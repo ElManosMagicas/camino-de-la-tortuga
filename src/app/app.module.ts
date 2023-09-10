@@ -2,17 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LayoutBarComponent } from './layout-bar/layout-bar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BaseComponent } from './presentation/layout/base/base.component';
+import { LayoutModule } from './presentation/layout/layout.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LayoutBarComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, LayoutModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
