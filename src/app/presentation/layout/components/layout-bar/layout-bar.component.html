@@ -1,6 +1,6 @@
 <div class="bar">
-  <button class="bar__tab">REPRODUCTOR</button>
-  <div class="bar__controls">
+  <button class="bar__tab" (click)="onToggleControls()">REPRODUCTOR</button>
+  <div class="bar__controls" *ngIf="toggleControls">
     <div class="bar__controls__left">
       <div class="bar__controls__left__scenes"></div>
     </div>
