@@ -3,15 +3,15 @@
   font-family: Lato-Thin;
   font-style: normal;
   font-weight: 100;
-  src: url("/assets/fonts/lato/Lato-Thin.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-Thin.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
 @font-face {
   font-family: Lato-Thin-Italic;
-  font-style: italic;
+  font-style: normal;
   font-weight: 100;
-  src: url("/assets/fonts/lato/Lato-ThinItalic.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-ThinItalic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -19,15 +19,15 @@
   font-family: Lato-Light;
   font-style: normal;
   font-weight: 300;
-  src: url("/assets/fonts/lato/Lato-Light.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-Light.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
 @font-face {
   font-family: Lato-Light-Italic;
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
-  src: url("/assets/fonts/lato/Lato-LightItalic.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-LightItalic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -35,15 +35,15 @@
   font-family: Lato-Regular;
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/lato/Lato-Regular.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-Regular.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
 @font-face {
   font-family: Lato-Italic;
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/lato/Lato-Italic.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-Italic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -51,15 +51,15 @@
   font-family: Lato-Bold;
   font-style: normal;
   font-weight: 700;
-  src: url("/assets/fonts/lato/Lato-Bold.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-Bold.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
 @font-face {
   font-family: Lato-Bold-Italic;
-  font-style: italic;
+  font-style: normal;
   font-weight: 700;
-  src: url("/assets/fonts/lato/Lato-BoldItalic.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-BoldItalic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -67,15 +67,15 @@
   font-family: Lato-Black;
   font-style: normal;
   font-weight: 900;
-  src: url("/assets/fonts/lato/Lato-Black.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-Black.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
 @font-face {
   font-family: Lato-Black-Italic;
-  font-style: italic;
+  font-style: normal;
   font-weight: 900;
-  src: url("/assets/fonts/lato/Lato-BlackItalic.ttf") format("ttf");
+  src: url("/assets/fonts/lato/Lato-BlackItalic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -99,7 +99,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url("/assets/fonts/letters-for-learners/Letters-for-Learners.ttf")
-    format("ttf");
+    format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -108,7 +108,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Outline.ttf")
-    format("ttf");
+    format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -117,7 +117,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-style: normal;
   font-weight: 300;
   src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Outline-Light.ttf")
-    format("ttf");
+    format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -126,7 +126,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-style: normal;
   font-weight: 700;
   src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Outline-Bold.ttf")
-    format("ttf");
+    format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -135,7 +135,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Lined.ttf")
-    format("ttf");
+    format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -144,7 +144,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Lined-Dots.ttf")
-    format("ttf");
+    format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -153,7 +153,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-style: normal;
   font-weight: 400;
   src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Dots.ttf")
-    format("ttf");
+    format("truetype");
   unicode-range: U+000-5FF;
 }
 
