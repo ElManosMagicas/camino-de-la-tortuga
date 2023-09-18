@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
-import { UtilService } from '@app/services/util.service';
 
 @Component({
   selector: 'home-footer',
@@ -9,20 +8,26 @@ import { UtilService } from '@app/services/util.service';
 })
 export class HomeFooterComponent {
   public ROUTES = ROUTES;
+  @Output() goToInstructionsEvent = new EventEmitter<boolean>();
+  @Output() goToConfigurationEvent = new EventEmitter<boolean>();
+  @Output() goToCreditsEvent = new EventEmitter<boolean>();
+  @Output() goToChapterOneEvent = new EventEmitter<boolean>();
 
-  constructor(private _utilService: UtilService) {}
+  constructor() {}
 
-  public onGoToReadBook() {}
+  public onGoToReadBook() {
+    this.goToChapterOneEvent.emit(true);
+  }
 
   public onGoToInstructions() {
-    this._utilService.navigateTo(this.ROUTES.INSTRUCTIONS);
+    this.goToInstructionsEvent.emit(true);
   }
 
   public onGoToConfiguration() {
-    this._utilService.navigateTo(this.ROUTES.CONFIGURATION);
+    this.goToConfigurationEvent.emit(true);
   }
 
   public onGoToCredits() {
-    this._utilService.navigateTo(this.ROUTES.CREDITS);
+    this.goToCreditsEvent.emit(true);
   }
 }
