@@ -49,7 +49,7 @@
     }
     .description {
       color: $color-primary-white;
-      font-family: $letter-for-learners-lined-dots;
+      font-family: $lato-regular;
       font-size: 21px;
       text-align: center;
       max-width: 360px;
@@ -72,15 +72,14 @@
       cursor: pointer;
       outline: none;
       &.active {
-        width: 20px; /* Adjust the width and height to make the button as large as you want */
+        width: 20px;
         height: 20px;
-        border-radius: 50%; /* This property makes the button circular */
-        background-color: $color-primary-white; /* Button background color */
-        color: $color-primary-white; /* Text color */
-        border: none; /* Remove the button border */
-        cursor: pointer; /* Add a pointer cursor for better usability */
-        outline: none; /* Remove the default focus outline */
-        /* Add any additional styling you want */
+        border-radius: 50%;
+        background-color: $color-primary-white;
+        color: $color-primary-white;
+        border: none;
+        cursor: pointer;
+        outline: none;
       }
     }
   }
