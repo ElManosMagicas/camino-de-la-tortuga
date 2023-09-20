@@ -1,0 +1,117 @@
+@import "global";
+@import "media-querys";
+@import "backgrounds";
+@import "elements";
+@import "gifs";
+@import "characters";
+
+.scene-two {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url($bg-chapter-1-scene-2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &__container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    &__body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      &__back-right-bush {
+        position: absolute;
+        top: 212px;
+        right: 0px;
+        z-index: 1;
+        width: 263px;
+        height: 430px;
+        background: url($gifs-chapter-1-scene-2-back-right-bush);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &__back-left-bush {
+        position: absolute;
+        top: 212px;
+        left: 0px;
+        z-index: 1;
+        width: 189px;
+        height: 375px;
+        background: url($gifs-chapter-1-scene-2-back-left-bush);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &__mom-cuy {
+        position: absolute;
+        top: 290px;
+        left: 200px;
+        z-index: 2;
+        width: 284px;
+        height: 225px;
+        background: url($character-chapter-1-scene-2-mom-cuy);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &__son-cuy {
+        position: absolute;
+        top: 264px;
+        right: 144px;
+        z-index: 3;
+        width: 443px;
+        height: 418px;
+        background: url($character-chapter-1-scene-2-son-cuy);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &__cambuche {
+        position: absolute;
+        top: 30px;
+        left: 92px;
+        z-index: 4;
+        width: 865px;
+        height: 673px;
+        background: url($elements-chapter-1-scene-2-cambuche);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &__front-right-bush {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        z-index: 5;
+        width: 312px;
+        height: 329px;
+        background: url($gifs-chapter-1-scene-2-front-right-grass);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      &__front-left-bush {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 6;
+        width: 744px;
+        height: 318px;
+        background: url($gifs-chapter-1-scene-2-left-grass);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+    &__footer {
+      z-index: 1000;
+    }
+  }
+}
