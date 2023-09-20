@@ -4,6 +4,7 @@
 @import "elements";
 @import "gifs";
 @import "characters";
+@import "keyframes";
 
 .scene-four {
   width: 100vw;
@@ -23,10 +24,12 @@
       z-index: 1;
       width: 353px;
       height: 273px;
+      opacity: 0;
       background: url($character-chapter-1-scene-4-turtle);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      animation: fromBottom 1s ease-in-out 1.5s forwards;
     }
     &__right-bush {
       position: absolute;
@@ -35,10 +38,12 @@
       z-index: 2;
       width: 398px;
       height: 518px;
+      opacity: 0;
       background: url($gifs-chapter-1-scene-4-right-bush);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      animation: fromRight 1s ease-in-out 0s forwards;
     }
     &__left-bush {
       position: absolute;
@@ -47,10 +52,12 @@
       z-index: 3;
       width: 278px;
       height: 355px;
+      opacity: 0;
       background: url($gifs-chapter-1-scene-4-left-bush);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      animation: fromLeft 1s ease-in-out 0.5s forwards;
     }
     &__front-grass {
       position: absolute;
@@ -59,10 +66,12 @@
       z-index: 4;
       width: 893px;
       height: 318px;
+      opacity: 0;
       background: url($gifs-chapter-1-scene-4-front-grass);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      animation: fromBottom 1s ease-in-out 1s forwards;
     }
     &__cuyo {
       position: absolute;
@@ -71,10 +80,12 @@
       z-index: 5;
       width: 363px;
       height: 412px;
+      opacity: 0;
       background: url($character-chapter-1-scene-4-cuy);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      animation: fromRight 1s ease-in-out 2s forwards;
     }
     &__footer {
       z-index: 1000;
