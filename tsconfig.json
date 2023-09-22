@@ -17,7 +17,9 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@app/*": ["src/app/*"],
-      "@core/*": ["src/app/core/*"]
+      "@core/*": ["src/app/core/*"],
+      "@store/*": ["src/app/domain/store/*"],
+      "@facades/*": ["src/app/facades/*"]
     }
   }
 }
