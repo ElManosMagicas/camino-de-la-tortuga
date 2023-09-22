@@ -1,6 +1,14 @@
 <div class="bar">
-  <button class="bar__tab" (click)="onToggleControls()">REPRODUCTOR</button>
-  <div class="bar__controls" *ngIf="toggleControls">
+  <button class="bar__tab" *ngIf="!toggleControls" (click)="onToggleControls()">
+    REPRODUCTOR
+  </button>
+  <div
+    class="bar__controls"
+    *ngIf="toggleControls"
+    #controls
+    (mouseenter)="onMouseEnterControls()"
+    (mouseleave)="onMouseLeaveControls()"
+  >
     <div class="bar__controls__left">
       <div class="bar__controls__left__scenes"></div>
     </div>
