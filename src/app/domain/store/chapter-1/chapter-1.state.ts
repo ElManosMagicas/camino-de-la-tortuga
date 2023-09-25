@@ -1,1 +1,3 @@
-export interface Chapter1State {}
+export interface Chapter1State {
+  step: number;
+}
