@@ -3,15 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { SceneTwelveRoutingModule } from './scene-twelve-routing.module';
 import { SceneTwelvePage } from './scene-twelve.page';
-
+import { LayoutModule } from '@app/presentation/layout/layout.module';
 
 @NgModule({
-  declarations: [
-    SceneTwelvePage
-  ],
-  imports: [
-    CommonModule,
-    SceneTwelveRoutingModule
-  ]
+  declarations: [SceneTwelvePage],
+  imports: [CommonModule, SceneTwelveRoutingModule, LayoutModule],
 })
-export class SceneTwelveModule { }
+export class SceneTwelveModule {}
