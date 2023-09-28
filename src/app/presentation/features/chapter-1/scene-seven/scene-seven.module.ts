@@ -9,4 +9,4 @@ import { LayoutModule } from '@app/presentation/layout/layout.module';
   declarations: [SceneSevenPage],
   imports: [CommonModule, SceneSevenRoutingModule, LayoutModule],
 })
-export class SceneSevenModule {}
+export class SceneEightModule {}
