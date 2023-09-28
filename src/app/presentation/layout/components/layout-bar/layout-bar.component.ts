@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'layout-bar',
@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout-bar.component.scss'],
 })
 export class LayoutBarComponent implements OnInit {
-  public toggleControls: boolean = false;
+  @Output() goToNextPageEvent = new EventEmitter<boolean>();
+  @Output() goToPreviousPageEvent = new EventEmitter<boolean>();
+  @Output() goToConfigurationEvent = new EventEmitter<boolean>();
+  @Output() goToBackpackEvent = new EventEmitter<boolean>();
+  @Output() repeatSceneEvent = new EventEmitter<boolean>();
 
+  public toggleControls: boolean = false;
   private _mouseOverControls: boolean = false;
   private _hideControlsTimeout: any;
 
@@ -36,5 +41,25 @@ export class LayoutBarComponent implements OnInit {
   public onMouseLeaveControls(): void {
     this._mouseOverControls = false;
     this._hideAfterFourSeconds();
+  }
+
+  public onGoToNextPage(): void {
+    this.goToNextPageEvent.emit(true);
+  }
+
+  public onGoToPreviousPage(): void {
+    this.goToPreviousPageEvent.emit(true);
+  }
+
+  public onGoToConfiguration(): void {
+    this.goToConfigurationEvent.emit(true);
+  }
+
+  public onGoToBackpack(): void {
+    this.goToBackpackEvent.emit(true);
+  }
+
+  public onRepeatScene(): void {
+    this.repeatSceneEvent.emit(true);
   }
 }
