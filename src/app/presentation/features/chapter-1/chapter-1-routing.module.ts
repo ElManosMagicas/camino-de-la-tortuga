@@ -37,6 +37,14 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'escena-3.5',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./scene-three-five/scene-three-five.module').then(
+        (m) => m.SceneThreeFiveModule
+      ),
+  },
+  {
     path: 'escena-4',
     component: BaseComponent,
     loadChildren: () =>
