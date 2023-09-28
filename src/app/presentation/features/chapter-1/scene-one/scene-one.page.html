@@ -4,6 +4,35 @@
     <div class="scene-one__container__bush-rock"></div>
     <div class="scene-one__container__turtle"></div>
     <div class="scene-one__container__front-grass"></div>
+    <ng-container>
+      <div class="scene-one__container__introduction">
+        <div class="scene-one__container__introduction__text">
+          <p>
+            Te damos la bienvenida.<br />
+            Para acompañar a nuestra amiga tortuga en esta aventura, ella
+            necesita un nombre.<br />
+            <br />
+            ¿Cómo quieres que se llame la tortuga?
+          </p>
+        </div>
+        <input
+          class="scene-one__container__introduction__input"
+          type="text"
+          [(ngModel)]="turtleName"
+          [placeholder]="placeholderText"
+          (input)="onInputChange()"
+          (focus)="onClearPlaceholder()"
+          required
+        />
+        <button
+          class="scene-one__container__introduction__accept"
+          (click)="onSubmit()"
+          [disabled]="isButtonDisabled"
+        >
+          Aceptar
+        </button>
+      </div>
+    </ng-container>
     <div class="scene-one__container__footer">
       <layout-bar></layout-bar>
     </div>
