@@ -14,6 +14,12 @@ const _chapter1Reducer = createReducer(
       ...state,
       step: state.step + 1,
     };
+  }),
+  on(chapter1Actions.stepBack, (state) => {
+    return {
+      ...state,
+      step: state.step - 1,
+    };
   })
 );
 
