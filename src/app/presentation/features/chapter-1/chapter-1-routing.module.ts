@@ -67,7 +67,7 @@ const routes: Routes = [
     component: BaseComponent,
     loadChildren: () =>
       import('./scene-seven/scene-seven.module').then(
-        (m) => m.SceneSevenModule
+        (m) => m.SceneEightModule
       ),
   },
   {
@@ -96,14 +96,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./scene-eleven/scene-eleven.module').then(
         (m) => m.SceneElevenModule
-      ),
-  },
-  {
-    path: 'escena-12',
-    component: BaseComponent,
-    loadChildren: () =>
-      import('./scene-twelve/scene-twelve.module').then(
-        (m) => m.SceneTwelveModule
       ),
   },
 ];
