@@ -21,6 +21,14 @@ const routes: Routes = [
       import('./scene-two/scene-two.module').then((m) => m.SceneTwoModule),
   },
   {
+    path: 'escena-2.5',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./scene-two-five/scene-two-five.module').then(
+        (m) => m.SceneTwoFiveModule
+      ),
+  },
+  {
     path: 'escena-3',
     component: BaseComponent,
     loadChildren: () =>
