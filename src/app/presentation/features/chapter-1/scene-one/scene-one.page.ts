@@ -18,7 +18,7 @@ import { UtilService } from '@app/services/util.service';
   styleUrls: ['./scene-one.page.scss'],
 })
 export class SceneOnePage implements OnInit, AfterViewInit {
-  @ViewChild('cap1Esc1Narradora') audioPlayer: ElementRef;
+  @ViewChild('cap1Esc1Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public turtleName: string = '';
@@ -31,13 +31,14 @@ export class SceneOnePage implements OnInit, AfterViewInit {
     private _appFacade: AppFacade,
     private _chapter1Facade: Chapter1Facade
   ) {}
+
+  ngOnInit(): void {}
+
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.playAudio();
     }, 4000);
   }
-
-  ngOnInit(): void {}
 
   public playAudio() {
     const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
