@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
+import { APP_CONSTANTS as CONST } from '@app/app.constants';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
@@ -9,18 +17,34 @@ import { UtilService } from '@app/services/util.service';
   templateUrl: './scene-one.page.html',
   styleUrls: ['./scene-one.page.scss'],
 })
-export class SceneOnePage implements OnInit {
+export class SceneOnePage implements OnInit, AfterViewInit {
+  @ViewChild('cap1Esc1Narradora') audioPlayer: ElementRef;
+
+  public CONST = CONST;
   public turtleName: string = '';
   public placeholderText: string = 'Ingresa el nombre aquí';
   public isButtonDisabled: boolean = true;
 
   constructor(
+    private _renderer: Renderer2,
     private _utilService: UtilService,
     private _appFacade: AppFacade,
     private _chapter1Facade: Chapter1Facade
   ) {}
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.playAudio();
+    }, 4000);
+  }
 
   ngOnInit(): void {}
+
+  public playAudio() {
+    const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
+    if (audioElement.paused) {
+      audioElement.play();
+    }
+  }
 
   public onInputChange(): void {
     this.isButtonDisabled = this.turtleName.trim() === '';
