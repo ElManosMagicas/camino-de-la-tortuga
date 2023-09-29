@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
+import { APP_CONSTANTS as CONST } from '@app/app.constants';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
@@ -10,10 +18,15 @@ import { Observable } from 'rxjs';
   templateUrl: './scene-six.page.html',
   styleUrls: ['./scene-six.page.scss'],
 })
-export class SceneSixPage implements OnInit {
+export class SceneSixPage implements OnInit, AfterViewInit {
+  @ViewChild('cap1Esc6Narrator') audioPlayer: ElementRef;
+
+  public CONST = CONST;
+
   public turtleName$: Observable<string>;
 
   constructor(
+    private _renderer: Renderer2,
     private _appFacade: AppFacade,
     private _chapter1Facade: Chapter1Facade,
     private _utilService: UtilService
@@ -21,6 +34,19 @@ export class SceneSixPage implements OnInit {
 
   ngOnInit(): void {
     this._setValues();
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.playAudio();
+    }, 3000);
+  }
+
+  public playAudio() {
+    const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
+    if (audioElement.paused) {
+      audioElement.play();
+    }
   }
 
   private _setValues(): void {
