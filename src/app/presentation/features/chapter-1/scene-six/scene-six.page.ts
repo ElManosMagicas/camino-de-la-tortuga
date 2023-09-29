@@ -42,15 +42,15 @@ export class SceneSixPage implements OnInit, AfterViewInit {
     }, 3000);
   }
 
+  private _setValues(): void {
+    this.turtleName$ = this._appFacade.turtleName$;
+  }
+
   public playAudio() {
     const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
     if (audioElement.paused) {
       audioElement.play();
     }
-  }
-
-  private _setValues(): void {
-    this.turtleName$ = this._appFacade.turtleName$;
   }
 
   public onGoToNextPage(): void {
