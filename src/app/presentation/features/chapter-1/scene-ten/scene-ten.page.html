@@ -1,16 +1,24 @@
 <section class="scene-ten">
   <div class="scene-ten__container">
-    <div class="scene-ten__container__back-grass-cuy"></div>
-    <div class="scene-ten__container__cuy"></div>
-    <div class="scene-ten__container__back-grass-turtle"></div>
-    <div class="scene-ten__container__turtle"></div>
+    <div class="scene-ten__container__head"></div>
+    <div class="scene-ten__container__backpack"></div>
+    <div class="scene-ten__container__feet"></div>
     <ng-container>
       <div class="scene-ten__container__subtitles">
-        <p>- ¿Sabes cómo puedo ir a mi casa?</p>
+        <p>
+          Es verde, tiene patas cortas e incluso parece que lleva una especie de
+          mochila en su espalda.
+        </p>
       </div>
     </ng-container>
     <div class="scene-ten__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>

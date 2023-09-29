@@ -6,72 +6,69 @@
 @import "characters";
 @import "keyframes";
 
-.scene-two-five {
+.scene-thirteen {
   width: 100vw;
   height: 100vh;
-  background-image: url($bg-chapter-1-scene-2-5);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: $color-primary-white;
   &__container {
-    position: relative;
     width: 100%;
     height: 100vh;
-    &__cambuche {
+    position: relative;
+    &__back-grass-cuy {
       position: absolute;
-      top: 190px;
+      top: 0px;
       left: 0px;
       z-index: 1;
-      width: 396px;
-      height: 252px;
+      width: 519px;
+      height: 768px;
       opacity: 0;
-      background: url($elements-chapter-1-scene-2-5-casa-cuy);
+      background: url($bg-chapter-1-scene-10-11-cuy-color);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromTop 1s ease-in-out 0s forwards;
+      animation: fromLeft 1s ease-in-out 0s forwards;
     }
-    &__mom-cuy {
+    &__cuy {
       position: absolute;
-      top: 272px;
-      left: 90px;
+      top: 0px;
+      left: 0px;
       z-index: 2;
-      width: 244px;
-      height: 173px;
+      width: 445px;
+      height: 729px;
       opacity: 0;
-      background: url($character-chapter-1-scene-2-5-mom-cuy);
+      background: url($character-chapter-1-scene-10-12-cuy);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0.5s forwards;
     }
-    &__enea {
+    &__back-grass-turtle {
       position: absolute;
-      top: 154px;
-      left: 344px;
-      z-index: 3;
-      width: 233px;
-      height: 210px;
+      top: 0px;
+      right: 0px;
+      z-index: 1;
+      width: 591px;
+      height: 768px;
       opacity: 0;
-      background: url($elements-chapter-1-scene-2-5-enea);
+      background: url($bg-chapter-1-scene-12-tortuga-BN);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      animation: fromRight 1s ease-in-out 1s forwards;
     }
-    &__son-cuy {
+    &__turtle {
       position: absolute;
-      bottom: 136px;
-      right: 60px;
-      z-index: 4;
-      width: 502px;
-      height: 302px;
+      bottom: 0px;
+      right: 0px;
+      z-index: 2;
+      width: 406px;
+      height: 507px;
       opacity: 0;
-      background: url($character-chapter-1-scene-2-5-son-cuy);
+      background: url($character-chapter-1-scene-12-turtle);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromLeft 1s ease-in-out 1.5s forwards;
+      animation: fromRight 1s ease-in-out 1.5s forwards;
     }
     &__subtitles {
       position: absolute;
@@ -95,7 +92,6 @@
         font-weight: 300;
         line-height: 25px;
         text-align: center;
-        margin: 12px 0;
       }
     }
     &__footer {

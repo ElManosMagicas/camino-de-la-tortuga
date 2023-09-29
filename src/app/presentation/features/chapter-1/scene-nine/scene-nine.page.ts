@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AppFacade } from '@app/facades/app.facade';
-import { Observable } from 'rxjs';
+import { APP_ROUTES as ROUTES } from '@app/app.routes';
+import { Chapter1Facade } from '@app/facades/chapter-1.facade';
+import { UtilService } from '@app/services/util.service';
 
 @Component({
   selector: 'chapter-1-scene-nine',
@@ -8,15 +9,24 @@ import { Observable } from 'rxjs';
   styleUrls: ['./scene-nine.page.scss'],
 })
 export class SceneNinePage implements OnInit {
-  public turtleName$: Observable<string>;
+  constructor(
+    private _chapter1Facade: Chapter1Facade,
+    private _utilService: UtilService
+  ) {}
 
-  constructor(private _appFacade: AppFacade) {}
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-    this._setValues();
+  public onGoToNextPage(): void {
+    this._chapter1Facade.goToNextStep();
+    this._utilService.navigateTo(ROUTES.CHAPTER_1_SCENE_10);
   }
-
-  private _setValues() {
-    this.turtleName$ = this._appFacade.turtleName$;
+  public onGoToPreviousPage(): void {
+    this._chapter1Facade.goToPreviousStep();
+    this._utilService.navigateTo(ROUTES.CHAPTER_1_SCENE_8);
+  }
+  public onGoToConfiguration() {}
+  public onGoToBackpack() {}
+  public onRepeatScene() {
+    this._utilService.redirectToUrl(ROUTES.CHAPTER_1_SCENE_9);
   }
 }

@@ -21,27 +21,11 @@ const routes: Routes = [
       import('./scene-two/scene-two.module').then((m) => m.SceneTwoModule),
   },
   {
-    path: 'escena-2.5',
-    component: BaseComponent,
-    loadChildren: () =>
-      import('./scene-two-five/scene-two-five.module').then(
-        (m) => m.SceneTwoFiveModule
-      ),
-  },
-  {
     path: 'escena-3',
     component: BaseComponent,
     loadChildren: () =>
       import('./scene-three/scene-three.module').then(
         (m) => m.SceneThreeModule
-      ),
-  },
-  {
-    path: 'escena-3.5',
-    component: BaseComponent,
-    loadChildren: () =>
-      import('./scene-three-five/scene-three-five.module').then(
-        (m) => m.SceneThreeFiveModule
       ),
   },
   {
@@ -67,7 +51,7 @@ const routes: Routes = [
     component: BaseComponent,
     loadChildren: () =>
       import('./scene-seven/scene-seven.module').then(
-        (m) => m.SceneEightModule
+        (m) => m.SceneSevenModule
       ),
   },
   {
@@ -96,6 +80,22 @@ const routes: Routes = [
     loadChildren: () =>
       import('./scene-eleven/scene-eleven.module').then(
         (m) => m.SceneElevenModule
+      ),
+  },
+  {
+    path: 'escena-12',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./scene-twelve/scene-twelve.module').then(
+        (m) => m.SceneTwelveModule
+      ),
+  },
+  {
+    path: 'escena-13',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./scene-thirteen/scene-thirteen.module').then(
+        (m) => m.SceneThirteenModule
       ),
   },
 ];

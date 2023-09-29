@@ -14,47 +14,61 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    &__head {
+    &__back-grass {
       position: absolute;
-      top: 24px;
-      left: 72px;
+      top: 0px;
+      left: 18px;
       z-index: 1;
-      width: 476px;
-      height: 224px;
+      width: 946px;
+      height: 485px;
       opacity: 0;
-      background: url($character-chapter-1-scene-9-head);
+      background: url($gifs-chapter-1-scene-7-back-grass);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromLeft 1s ease-in-out 0s forwards;
+      animation: fromTop 1s ease-in-out 0s forwards;
     }
-    &__backpack {
+    &__floor {
       position: absolute;
-      top: 126px;
-      right: 72px;
+      bottom: 48px;
+      left: 0px;
       z-index: 2;
-      width: 511px;
-      height: 314px;
+      width: 1024px;
+      height: 426px;
       opacity: 0;
-      background: url($character-chapter-1-scene-9-backpack);
+      background: url($bg-chapter-1-scene-7);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromRight 1s ease-in-out 0.5s forwards;
+      animation: fromTop 1s ease-in-out 0.5s forwards;
     }
-    &__feet {
+    &__front-grass {
       position: absolute;
-      bottom: 148px;
-      left: 72px;
-      z-index: 3;
-      width: 471px;
-      height: 213px;
+      bottom: 48px;
+      left: 0px;
+      z-index: 4;
+      width: 1014px;
+      height: 279px;
       opacity: 0;
-      background: url($character-chapter-1-scene-9-turtle-feet);
+      background: url($gifs-chapter-1-scene-7-front-grass);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1s forwards;
+    }
+    &__turtle {
+      position: absolute;
+      top: 58px;
+      left: 260px;
+      z-index: 3;
+      width: 529px;
+      height: 533px;
+      opacity: 0;
+      background: url($character-chapter-1-scene-7-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromTop 1s ease-in-out 1.5s forwards;
     }
     &__subtitles {
       position: absolute;

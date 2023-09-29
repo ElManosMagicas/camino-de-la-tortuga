@@ -8,13 +8,19 @@
     <ng-container>
       <div class="scene-seven__container__subtitles">
         <p>
-          El cuy sólo la observa. El animal que se queja es uno que él nunca
-          había visto.
+          El cuy se acerca a la tortuga {{ turtleName$ | async }} y nota que
+          ella está incómoda en este lugar.
         </p>
       </div>
     </ng-container>
     <div class="scene-seven__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>

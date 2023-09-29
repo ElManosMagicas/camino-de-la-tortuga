@@ -7,13 +7,19 @@
     <ng-container>
       <div class="scene-eleven__container__subtitles">
         <p>
-          - No, no lo sé. Pero conozco algunos amigos que quizás te puedan
-          ayudar.
+          La tortuga {{ turtleName$ | async }} mira hacia todos lados y le
+          pregunta agitada al cuy:
         </p>
       </div>
     </ng-container>
     <div class="scene-eleven__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>

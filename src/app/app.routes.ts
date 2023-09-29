@@ -16,6 +16,7 @@ export const APP_ROUTES = {
   CHAPTER_1_SCENE_10: '/capitulo-1/escena-10',
   CHAPTER_1_SCENE_11: '/capitulo-1/escena-11',
   CHAPTER_1_SCENE_12: '/capitulo-1/escena-12',
+  CHAPTER_1_SCENE_13: '/capitulo-1/escena-13',
   CHAPTER_2: '/capitulo-2',
   CHAPTER_2_SCENE_1: '/capitulo-2/escena-1',
   CHAPTER_2_SCENE_2: '/capitulo-2/escena-2',

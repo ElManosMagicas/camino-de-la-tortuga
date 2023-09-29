@@ -47,5 +47,7 @@ export class SceneOnePage implements OnInit {
   }
   public onGoToConfiguration() {}
   public onGoToBackpack() {}
-  public onRepeatScene() {}
+  public onRepeatScene() {
+    this._utilService.redirectToUrl(ROUTES.CHAPTER_1_SCENE_1);
+  }
 }

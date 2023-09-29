@@ -1,19 +1,26 @@
 <section class="scene-nine">
   <div class="scene-nine__container">
-    <div class="scene-nine__container__back-grass-cuy"></div>
-    <div class="scene-nine__container__cuy"></div>
-    <div class="scene-nine__container__back-grass-turtle"></div>
     <div class="scene-nine__container__turtle"></div>
+    <div class="scene-nine__container__right-bush"></div>
+    <div class="scene-nine__container__left-bush"></div>
+    <div class="scene-nine__container__front-grass"></div>
+    <div class="scene-nine__container__cuyo"></div>
     <ng-container>
       <div class="scene-nine__container__subtitles">
         <p>
-          La tortuga {{ turtleName$ | async }} mira hacia todos lados y le
-          pregunta agitada al cuy:
+          El cuy sólo la observa. El animal que se queja es uno que él nunca
+          había visto.
         </p>
       </div>
     </ng-container>
     <div class="scene-nine__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>

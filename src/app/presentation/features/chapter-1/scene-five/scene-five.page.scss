@@ -9,7 +9,7 @@
 .scene-five {
   width: 100vw;
   height: 100vh;
-  background-image: url($bg-chapter-1-scene-6);
+  background-image: url($bg-chapter-1-scene-3);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,75 +17,44 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    &__turtle {
+    &__car {
       position: absolute;
-      bottom: 206px;
-      right: 150px;
+      top: 276px;
+      right: 74px;
       z-index: 1;
-      width: 349px;
-      height: 249px;
-      opacity: 0;
-      background: url($character-chapter-1-scene-6-turtle);
+      width: 236px;
+      height: 338px;
+      opacity: 1;
+      background: url($elements-chapter-1-scene-3-car);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromBottom 1s ease-in-out 1.5s forwards;
     }
-    &__right-bush {
+    &__person {
       position: absolute;
-      bottom: 100px;
-      right: 0px;
+      top: 296px;
+      right: 310px;
       z-index: 2;
-      width: 276px;
-      height: 485px;
-      opacity: 0;
-      background: url($gifs-chapter-1-scene-6-right-bush);
+      width: 185px;
+      height: 299px;
+      opacity: 1;
+      background: url($character-chapter-1-scene-3-person);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromRight 1s ease-in-out 0s forwards;
-    }
-    &__left-bush {
-      position: absolute;
-      bottom: 174px;
-      left: 8px;
-      z-index: 3;
-      width: 285px;
-      height: 340px;
-      opacity: 0;
-      background: url($gifs-chapter-1-scene-6-left-bush);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: fromLeft 1s ease-in-out 0.5s forwards;
-    }
-    &__front-grass {
-      position: absolute;
-      bottom: 48px;
-      left: 46px;
-      z-index: 4;
-      width: 934px;
-      height: 264px;
-      opacity: 0;
-      background: url($gifs-chapter-1-scene-6-front-grass);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: fromBottom 1s ease-in-out 1s forwards;
     }
     &__cuyo {
       position: absolute;
-      top: 296px;
-      left: 204px;
-      z-index: 1;
-      width: 250px;
-      height: 207px;
-      opacity: 0;
-      background: url($character-chapter-1-scene-6-cuy);
+      bottom: 30px;
+      left: 18px;
+      z-index: 3;
+      width: 400px;
+      height: 405px;
+      opacity: 1;
+      background: url($character-chapter-1-scene-3-cuy);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromLeft 1s ease-in-out 2s forwards;
     }
     &__subtitles {
       position: absolute;
@@ -101,7 +70,7 @@
       border-top-left-radius: 20px;
       width: 100%;
       height: 140px;
-      animation: appear 1s ease-in-out 2.5s forwards;
+      animation: appear 1s ease-in-out 0s forwards;
       p {
         color: $color-primary-white;
         font-family: $letter-for-learners;

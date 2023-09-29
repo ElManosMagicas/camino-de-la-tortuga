@@ -16,7 +16,13 @@
       </div>
     </ng-container>
     <div class="scene-two__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>

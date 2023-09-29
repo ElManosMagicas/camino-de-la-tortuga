@@ -1,20 +1,21 @@
 <section class="scene-five">
   <div class="scene-five__container">
-    <div class="scene-five__container__turtle"></div>
-    <div class="scene-five__container__right-bush"></div>
-    <div class="scene-five__container__left-bush"></div>
-    <div class="scene-five__container__front-grass"></div>
+    <div class="scene-five__container__car"></div>
+    <div class="scene-five__container__person"></div>
     <div class="scene-five__container__cuyo"></div>
     <ng-container>
       <div class="scene-five__container__subtitles">
-        <p>
-          El cuy se acerca a la tortuga {{ turtleName$ | async }} y nota que
-          ella está incómoda en este lugar.
-        </p>
+        <p>─ ¡Qué miedo!</p>
       </div>
     </ng-container>
     <div class="scene-five__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>

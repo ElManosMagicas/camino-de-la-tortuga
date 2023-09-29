@@ -1,20 +1,24 @@
 <section class="scene-four">
   <div class="scene-four__container">
-    <div class="scene-four__container__turtle"></div>
-    <div class="scene-four__container__right-bush"></div>
-    <div class="scene-four__container__left-bush"></div>
-    <div class="scene-four__container__front-grass"></div>
+    <div class="scene-four__container__car"></div>
+    <div class="scene-four__container__person"></div>
     <div class="scene-four__container__cuyo"></div>
     <ng-container>
       <div class="scene-four__container__subtitles">
         <p>
-          El cuy ve a un animal de color extraño, es la tortuga {{ turtleName$ |
-          async }}
+          En el camino, el cuy ve la silueta de un ser humano que corre hacia un
+          objeto que él no conocía.
         </p>
       </div>
     </ng-container>
     <div class="scene-four__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>

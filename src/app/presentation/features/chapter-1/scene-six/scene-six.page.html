@@ -1,19 +1,26 @@
 <section class="scene-six">
   <div class="scene-six__container">
-    <div class="scene-six__container__back-grass"></div>
-    <div class="scene-six__container__floor"></div>
     <div class="scene-six__container__turtle"></div>
+    <div class="scene-six__container__right-bush"></div>
+    <div class="scene-six__container__left-bush"></div>
     <div class="scene-six__container__front-grass"></div>
+    <div class="scene-six__container__cuyo"></div>
     <ng-container>
       <div class="scene-six__container__subtitles">
         <p>
-          ─ ¡Es muy fangoso! ─ dice la tortuga {{ turtleName$ | async }}-. Este
-          pasto es muy rasposo para mis piecitos.
+          El cuy ve a un animal de color extraño, es la tortuga {{ turtleName$ |
+          async }}.
         </p>
       </div>
     </ng-container>
     <div class="scene-six__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>

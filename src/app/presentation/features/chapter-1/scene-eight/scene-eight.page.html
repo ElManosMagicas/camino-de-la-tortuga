@@ -1,18 +1,25 @@
 <section class="scene-eight">
   <div class="scene-eight__container">
-    <div class="scene-eight__container__head"></div>
-    <div class="scene-eight__container__backpack"></div>
-    <div class="scene-eight__container__feet"></div>
+    <div class="scene-eight__container__back-grass"></div>
+    <div class="scene-eight__container__floor"></div>
+    <div class="scene-eight__container__turtle"></div>
+    <div class="scene-eight__container__front-grass"></div>
     <ng-container>
       <div class="scene-eight__container__subtitles">
         <p>
-          Es verde, tiene patas cortas e incluso parece que lleva una especie de
-          mochila en su espalda.
+          ─ ¡Es muy fangoso! ─ dice la tortuga {{ turtleName$ | async }}-. Este
+          pasto es muy rasposo para mis piecitos.
         </p>
       </div>
     </ng-container>
     <div class="scene-eight__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>

@@ -1,0 +1,25 @@
+<section class="scene-thirteen">
+  <div class="scene-thirteen__container">
+    <div class="scene-thirteen__container__back-grass-cuy"></div>
+    <div class="scene-thirteen__container__cuy"></div>
+    <div class="scene-thirteen__container__back-grass-turtle"></div>
+    <div class="scene-thirteen__container__turtle"></div>
+    <ng-container>
+      <div class="scene-thirteen__container__subtitles">
+        <p>
+          - No, no lo sé. Pero conozco algunos amigos que quizás te puedan
+          ayudar.
+        </p>
+      </div>
+    </ng-container>
+    <div class="scene-thirteen__container__footer">
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+  </div>
+</section>

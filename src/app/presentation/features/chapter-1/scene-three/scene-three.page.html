@@ -1,18 +1,25 @@
 <section class="scene-three">
   <div class="scene-three__container">
-    <div class="scene-three__container__car"></div>
-    <div class="scene-three__container__person"></div>
-    <div class="scene-three__container__cuyo"></div>
+    <div class="scene-three__container__cambuche"></div>
+    <div class="scene-three__container__mom-cuy"></div>
+    <div class="scene-three__container__enea"></div>
+    <div class="scene-three__container__son-cuy"></div>
     <ng-container>
       <div class="scene-three__container__subtitles">
         <p>
-          En el camino, el cuy ve la silueta de un ser humano que corre hacia un
-          objeto que él no conocía.
+          Su madre le pide que vaya por enea, su desayuno. El cuy de forma
+          diligente corre hacia el humedal para hacerle el mandado a su mamá.
         </p>
       </div>
     </ng-container>
     <div class="scene-three__container__footer">
-      <layout-bar></layout-bar>
+      <layout-bar
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
     </div>
   </div>
 </section>
