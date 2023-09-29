@@ -32,7 +32,7 @@ export class SceneThreePage implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.playAudio();
-    }, 2000);
+    }, 3000);
   }
 
   public playAudio() {
