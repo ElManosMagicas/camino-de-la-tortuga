@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { LABELS_MAPPING } from '@app/domain/services/labels/labels.map';
 
 @Component({
   selector: 'layout-bar',
@@ -6,6 +7,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./layout-bar.component.scss'],
 })
 export class LayoutBarComponent implements OnInit {
+  @Input() currentRoute: string;
+
   @Output() goToNextPageEvent = new EventEmitter<boolean>();
   @Output() goToPreviousPageEvent = new EventEmitter<boolean>();
   @Output() goToConfigurationEvent = new EventEmitter<boolean>();
@@ -13,10 +16,13 @@ export class LayoutBarComponent implements OnInit {
   @Output() repeatSceneEvent = new EventEmitter<boolean>();
 
   public toggleControls: boolean = false;
+  public sceneListLabel: string = '';
   private _mouseOverControls: boolean = false;
   private _hideControlsTimeout: any;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sceneListLabel = LABELS_MAPPING[this.currentRoute];
+  }
 
   private _hideAfterFourSeconds() {
     this._hideControlsTimeout = setTimeout(() => {

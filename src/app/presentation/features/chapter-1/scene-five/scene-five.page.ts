@@ -20,6 +20,7 @@ export class SceneFivePage implements OnInit, AfterViewInit {
   @ViewChild('cap1Esc5Cuy') audioPlayer: ElementRef;
 
   public CONST = CONST;
+  public currentRoute: string = '';
 
   constructor(
     private _renderer: Renderer2,
@@ -27,7 +28,9 @@ export class SceneFivePage implements OnInit, AfterViewInit {
     private _utilService: UtilService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.currentRoute = this._utilService.getCurrentRoute();
+  }
 
   ngAfterViewInit(): void {
     setTimeout(() => {

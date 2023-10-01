@@ -20,13 +20,16 @@ export class SceneTwoPage implements OnInit, AfterViewInit {
   @ViewChild('cap1Esc2Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
+  public currentRoute: string = '';
 
   constructor(
     private _renderer: Renderer2,
     private _chapter1Facade: Chapter1Facade,
     private _utilService: UtilService
   ) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.currentRoute = this._utilService.getCurrentRoute();
+  }
 
   ngAfterViewInit(): void {
     setTimeout(() => {

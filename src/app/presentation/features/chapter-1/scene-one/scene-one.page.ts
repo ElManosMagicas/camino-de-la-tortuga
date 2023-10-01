@@ -24,6 +24,7 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   public turtleName: string = '';
   public placeholderText: string = 'Ingresa el nombre aquí';
   public isButtonDisabled: boolean = true;
+  public currentRoute: string = '';
 
   constructor(
     private _renderer: Renderer2,
@@ -32,7 +33,9 @@ export class SceneOnePage implements OnInit, AfterViewInit {
     private _chapter1Facade: Chapter1Facade
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.currentRoute = this._utilService.getCurrentRoute();
+  }
 
   ngAfterViewInit(): void {
     setTimeout(() => {

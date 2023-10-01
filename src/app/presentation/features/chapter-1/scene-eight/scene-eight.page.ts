@@ -13,6 +13,8 @@ import { Observable } from 'rxjs';
 export class SceneEightPage implements OnInit {
   public turtleName$: Observable<string>;
 
+  public currentRoute: string = '';
+
   constructor(
     private _appFacade: AppFacade,
     private _chapter1Facade: Chapter1Facade,
@@ -25,6 +27,7 @@ export class SceneEightPage implements OnInit {
 
   private _setValues(): void {
     this.turtleName$ = this._appFacade.turtleName$;
+    this.currentRoute = this._utilService.getCurrentRoute();
   }
 
   public onGoToNextPage(): void {

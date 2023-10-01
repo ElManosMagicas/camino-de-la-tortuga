@@ -10,7 +10,9 @@
     (mouseleave)="onMouseLeaveControls()"
   >
     <div class="bar__controls__left">
-      <div class="bar__controls__left__scenes"></div>
+      <div class="bar__controls__left__scenes">
+        <p>{{ sceneListLabel }}</p>
+      </div>
     </div>
     <div class="bar__controls__right">
       <button class="bar__controls__right__btns" (click)="onGoToPreviousPage()">

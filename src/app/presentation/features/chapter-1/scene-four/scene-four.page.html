@@ -13,6 +13,7 @@
     </ng-container>
     <div class="scene-four__container__footer">
       <layout-bar
+        [currentRoute]="currentRoute"
         (goToNextPageEvent)="onGoToNextPage()"
         (goToPreviousPageEvent)="onGoToPreviousPage()"
         (goToConfigurationEvent)="onGoToConfiguration()"

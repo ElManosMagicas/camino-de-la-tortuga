@@ -22,6 +22,7 @@ export class SceneSixPage implements OnInit, AfterViewInit {
   @ViewChild('cap1Esc6Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
+  public currentRoute: string = '';
 
   public turtleName$: Observable<string>;
 
@@ -44,6 +45,7 @@ export class SceneSixPage implements OnInit, AfterViewInit {
 
   private _setValues(): void {
     this.turtleName$ = this._appFacade.turtleName$;
+    this.currentRoute = this._utilService.getCurrentRoute();
   }
 
   public playAudio() {

@@ -15,6 +15,7 @@
     </ng-container>
     <div class="scene-seven__container__footer">
       <layout-bar
+        [currentRoute]="currentRoute"
         (goToNextPageEvent)="onGoToNextPage()"
         (goToPreviousPageEvent)="onGoToPreviousPage()"
         (goToConfigurationEvent)="onGoToConfiguration()"

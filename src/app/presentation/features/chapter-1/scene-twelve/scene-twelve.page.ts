@@ -9,12 +9,16 @@ import { UtilService } from '@app/services/util.service';
   styleUrls: ['./scene-twelve.page.scss'],
 })
 export class SceneTwelvePage implements OnInit {
+  public currentRoute: string = '';
+
   constructor(
     private _chapter1Facade: Chapter1Facade,
     private _utilService: UtilService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.currentRoute = this._utilService.getCurrentRoute();
+  }
 
   public onGoToNextPage(): void {
     this._chapter1Facade.goToNextStep();

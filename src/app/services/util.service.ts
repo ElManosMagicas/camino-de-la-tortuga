@@ -20,4 +20,8 @@ export class UtilService {
   public navigateTo(url: string, params?: NavigationExtras) {
     this._router.navigate([url], params ?? {});
   }
+
+  public getCurrentRoute(): string {
+    return this._router.url;
+  }
 }
