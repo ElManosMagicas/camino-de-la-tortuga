@@ -1,36 +1,68 @@
 @import "global";
 @import "backgrounds";
 @import "media-querys";
+@import "characters";
+@import "gifs";
+@import "elements";
 
 .home {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   background-image: url($bg-start-screen);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   &__container {
+    position: relative;
+    width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    &__body {
+    &__turtle {
+      position: absolute;
+      top: 244px;
+      left: 200px;
+      z-index: 0;
+      width: 345px;
+      height: 327px;
+      opacity: 0;
+      background: url($character-front-page-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromLeft 1s ease-in-out 0s forwards;
+    }
+    &__front-bush {
+      position: absolute;
+      bottom: 0px;
+      z-index: 1;
       width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: center;
-      .title {
-        width: 300px;
-        color: $color-primary-blue;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 700;
-        font-size: 60px;
-        text-align: center;
-      }
+      height: 390px;
+      opacity: 0;
+      background: url($gifs-front-page-front-bush);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromBottom 1s ease-in-out 1s forwards;
+    }
+    &__title {
+      position: absolute;
+      top: 80px;
+      left: 200px;
+      z-index: 2;
+      width: 615px;
+      height: 143px;
+      opacity: 0;
+      background: url($elements-front-page-title);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromTop 1s ease-in-out 2s forwards;
+    }
+    &__footer {
+      z-index: 1000;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      margin: 0 auto;
     }
   }
 }
