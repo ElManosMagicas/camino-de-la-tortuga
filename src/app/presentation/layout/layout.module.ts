@@ -4,10 +4,16 @@ import { BaseComponent } from './base/base.component';
 import { RouterModule } from '@angular/router';
 import { LayoutBarComponent } from './components/layout-bar/layout-bar.component';
 import { SplashComponent } from './components/splash/splash.component';
+import { InnerNavComponent } from './components/inner-nav/inner-nav.component';
 
 const PIPES = [];
 
-const COMPONENTS = [BaseComponent, LayoutBarComponent, SplashComponent];
+const COMPONENTS = [
+  BaseComponent,
+  LayoutBarComponent,
+  InnerNavComponent,
+  SplashComponent,
+];
 
 @NgModule({
   declarations: [...COMPONENTS],
