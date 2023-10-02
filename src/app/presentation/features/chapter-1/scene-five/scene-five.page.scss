@@ -80,6 +80,16 @@
         text-align: center;
       }
     }
+    &__arrows {
+      z-index: 990;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -30px;
+      width: 100%;
+      opacity: 0;
+      animation: fromBottom 1s ease-in-out 2s forwards;
+    }
     &__footer {
       z-index: 1000;
       position: absolute;

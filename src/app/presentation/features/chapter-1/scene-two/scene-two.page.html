@@ -15,6 +15,12 @@
         </p>
       </div>
     </ng-container>
+    <div class="scene-two__container__arrows">
+      <layout-inner-nav
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
     <div class="scene-two__container__footer">
       <layout-bar
         [currentRoute]="currentRoute"

@@ -9,6 +9,12 @@
         <p>- ¿Sabes cómo puedo ir a mi casa?</p>
       </div>
     </ng-container>
+    <div class="scene-twelve__container__arrows">
+      <layout-inner-nav
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
     <div class="scene-twelve__container__footer">
       <layout-bar
         [currentRoute]="currentRoute"

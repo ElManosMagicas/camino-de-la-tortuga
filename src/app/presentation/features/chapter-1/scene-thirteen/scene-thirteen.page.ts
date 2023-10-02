@@ -45,7 +45,6 @@ export class SceneThirteenPage implements OnInit, AfterViewInit {
   }
 
   public onGoToNextPage(): void {
-    this._chapter1Facade.goToNextStep();
     this._utilService.navigateTo(ROUTES.MAP);
   }
   public onGoToPreviousPage(): void {
