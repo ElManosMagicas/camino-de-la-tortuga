@@ -63,6 +63,8 @@
       bottom: 0px;
       width: 100%;
       margin: 0 auto;
+      opacity: 0;
+      animation: fromBottom 1s ease-in-out 2.5s forwards;
     }
   }
 }
