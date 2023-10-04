@@ -1,9 +1,27 @@
-import { Action, createReducer } from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 import { Chapter2State } from './chapter-2.state';
 
-export const initialChapter2: Chapter2State = {};
+import * as chapter2Actions from '@store/chapter-2/chapter-2.actions';
 
-const _chapter2Reducer = createReducer(initialChapter2);
+export const initialChapter2: Chapter2State = {
+  step: 1,
+};
+
+const _chapter2Reducer = createReducer(
+  initialChapter2,
+  on(chapter2Actions.nextStep, (state) => {
+    return {
+      ...state,
+      step: state.step + 1,
+    };
+  }),
+  on(chapter2Actions.stepBack, (state) => {
+    return {
+      ...state,
+      step: state.step - 1,
+    };
+  })
+);
 
 export function Chapter2Reducers(
   state: Chapter2State | undefined,
