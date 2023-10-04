@@ -1,1 +1,40 @@
-<p>scene-one works!</p>
+<section class="scene-one">
+  <div class="scene-one__container">
+    <div class="scene-one__container__right-front-tree"></div>
+    <div class="scene-one__container__left-back-tree"></div>
+    <div class="scene-one__container__tucan"></div>
+    <div class="scene-one__container__turtle"></div>
+    <div class="scene-one__container__soundbtn"></div>
+    <ng-container>
+      <div class="scene-one__container__subtitles">
+        <p>
+          Al entrar al bosque, la tortuga {{ turtleName$ | async }} está
+          espantada porque hay muchos árboles enormes y entre las ramas
+          encuentra al tucán.
+        </p>
+      </div>
+    </ng-container>
+    <div class="scene-one__container__arrows">
+      <layout-inner-nav
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-one__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+    <!-- <audio #cap1Esc2Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>
