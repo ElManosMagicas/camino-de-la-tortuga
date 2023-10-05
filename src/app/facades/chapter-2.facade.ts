@@ -7,9 +7,11 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class Chapter2Facade {
   public step$: Observable<number>;
+  public backpack$: Observable<number>;
 
   constructor(private _store: Store) {
     this.step$ = this._store.select(chapter2Selectors.selectStep);
+    this.backpack$ = this._store.select(chapter2Selectors.selectBackpack);
   }
 
   public goToNextStep(): void {
@@ -18,5 +20,9 @@ export class Chapter2Facade {
 
   public goToPreviousStep(): void {
     this._store.dispatch(chapter2Actions.stepBack());
+  }
+
+  public increaseBackpackScore(): void {
+    this._store.dispatch(chapter2Actions.increaseBackpackScore());
   }
 }

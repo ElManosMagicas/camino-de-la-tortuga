@@ -5,6 +5,7 @@ import * as chapter2Actions from '@store/chapter-2/chapter-2.actions';
 
 export const initialChapter2: Chapter2State = {
   step: 1,
+  backpack: 1,
 };
 
 const _chapter2Reducer = createReducer(
@@ -19,6 +20,12 @@ const _chapter2Reducer = createReducer(
     return {
       ...state,
       step: state.step - 1,
+    };
+  }),
+  on(chapter2Actions.increaseBackpackScore, (state) => {
+    return {
+      ...state,
+      backpack: state.backpack + 1,
     };
   })
 );

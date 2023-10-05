@@ -1,10 +1,42 @@
 <section class="scene-six">
   <div class="scene-six__container">
-    <div class="scene-six__container__seed-right-back"></div>
-    <div class="scene-six__container__seed-left-front"></div>
-    <div class="scene-six__container__stem-back"></div>
-    <div class="scene-six__container__stem-front"></div>
-    <div class="scene-six__container__backpack"></div>
+    <div
+      class="scene-six__container__seed-right-back"
+      [ngClass]="{'clicked': divClicked[0]}"
+      (click)="divClicked[0] ? null : onIncreaseBackpackScore(0)"
+    ></div>
+    <div
+      class="scene-six__container__seed-left-front"
+      [ngClass]="{'clicked': divClicked[1]}"
+      (click)="divClicked[1] ? null : onIncreaseBackpackScore(1)"
+    ></div>
+    <div
+      class="scene-six__container__stem-back"
+      [ngClass]="{'clicked': divClicked[2]}"
+      (click)="divClicked[2] ? null : onIncreaseBackpackScore(2)"
+    ></div>
+    <div
+      class="scene-six__container__stem-front"
+      [ngClass]="{'clicked': divClicked[3]}"
+      (click)="divClicked[3] ? null : onIncreaseBackpackScore(3)"
+    ></div>
+    <ng-container *ngIf="backpack$ | async as backpack">
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_1">
+        <div class="scene-six__container__backpack"></div>
+      </ng-container>
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_2">
+        <div class="scene-six__container__backpack state-2"></div>
+      </ng-container>
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_3">
+        <div class="scene-six__container__backpack state-3"></div>
+      </ng-container>
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_4">
+        <div class="scene-six__container__backpack state-4"></div>
+      </ng-container>
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_5">
+        <div class="scene-six__container__backpack state-5"></div>
+      </ng-container>
+    </ng-container>
     <ng-container>
       <div class="scene-six__container__subtitles">
         <p>
@@ -29,9 +61,9 @@
         (repeatSceneEvent)="onRepeatScene()"
       ></layout-bar>
     </div>
-    <!-- <audio #cap2Esc2Narrator>
+    <!-- <audio #cap2Esc6Narrator>
       <source
-        [src]="CONST.AUDIO.NARRATOR_CHAPTER_2_SCENE_2"
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_2_SCENE_6"
         type="audio/mpeg"
       />
     </audio> -->

@@ -30,6 +30,13 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0s forwards;
+      &.clicked {
+        top: 316px;
+        right: 274px;
+        width: 218px;
+        height: 167px;
+        background: url($elements-chapter-2-scene-6-seed-right-back-on);
+      }
     }
     &__seed-left-front {
       position: absolute;
@@ -44,6 +51,13 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0.5s forwards;
+      &.clicked {
+        bottom: 104px;
+        left: 30px;
+        width: 255px;
+        height: 174px;
+        background: url($elements-chapter-2-scene-6-seed-left-front-on);
+      }
     }
     &__stem-back {
       position: absolute;
@@ -58,6 +72,13 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 1s forwards;
+      &.clicked {
+        top: 292px;
+        left: 248px;
+        width: 162px;
+        height: 149px;
+        background: url($elements-chapter-2-scene-6-stem-back-on);
+      }
     }
     &__stem-front {
       position: absolute;
@@ -72,6 +93,13 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 1.5s forwards;
+      &.clicked {
+        bottom: 82px;
+        right: 28px;
+        width: 223px;
+        height: 228px;
+        background: url($elements-chapter-2-scene-6-stem-front-on);
+      }
     }
     &__backpack {
       position: absolute;
@@ -82,12 +110,24 @@
       z-index: 5;
       width: 273px;
       height: 319px;
-      opacity: 0;
+      // opacity: 0;
       background: url($elements-chapter-2-scene-6-backpack-state-1);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      // animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      &.state-2 {
+        background: url($elements-chapter-2-scene-6-backpack-state-2);
+      }
+      &.state-3 {
+        background: url($elements-chapter-2-scene-6-backpack-state-3);
+      }
+      &.state-4 {
+        background: url($elements-chapter-2-scene-6-backpack-state-4);
+      }
+      &.state-5 {
+        background: url($elements-chapter-2-scene-6-backpack-state-5);
+      }
     }
     &__subtitles {
       position: absolute;
