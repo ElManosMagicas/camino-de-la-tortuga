@@ -1,1 +1,37 @@
-<p>scene-four works!</p>
+<section class="scene-four">
+  <div class="scene-four__container">
+    <div class="scene-four__container__tucan"></div>
+    <div class="scene-four__container__turtle"></div>
+    <div class="scene-four__container__logs"></div>
+    <ng-container>
+      <div class="scene-four__container__subtitles">
+        <p>
+          ─ Yo prefiero comer tallos y semillas. ¡Son deliciosos y llenan mi
+          pancita!
+        </p>
+      </div>
+    </ng-container>
+    <div class="scene-four__container__arrows">
+      <layout-inner-nav
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-four__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+    <!-- <audio #cap2Esc2Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_2_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>

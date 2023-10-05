@@ -18,7 +18,7 @@ import { Observable } from 'rxjs';
   templateUrl: './scene-three.page.html',
   styleUrls: ['./scene-three.page.scss'],
 })
-export class SceneThreePage {
+export class SceneThreePage implements OnInit, AfterViewInit {
   @ViewChild('cap2Esc3Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;

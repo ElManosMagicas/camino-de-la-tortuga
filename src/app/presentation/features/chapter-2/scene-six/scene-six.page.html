@@ -1,1 +1,39 @@
-<p>scene-six works!</p>
+<section class="scene-six">
+  <div class="scene-six__container">
+    <div class="scene-six__container__seed-right-back"></div>
+    <div class="scene-six__container__seed-left-front"></div>
+    <div class="scene-six__container__stem-back"></div>
+    <div class="scene-six__container__stem-front"></div>
+    <div class="scene-six__container__backpack"></div>
+    <ng-container>
+      <div class="scene-six__container__subtitles">
+        <p>
+          Recolecta las semillas y las ramas que le gustan a la tortuga hasta
+          que la mochila esté llena.
+        </p>
+      </div>
+    </ng-container>
+    <!-- <div class="scene-six__container__arrows">
+      <layout-inner-nav
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div> -->
+    <div class="scene-six__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+    <!-- <audio #cap2Esc2Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_2_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>

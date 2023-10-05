@@ -1,1 +1,36 @@
-<p>scene-five works!</p>
+<section class="scene-five">
+  <div class="scene-five__container">
+    <div class="scene-five__container__tucan"></div>
+    <div class="scene-five__container__turtle"></div>
+    <ng-container>
+      <div class="scene-five__container__subtitles">
+        <p>
+          ─ Ya veo, pues yo no como tallos ni semillas. No sé de dónde podrías
+          venir. Será mejor que visites otro lugar.
+        </p>
+      </div>
+    </ng-container>
+    <div class="scene-five__container__arrows">
+      <layout-inner-nav
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-five__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+    <!-- <audio #cap2Esc2Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_2_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>
