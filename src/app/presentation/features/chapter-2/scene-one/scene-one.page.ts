@@ -9,7 +9,7 @@ import {
 import { APP_CONSTANTS as CONST } from '@app/app.constants';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { AppFacade } from '@app/facades/app.facade';
-import { Chapter1Facade } from '@app/facades/chapter-1.facade';
+import { Chapter2Facade } from '@app/facades/chapter-2.facade';
 import { UtilService } from '@app/services/util.service';
 import { Observable } from 'rxjs';
 
@@ -29,7 +29,7 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   constructor(
     private _renderer: Renderer2,
     private _appFacade: AppFacade,
-    private _chapter1Facade: Chapter1Facade,
+    private _chapter2Facade: Chapter2Facade,
     private _utilService: UtilService
   ) {}
   ngOnInit(): void {
@@ -51,7 +51,7 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   }
 
   public onGoToNextPage(): void {
-    this._chapter1Facade.goToNextStep();
+    this._chapter2Facade.goToNextStep();
     this._utilService.navigateTo(ROUTES.CHAPTER_2_SCENE_2);
   }
   public onGoToPreviousPage(): void {
