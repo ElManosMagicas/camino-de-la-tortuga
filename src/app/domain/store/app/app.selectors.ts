@@ -7,3 +7,8 @@ export const selectTurtleName = createSelector(
   getAppFeatureState,
   (state: AppState) => state.turtleName
 );
+
+export const selectModalShow = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.modalShow
+);

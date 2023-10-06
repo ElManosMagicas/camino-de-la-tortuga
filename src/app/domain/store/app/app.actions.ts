@@ -6,3 +6,8 @@ export const setTurtleName = createAction(
   '[App] Set Turtle Name',
   props<{ turtleName: string }>()
 );
+
+export const updateModalShow = createAction(
+  '[App] Update Modal Config',
+  props<{ modalShow: boolean }>()
+);
