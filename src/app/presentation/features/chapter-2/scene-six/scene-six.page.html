@@ -69,3 +69,10 @@
     </audio> -->
   </div>
 </section>
+
+<ng-template #successChapter2Activity>
+  <success-activity-chapter-two
+    [turtleName]="turtleName$ | async"
+    (goToMapEvent)="onGoToMap()"
+  ></success-activity-chapter-two>
+</ng-template>

@@ -27,6 +27,12 @@ const _chapter2Reducer = createReducer(
       ...state,
       backpack: state.backpack + 1,
     };
+  }),
+  on(chapter2Actions.resetBackpackScore, (state) => {
+    return {
+      ...state,
+      backpack: 1,
+    };
   })
 );
 

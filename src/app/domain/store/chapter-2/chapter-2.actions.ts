@@ -11,3 +11,7 @@ export const getCurrentRoute = createAction('[Chapter-2] Get Current Route');
 export const increaseBackpackScore = createAction(
   '[Chapter - 2] Increase Backpack Score'
 );
+
+export const resetBackpackScore = createAction(
+  '[Chapter - 2] Reset Backpack Score'
+);

@@ -25,4 +25,8 @@ export class Chapter2Facade {
   public increaseBackpackScore(): void {
     this._store.dispatch(chapter2Actions.increaseBackpackScore());
   }
+
+  public resetBackpackScore(): void {
+    this._store.dispatch(chapter2Actions.resetBackpackScore());
+  }
 }
