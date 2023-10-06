@@ -20,6 +20,7 @@ import { Observable } from 'rxjs';
 })
 export class SceneOnePage implements OnInit, AfterViewInit {
   @ViewChild('cap1Esc2Narrator') audioPlayer: ElementRef;
+  @ViewChild('cap2Esc1Tucan') tucanPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
@@ -61,5 +62,12 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   public onGoToBackpack() {}
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_2_SCENE_1);
+  }
+
+  public onPlayTucanSound(): void {
+    // const tucanElement: HTMLAudioElement = this.tucanPlayer.nativeElement;
+    // if (tucanElement.paused) {
+    //   tucanElement.play();
+    // }
   }
 }

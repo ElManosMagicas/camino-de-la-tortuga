@@ -4,7 +4,11 @@
     <div class="scene-one__container__left-back-tree"></div>
     <div class="scene-one__container__tucan"></div>
     <div class="scene-one__container__turtle"></div>
-    <div class="scene-one__container__soundbtn"></div>
+    <div class="scene-one__container__soundbtn">
+      <layout-sound-button
+        (soundEvent)="onPlayTucanSound()"
+      ></layout-sound-button>
+    </div>
     <ng-container>
       <div class="scene-one__container__subtitles">
         <p>
@@ -31,6 +35,12 @@
       ></layout-bar>
     </div>
     <!-- <audio #cap1Esc2Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+    <!-- <audio #cap2Esc1Tucan>
       <source
         [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_2"
         type="audio/mpeg"

@@ -75,11 +75,11 @@
     }
     &__soundbtn {
       position: absolute;
-      bottom: 80px;
-      right: 120px;
+      top: 184px;
+      left: 350px;
       z-index: 5;
-      width: 231px;
-      height: 224px;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 2.5s forwards;
     }
     &__subtitles {
       position: absolute;
