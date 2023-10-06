@@ -1,0 +1,37 @@
+@import "global";
+@import "media-querys";
+@import "keyframes";
+
+.modal-base {
+  animation: modalOpacityBackgroundIn 400ms ease-in;
+  backdrop-filter: blur(1px);
+  background-color: rgba(55, 55, 55, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9999;
+  &.close-in-progress {
+    animation: modalOpacityBackgroundOut 400ms ease-out;
+  }
+
+  .modal-content {
+    align-self: center;
+    background: $color-primary-blue;
+    border-radius: 10px;
+    box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    animation: modalEasyInBottom 400ms ease-in;
+    &.close-in-progress {
+      animation: modalEasyOutBottom 400ms ease-in;
+    }
+    @include to(mobile-l) {
+      width: 90vw;
+    }
+  }
+}

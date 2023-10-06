@@ -79,3 +79,46 @@
     opacity: 1;
   }
 }
+
+@keyframes modalOpacityBackgroundIn {
+  0% {
+    background-color: rgba(55, 55, 55, 0);
+  }
+  100% {
+    background-color: rgba(55, 55, 55, 0.5);
+  }
+}
+
+@keyframes modalEasyInBottom {
+  0% {
+    transform: translate(0, 1200px);
+    -webkit-transform: translate(0, 1200px);
+    -moz-transform: translate(0, 1200px);
+    -ms-transform: translate(0, 1200px);
+    -o-transform: translate(0, 1200px);
+  }
+  100% {
+    transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+  }
+}
+
+@keyframes modalEasyOutBottom {
+  0% {
+    transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0, 1500px);
+    -webkit-transform: translate(0, 1500px);
+    -moz-transform: translate(0, 1500px);
+    -ms-transform: translate(0, 1500px);
+    -o-transform: translate(0, 1500px);
+  }
+}

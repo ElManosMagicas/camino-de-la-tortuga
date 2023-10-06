@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { LayoutBarComponent } from './components/layout-bar/layout-bar.component';
 import { SplashComponent } from './components/splash/splash.component';
 import { InnerNavComponent } from './components/inner-nav/inner-nav.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 const PIPES = [];
 
@@ -13,6 +14,7 @@ const COMPONENTS = [
   LayoutBarComponent,
   InnerNavComponent,
   SplashComponent,
+  ModalComponent,
 ];
 
 @NgModule({
