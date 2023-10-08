@@ -62,12 +62,6 @@ const routes: Routes = [
         (m) => m.SceneEightModule
       ),
   },
-  {
-    path: 'escena-9',
-    component: BaseComponent,
-    loadChildren: () =>
-      import('./scene-nine/scene-nine.module').then((m) => m.SceneNineModule),
-  },
 ];
 
 @NgModule({
