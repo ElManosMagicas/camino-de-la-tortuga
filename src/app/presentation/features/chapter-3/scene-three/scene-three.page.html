@@ -1,1 +1,42 @@
-<p>scene-three works!</p>
+<section class="scene-three">
+  <div class="scene-three__container">
+    <div class="scene-three__container__log"></div>
+    <div class="scene-three__container__turtle"></div>
+    <div class="scene-three__container__snake"></div>
+    <ng-container>
+      <div class="scene-three__container__subtitles">
+        <p>
+          -Buenos días o tardes, para mí todavía es muy temprano para salir.
+        </p>
+      </div>
+    </ng-container>
+    <div class="scene-three__container__arrows">
+      <layout-inner-nav
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-three__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+    <!-- <audio #cap3Esc3Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_3_SCENE_3"
+        type="audio/mpeg"
+      />
+    </audio> -->
+    <!-- <audio #cap2Esc1Tucan>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>
