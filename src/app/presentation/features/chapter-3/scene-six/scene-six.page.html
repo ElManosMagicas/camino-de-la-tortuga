@@ -1,1 +1,45 @@
-<p>scene-six works!</p>
+<section class="scene-six">
+  <div class="scene-six__container">
+    <div class="scene-six__container__log"></div>
+    <div class="scene-six__container__turtle"></div>
+    <div class="scene-six__container__snake"></div>
+    <div class="scene-six__container__globe"></div>
+    <ng-container>
+      <div class="scene-six__container__subtitles">
+        <p>
+          ─ No, no sé qué es una madriguera, me gustan los lugares húmedos, de
+          pronto cerca de un río o un lago… ojalá con un clima más fresco porque
+          aquí hace mucho calor.
+        </p>
+      </div>
+    </ng-container>
+    <div class="scene-six__container__arrows">
+      <layout-inner-nav
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-six__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+    <!-- <audio #cap3Esc3Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_3_SCENE_3"
+        type="audio/mpeg"
+      />
+    </audio> -->
+    <!-- <audio #cap2Esc1Tucan>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>
