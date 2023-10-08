@@ -34,7 +34,6 @@ export const APP_ROUTES = {
   CHAPTER_3_SCENE_6: '/capitulo-3/escena-6',
   CHAPTER_3_SCENE_7: '/capitulo-3/escena-7',
   CHAPTER_3_SCENE_8: '/capitulo-3/escena-8',
-  CHAPTER_3_SCENE_9: '/capitulo-3/escena-9',
   CHAPTER_4: '/capitulo-4',
   CHAPTER_4_SCENE_1: '/capitulo-4/escena-1',
   CHAPTER_4_SCENE_2: '/capitulo-4/escena-2',

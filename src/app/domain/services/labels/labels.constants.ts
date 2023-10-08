@@ -23,6 +23,13 @@ export const LABELS_CONSTANTS = {
     CHAPTER_2_SCENE_6: 'Bosque - Escena 6',
     //CHAPTER 3
     CHAPTER_3_SCENE_1: 'Desierto - Escena 1',
+    CHAPTER_3_SCENE_2: 'Desierto - Escena 2',
+    CHAPTER_3_SCENE_3: 'Desierto - Escena 3',
+    CHAPTER_3_SCENE_4: 'Desierto - Escena 4',
+    CHAPTER_3_SCENE_5: 'Desierto - Escena 5',
+    CHAPTER_3_SCENE_6: 'Desierto - Escena 6',
+    CHAPTER_3_SCENE_7: 'Desierto - Escena 7',
+    CHAPTER_3_SCENE_8: 'Desierto - Escena 8',
     //CHAPTER 4
     CHAPTER_4_SCENE_1: 'Llanos - Escena 1',
     //CHAPTER 5
