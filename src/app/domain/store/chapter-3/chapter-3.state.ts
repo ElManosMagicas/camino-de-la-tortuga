@@ -1,1 +1,4 @@
-export interface Chapter3State {}
+export interface Chapter3State {
+  step: number;
+  puzzle: number;
+}
