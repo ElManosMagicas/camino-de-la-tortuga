@@ -1,1 +1,41 @@
-<p>scene-eight works!</p>
+<section class="scene-eight">
+  <div class="scene-eight__container">
+    <div
+      class="scene-eight__container__piece-1"
+      [ngClass]="currentBackgroundClass"
+      (click)="onToggleBackground()"
+    ></div>
+
+    <ng-container>
+      <div class="scene-eight__container__subtitles">
+        <p>
+          Presiona las fichas para girarlas y armar la imagen del río, hogar de
+          la tortuga {{ turtleName$ | async }}.
+        </p>
+      </div>
+    </ng-container>
+    <div class="scene-eight__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+    <!-- <audio #cap2Esc6Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_2_SCENE_6"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>
+
+<ng-template #successChapter2Activity>
+  <success-activity-chapter-two
+    [turtleName]="turtleName$ | async"
+    (goToMapEvent)="onGoToMap()"
+  ></success-activity-chapter-two>
+</ng-template>

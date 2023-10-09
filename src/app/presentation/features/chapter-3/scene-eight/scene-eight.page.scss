@@ -1,0 +1,85 @@
+@import "global";
+@import "media-querys";
+@import "backgrounds";
+@import "elements";
+@import "gifs";
+@import "characters";
+@import "keyframes";
+
+.scene-eight {
+  width: 100vw;
+  height: 100vh;
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    &__piece-1 {
+      position: absolute;
+      top: 80px;
+      left: 0px;
+      z-index: 1;
+      width: 398px;
+      height: 398px;
+      opacity: 0;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      &.pos1 {
+        background: url($elements-chapter-3-scene-8-piece-1-pos-1);
+      }
+      &.pos2 {
+        background: url($elements-chapter-3-scene-8-piece-1-pos-2);
+      }
+      &.pos3 {
+        background: url($elements-chapter-3-scene-8-piece-1-pos-3);
+      }
+      &.pos4 {
+        background: url($elements-chapter-3-scene-8-piece-1-pos-4);
+      }
+    }
+    &__subtitles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: $color-primary-black;
+      opacity: 0;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      width: 100%;
+      height: 74px;
+      animation: appear 1s ease-in-out 3s forwards;
+      p {
+        color: $color-primary-white;
+        font-family: $letter-for-learners;
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 25px;
+        text-align: center;
+        margin: 12px 0px;
+        padding: 0 60px;
+      }
+    }
+    &__arrows {
+      z-index: 990;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -30px;
+      width: 100%;
+      opacity: 0;
+      animation: fromBottom 1s ease-in-out 2s forwards;
+    }
+    &__footer {
+      z-index: 1000;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
