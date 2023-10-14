@@ -7,6 +7,7 @@ import { SplashComponent } from './components/splash/splash.component';
 import { InnerNavComponent } from './components/inner-nav/inner-nav.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { SoundButtonComponent } from './components/sound-button/sound-button.component';
+import { SubtitlesComponent } from './components/subtitles/subtitles.component';
 
 const PIPES = [];
 
@@ -17,6 +18,7 @@ const COMPONENTS = [
   SplashComponent,
   ModalComponent,
   SoundButtonComponent,
+  SubtitlesComponent,
 ];
 
 @NgModule({
