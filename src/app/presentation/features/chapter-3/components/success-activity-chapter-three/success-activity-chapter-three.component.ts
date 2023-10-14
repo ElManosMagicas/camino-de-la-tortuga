@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'success-activity-chapter-two',
-  templateUrl: './success-activity-chapter-two.component.html',
-  styleUrls: ['./success-activity-chapter-two.component.scss'],
+  selector: 'success-activity-chapter-three',
+  templateUrl: './success-activity-chapter-three.component.html',
+  styleUrls: ['./success-activity-chapter-three.component.scss'],
 })
-export class SuccessActivityChapterTwoComponent implements OnInit {
+export class SuccessActivityChapterThreeComponent implements OnInit {
   @Input() turtleName: string;
 
   @Output() goToMapEvent = new EventEmitter<void>();
