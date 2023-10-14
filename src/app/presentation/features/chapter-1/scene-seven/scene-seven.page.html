@@ -7,10 +7,7 @@
     <div class="scene-seven__container__cuyo"></div>
     <ng-container>
       <div class="scene-seven__container__subtitles">
-        <p>
-          El cuy se acerca a la tortuga {{ turtleName$ | async }} y nota que
-          ella está incómoda en este lugar.
-        </p>
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-seven__container__arrows">

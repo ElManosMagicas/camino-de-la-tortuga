@@ -11,11 +11,7 @@
     </div>
     <ng-container>
       <div class="scene-one__container__subtitles">
-        <p>
-          Al entrar al bosque, la tortuga {{ turtleName$ | async }} está
-          espantada porque hay muchos árboles enormes y entre las ramas
-          encuentra al tucán.
-        </p>
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-one__container__arrows">

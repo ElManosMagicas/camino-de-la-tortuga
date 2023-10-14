@@ -6,10 +6,7 @@
     <div class="scene-eleven__container__turtle"></div>
     <ng-container>
       <div class="scene-eleven__container__subtitles">
-        <p>
-          La tortuga {{ turtleName$ | async }} mira hacia todos lados y le
-          pregunta agitada al cuy:
-        </p>
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-eleven__container__arrows">

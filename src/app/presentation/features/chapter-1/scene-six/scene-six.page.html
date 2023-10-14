@@ -7,10 +7,7 @@
     <div class="scene-six__container__cuyo"></div>
     <ng-container>
       <div class="scene-six__container__subtitles">
-        <p>
-          El cuy ve a un animal de color extraño, es la tortuga {{ turtleName$ |
-          async }}.
-        </p>
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-six__container__arrows">
