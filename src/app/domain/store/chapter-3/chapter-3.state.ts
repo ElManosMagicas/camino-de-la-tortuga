@@ -1,4 +1,9 @@
 export interface Chapter3State {
   step: number;
-  puzzle: number;
+  isPieceOne: boolean;
+  isPieceTwo: boolean;
+  isPieceThree: boolean;
+  isPieceFour: boolean;
+  isPieceFive: boolean;
+  isPieceSix: boolean;
 }

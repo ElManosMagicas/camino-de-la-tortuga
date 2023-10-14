@@ -8,7 +8,32 @@ export const selectStep = createSelector(
   (state: Chapter3State) => state.step
 );
 
-export const selectPuzzle = createSelector(
+export const selectPieceOne = createSelector(
   getChapter3FeatureState,
-  (state: Chapter3State) => state.puzzle
+  (state: Chapter3State) => state.isPieceOne
+);
+
+export const selectPieceTwo = createSelector(
+  getChapter3FeatureState,
+  (state: Chapter3State) => state.isPieceTwo
+);
+
+export const selectPieceThree = createSelector(
+  getChapter3FeatureState,
+  (state: Chapter3State) => state.isPieceThree
+);
+
+export const selectPieceFour = createSelector(
+  getChapter3FeatureState,
+  (state: Chapter3State) => state.isPieceFour
+);
+
+export const selectPieceFive = createSelector(
+  getChapter3FeatureState,
+  (state: Chapter3State) => state.isPieceFive
+);
+
+export const selectPieceSix = createSelector(
+  getChapter3FeatureState,
+  (state: Chapter3State) => state.isPieceSix
 );

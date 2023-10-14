@@ -5,7 +5,12 @@ import * as chapter3Actions from '@store/chapter-3/chapter-3.actions';
 
 export const initialChapter3: Chapter3State = {
   step: 1,
-  puzzle: 0,
+  isPieceOne: false,
+  isPieceTwo: false,
+  isPieceThree: false,
+  isPieceFour: false,
+  isPieceFive: false,
+  isPieceSix: false,
 };
 
 const _chapter3Reducer = createReducer(
@@ -22,16 +27,40 @@ const _chapter3Reducer = createReducer(
       step: state.step - 1,
     };
   }),
-  on(chapter3Actions.increasePuzzleScore, (state) => {
+  on(chapter3Actions.setPieceOne, (state, { isPieceOne }) => {
     return {
       ...state,
-      puzzle: state.puzzle + 1,
+      isPieceOne,
     };
   }),
-  on(chapter3Actions.resetPuzzleScore, (state) => {
+  on(chapter3Actions.setPieceTwo, (state, { isPieceTwo }) => {
     return {
       ...state,
-      puzzle: 1,
+      isPieceTwo,
+    };
+  }),
+  on(chapter3Actions.setPieceThree, (state, { isPieceThree }) => {
+    return {
+      ...state,
+      isPieceThree,
+    };
+  }),
+  on(chapter3Actions.setPieceFour, (state, { isPieceFour }) => {
+    return {
+      ...state,
+      isPieceFour,
+    };
+  }),
+  on(chapter3Actions.setPieceFive, (state, { isPieceFive }) => {
+    return {
+      ...state,
+      isPieceFive,
+    };
+  }),
+  on(chapter3Actions.setPieceSix, (state, { isPieceSix }) => {
+    return {
+      ...state,
+      isPieceSix,
     };
   })
 );
