@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { APP_CONSTANTS as CONST } from '@app/app.constants';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
-import { EBACKPACK } from '@app/core/enums/scene-6.enum';
+import { EBACKPACK } from '@app/core/enums/chapter-2-scene-6.enum';
 import { IContextModal } from '@app/core/models/modal.model';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter3Facade } from '@app/facades/chapter-3.facade';
