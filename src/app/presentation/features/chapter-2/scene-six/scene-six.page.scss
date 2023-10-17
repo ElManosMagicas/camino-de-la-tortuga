@@ -30,6 +30,13 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0s forwards;
+      &:hover {
+        top: 316px;
+        right: 274px;
+        width: 218px;
+        height: 167px;
+        background: url($elements-chapter-2-scene-6-seed-right-back-on);
+      }
       &.clicked {
         top: 316px;
         right: 274px;
@@ -51,6 +58,13 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0.5s forwards;
+      &:hover {
+        bottom: 104px;
+        left: 30px;
+        width: 255px;
+        height: 174px;
+        background: url($elements-chapter-2-scene-6-seed-left-front-on);
+      }
       &.clicked {
         bottom: 104px;
         left: 30px;
@@ -72,6 +86,13 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 1s forwards;
+      &:hover {
+        top: 292px;
+        left: 248px;
+        width: 162px;
+        height: 149px;
+        background: url($elements-chapter-2-scene-6-stem-back-on);
+      }
       &.clicked {
         top: 292px;
         left: 248px;
@@ -93,6 +114,13 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 1.5s forwards;
+      &:hover {
+        bottom: 82px;
+        right: 28px;
+        width: 223px;
+        height: 228px;
+        background: url($elements-chapter-2-scene-6-stem-front-on);
+      }
       &.clicked {
         bottom: 82px;
         right: 28px;
