@@ -35,6 +35,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
   public turtleName: string;
   public divClicked: boolean[] = [false, false, false];
 
+  public turtleName$: Observable<string>;
   public perfectDay$: Observable<number>;
 
   public perfectDaySubscription$: Subscription;
@@ -47,6 +48,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.turtleName$ = this._appFacade.turtleName$;
     this.perfectDay$ = this._chapter4Facade.perfectDay$;
     this.perfectDaySubscription$ = this.perfectDay$.subscribe((score) => {
       score === EPERFECT_DAY.STATE_3
