@@ -46,6 +46,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./scene-six/scene-six.module').then((m) => m.SceneSixModule),
   },
+  {
+    path: 'escena-7',
+    component: BaseComponent,
+    loadChildren: () =>
+      import('./scene-seven/scene-seven.module').then(
+        (m) => m.SceneSevenModule
+      ),
+  },
 ];
 
 @NgModule({
