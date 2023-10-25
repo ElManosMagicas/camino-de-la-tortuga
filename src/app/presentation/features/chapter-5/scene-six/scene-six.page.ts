@@ -71,16 +71,16 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
 
   public onGoToNextPage(): void {
     this._chapter5Facade.goToNextStep();
-    this._utilService.navigateTo(ROUTES.CHAPTER_5_SCENE_6);
+    this._utilService.navigateTo(ROUTES.CHAPTER_5_SCENE_7);
   }
   public onGoToPreviousPage(): void {
     this._chapter5Facade.goToPreviousStep();
-    this._utilService.navigateTo(ROUTES.CHAPTER_5_SCENE_4);
+    this._utilService.navigateTo(ROUTES.CHAPTER_5_SCENE_5);
   }
   public onGoToConfiguration() {}
   public onGoToBackpack() {}
   public onRepeatScene() {
-    this._utilService.redirectToUrl(ROUTES.CHAPTER_5_SCENE_5);
+    this._utilService.redirectToUrl(ROUTES.CHAPTER_5_SCENE_6);
   }
 
   public onPlayTucanSound(): void {
