@@ -10,7 +10,6 @@ import {
 } from '@angular/core';
 import { APP_CONSTANTS as CONST } from '@app/app.constants';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
-import { SUBTITLES_CHAPTER_4 } from '../chapter-4.subtitles';
 import { EPERFECT_DAY } from '@app/core/enums/chapter-4-scene-6.enum';
 import { AppFacade } from '@app/facades/app.facade';
 import { UtilService } from '@app/services/util.service';
