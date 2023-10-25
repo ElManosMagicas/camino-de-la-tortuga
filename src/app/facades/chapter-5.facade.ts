@@ -11,7 +11,9 @@ export class Chapter5Facade {
 
   constructor(private _store: Store) {
     this.step$ = this._store.select(chapter5Selectors.selectStep);
-    this.turtleHome$ = this._store.select(chapter5Selectors.selectStep);
+    this.turtleHome$ = this._store.select(
+      chapter5Selectors.selectTurtleHomeScore
+    );
   }
 
   public goToNextStep(): void {
