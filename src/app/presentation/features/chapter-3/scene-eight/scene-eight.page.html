@@ -8,6 +8,14 @@
         </p>
       </div>
     </ng-container>
+    <div class="scene-seven__container__arrows">
+      <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
     <div class="scene-eight__container__reference"></div>
     <div class="scene-eight__container__box">
       <div class="scene-eight__container__box__top">

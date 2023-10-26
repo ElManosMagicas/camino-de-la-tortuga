@@ -23,6 +23,8 @@ export class SceneTenPage implements OnInit, AfterViewInit {
   public CONST = CONST;
   public currentRoute: string = '';
   public turtleName: string;
+  public showNextButton: boolean = true;
+  public showPreviousButton: boolean = true;
 
   constructor(
     private _chapter1Facade: Chapter1Facade,

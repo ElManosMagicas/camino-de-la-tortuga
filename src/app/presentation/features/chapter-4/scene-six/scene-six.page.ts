@@ -32,6 +32,8 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
   public EPERFECT_DAY = EPERFECT_DAY;
   public currentRoute: string = '';
   public turtleName: string;
+  public showNextButton: boolean = false;
+  public showPreviousButton: boolean = true;
   public divClicked: boolean[] = [false, false, false];
 
   public turtleName$: Observable<string>;

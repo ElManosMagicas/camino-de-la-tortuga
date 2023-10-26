@@ -14,6 +14,8 @@ import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 export class SceneElevenPage implements OnInit, OnDestroy {
   public currentRoute: string = '';
   public turtleName: string;
+  public showNextButton: boolean = true;
+  public showPreviousButton: boolean = true;
 
   public turtleName$: Observable<string>;
 

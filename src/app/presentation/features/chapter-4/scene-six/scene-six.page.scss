@@ -171,5 +171,15 @@
         padding: 0 60px;
       }
     }
+    &__arrows {
+      z-index: 990;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -30px;
+      width: 100%;
+      opacity: 0;
+      animation: fromBottom 1s ease-in-out 3s forwards;
+    }
   }
 }

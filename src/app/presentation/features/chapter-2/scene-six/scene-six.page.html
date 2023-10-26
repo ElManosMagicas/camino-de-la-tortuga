@@ -45,12 +45,14 @@
         </p>
       </div>
     </ng-container>
-    <!-- <div class="scene-six__container__arrows">
+    <div class="scene-six__container__arrows">
       <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
         (goToNextPageEvent)="onGoToNextPage()"
         (goToPreviousPageEvent)="onGoToPreviousPage()"
       ></layout-inner-nav>
-    </div> -->
+    </div>
     <div class="scene-six__container__footer">
       <layout-bar
         [currentRoute]="currentRoute"

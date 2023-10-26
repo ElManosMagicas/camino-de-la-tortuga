@@ -31,6 +31,8 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
   public CONST = CONST;
   public EBACKPACK = EBACKPACK;
   public currentRoute: string = '';
+  public showNextButton: boolean = false;
+  public showPreviousButton: boolean = true;
   public divClicked: boolean[] = [false, false, false, false];
 
   public turtleName$: Observable<string>;

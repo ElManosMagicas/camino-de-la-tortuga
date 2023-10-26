@@ -23,6 +23,8 @@ export class SceneFourPage implements OnInit, AfterViewInit {
   public CONST = CONST;
   public currentRoute: string = '';
   public turtleName: string;
+  public showNextButton: boolean = true;
+  public showPreviousButton: boolean = true;
 
   constructor(
     private _renderer: Renderer2,

@@ -12,6 +12,8 @@ import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 export class SceneTwelvePage implements OnInit {
   public currentRoute: string = '';
   public turtleName: string;
+  public showNextButton: boolean = true;
+  public showPreviousButton: boolean = true;
 
   constructor(
     private _chapter1Facade: Chapter1Facade,
