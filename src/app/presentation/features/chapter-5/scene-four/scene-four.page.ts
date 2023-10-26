@@ -32,6 +32,8 @@ export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
   public EPERFECT_DAY = EPERFECT_DAY;
   public currentRoute: string = '';
   public turtleName: string;
+  public showNextButton: boolean = false;
+  public showPreviousButton: boolean = true;
   public piecesClicked: boolean[] = [false, false, false];
   public isDottedEnabled: boolean = false;
   public dottedClicked: boolean[] = [false, false, false];
