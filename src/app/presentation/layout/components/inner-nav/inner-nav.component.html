@@ -1,11 +1,19 @@
 <div class="inner-nav">
-  <button class="inner-nav__btn" (click)="onGoToPreviousPage()">
+  <button
+    class="inner-nav__btn"
+    (click)="onGoToPreviousPage()"
+    *ngIf="showPreviousButton"
+  >
     <img
       src="/assets/icons/btn-retroceder-dentro-escena.svg"
       alt="Botón Retroceder"
     />
   </button>
-  <button class="inner-nav__btn" (click)="onGoToNextPage()">
+  <button
+    class="inner-nav__btn"
+    (click)="onGoToNextPage()"
+    *ngIf="showNextButton"
+  >
     <img
       src="/assets/icons/btn-avanzar-dentro-escena.svg"
       alt="Botón Avanzar"

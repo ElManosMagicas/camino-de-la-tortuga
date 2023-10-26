@@ -32,6 +32,18 @@ export const LABELS_CONSTANTS = {
     CHAPTER_3_SCENE_8: 'Desierto - Escena 8',
     //CHAPTER 4
     CHAPTER_4_SCENE_1: 'Llanos - Escena 1',
+    CHAPTER_4_SCENE_2: 'Llanos - Escena 2',
+    CHAPTER_4_SCENE_3: 'Llanos - Escena 3',
+    CHAPTER_4_SCENE_4: 'Llanos - Escena 4',
+    CHAPTER_4_SCENE_5: 'Llanos - Escena 5',
+    CHAPTER_4_SCENE_6: 'Llanos - Escena 6',
     //CHAPTER 5
+    CHAPTER_5_SCENE_1: 'Río - Escena 1',
+    CHAPTER_5_SCENE_2: 'Río - Escena 2',
+    CHAPTER_5_SCENE_3: 'Río - Escena 3',
+    CHAPTER_5_SCENE_4: 'Río - Escena 4',
+    CHAPTER_5_SCENE_5: 'Río - Escena 5',
+    CHAPTER_5_SCENE_6: 'Río - Escena 6',
+    CHAPTER_5_SCENE_7: 'Río - Escena 7',
   },
 };

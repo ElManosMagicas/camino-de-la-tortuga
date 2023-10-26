@@ -1,1 +1,44 @@
-<p>scene-one works!</p>
+<section class="scene-one">
+  <div class="scene-one__container">
+    <div class="scene-one__container__right-after-turtle"></div>
+    <div class="scene-one__container__left-after-turtle"></div>
+    <div class="scene-one__container__right-before-turtle"></div>
+    <div class="scene-one__container__left-before-turtle"></div>
+    <div class="scene-one__container__main-turtle"></div>
+    <ng-container>
+      <div class="scene-one__container__subtitles">
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
+      </div>
+    </ng-container>
+    <div class="scene-one__container__arrows">
+      <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-one__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+    <!-- <audio #cap1Esc2Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+    <!-- <audio #cap2Esc1Tucan>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>

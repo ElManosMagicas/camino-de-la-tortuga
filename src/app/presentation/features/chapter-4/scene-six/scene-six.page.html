@@ -1,1 +1,59 @@
-<p>scene-six works!</p>
+<section class="scene-six">
+  <div class="scene-six__container">
+    <ng-container>
+      <div class="scene-six__container__subtitles">
+        <p>
+          Construye un día perfecto. Selecciona los elementos que
+          <b>NO</b> hacen parte de un día soleado.
+        </p>
+      </div>
+    </ng-container>
+    <div class="scene-six__container__arrows">
+      <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-six__container__sun"></div>
+    <div class="scene-six__container__center-clouds"></div>
+    <div class="scene-six__container__clouds"></div>
+    <div
+      class="scene-six__container__moon"
+      [ngClass]="{'clicked': divClicked[0]}"
+      (click)="divClicked[0] ? null : onIncreasePerfectDayScore(0)"
+    ></div>
+    <div
+      class="scene-six__container__stars"
+      [ngClass]="{'clicked': divClicked[1]}"
+      (click)="divClicked[1] ? null : onIncreasePerfectDayScore(1)"
+    ></div>
+    <div class="scene-six__container__left-frailejon"></div>
+    <div class="scene-six__container__right-frailejon"></div>
+    <div
+      class="scene-six__container__lintern"
+      [ngClass]="{'clicked': divClicked[2]}"
+      (click)="divClicked[2] ? null : onIncreasePerfectDayScore(2)"
+    ></div>
+    <!-- <audio #cap1Esc2Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+    <!-- <audio #cap4Esc2Danta>
+      <source
+        [src]="CONST.AUDIO.DANTA_CHAPTER_4_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>
+
+<ng-template #successChapter4Activity>
+  <success-activity-chapter-four
+    [turtleName]="turtleName$ | async"
+    (goToMapEvent)="onGoToMap()"
+  ></success-activity-chapter-four>
+</ng-template>

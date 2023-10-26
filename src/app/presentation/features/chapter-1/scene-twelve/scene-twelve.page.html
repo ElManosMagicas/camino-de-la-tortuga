@@ -6,11 +6,13 @@
     <div class="scene-twelve__container__turtle"></div>
     <ng-container>
       <div class="scene-twelve__container__subtitles">
-        <p>- ¿Sabes cómo puedo ir a mi casa?</p>
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-twelve__container__arrows">
       <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
         (goToNextPageEvent)="onGoToNextPage()"
         (goToPreviousPageEvent)="onGoToPreviousPage()"
       ></layout-inner-nav>

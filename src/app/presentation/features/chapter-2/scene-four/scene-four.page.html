@@ -5,14 +5,13 @@
     <div class="scene-four__container__logs"></div>
     <ng-container>
       <div class="scene-four__container__subtitles">
-        <p>
-          ─ Yo prefiero comer tallos y semillas. ¡Son deliciosos y llenan mi
-          pancita!
-        </p>
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-four__container__arrows">
       <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
         (goToNextPageEvent)="onGoToNextPage()"
         (goToPreviousPageEvent)="onGoToPreviousPage()"
       ></layout-inner-nav>

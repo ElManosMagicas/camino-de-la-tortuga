@@ -6,15 +6,13 @@
     <div class="scene-six__container__globe"></div>
     <ng-container>
       <div class="scene-six__container__subtitles">
-        <p>
-          ─ No, no sé qué es una madriguera, me gustan los lugares húmedos, de
-          pronto cerca de un río o un lago… ojalá con un clima más fresco porque
-          aquí hace mucho calor.
-        </p>
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-six__container__arrows">
       <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
         (goToNextPageEvent)="onGoToNextPage()"
         (goToPreviousPageEvent)="onGoToPreviousPage()"
       ></layout-inner-nav>

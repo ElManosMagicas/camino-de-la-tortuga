@@ -7,14 +7,13 @@
     <div class="scene-nine__container__cuyo"></div>
     <ng-container>
       <div class="scene-nine__container__subtitles">
-        <p>
-          El cuy sólo la observa. El animal que se queja es uno que él nunca
-          había visto.
-        </p>
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-nine__container__arrows">
       <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
         (goToNextPageEvent)="onGoToNextPage()"
         (goToPreviousPageEvent)="onGoToPreviousPage()"
       ></layout-inner-nav>

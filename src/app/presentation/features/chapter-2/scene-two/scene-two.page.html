@@ -4,14 +4,13 @@
     <div class="scene-two__container__turtle"></div>
     <ng-container>
       <div class="scene-two__container__subtitles">
-        <p>
-          ─ Señor tucán disculpe, ¿sabe si en este bosque viven las tortugas
-          como yo?
-        </p>
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-two__container__arrows">
       <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
         (goToNextPageEvent)="onGoToNextPage()"
         (goToPreviousPageEvent)="onGoToPreviousPage()"
       ></layout-inner-nav>

@@ -1,1 +1,41 @@
-<p>scene-three works!</p>
+<section class="scene-three">
+  <div class="scene-three__container">
+    <div class="scene-three__container__turtle"></div>
+    <div class="scene-three__container__danta"></div>
+    <ng-container>
+      <div class="scene-three__container__subtitles">
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
+      </div>
+    </ng-container>
+    <div class="scene-three__container__arrows">
+      <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-three__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+      ></layout-bar>
+    </div>
+    <!-- <audio #cap1Esc2Narrator>
+      <source
+        [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+    <!-- <audio #cap4Esc2Danta>
+      <source
+        [src]="CONST.AUDIO.DANTA_CHAPTER_4_SCENE_2"
+        type="audio/mpeg"
+      />
+    </audio> -->
+  </div>
+</section>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
+import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 
 @Component({
   selector: 'chapter-1-scene-twelve',
@@ -10,6 +11,9 @@ import { UtilService } from '@app/services/util.service';
 })
 export class SceneTwelvePage implements OnInit {
   public currentRoute: string = '';
+  public turtleName: string;
+  public showNextButton: boolean = true;
+  public showPreviousButton: boolean = true;
 
   constructor(
     private _chapter1Facade: Chapter1Facade,
@@ -18,6 +22,11 @@ export class SceneTwelvePage implements OnInit {
 
   ngOnInit(): void {
     this.currentRoute = this._utilService.getCurrentRoute();
+  }
+
+  public getSubtitles(): string {
+    const name = this.turtleName || '';
+    return SUBTITLES_CHAPTER_1.SCENE_TWELVE.replace(/{turtleName}/g, name);
   }
 
   public onGoToNextPage(): void {

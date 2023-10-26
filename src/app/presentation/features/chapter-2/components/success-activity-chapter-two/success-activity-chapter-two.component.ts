@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { UtilService } from '@app/services/util.service';
 
 @Component({
   selector: 'success-activity-chapter-two',

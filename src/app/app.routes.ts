@@ -49,5 +49,6 @@ export const APP_ROUTES = {
   CHAPTER_5_SCENE_4: '/capitulo-5/escena-4',
   CHAPTER_5_SCENE_5: '/capitulo-5/escena-5',
   CHAPTER_5_SCENE_6: '/capitulo-5/escena-6',
+  CHAPTER_5_SCENE_7: '/capitulo-5/escena-7',
   MAP: '/mapa',
 };

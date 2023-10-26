@@ -10,6 +10,7 @@ import { APP_CONSTANTS as CONST } from '@app/app.constants';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
+import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 
 @Component({
   selector: 'chapter-1-scene-nine',
@@ -21,6 +22,9 @@ export class SceneNinePage implements OnInit, AfterViewInit {
 
   public CONST = CONST;
   public currentRoute: string = '';
+  public turtleName: string;
+  public showNextButton: boolean = true;
+  public showPreviousButton: boolean = true;
 
   constructor(
     private _renderer: Renderer2,
@@ -36,6 +40,11 @@ export class SceneNinePage implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.playAudio();
     }, 3000);
+  }
+
+  public getSubtitles(): string {
+    const name = this.turtleName || '';
+    return SUBTITLES_CHAPTER_1.SCENE_NINE.replace(/{turtleName}/g, name);
   }
 
   public playAudio() {

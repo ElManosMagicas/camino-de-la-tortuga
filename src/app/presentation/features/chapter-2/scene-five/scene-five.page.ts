@@ -8,10 +8,9 @@ import {
 } from '@angular/core';
 import { APP_CONSTANTS as CONST } from '@app/app.constants';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
-import { AppFacade } from '@app/facades/app.facade';
 import { Chapter2Facade } from '@app/facades/chapter-2.facade';
 import { UtilService } from '@app/services/util.service';
-import { Observable } from 'rxjs';
+import { SUBTITLES_CHAPTER_2 } from '../chapter-2.subtitles';
 
 @Component({
   selector: 'chapter-2-scene-five',
@@ -23,17 +22,16 @@ export class SceneFivePage implements OnInit, AfterViewInit {
 
   public CONST = CONST;
   public currentRoute: string = '';
-
-  public turtleName$: Observable<string>;
+  public turtleName: string;
+  public showNextButton: boolean = true;
+  public showPreviousButton: boolean = true;
 
   constructor(
     private _renderer: Renderer2,
-    private _appFacade: AppFacade,
     private _chapter2Facade: Chapter2Facade,
     private _utilService: UtilService
   ) {}
   ngOnInit(): void {
-    this.turtleName$ = this._appFacade.turtleName$;
     this.currentRoute = this._utilService.getCurrentRoute();
   }
 
@@ -41,6 +39,11 @@ export class SceneFivePage implements OnInit, AfterViewInit {
     // setTimeout(() => {
     //   this.playAudio();
     // }, 5000);
+  }
+
+  public getSubtitles(): string {
+    const name = this.turtleName || '';
+    return SUBTITLES_CHAPTER_2.SCENE_FIVE.replace(/{turtleName}/g, name);
   }
 
   public playAudio() {

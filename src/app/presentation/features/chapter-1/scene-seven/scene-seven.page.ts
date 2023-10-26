@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  OnDestroy,
   OnInit,
   Renderer2,
   ViewChild,
@@ -11,20 +12,26 @@ import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 
 @Component({
   selector: 'chapter-1-scene-seven',
   templateUrl: './scene-seven.page.html',
   styleUrls: ['./scene-seven.page.scss'],
 })
-export class SceneSevenPage implements OnInit, AfterViewInit {
+export class SceneSevenPage implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('cap1Esc7Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
+  public turtleName: string;
+  public showNextButton: boolean = true;
+  public showPreviousButton: boolean = true;
 
   public turtleName$: Observable<string>;
+
+  public turtleNameSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -43,9 +50,21 @@ export class SceneSevenPage implements OnInit, AfterViewInit {
     }, 3000);
   }
 
+  ngOnDestroy(): void {
+    this.turtleNameSubscription$?.unsubscribe();
+  }
+
   private _setValues(): void {
     this.turtleName$ = this._appFacade.turtleName$;
+    this.turtleNameSubscription$ = this.turtleName$.subscribe((name) => {
+      this.turtleName = name;
+    });
     this.currentRoute = this._utilService.getCurrentRoute();
+  }
+
+  public getSubtitles(): string {
+    const name = this.turtleName || '';
+    return SUBTITLES_CHAPTER_1.SCENE_SEVEN.replace(/{turtleName}/g, name);
   }
 
   public playAudio() {

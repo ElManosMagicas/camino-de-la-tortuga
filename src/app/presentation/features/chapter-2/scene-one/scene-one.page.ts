@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  OnDestroy,
   OnInit,
   Renderer2,
   ViewChild,
@@ -11,21 +12,28 @@ import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter2Facade } from '@app/facades/chapter-2.facade';
 import { UtilService } from '@app/services/util.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { SUBTITLES_CHAPTER_1 } from '../../chapter-1/chapter-1.subtitles';
+import { SUBTITLES_CHAPTER_2 } from '../chapter-2.subtitles';
 
 @Component({
   selector: 'chapter-2-scene-one',
   templateUrl: './scene-one.page.html',
   styleUrls: ['./scene-one.page.scss'],
 })
-export class SceneOnePage implements OnInit, AfterViewInit {
+export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('cap1Esc2Narrator') audioPlayer: ElementRef;
   @ViewChild('cap2Esc1Tucan') tucanPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
+  public turtleName: string;
+  public showNextButton: boolean = true;
+  public showPreviousButton: boolean = true;
 
   public turtleName$: Observable<string>;
+
+  public turtleNameSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -35,6 +43,9 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   ) {}
   ngOnInit(): void {
     this.turtleName$ = this._appFacade.turtleName$;
+    this.turtleNameSubscription$ = this.turtleName$.subscribe((name) => {
+      this.turtleName = name;
+    });
     this.currentRoute = this._utilService.getCurrentRoute();
   }
 
@@ -42,6 +53,15 @@ export class SceneOnePage implements OnInit, AfterViewInit {
     // setTimeout(() => {
     //   this.playAudio();
     // }, 5000);
+  }
+
+  ngOnDestroy(): void {
+    this.turtleNameSubscription$?.unsubscribe();
+  }
+
+  public getSubtitles(): string {
+    const name = this.turtleName || '';
+    return SUBTITLES_CHAPTER_2.SCENE_ONE.replace(/{turtleName}/g, name);
   }
 
   public playAudio() {

@@ -9,50 +9,28 @@
 .scene-eight {
   width: 100vw;
   height: 100vh;
+  background-image: url($bg-chapter-3-scene-7);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   &__container {
     position: relative;
     width: 100%;
     height: 100vh;
-    &__piece-1 {
-      position: absolute;
-      top: 80px;
-      left: 0px;
-      z-index: 1;
-      width: 398px;
-      height: 398px;
-      opacity: 0;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: appearFullOpacity 1s ease-in-out 0s forwards;
-      &.pos1 {
-        background: url($elements-chapter-3-scene-8-piece-1-pos-1);
-      }
-      &.pos2 {
-        background: url($elements-chapter-3-scene-8-piece-1-pos-2);
-      }
-      &.pos3 {
-        background: url($elements-chapter-3-scene-8-piece-1-pos-3);
-      }
-      &.pos4 {
-        background: url($elements-chapter-3-scene-8-piece-1-pos-4);
-      }
-    }
     &__subtitles {
       position: absolute;
-      top: 0;
+      top: 50px;
       left: 0;
       z-index: 999;
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      background-color: $color-primary-black;
+      background-color: $color-primary-blue;
       opacity: 0;
-      border-bottom-right-radius: 20px;
-      border-bottom-left-radius: 20px;
-      width: 100%;
+      border-radius: 20px;
+      width: 65%;
       height: 74px;
-      animation: appear 1s ease-in-out 3s forwards;
+      animation: appearFullOpacity 1s ease-in-out 3s forwards;
       p {
         color: $color-primary-white;
         font-family: $letter-for-learners;
@@ -64,6 +42,255 @@
         padding: 0 60px;
       }
     }
+    &__reference {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 1;
+      width: 291px;
+      height: 186px;
+      opacity: 0;
+      background: url($elements-chapter-3-scene-8-puzzle-ref);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromRight 1s ease-in-out 0s forwards;
+    }
+    &__box {
+      position: absolute;
+      bottom: 64px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__piece-1 {
+          opacity: 0;
+          animation: appearFullOpacity 1s ease-in-out 0s forwards;
+          &.pos1 {
+            width: 210px;
+            height: 202px;
+            background: url($elements-chapter-3-scene-8-piece-1-pos-1);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos2 {
+            width: 202px;
+            height: 210px;
+            background: url($elements-chapter-3-scene-8-piece-1-pos-2);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos3 {
+            width: 210px;
+            height: 202px;
+            background: url($elements-chapter-3-scene-8-piece-1-pos-3);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos4 {
+            width: 202px;
+            height: 210px;
+            background: url($elements-chapter-3-scene-8-piece-1-pos-4);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+        &__piece-3 {
+          opacity: 0;
+          animation: appearFullOpacity 1s ease-in-out 0s forwards;
+          &.pos1 {
+            width: 227px;
+            height: 202px;
+            background: url($elements-chapter-3-scene-8-piece-3-pos-1);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos2 {
+            width: 202px;
+            height: 227px;
+            background: url($elements-chapter-3-scene-8-piece-3-pos-2);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos3 {
+            width: 227px;
+            height: 202px;
+            background: url($elements-chapter-3-scene-8-piece-3-pos-3);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos4 {
+            width: 202px;
+            height: 227px;
+            background: url($elements-chapter-3-scene-8-piece-3-pos-4);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+        &__piece-5 {
+          opacity: 0;
+          animation: appearFullOpacity 1s ease-in-out 0s forwards;
+          &.pos1 {
+            width: 205px;
+            height: 203px;
+            background: url($elements-chapter-3-scene-8-piece-5-pos-1);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos2 {
+            width: 203px;
+            height: 205px;
+            background: url($elements-chapter-3-scene-8-piece-5-pos-2);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos3 {
+            width: 205px;
+            height: 203px;
+            background: url($elements-chapter-3-scene-8-piece-5-pos-3);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos4 {
+            width: 203px;
+            height: 205px;
+            background: url($elements-chapter-3-scene-8-piece-5-pos-4);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      &__bot {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__piece-2 {
+          opacity: 0;
+          animation: appearFullOpacity 1s ease-in-out 0s forwards;
+          &.pos1 {
+            width: 210px;
+            height: 207px;
+            background: url($elements-chapter-3-scene-8-piece-2-pos-1);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos2 {
+            width: 207px;
+            height: 210px;
+            background: url($elements-chapter-3-scene-8-piece-2-pos-2);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos3 {
+            width: 210px;
+            height: 207px;
+            background: url($elements-chapter-3-scene-8-piece-2-pos-3);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos4 {
+            width: 207px;
+            height: 210px;
+            background: url($elements-chapter-3-scene-8-piece-2-pos-4);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+        &__piece-4 {
+          opacity: 0;
+          animation: appearFullOpacity 1s ease-in-out 0s forwards;
+          &.pos1 {
+            width: 227px;
+            height: 206px;
+            background: url($elements-chapter-3-scene-8-piece-4-pos-1);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos2 {
+            width: 206px;
+            height: 227px;
+            background: url($elements-chapter-3-scene-8-piece-4-pos-2);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos3 {
+            width: 227px;
+            height: 206px;
+            background: url($elements-chapter-3-scene-8-piece-4-pos-3);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos4 {
+            width: 206px;
+            height: 227px;
+            background: url($elements-chapter-3-scene-8-piece-4-pos-4);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+        &__piece-6 {
+          opacity: 0;
+          animation: appearFullOpacity 1s ease-in-out 0s forwards;
+          &.pos1 {
+            width: 205px;
+            height: 205px;
+            background: url($elements-chapter-3-scene-8-piece-6-pos-1);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos2 {
+            width: 205px;
+            height: 205px;
+            background: url($elements-chapter-3-scene-8-piece-6-pos-2);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos3 {
+            width: 205px;
+            height: 205px;
+            background: url($elements-chapter-3-scene-8-piece-6-pos-3);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          &.pos4 {
+            width: 205px;
+            height: 205px;
+            background: url($elements-chapter-3-scene-8-piece-6-pos-4);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
     &__arrows {
       z-index: 990;
       position: absolute;
@@ -72,7 +299,7 @@
       margin-top: -30px;
       width: 100%;
       opacity: 0;
-      animation: fromBottom 1s ease-in-out 2s forwards;
+      animation: fromBottom 1s ease-in-out 3s forwards;
     }
     &__footer {
       z-index: 1000;
