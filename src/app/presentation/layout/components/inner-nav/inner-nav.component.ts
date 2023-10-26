@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'layout-inner-nav',
@@ -6,6 +6,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./inner-nav.component.scss'],
 })
 export class InnerNavComponent {
+  @Input() showNextButton: boolean;
+  @Input() showPreviousButton: boolean;
   @Output() goToNextPageEvent = new EventEmitter<boolean>();
   @Output() goToPreviousPageEvent = new EventEmitter<boolean>();
 
