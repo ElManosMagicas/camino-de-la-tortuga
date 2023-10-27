@@ -95,8 +95,8 @@
       bottom: 100px;
       right: 170px;
       z-index: 3;
-      width: 162px;
-      height: 182px;
+      width: 206px;
+      height: 228px;
       opacity: 0;
       background: url($elements-map-btn-chapter4-off);
       background-size: contain;
@@ -110,8 +110,8 @@
       top: 190px;
       right: 40px;
       z-index: 3;
-      width: 176px;
-      height: 176px;
+      width: 215px;
+      height: 214px;
       opacity: 0;
       background: url($elements-map-btn-chapter5-off);
       background-size: contain;
@@ -121,13 +121,28 @@
       cursor: pointer;
     }
     &__subtitles {
-      width: 100%;
       position: absolute;
       bottom: 0;
       left: 0;
       z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-primary-blue;
       opacity: 0;
+      width: 100%;
+      height: 74px;
       animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      p {
+        color: $color-primary-white;
+        font-family: $letter-for-learners;
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 25px;
+        text-align: center;
+        margin: 12px 0px;
+        padding: 0 60px;
+      }
     }
     &__arrows {
       z-index: 990;
@@ -138,13 +153,6 @@
       width: 100%;
       opacity: 0;
       animation: fromBottom 1s ease-in-out 3s forwards;
-    }
-    &__footer {
-      z-index: 1000;
-      position: absolute;
-      bottom: 0px;
-      width: 100%;
-      margin: 0 auto;
     }
   }
 }
