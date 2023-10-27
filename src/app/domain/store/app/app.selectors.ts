@@ -17,3 +17,23 @@ export const selectChapterOneFinished = createSelector(
   getAppFeatureState,
   (state: AppState) => state.chapterOneFinished
 );
+
+export const selectChapterTwoFinished = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.chapterTwoFinished
+);
+
+export const selectChapterThreeFinished = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.chapterThreeFinished
+);
+
+export const selectChapterFourFinished = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.chapterFourFinished
+);
+
+export const selectChapterFiveFinished = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.chapterFiveFinished
+);

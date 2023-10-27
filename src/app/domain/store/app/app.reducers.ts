@@ -6,6 +6,10 @@ export const initialApp: AppState = {
   turtleName: null,
   modalShow: false,
   chapterOneFinished: false,
+  chapterTwoFinished: false,
+  chapterThreeFinished: false,
+  chapterFourFinished: false,
+  chapterFiveFinished: false,
 };
 
 const _appReducer = createReducer(
@@ -26,6 +30,30 @@ const _appReducer = createReducer(
     return {
       ...state,
       chapterOneFinished: true,
+    };
+  }),
+  on(appActions.finishChapterTwo, (state) => {
+    return {
+      ...state,
+      chapterTwoFinished: true,
+    };
+  }),
+  on(appActions.finishChapterThree, (state) => {
+    return {
+      ...state,
+      chapterThreeFinished: true,
+    };
+  }),
+  on(appActions.finishChapterFour, (state) => {
+    return {
+      ...state,
+      chapterFourFinished: true,
+    };
+  }),
+  on(appActions.finishChapterFive, (state) => {
+    return {
+      ...state,
+      chapterFiveFinished: true,
     };
   })
 );

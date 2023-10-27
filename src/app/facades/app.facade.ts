@@ -11,12 +11,28 @@ export class AppFacade {
   public turtleName$: Observable<string>;
   public modalShow$: Observable<boolean>;
   public isChapterOneFinished$: Observable<boolean>;
+  public isChapterTwoFinished$: Observable<boolean>;
+  public isChapterThreeFinished$: Observable<boolean>;
+  public isChapterFourFinished$: Observable<boolean>;
+  public isChapterFiveFinished$: Observable<boolean>;
 
   constructor(private _store: Store, private _modalService: ModalService) {
     this.turtleName$ = this._store.select(appSelectors.selectTurtleName);
     this.modalShow$ = this._store.select(appSelectors.selectModalShow);
     this.isChapterOneFinished$ = this._store.select(
       appSelectors.selectChapterOneFinished
+    );
+    this.isChapterTwoFinished$ = this._store.select(
+      appSelectors.selectChapterTwoFinished
+    );
+    this.isChapterThreeFinished$ = this._store.select(
+      appSelectors.selectChapterThreeFinished
+    );
+    this.isChapterFourFinished$ = this._store.select(
+      appSelectors.selectChapterFourFinished
+    );
+    this.isChapterFiveFinished$ = this._store.select(
+      appSelectors.selectChapterFiveFinished
     );
   }
 
@@ -41,5 +57,21 @@ export class AppFacade {
 
   public finishChapterOne(): void {
     this._store.dispatch(appActions.finishChapterOne());
+  }
+
+  public finishChapterTwo(): void {
+    this._store.dispatch(appActions.finishChapterTwo());
+  }
+
+  public finishChapterThree(): void {
+    this._store.dispatch(appActions.finishChapterThree());
+  }
+
+  public finishChapterFour(): void {
+    this._store.dispatch(appActions.finishChapterFour());
+  }
+
+  public finishChapterFive(): void {
+    this._store.dispatch(appActions.finishChapterFive());
   }
 }
