@@ -10,10 +10,14 @@ import { ModalService } from '@app/domain/services/modal/modal.service';
 export class AppFacade {
   public turtleName$: Observable<string>;
   public modalShow$: Observable<boolean>;
+  public isChapterOneFinished$: Observable<boolean>;
 
   constructor(private _store: Store, private _modalService: ModalService) {
     this.turtleName$ = this._store.select(appSelectors.selectTurtleName);
     this.modalShow$ = this._store.select(appSelectors.selectModalShow);
+    this.isChapterOneFinished$ = this._store.select(
+      appSelectors.selectChapterOneFinished
+    );
   }
 
   public setTurtleName(turtleName: string) {
@@ -33,5 +37,9 @@ export class AppFacade {
   public closeModal(): void {
     this._modalService.setModalConfig = {} as IModalConfig;
     this._store.dispatch(appActions.updateModalShow({ modalShow: false }));
+  }
+
+  public finishChapterOne(): void {
+    this._store.dispatch(appActions.finishChapterOne());
   }
 }

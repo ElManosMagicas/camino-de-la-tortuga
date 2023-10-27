@@ -5,6 +5,7 @@ import * as appActions from './app.actions';
 export const initialApp: AppState = {
   turtleName: null,
   modalShow: false,
+  chapterOneFinished: false,
 };
 
 const _appReducer = createReducer(
@@ -19,6 +20,12 @@ const _appReducer = createReducer(
     return {
       ...state,
       modalShow,
+    };
+  }),
+  on(appActions.finishChapterOne, (state) => {
+    return {
+      ...state,
+      chapterOneFinished: true,
     };
   })
 );

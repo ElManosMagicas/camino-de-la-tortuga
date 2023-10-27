@@ -12,3 +12,8 @@ export const selectModalShow = createSelector(
   getAppFeatureState,
   (state: AppState) => state.modalShow
 );
+
+export const selectChapterOneFinished = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.chapterOneFinished
+);

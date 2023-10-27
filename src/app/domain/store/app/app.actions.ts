@@ -11,3 +11,5 @@ export const updateModalShow = createAction(
   '[App] Update Modal Config',
   props<{ modalShow: boolean }>()
 );
+
+export const finishChapterOne = createAction('[Chapter-1] Finish Chapter One');
