@@ -11,6 +11,7 @@ import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
 import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
+import { AppFacade } from '@app/facades/app.facade';
 
 @Component({
   selector: 'chapter-1-scene-thirteen',
@@ -27,6 +28,7 @@ export class SceneThirteenPage implements OnInit, AfterViewInit {
   public showPreviousButton: boolean = true;
 
   constructor(
+    private _appFacade: AppFacade,
     private _chapter1Facade: Chapter1Facade,
     private _utilService: UtilService
   ) {}
@@ -54,7 +56,8 @@ export class SceneThirteenPage implements OnInit, AfterViewInit {
   }
 
   public onGoToNextPage(): void {
-    this._utilService.navigateTo(ROUTES.CHAPTER_2_SCENE_1);
+    this._appFacade.finishChapterOne();
+    this._utilService.navigateTo(ROUTES.MAP);
   }
   public onGoToPreviousPage(): void {
     this._chapter1Facade.goToPreviousStep();
