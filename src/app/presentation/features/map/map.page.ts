@@ -13,6 +13,11 @@ import { AppFacade } from '@app/facades/app.facade';
 import { UtilService } from '@app/services/util.service';
 import { Observable, Subscription } from 'rxjs';
 import { MapFacade } from '@app/facades/map.facade';
+import { Chapter1Facade } from '@app/facades/chapter-1.facade';
+import { Chapter2Facade } from '@app/facades/chapter-2.facade';
+import { Chapter3Facade } from '@app/facades/chapter-3.facade';
+import { Chapter4Facade } from '@app/facades/chapter-4.facade';
+import { Chapter5Facade } from '@app/facades/chapter-5.facade';
 
 @Component({
   selector: 'app-map',
@@ -26,25 +31,29 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
   public CONST = CONST;
   public currentRoute: string = '';
   public turtleName: string;
-  public showNextButton: boolean = false;
-  public showPreviousButton: boolean = false;
 
   public turtleName$: Observable<string>;
+  public isChapterOneFinished$: Observable<boolean>;
+  public isChapterTwoFinished$: Observable<boolean>;
+  public isChapterThreeFinished$: Observable<boolean>;
+  public isChapterFourFinished$: Observable<boolean>;
+  public isChapterFiveFinished$: Observable<boolean>;
 
   public turtleNameSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
     private _appFacade: AppFacade,
+    private _chapter1Facade: Chapter1Facade,
+    private _chapter2Facade: Chapter2Facade,
+    private _chapter3Facade: Chapter3Facade,
+    private _chapter4Facade: Chapter4Facade,
+    private _chapter5Facade: Chapter5Facade,
     private _utilService: UtilService
   ) {}
 
   ngOnInit(): void {
-    this.turtleName$ = this._appFacade.turtleName$;
-    this.turtleNameSubscription$ = this.turtleName$.subscribe((name) => {
-      this.turtleName = name;
-    });
-    this.currentRoute = this._utilService.getCurrentRoute();
+    this._setValues();
   }
 
   ngAfterViewInit(): void {
@@ -57,10 +66,18 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
     this.turtleNameSubscription$?.unsubscribe();
   }
 
-  // public getSubtitles(): string {
-  //   const name = this.turtleName || '';
-  //   return SUBTITLES_CHAPTER_4.SCENE_ONE.replace(/{turtleName}/g, name);
-  // }
+  private _setValues(): void {
+    this.turtleName$ = this._appFacade.turtleName$;
+    this.turtleNameSubscription$ = this.turtleName$.subscribe((name) => {
+      this.turtleName = name;
+    });
+    this.isChapterOneFinished$ = this._appFacade.isChapterOneFinished$;
+    this.isChapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
+    this.isChapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
+    this.isChapterFourFinished$ = this._appFacade.isChapterFourFinished$;
+    this.isChapterFiveFinished$ = this._appFacade.isChapterFiveFinished$;
+    this.currentRoute = this._utilService.getCurrentRoute();
+  }
 
   public playAudio() {
     const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
@@ -69,22 +86,31 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  public onGoToNextPage(): void {
-    this._utilService.navigateTo(ROUTES.CHAPTER_4_SCENE_2);
-  }
-  public onGoToPreviousPage(): void {
-    this._utilService.navigateTo(ROUTES.MAP);
-  }
-  public onGoToConfiguration() {}
-  public onGoToBackpack() {}
-  public onRepeatScene() {
-    this._utilService.redirectToUrl(ROUTES.MAP);
-  }
-
   public onPlayTucanSound(): void {
     // const tucanElement: HTMLAudioElement = this.tucanPlayer.nativeElement;
     // if (tucanElement.paused) {
     //   tucanElement.play();
     // }
+  }
+
+  public onGoToChapterOne(): void {
+    this._chapter1Facade.goToNextStep();
+    this._utilService.navigateTo(ROUTES.CHAPTER_1_SCENE_1);
+  }
+  public onGoToChapterTwo(): void {
+    this._chapter2Facade.goToNextStep();
+    this._utilService.navigateTo(ROUTES.CHAPTER_2_SCENE_1);
+  }
+  public onGoToChapterThree(): void {
+    this._chapter3Facade.goToNextStep();
+    this._utilService.navigateTo(ROUTES.CHAPTER_3_SCENE_1);
+  }
+  public onGoToChapterFour(): void {
+    this._chapter4Facade.goToNextStep();
+    this._utilService.navigateTo(ROUTES.CHAPTER_4_SCENE_1);
+  }
+  public onGoToChapterFive(): void {
+    this._chapter5Facade.goToNextStep();
+    this._utilService.navigateTo(ROUTES.CHAPTER_5_SCENE_1);
   }
 }
