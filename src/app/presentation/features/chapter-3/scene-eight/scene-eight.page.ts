@@ -158,7 +158,8 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
     this.divClicked = [false, false, false, false];
     // this._chapter3Facade.resetBackpackScore();
     this._appFacade.closeModal();
-    this._utilService.navigateTo(ROUTES.CHAPTER_4_SCENE_1);
+    this._appFacade.finishChapterThree();
+    this._utilService.navigateTo(ROUTES.MAP);
   }
 
   public onToggleBackgroundPiece1() {

@@ -105,6 +105,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
     this.divClicked = [false, false, false];
     this._chapter4Facade.resetPerfectDayScore();
     this._appFacade.closeModal();
-    this._utilService.navigateTo(ROUTES.CHAPTER_5_SCENE_1);
+    this._appFacade.finishChapterFour();
+    this._utilService.navigateTo(ROUTES.MAP);
   }
 }

@@ -71,6 +71,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
 
   public onGoToNextPage(): void {
     this._chapter5Facade.goToNextStep();
+    this._appFacade.finishChapterFive();
     this._utilService.navigateTo(ROUTES.CHAPTER_5_SCENE_7);
   }
   public onGoToPreviousPage(): void {

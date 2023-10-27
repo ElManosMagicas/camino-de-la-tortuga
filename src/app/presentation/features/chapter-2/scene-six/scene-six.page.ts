@@ -101,6 +101,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
     this.divClicked = [false, false, false, false];
     this._chapter2Facade.resetBackpackScore();
     this._appFacade.closeModal();
-    this._utilService.navigateTo(ROUTES.CHAPTER_3_SCENE_1);
+    this._appFacade.finishChapterTwo();
+    this._utilService.navigateTo(ROUTES.MAP);
   }
 }

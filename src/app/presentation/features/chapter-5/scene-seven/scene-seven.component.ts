@@ -14,6 +14,10 @@ import { UtilService } from '@app/services/util.service';
 import { Observable, Subscription } from 'rxjs';
 import { SUBTITLES_CHAPTER_5 } from '../chapter-5.subtitles';
 import { Chapter5Facade } from '@app/facades/chapter-5.facade';
+import { Chapter1Facade } from '@app/facades/chapter-1.facade';
+import { Chapter2Facade } from '@app/facades/chapter-2.facade';
+import { Chapter3Facade } from '@app/facades/chapter-3.facade';
+import { Chapter4Facade } from '@app/facades/chapter-4.facade';
 
 @Component({
   selector: 'app-scene-seven',
@@ -35,6 +39,10 @@ export class SceneSevenComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(
     private _renderer: Renderer2,
     private _appFacade: AppFacade,
+    private _chapter1Facade: Chapter1Facade,
+    private _chapter2Facade: Chapter2Facade,
+    private _chapter3Facade: Chapter3Facade,
+    private _chapter4Facade: Chapter4Facade,
     private _chapter5Facade: Chapter5Facade,
     private _utilService: UtilService
   ) {}
@@ -90,7 +98,14 @@ export class SceneSevenComponent implements OnInit, AfterViewInit, OnDestroy {
     // }
   }
 
-  public onRepeat(): void {}
+  public onRepeat(): void {
+    this._chapter1Facade.resetStep();
+    this._chapter2Facade.resetStep();
+    this._chapter3Facade.resetStep();
+    this._chapter4Facade.resetStep();
+    this._chapter5Facade.resetStep();
+    this._utilService.navigateTo(ROUTES.MAP);
+  }
 
   public onGoToCredits(): void {}
 }
