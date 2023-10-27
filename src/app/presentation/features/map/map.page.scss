@@ -47,31 +47,78 @@
     }
     &__chapter1 {
       position: absolute;
-      bottom: 260px;
-      left: 50px;
+      bottom: 190px;
+      left: 60px;
       z-index: 3;
-      width: 156px;
-      height: 139px;
+      width: 206px;
+      height: 195px;
       opacity: 0;
       background: url($elements-map-btn-chapter1);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      cursor: pointer;
     }
     &__chapter2 {
       position: absolute;
-      bottom: 170px;
+      bottom: 90px;
       left: 310px;
       z-index: 3;
-      width: 165px;
-      height: 179px;
+      width: 221px;
+      height: 225px;
       opacity: 0;
       background: url($elements-map-btn-chapter2-off);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      cursor: pointer;
+    }
+    &__chapter3 {
+      position: absolute;
+      top: 230px;
+      right: 390px;
+      z-index: 3;
+      width: 212px;
+      height: 189px;
+      opacity: 0;
+      background: url($elements-map-btn-chapter3-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      cursor: pointer;
+    }
+    &__chapter4 {
+      position: absolute;
+      bottom: 100px;
+      right: 170px;
+      z-index: 3;
+      width: 162px;
+      height: 182px;
+      opacity: 0;
+      background: url($elements-map-btn-chapter4-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      cursor: pointer;
+    }
+    &__chapter5 {
+      position: absolute;
+      top: 190px;
+      right: 40px;
+      z-index: 3;
+      width: 176px;
+      height: 176px;
+      opacity: 0;
+      background: url($elements-map-btn-chapter5-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      cursor: pointer;
     }
     &__subtitles {
       width: 100%;
