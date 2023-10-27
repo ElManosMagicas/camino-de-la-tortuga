@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { APP_ROUTES } from '@app/app.routes';
+import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
 
 @Component({
@@ -10,7 +11,10 @@ import { UtilService } from '@app/services/util.service';
 export class HomePage {
   public ROUTES = APP_ROUTES;
 
-  constructor(private _utilService: UtilService) {}
+  constructor(
+    private _utilService: UtilService,
+    private _chapter1Facade: Chapter1Facade
+  ) {}
 
   public onGoToInstructions(): void {
     this._utilService.navigateTo(this.ROUTES.INSTRUCTIONS);
@@ -25,6 +29,7 @@ export class HomePage {
   }
 
   public onGoToChapterOne(): void {
+    this._chapter1Facade.goToNextStep();
     this._utilService.navigateTo(this.ROUTES.CHAPTER_1);
   }
 }
