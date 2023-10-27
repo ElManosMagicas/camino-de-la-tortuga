@@ -4,7 +4,7 @@ import { Chapter1State } from './chapter-1.state';
 import * as chapter1Actions from '@store/chapter-1/chapter-1.actions';
 
 export const initialChapter1: Chapter1State = {
-  step: 1,
+  step: 0,
 };
 
 const _chapter1Reducer = createReducer(

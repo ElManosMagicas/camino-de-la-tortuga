@@ -4,7 +4,7 @@ import { Chapter3State } from './chapter-3.state';
 import * as chapter3Actions from '@store/chapter-3/chapter-3.actions';
 
 export const initialChapter3: Chapter3State = {
-  step: 1,
+  step: 0,
   isPieceOne: false,
   isPieceTwo: false,
   isPieceThree: false,
