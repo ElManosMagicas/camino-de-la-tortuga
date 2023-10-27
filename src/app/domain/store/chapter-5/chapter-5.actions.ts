@@ -8,6 +8,8 @@ export const stepBack = createAction('[Chapter-5] Go To Step Back');
 
 export const setNewStep = createAction('[Chapter-5] Set New Step');
 
+export const resetStep = createAction('[Chapter-5] Reset Step');
+
 export const increaseTurtleHomeScore = createAction(
   '[Chapter-5] Increase Turtles Home Score'
 );

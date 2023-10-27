@@ -22,6 +22,12 @@ const _chapter2Reducer = createReducer(
       step: state.step - 1,
     };
   }),
+  on(chapter2Actions.resetStep, (state) => {
+    return {
+      ...state,
+      step: 0,
+    };
+  }),
   on(chapter2Actions.increaseBackpackScore, (state) => {
     return {
       ...state,

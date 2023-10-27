@@ -8,6 +8,8 @@ export const stepBack = createAction('[Chapter-4] Go To Step Back');
 
 export const setNewStep = createAction('[Chapter-4] Set New Step');
 
+export const resetStep = createAction('[Chapter-3] Reset Step');
+
 export const increasePerfectDayScore = createAction(
   '[Chapter-4] Increase Perfect Day Score'
 );

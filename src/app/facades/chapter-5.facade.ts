@@ -24,6 +24,10 @@ export class Chapter5Facade {
     this._store.dispatch(chapter5Actions.stepBack());
   }
 
+  public resetStep(): void {
+    this._store.dispatch(chapter5Actions.resetStep());
+  }
+
   public increaseTurtleHomeScore(): void {
     this._store.dispatch(chapter5Actions.increaseTurtleHomeScore());
   }

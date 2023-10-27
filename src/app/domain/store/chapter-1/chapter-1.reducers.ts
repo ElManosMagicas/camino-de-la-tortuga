@@ -20,6 +20,12 @@ const _chapter1Reducer = createReducer(
       ...state,
       step: state.step - 1,
     };
+  }),
+  on(chapter1Actions.resetStep, (state) => {
+    return {
+      ...state,
+      step: 0,
+    };
   })
 );
 

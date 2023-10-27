@@ -8,6 +8,8 @@ export const stepBack = createAction('[Chapter-3] Go To Step Back');
 
 export const setNewStep = createAction('[Chapter-3] Set New Step');
 
+export const resetStep = createAction('[Chapter-3] Reset Step');
+
 export const setPieceOne = createAction(
   '[Chapter-3] Set Piece One',
   props<{ isPieceOne: boolean }>()

@@ -19,4 +19,8 @@ export class Chapter1Facade {
   public goToPreviousStep(): void {
     this._store.dispatch(chapter1Actions.stepBack());
   }
+
+  public resetStep(): void {
+    this._store.dispatch(chapter1Actions.resetStep());
+  }
 }

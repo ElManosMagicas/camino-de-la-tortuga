@@ -32,6 +32,10 @@ export class Chapter3Facade {
     this._store.dispatch(chapter3Actions.stepBack());
   }
 
+  public resetStep(): void {
+    this._store.dispatch(chapter3Actions.resetStep());
+  }
+
   public setPieceOne(isPieceOne: boolean): void {
     this._store.dispatch(chapter3Actions.setPieceOne({ isPieceOne }));
   }

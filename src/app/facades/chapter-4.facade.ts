@@ -24,6 +24,10 @@ export class Chapter4Facade {
     this._store.dispatch(chapter4Actions.stepBack());
   }
 
+  public resetStep(): void {
+    this._store.dispatch(chapter4Actions.resetStep());
+  }
+
   public increasePerfectDayScore(): void {
     this._store.dispatch(chapter4Actions.increasePerfectDayScore());
   }

@@ -22,6 +22,12 @@ const _chapter5Reducer = createReducer(
       step: state.step - 1,
     };
   }),
+  on(chapter5Actions.resetStep, (state) => {
+    return {
+      ...state,
+      step: 0,
+    };
+  }),
   on(chapter5Actions.increaseTurtleHomeScore, (state) => {
     return {
       ...state,

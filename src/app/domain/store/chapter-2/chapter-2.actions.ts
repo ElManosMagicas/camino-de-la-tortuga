@@ -6,6 +6,8 @@ export const stepBack = createAction('[Chapter-2] Go To Step Back');
 
 export const setNewStep = createAction('[Chapter-2] Set New Step');
 
+export const resetStep = createAction('[Chapter-2] Reset Step');
+
 export const getCurrentRoute = createAction('[Chapter-2] Get Current Route');
 
 export const increaseBackpackScore = createAction(

@@ -22,6 +22,10 @@ export class Chapter2Facade {
     this._store.dispatch(chapter2Actions.stepBack());
   }
 
+  public resetStep(): void {
+    this._store.dispatch(chapter2Actions.resetStep());
+  }
+
   public increaseBackpackScore(): void {
     this._store.dispatch(chapter2Actions.increaseBackpackScore());
   }

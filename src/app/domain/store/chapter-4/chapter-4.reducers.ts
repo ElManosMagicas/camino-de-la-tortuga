@@ -22,6 +22,12 @@ const _chapter4Reducer = createReducer(
       step: state.step - 1,
     };
   }),
+  on(chapter4Actions.resetStep, (state) => {
+    return {
+      ...state,
+      step: 0,
+    };
+  }),
   on(chapter4Actions.increasePerfectDayScore, (state) => {
     return {
       ...state,
