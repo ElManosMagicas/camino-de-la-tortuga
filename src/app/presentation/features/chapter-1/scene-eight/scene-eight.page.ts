@@ -1,4 +1,12 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { APP_CONSTANTS as CONST } from '@app/app.constants';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
@@ -11,7 +19,10 @@ import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
   templateUrl: './scene-eight.page.html',
   styleUrls: ['./scene-eight.page.scss'],
 })
-export class SceneEightPage implements OnInit, OnDestroy {
+export class SceneEightPage implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChild('cap1Esc8Narrator') audioPlayer: ElementRef;
+
+  public CONST = CONST;
   public currentRoute: string = '';
   public turtleName: string;
   public showNextButton: boolean = true;
@@ -33,6 +44,12 @@ export class SceneEightPage implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.turtleNameSubscription$?.unsubscribe();
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.playAudio();
+    }, 3000);
   }
 
   private _setValues(): void {
@@ -60,5 +77,12 @@ export class SceneEightPage implements OnInit, OnDestroy {
   public onGoToBackpack() {}
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_1_SCENE_8);
+  }
+
+  public playAudio() {
+    const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
+    if (audioElement.paused) {
+      audioElement.play();
+    }
   }
 }

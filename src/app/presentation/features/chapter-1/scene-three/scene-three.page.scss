@@ -59,7 +59,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
+      animation: appearFullOpacity 1s ease-in-out 4.5s forwards;
     }
     &__son-cuy {
       position: absolute;
@@ -92,7 +92,7 @@
       margin-top: -30px;
       width: 100%;
       opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 4s forwards;
+      animation: appearFullOpacity 1s ease-in-out 14s forwards;
     }
     &__footer {
       z-index: 1000;

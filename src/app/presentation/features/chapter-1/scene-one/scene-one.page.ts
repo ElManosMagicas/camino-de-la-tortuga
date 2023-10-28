@@ -40,7 +40,7 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.playAudio();
-    }, 4000);
+    }, 3500);
   }
 
   public playAudio() {

@@ -39,7 +39,7 @@ export class SceneFourPage implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.playAudio();
-    }, 3000);
+    }, 1000);
   }
 
   public getSubtitles(): string {

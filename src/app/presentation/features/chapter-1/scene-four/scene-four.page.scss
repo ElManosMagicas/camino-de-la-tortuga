@@ -31,7 +31,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromBottom 1s ease-in-out 2s forwards;
+      animation: fromBottom 1s ease-in-out 6s forwards;
     }
     &__person {
       position: absolute;
@@ -45,7 +45,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromBottom 1s ease-in-out 1s forwards;
+      animation: fromBottom 1s ease-in-out 3.5s forwards;
     }
     &__cuyo {
       position: absolute;
@@ -68,7 +68,7 @@
       left: 0;
       z-index: 999;
       opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      animation: appearFullOpacity 1s ease-in-out 1s forwards;
     }
     &__arrows {
       z-index: 990;
@@ -78,7 +78,7 @@
       margin-top: -30px;
       width: 100%;
       opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 4s forwards;
+      animation: appearFullOpacity 1s ease-in-out 14s forwards;
     }
     &__footer {
       z-index: 1000;

@@ -39,7 +39,7 @@ export class SceneNinePage implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.playAudio();
-    }, 3000);
+    }, 2500);
   }
 
   public getSubtitles(): string {
