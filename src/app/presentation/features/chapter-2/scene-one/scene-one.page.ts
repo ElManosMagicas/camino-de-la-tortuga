@@ -5,6 +5,7 @@ import {
   OnDestroy,
   OnInit,
   Renderer2,
+  TemplateRef,
   ViewChild,
 } from '@angular/core';
 import { APP_CONSTANTS as CONST } from '@app/app.constants';
@@ -13,8 +14,8 @@ import { AppFacade } from '@app/facades/app.facade';
 import { Chapter2Facade } from '@app/facades/chapter-2.facade';
 import { UtilService } from '@app/services/util.service';
 import { Observable, Subscription } from 'rxjs';
-import { SUBTITLES_CHAPTER_1 } from '../../chapter-1/chapter-1.subtitles';
 import { SUBTITLES_CHAPTER_2 } from '../chapter-2.subtitles';
+import { IContextModal } from '@app/core/models/modal.model';
 
 @Component({
   selector: 'chapter-2-scene-one',
@@ -22,6 +23,8 @@ import { SUBTITLES_CHAPTER_2 } from '../chapter-2.subtitles';
   styleUrls: ['./scene-one.page.scss'],
 })
 export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('backpackChapter2', { static: true })
+  backpackChapter2!: TemplateRef<IContextModal>;
   @ViewChild('cap2Esc1Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
@@ -31,6 +34,9 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
   public showPreviousButton: boolean = true;
 
   public turtleName$: Observable<string>;
+  public chapterTwoFinished$: Observable<boolean>;
+  public chapterThreeFinished$: Observable<boolean>;
+  public chapterFourFinished$: Observable<boolean>;
 
   public turtleNameSubscription$: Subscription;
 
@@ -42,6 +48,9 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
   ) {}
   ngOnInit(): void {
     this.turtleName$ = this._appFacade.turtleName$;
+    this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
+    this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
+    this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
     this.turtleNameSubscription$ = this.turtleName$.subscribe((name) => {
       this.turtleName = name;
     });
@@ -78,8 +87,16 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
     this._utilService.navigateTo(ROUTES.MAP);
   }
   public onGoToConfiguration() {}
-  public onGoToBackpack() {}
+
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_2_SCENE_1);
+  }
+
+  public onGoToBackpack(): void {
+    this._appFacade.openModal(this.backpackChapter2);
+  }
+
+  public onCloseBackpack(): void {
+    this._appFacade.closeModal();
   }
 }
