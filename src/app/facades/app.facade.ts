@@ -5,6 +5,7 @@ import * as appActions from '@store/app/app.actions';
 import { Observable } from 'rxjs';
 import { IContextModal, IModalConfig } from '@app/core/models/modal.model';
 import { ModalService } from '@app/domain/services/modal/modal.service';
+import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
 
 @Injectable({ providedIn: 'root' })
 export class AppFacade {
@@ -15,6 +16,7 @@ export class AppFacade {
   public isChapterThreeFinished$: Observable<boolean>;
   public isChapterFourFinished$: Observable<boolean>;
   public isChapterFiveFinished$: Observable<boolean>;
+  public lastChapterFinished$: Observable<ILastChapterFinished>;
 
   constructor(private _store: Store, private _modalService: ModalService) {
     this.turtleName$ = this._store.select(appSelectors.selectTurtleName);
@@ -33,6 +35,9 @@ export class AppFacade {
     );
     this.isChapterFiveFinished$ = this._store.select(
       appSelectors.selectChapterFiveFinished
+    );
+    this.lastChapterFinished$ = this._store.select(
+      appSelectors.selectLastChapterFinished
     );
   }
 
@@ -73,5 +78,13 @@ export class AppFacade {
 
   public finishChapterFive(): void {
     this._store.dispatch(appActions.finishChapterFive());
+  }
+
+  public setLastChapterFinished(
+    lastChapterFinished: ILastChapterFinished
+  ): void {
+    this._store.dispatch(
+      appActions.setLastChapterFinished({ lastChapterFinished })
+    );
   }
 }

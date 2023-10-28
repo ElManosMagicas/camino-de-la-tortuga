@@ -37,3 +37,8 @@ export const selectChapterFiveFinished = createSelector(
   getAppFeatureState,
   (state: AppState) => state.chapterFiveFinished
 );
+
+export const selectLastChapterFinished = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.lastChapterFinished
+);

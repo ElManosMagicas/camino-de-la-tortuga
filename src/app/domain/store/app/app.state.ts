@@ -1,3 +1,5 @@
+import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
+
 export interface AppState {
   turtleName: string | null;
   modalShow: boolean;
@@ -6,4 +8,5 @@ export interface AppState {
   chapterThreeFinished: boolean;
   chapterFourFinished: boolean;
   chapterFiveFinished: boolean;
+  lastChapterFinished: ILastChapterFinished;
 }

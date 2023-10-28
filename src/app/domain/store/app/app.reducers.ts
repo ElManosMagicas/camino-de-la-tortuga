@@ -10,6 +10,7 @@ export const initialApp: AppState = {
   chapterThreeFinished: false,
   chapterFourFinished: false,
   chapterFiveFinished: false,
+  lastChapterFinished: null,
 };
 
 const _appReducer = createReducer(
@@ -54,6 +55,12 @@ const _appReducer = createReducer(
     return {
       ...state,
       chapterFiveFinished: true,
+    };
+  }),
+  on(appActions.setLastChapterFinished, (state, { lastChapterFinished }) => {
+    return {
+      ...state,
+      lastChapterFinished,
     };
   })
 );
