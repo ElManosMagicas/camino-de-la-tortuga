@@ -18,6 +18,7 @@ import { Chapter2Facade } from '@app/facades/chapter-2.facade';
 import { Chapter3Facade } from '@app/facades/chapter-3.facade';
 import { Chapter4Facade } from '@app/facades/chapter-4.facade';
 import { Chapter5Facade } from '@app/facades/chapter-5.facade';
+import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
 
 @Component({
   selector: 'app-map',
@@ -38,6 +39,8 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
   public isChapterThreeFinished$: Observable<boolean>;
   public isChapterFourFinished$: Observable<boolean>;
   public isChapterFiveFinished$: Observable<boolean>;
+
+  public lastChapterFinished$: Observable<ILastChapterFinished>;
 
   public turtleNameSubscription$: Subscription;
 
@@ -76,6 +79,7 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
     this.isChapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
     this.isChapterFourFinished$ = this._appFacade.isChapterFourFinished$;
     this.isChapterFiveFinished$ = this._appFacade.isChapterFiveFinished$;
+    this.lastChapterFinished$ = this._appFacade.lastChapterFinished$;
     this.currentRoute = this._utilService.getCurrentRoute();
   }
 

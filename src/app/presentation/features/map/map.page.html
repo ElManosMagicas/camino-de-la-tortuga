@@ -9,7 +9,7 @@
       ></div>
       <div
         class="map__container__chapter1__tortuga1"
-        [ngClass]="{'finished': (isChapterOneFinished$ | async)}"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter1}"
       ></div>
     </div>
     <div class="map__container__chapter2">
@@ -20,7 +20,7 @@
       ></div>
       <div
         class="map__container__chapter2__tortuga2"
-        [ngClass]="{'finished': (isChapterTwoFinished$ | async)}"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter2}"
       ></div>
     </div>
     <div class="map__container__chapter3">
@@ -31,7 +31,7 @@
       ></div>
       <div
         class="map__container__chapter3__tortuga3"
-        [ngClass]="{'finished': (isChapterThreeFinished$ | async)}"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter3}"
       ></div>
     </div>
     <div class="map__container__chapter4">
@@ -42,7 +42,7 @@
       ></div>
       <div
         class="map__container__chapter4__tortuga4"
-        [ngClass]="{'finished': (isChapterFourFinished$ | async)}"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter4}"
       ></div>
     </div>
     <div class="map__container__chapter5">
@@ -53,7 +53,7 @@
       ></div>
       <div
         class="map__container__chapter5__tortuga5"
-        [ngClass]="{'finished': (isChapterFiveFinished$ | async)}"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter5}"
       ></div>
     </div>
     <div class="map__container__subtitles">
