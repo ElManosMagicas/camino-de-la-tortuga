@@ -3,15 +3,15 @@ export const APP_CONSTANTS = {
     // CHAPTER 1
     NARRATOR_CHAPTER_1_SCENE_1: '/assets/audios/cap1-esc1-narradora.wav',
     NARRATOR_CHAPTER_1_SCENE_2: '/assets/audios/cap1-esc2-narradora.mp3',
-    NARRATOR_CHAPTER_1_SCENE_3: '/assets/audios/cap1-esc2-narradora.mp3',
-    NARRATOR_CHAPTER_1_SCENE_4: '/assets/audios/cap1-esc2-narradora.mp3',
+    NARRATOR_CHAPTER_1_SCENE_3: '/assets/audios/cap1-esc3-narradora.mp3',
+    NARRATOR_CHAPTER_1_SCENE_4: '/assets/audios/cap1-esc4-narradora.mp3',
     CUY_CHAPTER_1_SCENE_5: '/assets/audios/cap1-esc5-cuy.mp3',
     NARRATOR_CHAPTER_1_SCENE_6: '/assets/audios/cap1-esc6-narradora.wav',
     NARRATOR_CHAPTER_1_SCENE_7: '/assets/audios/cap1-esc7-narradora.wav',
     NARRATOR_CHAPTER_1_SCENE_8: '/assets/audios/cap1-esc8-narradora.wav',
     NARRATOR_CHAPTER_1_SCENE_9: '/assets/audios/cap1-esc9-narradora.wav',
     NARRATOR_CHAPTER_1_SCENE_10: '/assets/audios/cap1-esc10-narradora.wav',
-    NARRATOR_CHAPTER_1_SCENE_11: '/assets/audios/cap1-esc6-narradora.wav',
+    NARRATOR_CHAPTER_1_SCENE_11: '/assets/audios/cap1-esc11-narradora.wav',
     TURTLE_CHAPTER_1_SCENE_12: '/assets/audios/cap1-esc12-tortuga.wav',
     CUY_CHAPTER_1_SCENE_13: '/assets/audios/cap1-esc13-cuy.wav',
     // CHAPTER 2
