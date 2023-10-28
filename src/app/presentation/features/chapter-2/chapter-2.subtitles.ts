@@ -8,5 +8,5 @@ export const SUBTITLES_CHAPTER_2 = {
   SCENE_FOUR:
     '─ Yo prefiero comer tallos y semillas. ¡Son deliciosos y llenan mi pancita!',
   SCENE_FIVE:
-    '─ Ya veo, pues yo no como tallos ni semillas. No sé de dónde podrías venir. Será mejor que visites otro lugar.',
+    '─ Ya veo, pues yo no como tallos ni semillas. No sé de dónde podrías venir. Será mejor que vayas otro lugar.',
 };
