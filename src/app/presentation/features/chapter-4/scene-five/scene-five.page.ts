@@ -5,6 +5,7 @@ import {
   OnDestroy,
   OnInit,
   Renderer2,
+  TemplateRef,
   ViewChild,
 } from '@angular/core';
 import { APP_CONSTANTS as CONST } from '@app/app.constants';
@@ -14,6 +15,7 @@ import { UtilService } from '@app/services/util.service';
 import { Observable, Subscription } from 'rxjs';
 import { SUBTITLES_CHAPTER_4 } from '../chapter-4.subtitles';
 import { Chapter4Facade } from '@app/facades/chapter-4.facade';
+import { IContextModal } from '@app/core/models/modal.model';
 
 @Component({
   selector: 'chapter-4-scene-five',
@@ -21,6 +23,8 @@ import { Chapter4Facade } from '@app/facades/chapter-4.facade';
   styleUrls: ['./scene-five.page.scss'],
 })
 export class SceneFivePage implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('backpackChapter4', { static: true })
+  backpackChapter4!: TemplateRef<IContextModal>;
   @ViewChild('cap4Esc5Danta') audioPlayer: ElementRef;
 
   public CONST = CONST;
@@ -30,6 +34,9 @@ export class SceneFivePage implements OnInit, AfterViewInit, OnDestroy {
   public showPreviousButton: boolean = true;
 
   public turtleName$: Observable<string>;
+  public chapterTwoFinished$: Observable<boolean>;
+  public chapterThreeFinished$: Observable<boolean>;
+  public chapterFourFinished$: Observable<boolean>;
 
   public turtleNameSubscription$: Subscription;
 
@@ -46,6 +53,9 @@ export class SceneFivePage implements OnInit, AfterViewInit, OnDestroy {
       this.turtleName = name;
     });
     this.currentRoute = this._utilService.getCurrentRoute();
+    this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
+    this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
+    this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
   }
 
   ngAfterViewInit(): void {
@@ -79,15 +89,16 @@ export class SceneFivePage implements OnInit, AfterViewInit, OnDestroy {
     this._utilService.navigateTo(ROUTES.CHAPTER_4_SCENE_4);
   }
   public onGoToConfiguration() {}
-  public onGoToBackpack() {}
+
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_4_SCENE_5);
   }
 
-  public onPlayDantaSound(): void {
-    // const dantaElement: HTMLAudioElement = this.dantaPlayer.nativeElement;
-    // if (dantaElement.paused) {
-    //   dantaElement.play();
-    // }
+  public onGoToBackpack(): void {
+    this._appFacade.openModal(this.backpackChapter4);
+  }
+
+  public onCloseBackpack(): void {
+    this._appFacade.closeModal();
   }
 }
