@@ -26,8 +26,9 @@
         />
         <button
           class="scene-one__container__introduction__accept"
-          (click)="onSubmit()"
+          [ngClass]="{'enabled': !isButtonDisabled}"
           [disabled]="isButtonDisabled"
+          (click)="onSubmit()"
         >
           Aceptar
         </button>

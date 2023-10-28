@@ -124,15 +124,22 @@
       &__accept {
         width: 30%;
         padding: 12px;
-        background-color: $color-primary-blue;
-        color: $color-primary-white;
+        background-color: $color-primary-white;
+        color: #b3b3b3;
         border: none;
         border-radius: 4px;
-        cursor: pointer;
+        pointer-events: none;
         font-family: $lato-bold;
         font-size: 18px;
         &:focus {
           background-color: #0056b3;
+        }
+        &.enabled {
+          pointer-events: all;
+
+          background-color: $color-primary-blue;
+          color: $color-primary-white;
+          cursor: pointer;
         }
       }
     }

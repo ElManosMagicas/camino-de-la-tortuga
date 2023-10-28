@@ -66,13 +66,8 @@ export class SceneOnePage implements OnInit, AfterViewInit {
     }
   }
 
-  public onGoToNextPage(): void {
-    this._chapter1Facade.goToNextStep();
-    this._utilService.navigateTo(ROUTES.CHAPTER_1_SCENE_2);
-  }
-  public onGoToPreviousPage(): void {
-    // this._chapter1Facade.goToPreviousStep();
-  }
+  public onGoToNextPage(): void {}
+  public onGoToPreviousPage(): void {}
   public onGoToConfiguration() {}
   public onGoToBackpack() {}
   public onRepeatScene() {
