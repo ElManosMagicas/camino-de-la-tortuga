@@ -43,6 +43,7 @@ export const APP_CONSTANTS = {
     // CHAPTER 5
     NARRATOR_CHAPTER_5_SCENE_1: '/assets/audios/cap5-esc1-narradora.wav',
     NARRATOR_CHAPTER_5_SCENE_2: '/assets/audios/cap5-esc2-narradora.wav',
+    NARRATOR_CHAPTER_5_SCENE_3: '/assets/audios/cap5-esc3-narradora.wav',
     ACTIVITY_INSTRUCTIONS_CHAPTER_5_SCENE_4:
       '/assets/audios/cap5-esc4-instrucciones-actividad.wav',
     TURTLE_CHAPTER_5_SCENE_5: '/assets/audios/cap5-esc5-tortuga.wav',

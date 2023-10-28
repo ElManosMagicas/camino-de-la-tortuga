@@ -21,8 +21,7 @@ import { Chapter5Facade } from '@app/facades/chapter-5.facade';
   styleUrls: ['./scene-two.page.scss'],
 })
 export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('cap5Esc1Narrator') audioPlayer: ElementRef;
-  @ViewChild('cap5Esc1Serpiente') tucanPlayer: ElementRef;
+  @ViewChild('cap5Esc2Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
@@ -50,9 +49,9 @@ export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 1000);
   }
 
   ngOnDestroy(): void {

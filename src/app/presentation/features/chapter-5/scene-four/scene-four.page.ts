@@ -26,8 +26,7 @@ import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
   styleUrls: ['./scene-four.page.scss'],
 })
 export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('cap5Esc1Narrator') audioPlayer: ElementRef;
-  @ViewChild('cap5Esc1Serpiente') tucanPlayer: ElementRef;
+  @ViewChild('cap5Esc4Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public EPERFECT_DAY = EPERFECT_DAY;
@@ -66,9 +65,9 @@ export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 2500);
   }
 
   ngOnDestroy(): void {
