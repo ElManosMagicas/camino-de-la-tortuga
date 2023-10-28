@@ -207,6 +207,7 @@
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         pointer-events: none;
         &.enabled {
+          pointer-events: all;
           cursor: pointer;
           background: url($elements-map-btn-chapter5-on);
         }
