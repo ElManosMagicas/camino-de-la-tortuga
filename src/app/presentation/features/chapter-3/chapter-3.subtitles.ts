@@ -7,7 +7,7 @@ export const SUBTITLES_CHAPTER_3 = {
   SCENE_FOUR:
     '─ Señora serpiente, estoy intentando llegar a mi hogar, pero no sé cómo.',
   SCENE_FIVE:
-    '─ Pareces un reptil... pero ¿cómo vives? Yo tengo una madriguera debajo de este árbol, me gusta porque me protege cuando hay mucho sol y me da cobijo cuando hace frío.',
+    '─ Pareces un reptil... pero ¿cómo vives? Yo tengo una madriguera debajo de este árbol, me gusta porque me protege cuando hace sol y me da cobijo cuando hace frío.',
   SCENE_SIX:
     '─ No, no sé qué es una madriguera, me gustan los lugares húmedos, de pronto cerca de un río o un lago… ojalá con un clima más fresco porque aquí hace mucho calor.',
   SCENE_SEVEN:

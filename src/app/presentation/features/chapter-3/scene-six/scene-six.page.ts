@@ -21,8 +21,7 @@ import { Observable, Subscription } from 'rxjs';
   styleUrls: ['./scene-six.page.scss'],
 })
 export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('cap1Esc2Narrator') audioPlayer: ElementRef;
-  @ViewChild('cap3Esc1Serpiente') tucanPlayer: ElementRef;
+  @ViewChild('cap3Esc6Turtle') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
@@ -49,9 +48,9 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 2000);
   }
 
   ngOnDestroy(): void {

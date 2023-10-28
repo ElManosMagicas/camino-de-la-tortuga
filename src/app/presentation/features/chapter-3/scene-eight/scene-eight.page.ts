@@ -82,9 +82,9 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 1000);
   }
 
   ngOnDestroy(): void {

@@ -24,7 +24,7 @@ export const APP_CONSTANTS = {
       '/assets/audios/cap2-esc6-instrucciones-actividad.wav',
     // CHAPTER 3
     NARRATOR_CHAPTER_3_SCENE_1: '/assets/audios/cap3-esc1-narradora.wav',
-    NARRATOR_CHAPTER_3_SCENE_2: '/assets/audios/cap3-esc2-narradora.WAV',
+    NARRATOR_CHAPTER_3_SCENE_2: '/assets/audios/cap3-esc2-narradora.wav',
     SNAKE_CHAPTER_3_SCENE_3: '/assets/audios/cap3-esc3-serpiente.wav',
     TURTLE_CHAPTER_3_SCENE_4: '/assets/audios/cap3-esc4-tortuga.wav',
     SNAKE_CHAPTER_3_SCENE_5: '/assets/audios/cap3-esc5-serpiente.wav',

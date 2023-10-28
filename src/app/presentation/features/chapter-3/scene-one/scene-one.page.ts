@@ -21,8 +21,7 @@ import { SUBTITLES_CHAPTER_3 } from '../chapter-3.subtitles';
   styleUrls: ['./scene-one.page.scss'],
 })
 export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('cap1Esc2Narrator') audioPlayer: ElementRef;
-  @ViewChild('cap3Esc1Serpiente') tucanPlayer: ElementRef;
+  @ViewChild('cap3Esc1Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
@@ -50,9 +49,9 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 1500);
   }
 
   ngOnDestroy(): void {
