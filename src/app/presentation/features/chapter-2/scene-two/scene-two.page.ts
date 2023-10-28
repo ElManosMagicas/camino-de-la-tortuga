@@ -21,7 +21,7 @@ import { SUBTITLES_CHAPTER_2 } from '../chapter-2.subtitles';
   styleUrls: ['./scene-two.page.scss'],
 })
 export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('cap1Esc2Narrator') audioPlayer: ElementRef;
+  @ViewChild('cap2Esc2Turtle') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
@@ -48,9 +48,9 @@ export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 2500);
   }
 
   ngOnDestroy(): void {

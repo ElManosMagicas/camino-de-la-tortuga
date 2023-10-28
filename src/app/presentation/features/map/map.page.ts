@@ -85,13 +85,13 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
     this.lastChapterFinished$ = this._appFacade.lastChapterFinished$;
     this.lastChapterFinishedSubscription$ = this.lastChapterFinished$.subscribe(
       (lastChapter) => {
-        if (lastChapter.chapter1 === true) {
+        if (lastChapter?.chapter1 === true) {
           this.mapDialogs = MAP_DIALOGS.AFTER_CHAPTER_1;
-        } else if (lastChapter.chapter2 === true) {
+        } else if (lastChapter?.chapter2 === true) {
           this.mapDialogs = MAP_DIALOGS.AFTER_CHAPTER_2;
-        } else if (lastChapter.chapter3 === true) {
+        } else if (lastChapter?.chapter3 === true) {
           this.mapDialogs = MAP_DIALOGS.AFTER_CHAPTER_3;
-        } else if (lastChapter.chapter4 === true) {
+        } else if (lastChapter?.chapter4 === true) {
           this.mapDialogs = MAP_DIALOGS.AFTER_CHAPTER_4;
         }
       }

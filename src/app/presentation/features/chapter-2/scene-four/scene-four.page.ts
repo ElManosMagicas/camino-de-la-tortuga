@@ -18,7 +18,7 @@ import { SUBTITLES_CHAPTER_2 } from '../chapter-2.subtitles';
   styleUrls: ['./scene-four.page.scss'],
 })
 export class SceneFourPage {
-  @ViewChild('cap2Esc4Narrator') audioPlayer: ElementRef;
+  @ViewChild('cap2Esc4Turtle') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
@@ -36,9 +36,9 @@ export class SceneFourPage {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 1500);
   }
 
   public getSubtitles(): string {

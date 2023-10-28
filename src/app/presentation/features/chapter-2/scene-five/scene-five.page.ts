@@ -18,7 +18,7 @@ import { SUBTITLES_CHAPTER_2 } from '../chapter-2.subtitles';
   styleUrls: ['./scene-five.page.scss'],
 })
 export class SceneFivePage implements OnInit, AfterViewInit {
-  @ViewChild('cap2Esc5Narrator') audioPlayer: ElementRef;
+  @ViewChild('cap2Esc5Tucan') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
@@ -36,9 +36,9 @@ export class SceneFivePage implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 1000);
   }
 
   public getSubtitles(): string {

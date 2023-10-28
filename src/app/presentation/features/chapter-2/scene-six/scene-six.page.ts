@@ -53,9 +53,9 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 2500);
   }
 
   ngOnDestroy(): void {
