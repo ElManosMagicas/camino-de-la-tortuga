@@ -104,7 +104,7 @@
       margin-top: -30px;
       width: 100%;
       opacity: 0;
-      animation: fromBottom 1s ease-in-out 3s forwards;
+      animation: appearFullOpacity 1s ease-in-out 3s forwards;
     }
     &__footer {
       z-index: 1000;
