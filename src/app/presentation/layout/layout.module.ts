@@ -8,6 +8,7 @@ import { InnerNavComponent } from './components/inner-nav/inner-nav.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { SoundButtonComponent } from './components/sound-button/sound-button.component';
 import { SubtitlesComponent } from './components/subtitles/subtitles.component';
+import { BackpackComponents } from './components/backpack/backpack.components';
 
 const PIPES = [];
 
@@ -19,6 +20,7 @@ const COMPONENTS = [
   ModalComponent,
   SoundButtonComponent,
   SubtitlesComponent,
+  BackpackComponents,
 ];
 
 @NgModule({

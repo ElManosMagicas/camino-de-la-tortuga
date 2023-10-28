@@ -1,0 +1,25 @@
+<div class="backpack">
+  <button class="backpack__close" (click)="onClose()">
+    <img src="/assets/icons/btn-close.png" alt="Botón Cerrar" />
+  </button>
+  <h2 class="backpack__title">¡TU MOCHILA!</h2>
+  <div class="backpack__description">
+    Acá podrás ver las cosas que la tortuga va recolectando durante su viaje.
+  </div>
+  <div class="backpack__wrapper">
+    <div class="backpack__wrapper__items">
+      <div
+        class="backpack__wrapper__items__food"
+        [ngClass]="{ collected: food }"
+      ></div>
+      <div
+        class="backpack__wrapper__items__sun"
+        [ngClass]="{ collected: sun }"
+      ></div>
+      <div
+        class="backpack__wrapper__items__river"
+        [ngClass]="{ collected: river }"
+      ></div>
+    </div>
+  </div>
+</div>
