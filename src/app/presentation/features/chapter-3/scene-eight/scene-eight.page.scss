@@ -64,6 +64,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      z-index: 2;
       &__top {
         display: flex;
         flex-direction: row;
@@ -292,7 +293,7 @@
       }
     }
     &__arrows {
-      z-index: 990;
+      z-index: 1;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

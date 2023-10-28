@@ -79,14 +79,6 @@
       background-position: center;
       background-repeat: no-repeat;
     }
-    &__soundbtn {
-      position: absolute;
-      bottom: 252px;
-      right: 300px;
-      z-index: 21;
-      opacity: 0;
-      animation: appearFullOpacity 1.5s ease-in-out 1s forwards;
-    }
     &__subtitles {
       width: 100%;
       position: absolute;

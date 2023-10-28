@@ -83,11 +83,4 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_2_SCENE_1);
   }
-
-  public onPlayTucanSound(): void {
-    // const tucanElement: HTMLAudioElement = this.tucanPlayer.nativeElement;
-    // if (tucanElement.paused) {
-    //   tucanElement.play();
-    // }
-  }
 }

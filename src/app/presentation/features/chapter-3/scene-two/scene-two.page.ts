@@ -84,11 +84,4 @@ export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_3_SCENE_2);
   }
-
-  public onPlaySnakeSound(): void {
-    // const snakeElement: HTMLAudioElement = this.snakePlayer.nativeElement;
-    // if (snakeElement.paused) {
-    //   snakeElement.play();
-    // }
-  }
 }

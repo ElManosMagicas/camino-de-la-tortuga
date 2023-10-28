@@ -84,11 +84,4 @@ export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_4_SCENE_2);
   }
-
-  public onPlayDantaSound(): void {
-    // const dantaElement: HTMLAudioElement = this.dantaPlayer.nativeElement;
-    // if (dantaElement.paused) {
-    //   dantaElement.play();
-    // }
-  }
 }
