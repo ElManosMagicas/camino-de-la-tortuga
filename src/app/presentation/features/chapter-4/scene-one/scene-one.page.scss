@@ -87,7 +87,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromRight 2s ease-in-out 2s forwards;
+      animation: fromRight 2s ease-in-out 8s forwards;
     }
     &__subtitles {
       width: 100%;
@@ -106,7 +106,7 @@
       margin-top: -30px;
       width: 100%;
       opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 3s forwards;
+      animation: appearFullOpacity 1s ease-in-out 12.5s forwards;
     }
     &__footer {
       z-index: 1000;

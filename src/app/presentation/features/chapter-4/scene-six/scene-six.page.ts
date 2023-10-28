@@ -26,8 +26,7 @@ import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
 export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
   @ViewChild('successChapter4Activity', { static: true })
   successChapter4Activity!: TemplateRef<IContextModal>;
-  @ViewChild('cap4Esc1Narrator') audioPlayer: ElementRef;
-  @ViewChild('cap4Esc2Danta') dantaPlayer: ElementRef;
+  @ViewChild('cap4Esc6Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public EPERFECT_DAY = EPERFECT_DAY;
@@ -61,9 +60,9 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 2500);
   }
 
   ngOnDestroy(): void {

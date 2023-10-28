@@ -21,8 +21,7 @@ import { Chapter4Facade } from '@app/facades/chapter-4.facade';
   styleUrls: ['./scene-five.page.scss'],
 })
 export class SceneFivePage implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('cap4Esc1Narrator') audioPlayer: ElementRef;
-  @ViewChild('cap4Esc2Danta') dantaPlayer: ElementRef;
+  @ViewChild('cap4Esc5Danta') audioPlayer: ElementRef;
 
   public CONST = CONST;
   public currentRoute: string = '';
@@ -50,9 +49,9 @@ export class SceneFivePage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    setTimeout(() => {
+      this.playAudio();
+    }, 1500);
   }
 
   ngOnDestroy(): void {

@@ -54,7 +54,7 @@
       left: 0;
       z-index: 999;
       opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      animation: appearFullOpacity 1s ease-in-out 1s forwards;
     }
     &__arrows {
       z-index: 990;
@@ -64,7 +64,7 @@
       margin-top: -30px;
       width: 100%;
       opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 3s forwards;
+      animation: appearFullOpacity 1s ease-in-out 9s forwards;
     }
     &__footer {
       z-index: 1000;
