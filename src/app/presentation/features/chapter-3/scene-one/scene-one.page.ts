@@ -27,7 +27,7 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
   public CONST = CONST;
   public currentRoute: string = '';
   public turtleName: string;
-  public showNextButton: boolean = true;
+  public showNextButton: boolean = false;
   public showPreviousButton: boolean = true;
 
   public turtleName$: Observable<string>;
