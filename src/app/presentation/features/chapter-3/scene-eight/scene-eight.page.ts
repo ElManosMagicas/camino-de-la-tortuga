@@ -11,6 +11,7 @@ import {
 import { APP_CONSTANTS as CONST } from '@app/app.constants';
 import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { EBACKPACK } from '@app/core/enums/chapter-2-scene-6.enum';
+import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
 import { IContextModal } from '@app/core/models/modal.model';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter3Facade } from '@app/facades/chapter-3.facade';
@@ -155,6 +156,14 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public onGoToMap() {
+    const lastChapterFinished: ILastChapterFinished = {
+      chapter1: false,
+      chapter2: false,
+      chapter3: true,
+      chapter4: false,
+      chapter5: false,
+    };
+    this._appFacade.setLastChapterFinished(lastChapterFinished);
     this.divClicked = [false, false, false, false];
     // this._chapter3Facade.resetBackpackScore();
     this._appFacade.closeModal();

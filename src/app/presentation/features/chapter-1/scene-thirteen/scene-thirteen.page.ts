@@ -12,6 +12,7 @@ import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
 import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 import { AppFacade } from '@app/facades/app.facade';
+import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
 
 @Component({
   selector: 'chapter-1-scene-thirteen',
@@ -56,6 +57,14 @@ export class SceneThirteenPage implements OnInit, AfterViewInit {
   }
 
   public onGoToNextPage(): void {
+    const lastChapterFinished: ILastChapterFinished = {
+      chapter1: true,
+      chapter2: false,
+      chapter3: false,
+      chapter4: false,
+      chapter5: false,
+    };
+    this._appFacade.setLastChapterFinished(lastChapterFinished);
     this._appFacade.finishChapterOne();
     this._chapter1Facade.resetStep();
     this._utilService.navigateTo(ROUTES.MAP);

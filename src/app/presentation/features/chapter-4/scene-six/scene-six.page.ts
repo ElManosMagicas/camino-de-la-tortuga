@@ -16,6 +16,7 @@ import { UtilService } from '@app/services/util.service';
 import { Observable, Subscription } from 'rxjs';
 import { Chapter4Facade } from '@app/facades/chapter-4.facade';
 import { IContextModal } from '@app/core/models/modal.model';
+import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
 
 @Component({
   selector: 'chapter-4-scene-six',
@@ -102,6 +103,14 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
   }
 
   public onGoToMap() {
+    const lastChapterFinished: ILastChapterFinished = {
+      chapter1: false,
+      chapter2: false,
+      chapter3: false,
+      chapter4: true,
+      chapter5: false,
+    };
+    this._appFacade.setLastChapterFinished(lastChapterFinished);
     this.divClicked = [false, false, false];
     this._chapter4Facade.resetPerfectDayScore();
     this._appFacade.closeModal();

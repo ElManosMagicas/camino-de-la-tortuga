@@ -18,6 +18,7 @@ import { SUBTITLES_CHAPTER_5 } from '../chapter-5.subtitles';
 import { Chapter5Facade } from '@app/facades/chapter-5.facade';
 import { EPERFECT_DAY } from '@app/core/enums/chapter-4-scene-6.enum';
 import { IContextModal } from '@app/core/models/modal.model';
+import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
 
 @Component({
   selector: 'chapter-5-scene-four',
@@ -133,6 +134,14 @@ export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public onContinue(): void {
+    const lastChapterFinished: ILastChapterFinished = {
+      chapter1: false,
+      chapter2: false,
+      chapter3: false,
+      chapter4: false,
+      chapter5: true,
+    };
+    this._appFacade.setLastChapterFinished(lastChapterFinished);
     this.piecesClicked = [false, false, false];
     this.isDottedEnabled = false;
     this.dottedClicked = [false, false, false];
