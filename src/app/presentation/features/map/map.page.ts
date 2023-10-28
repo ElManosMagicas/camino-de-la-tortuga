@@ -12,13 +12,13 @@ import { APP_ROUTES as ROUTES } from '@app/app.routes';
 import { AppFacade } from '@app/facades/app.facade';
 import { UtilService } from '@app/services/util.service';
 import { Observable, Subscription } from 'rxjs';
-import { MapFacade } from '@app/facades/map.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { Chapter2Facade } from '@app/facades/chapter-2.facade';
 import { Chapter3Facade } from '@app/facades/chapter-3.facade';
 import { Chapter4Facade } from '@app/facades/chapter-4.facade';
 import { Chapter5Facade } from '@app/facades/chapter-5.facade';
 import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
+import { MAP_DIALOGS } from './map.dialogs';
 
 @Component({
   selector: 'app-map',
@@ -32,6 +32,7 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
   public CONST = CONST;
   public currentRoute: string = '';
   public turtleName: string;
+  public mapDialogs: string = '';
 
   public turtleName$: Observable<string>;
   public isChapterOneFinished$: Observable<boolean>;
@@ -43,6 +44,7 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
   public lastChapterFinished$: Observable<ILastChapterFinished>;
 
   public turtleNameSubscription$: Subscription;
+  public lastChapterFinishedSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -67,6 +69,7 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.turtleNameSubscription$?.unsubscribe();
+    this.lastChapterFinishedSubscription$?.unsubscribe();
   }
 
   private _setValues(): void {
@@ -80,6 +83,19 @@ export class MapPage implements OnInit, AfterViewInit, OnDestroy {
     this.isChapterFourFinished$ = this._appFacade.isChapterFourFinished$;
     this.isChapterFiveFinished$ = this._appFacade.isChapterFiveFinished$;
     this.lastChapterFinished$ = this._appFacade.lastChapterFinished$;
+    this.lastChapterFinishedSubscription$ = this.lastChapterFinished$.subscribe(
+      (lastChapter) => {
+        if (lastChapter.chapter1 === true) {
+          this.mapDialogs = MAP_DIALOGS.AFTER_CHAPTER_1;
+        } else if (lastChapter.chapter2 === true) {
+          this.mapDialogs = MAP_DIALOGS.AFTER_CHAPTER_2;
+        } else if (lastChapter.chapter3 === true) {
+          this.mapDialogs = MAP_DIALOGS.AFTER_CHAPTER_3;
+        } else if (lastChapter.chapter4 === true) {
+          this.mapDialogs = MAP_DIALOGS.AFTER_CHAPTER_4;
+        }
+      }
+    );
     this.currentRoute = this._utilService.getCurrentRoute();
   }
 

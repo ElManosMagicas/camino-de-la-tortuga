@@ -36,14 +36,26 @@
       top: 56px;
       left: 340px;
       z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 287px;
       height: 119px;
-      opacity: 0;
       background: url($elements-map-textbox);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      &__text {
+        color: $color-primary-white;
+        font-family: $letter-for-learners;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 25px;
+        text-align: center;
+        padding: 0 0 0 20px;
+      }
     }
     &__chapter1 {
       position: relative;
