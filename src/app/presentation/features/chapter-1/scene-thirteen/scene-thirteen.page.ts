@@ -4,6 +4,7 @@ import {
   ElementRef,
   OnInit,
   Renderer2,
+  TemplateRef,
   ViewChild,
 } from '@angular/core';
 import { APP_CONSTANTS as CONST } from '@app/app.constants';
@@ -13,6 +14,8 @@ import { UtilService } from '@app/services/util.service';
 import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 import { AppFacade } from '@app/facades/app.facade';
 import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
+import { IContextModal } from '@app/core/models/modal.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'chapter-1-scene-thirteen',
@@ -20,6 +23,8 @@ import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
   styleUrls: ['./scene-thirteen.page.scss'],
 })
 export class SceneThirteenPage implements OnInit, AfterViewInit {
+  @ViewChild('backpackChapter1', { static: true })
+  backpackChapter1!: TemplateRef<IContextModal>;
   @ViewChild('cap1Esc13Cuy') audioPlayer: ElementRef;
 
   public CONST = CONST;
@@ -27,6 +32,10 @@ export class SceneThirteenPage implements OnInit, AfterViewInit {
   public turtleName: string;
   public showNextButton: boolean = true;
   public showPreviousButton: boolean = true;
+
+  public chapterTwoFinished$: Observable<boolean>;
+  public chapterThreeFinished$: Observable<boolean>;
+  public chapterFourFinished$: Observable<boolean>;
 
   constructor(
     private _appFacade: AppFacade,
@@ -36,6 +45,9 @@ export class SceneThirteenPage implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.currentRoute = this._utilService.getCurrentRoute();
+    this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
+    this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
+    this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
   }
 
   ngAfterViewInit(): void {
@@ -74,8 +86,16 @@ export class SceneThirteenPage implements OnInit, AfterViewInit {
     this._utilService.navigateTo(ROUTES.CHAPTER_1_SCENE_12);
   }
   public onGoToConfiguration() {}
-  public onGoToBackpack() {}
+
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_1_SCENE_13);
+  }
+
+  public onGoToBackpack(): void {
+    this._appFacade.openModal(this.backpackChapter1);
+  }
+
+  public onCloseBackpack(): void {
+    this._appFacade.closeModal();
   }
 }
