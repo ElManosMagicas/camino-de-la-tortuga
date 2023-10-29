@@ -1,6 +1,7 @@
 export const LABELS_CONSTANTS = {
   SCENES_LIST: {
     //CHAPTER 1
+    CHAPTER_1: 'Capítulo: Humedal',
     CHAPTER_1_SCENE_1: 'Humedal - Escena 1',
     CHAPTER_1_SCENE_2: 'Humedal - Escena 2',
     CHAPTER_1_SCENE_3: 'Humedal - Escena 3',
@@ -15,6 +16,7 @@ export const LABELS_CONSTANTS = {
     CHAPTER_1_SCENE_12: 'Humedal - Escena 12',
     CHAPTER_1_SCENE_13: 'Humedal - Escena 13',
     //CHAPTER 2
+    CHAPTER_2: 'Capítulo: Bosque',
     CHAPTER_2_SCENE_1: 'Bosque - Escena 1',
     CHAPTER_2_SCENE_2: 'Bosque - Escena 2',
     CHAPTER_2_SCENE_3: 'Bosque - Escena 3',
@@ -22,6 +24,7 @@ export const LABELS_CONSTANTS = {
     CHAPTER_2_SCENE_5: 'Bosque - Escena 5',
     CHAPTER_2_SCENE_6: 'Bosque - Escena 6',
     //CHAPTER 3
+    CHAPTER_3: 'Capítulo: Desierto',
     CHAPTER_3_SCENE_1: 'Desierto - Escena 1',
     CHAPTER_3_SCENE_2: 'Desierto - Escena 2',
     CHAPTER_3_SCENE_3: 'Desierto - Escena 3',
@@ -31,6 +34,7 @@ export const LABELS_CONSTANTS = {
     CHAPTER_3_SCENE_7: 'Desierto - Escena 7',
     CHAPTER_3_SCENE_8: 'Desierto - Escena 8',
     //CHAPTER 4
+    CHAPTER_4: 'Capítulo: Llanos',
     CHAPTER_4_SCENE_1: 'Llanos - Escena 1',
     CHAPTER_4_SCENE_2: 'Llanos - Escena 2',
     CHAPTER_4_SCENE_3: 'Llanos - Escena 3',
@@ -38,6 +42,7 @@ export const LABELS_CONSTANTS = {
     CHAPTER_4_SCENE_5: 'Llanos - Escena 5',
     CHAPTER_4_SCENE_6: 'Llanos - Escena 6',
     //CHAPTER 5
+    CHAPTER_5: 'Capítulo: Río',
     CHAPTER_5_SCENE_1: 'Río - Escena 1',
     CHAPTER_5_SCENE_2: 'Río - Escena 2',
     CHAPTER_5_SCENE_3: 'Río - Escena 3',
