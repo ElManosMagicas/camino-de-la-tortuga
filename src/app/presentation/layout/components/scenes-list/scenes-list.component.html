@@ -1,0 +1,28 @@
+<div class="scenes-list">
+  <button class="scenes-list__close" (click)="onClose()">
+    <img src="/assets/icons/btn-close.png" alt="Botón Cerrar" />
+  </button>
+  <h2 class="scenes-list__title">GLOSARIO:</h2>
+  <div class="scenes-list__description">
+    Acá podrás ver todos los capítulos y escenas del libro.
+  </div>
+  <div class="scenes-list__wrapper">
+    <div class="scenes-list__wrapper__items">
+      <div
+        class="scenes-list__wrapper__items__content"
+        [ngClass]="{ chapter: list.type === ESCENES_LIST.CHAPTER }"
+        *ngFor="let list of scenesLists"
+        (click)="onGoTo(list.path, list.type)"
+      >
+        <div class="scenes-list__wrapper__items__content__left">
+          <p>{{ list.text }}</p>
+        </div>
+        <ng-container *ngIf="list.type === ESCENES_LIST.SCENE">
+          <div class="scenes-list__wrapper__items__content__right">
+            <img [src]="list.iconUrl" [alt]="list.iconAlt" />
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

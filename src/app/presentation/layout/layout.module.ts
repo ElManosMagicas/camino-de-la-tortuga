@@ -10,6 +10,7 @@ import { SoundButtonComponent } from './components/sound-button/sound-button.com
 import { SubtitlesComponent } from './components/subtitles/subtitles.component';
 import { BackpackComponents } from './components/backpack/backpack.components';
 import { CreditsComponent } from './components/credits/credits.component';
+import { ScenesListComponent } from './components/scenes-list/scenes-list.component';
 
 const PIPES = [];
 
@@ -23,6 +24,7 @@ const COMPONENTS = [
   SubtitlesComponent,
   BackpackComponents,
   CreditsComponent,
+  ScenesListComponent,
 ];
 
 @NgModule({
