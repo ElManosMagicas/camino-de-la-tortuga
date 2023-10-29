@@ -15,6 +15,7 @@ import { UtilService } from '@app/services/util.service';
 import { Observable, Subscription } from 'rxjs';
 import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 import { IContextModal } from '@app/core/models/modal.model';
+import { ECONFIGURATION } from '@app/core/enums/configuration.enum';
 
 @Component({
   selector: 'chapter-1-scene-eight',
@@ -26,6 +27,8 @@ export class SceneEightPage implements OnInit, OnDestroy, AfterViewInit {
   backpackChapter1!: TemplateRef<IContextModal>;
   @ViewChild('scenesList', { static: true })
   scenesList!: TemplateRef<IContextModal>;
+  @ViewChild('config', { static: true })
+  config!: TemplateRef<IContextModal>;
   @ViewChild('cap1Esc8Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
@@ -33,11 +36,14 @@ export class SceneEightPage implements OnInit, OnDestroy, AfterViewInit {
   public turtleName: string;
   public showNextButton: boolean = true;
   public showPreviousButton: boolean = true;
+  public isToggled: boolean = true;
 
   public turtleName$: Observable<string>;
   public chapterTwoFinished$: Observable<boolean>;
   public chapterThreeFinished$: Observable<boolean>;
   public chapterFourFinished$: Observable<boolean>;
+  public isSubtitles$: Observable<boolean>;
+  public isSound$: Observable<boolean>;
 
   public turtleNameSubscription$: Subscription;
 
@@ -70,6 +76,8 @@ export class SceneEightPage implements OnInit, OnDestroy, AfterViewInit {
     this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
     this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
     this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
+    this.isSubtitles$ = this._appFacade.isSubtitles$;
+    this.isSound$ = this._appFacade.isSound$;
   }
 
   public getSubtitles(): string {
@@ -85,7 +93,6 @@ export class SceneEightPage implements OnInit, OnDestroy, AfterViewInit {
     this._chapter1Facade.goToPreviousStep();
     this._utilService.navigateTo(ROUTES.CHAPTER_1_SCENE_7);
   }
-  public onGoToConfiguration() {}
 
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_1_SCENE_8);
@@ -112,5 +119,29 @@ export class SceneEightPage implements OnInit, OnDestroy, AfterViewInit {
 
   public onCloseScenesList(): void {
     this._appFacade.closeModal();
+  }
+
+  public onGoToConfiguration(): void {
+    this._appFacade.openModal(this.config);
+  }
+
+  public onCloseConfig(): void {
+    this._appFacade.closeModal();
+  }
+
+  public onToggle(eventData: { identifier: string; isToggled: boolean }) {
+    if (eventData.identifier === ECONFIGURATION.SUBTITLES) {
+      if (eventData.isToggled) {
+        this._appFacade.activateSubtitles();
+      } else {
+        this._appFacade.deactivateSubtitles();
+      }
+    } else if (eventData.identifier === ECONFIGURATION.SOUND) {
+      if (eventData.isToggled) {
+        this._appFacade.activateSound();
+      } else {
+        this._appFacade.deactivateSound();
+      }
+    }
   }
 }

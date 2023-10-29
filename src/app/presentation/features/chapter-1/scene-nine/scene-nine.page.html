@@ -49,3 +49,11 @@
     (closeScenesListEvent)="onCloseScenesList()"
   ></layout-scenes-list>
 </ng-template>
+
+<ng-template #config>
+  <layout-configuration
+    (closeConfigEvent)="onCloseConfig()"
+    [isToggled]="isToggled"
+    (toggleEvent)="onToggle($event)"
+  ></layout-configuration>
+</ng-template>

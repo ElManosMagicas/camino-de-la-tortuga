@@ -14,6 +14,7 @@ import { AppFacade } from '@app/facades/app.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
 import { Observable } from 'rxjs';
+import { ECONFIGURATION } from '@app/core/enums/configuration.enum';
 
 @Component({
   selector: 'chapter-1-scene-one',
@@ -25,6 +26,8 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   backpackChapter1!: TemplateRef<IContextModal>;
   @ViewChild('scenesList', { static: true })
   scenesList!: TemplateRef<IContextModal>;
+  @ViewChild('config', { static: true })
+  config!: TemplateRef<IContextModal>;
   @ViewChild('cap1Esc1Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
@@ -32,10 +35,13 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   public placeholderText: string = 'Ingresa el nombre aquí';
   public isButtonDisabled: boolean = true;
   public currentRoute: string = '';
+  public isToggled: boolean = true;
 
   public chapterTwoFinished$: Observable<boolean>;
   public chapterThreeFinished$: Observable<boolean>;
   public chapterFourFinished$: Observable<boolean>;
+  public isSubtitles$: Observable<boolean>;
+  public isSound$: Observable<boolean>;
 
   constructor(
     private _renderer: Renderer2,
@@ -49,6 +55,8 @@ export class SceneOnePage implements OnInit, AfterViewInit {
     this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
     this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
     this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
+    this.isSubtitles$ = this._appFacade.isSubtitles$;
+    this.isSound$ = this._appFacade.isSound$;
   }
 
   ngAfterViewInit(): void {
@@ -82,7 +90,6 @@ export class SceneOnePage implements OnInit, AfterViewInit {
 
   public onGoToNextPage(): void {}
   public onGoToPreviousPage(): void {}
-  public onGoToConfiguration() {}
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_1_SCENE_1);
   }
@@ -101,5 +108,29 @@ export class SceneOnePage implements OnInit, AfterViewInit {
 
   public onCloseScenesList(): void {
     this._appFacade.closeModal();
+  }
+
+  public onGoToConfiguration(): void {
+    this._appFacade.openModal(this.config);
+  }
+
+  public onCloseConfig(): void {
+    this._appFacade.closeModal();
+  }
+
+  public onToggle(eventData: { identifier: string; isToggled: boolean }) {
+    if (eventData.identifier === ECONFIGURATION.SUBTITLES) {
+      if (eventData.isToggled) {
+        this._appFacade.activateSubtitles();
+      } else {
+        this._appFacade.deactivateSubtitles();
+      }
+    } else if (eventData.identifier === ECONFIGURATION.SOUND) {
+      if (eventData.isToggled) {
+        this._appFacade.activateSound();
+      } else {
+        this._appFacade.deactivateSound();
+      }
+    }
   }
 }
