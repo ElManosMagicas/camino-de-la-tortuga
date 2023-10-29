@@ -25,6 +25,8 @@ import { IContextModal } from '@app/core/models/modal.model';
 export class SceneSevenPage implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('backpackChapter1', { static: true })
   backpackChapter1!: TemplateRef<IContextModal>;
+  @ViewChild('scenesList', { static: true })
+  scenesList!: TemplateRef<IContextModal>;
   @ViewChild('cap1Esc7Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
@@ -103,6 +105,14 @@ export class SceneSevenPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public onCloseBackpack(): void {
+    this._appFacade.closeModal();
+  }
+
+  public onOpenScenesList(): void {
+    this._appFacade.openModal(this.scenesList);
+  }
+
+  public onCloseScenesList(): void {
     this._appFacade.closeModal();
   }
 }

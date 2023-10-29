@@ -28,7 +28,6 @@ export class ScenesListComponent implements OnInit {
         this._appFacade.closeModal();
         return this._utilService.navigateTo(path);
       case ESCENES_LIST.CHAPTER:
-        this._appFacade.closeModal();
         return false;
     }
   }

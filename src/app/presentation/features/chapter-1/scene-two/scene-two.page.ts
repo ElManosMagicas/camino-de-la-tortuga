@@ -24,6 +24,8 @@ import { AppFacade } from '@app/facades/app.facade';
 export class SceneTwoPage implements OnInit, AfterViewInit {
   @ViewChild('backpackChapter1', { static: true })
   backpackChapter1!: TemplateRef<IContextModal>;
+  @ViewChild('scenesList', { static: true })
+  scenesList!: TemplateRef<IContextModal>;
   @ViewChild('cap1Esc2Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
@@ -86,6 +88,14 @@ export class SceneTwoPage implements OnInit, AfterViewInit {
   }
 
   public onCloseBackpack(): void {
+    this._appFacade.closeModal();
+  }
+
+  public onOpenScenesList(): void {
+    this._appFacade.openModal(this.scenesList);
+  }
+
+  public onCloseScenesList(): void {
     this._appFacade.closeModal();
   }
 }

@@ -25,6 +25,7 @@
         (goToConfigurationEvent)="onGoToConfiguration()"
         (goToBackpackEvent)="onGoToBackpack()"
         (repeatSceneEvent)="onRepeatScene()"
+        (openScenesListEvent)="onOpenScenesList()"
       ></layout-bar>
     </div>
     <audio #cap1Esc11Narrator>
@@ -43,4 +44,10 @@
     [sun]="chapterFourFinished$ | async"
     (closeBackpackEvent)="onCloseBackpack()"
   ></layout-backpack>
+</ng-template>
+
+<ng-template #scenesList>
+  <layout-scenes-list
+    (closeScenesListEvent)="onCloseScenesList()"
+  ></layout-scenes-list>
 </ng-template>
