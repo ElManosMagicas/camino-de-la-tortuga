@@ -11,6 +11,9 @@ import { SubtitlesComponent } from './components/subtitles/subtitles.component';
 import { BackpackComponents } from './components/backpack/backpack.components';
 import { CreditsComponent } from './components/credits/credits.component';
 import { ScenesListComponent } from './components/scenes-list/scenes-list.component';
+import { ToggleButtonComponent } from './components/toggle-button/toggle-button.component';
+import { ConfigurationComponent } from './components/configuration/configuration.component';
+import { FormsModule } from '@angular/forms';
 
 const PIPES = [];
 
@@ -25,11 +28,13 @@ const COMPONENTS = [
   BackpackComponents,
   CreditsComponent,
   ScenesListComponent,
+  ToggleButtonComponent,
+  ConfigurationComponent,
 ];
 
 @NgModule({
   declarations: [...COMPONENTS],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   exports: [...COMPONENTS],
 })
 export class LayoutModule {}
