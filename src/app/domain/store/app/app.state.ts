@@ -9,4 +9,6 @@ export interface AppState {
   chapterFourFinished: boolean;
   chapterFiveFinished: boolean;
   lastChapterFinished: ILastChapterFinished;
+  isSubtitles: boolean;
+  isSound: boolean;
 }

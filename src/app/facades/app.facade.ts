@@ -17,6 +17,8 @@ export class AppFacade {
   public isChapterFourFinished$: Observable<boolean>;
   public isChapterFiveFinished$: Observable<boolean>;
   public lastChapterFinished$: Observable<ILastChapterFinished>;
+  public isSubtitles$: Observable<boolean>;
+  public isSound$: Observable<boolean>;
 
   constructor(private _store: Store, private _modalService: ModalService) {
     this.turtleName$ = this._store.select(appSelectors.selectTurtleName);
@@ -39,6 +41,8 @@ export class AppFacade {
     this.lastChapterFinished$ = this._store.select(
       appSelectors.selectLastChapterFinished
     );
+    this.isSubtitles$ = this._store.select(appSelectors.selectSubtitles);
+    this.isSound$ = this._store.select(appSelectors.selectSound);
   }
 
   public setTurtleName(turtleName: string) {
@@ -86,5 +90,21 @@ export class AppFacade {
     this._store.dispatch(
       appActions.setLastChapterFinished({ lastChapterFinished })
     );
+  }
+
+  public activateSubtitles(): void {
+    this._store.dispatch(appActions.activateSubtitles());
+  }
+
+  public deactivateSubtitles(): void {
+    this._store.dispatch(appActions.deactivateSubtitles());
+  }
+
+  public activateSound(): void {
+    this._store.dispatch(appActions.activateSound());
+  }
+
+  public deactivateSound(): void {
+    this._store.dispatch(appActions.deactivateSound());
   }
 }

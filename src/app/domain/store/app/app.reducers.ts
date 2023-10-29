@@ -11,6 +11,8 @@ export const initialApp: AppState = {
   chapterFourFinished: false,
   chapterFiveFinished: false,
   lastChapterFinished: null,
+  isSubtitles: true,
+  isSound: true,
 };
 
 const _appReducer = createReducer(
@@ -61,6 +63,30 @@ const _appReducer = createReducer(
     return {
       ...state,
       lastChapterFinished,
+    };
+  }),
+  on(appActions.activateSubtitles, (state) => {
+    return {
+      ...state,
+      isSubtitles: true,
+    };
+  }),
+  on(appActions.deactivateSubtitles, (state) => {
+    return {
+      ...state,
+      isSubtitles: false,
+    };
+  }),
+  on(appActions.activateSound, (state) => {
+    return {
+      ...state,
+      isSound: true,
+    };
+  }),
+  on(appActions.deactivateSound, (state) => {
+    return {
+      ...state,
+      isSound: false,
     };
   })
 );

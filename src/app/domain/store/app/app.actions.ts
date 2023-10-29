@@ -27,3 +27,11 @@ export const setLastChapterFinished = createAction(
   '[App] Set Last Chapter Finished',
   props<{ lastChapterFinished: ILastChapterFinished }>()
 );
+
+export const activateSubtitles = createAction('[App] Activate Subtitles');
+
+export const deactivateSubtitles = createAction('[App] Deactivate Subtitles');
+
+export const activateSound = createAction('[App] Activate Sound');
+
+export const deactivateSound = createAction('[App] Deactivate Sound');

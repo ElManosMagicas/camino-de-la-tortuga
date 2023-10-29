@@ -42,3 +42,13 @@ export const selectLastChapterFinished = createSelector(
   getAppFeatureState,
   (state: AppState) => state.lastChapterFinished
 );
+
+export const selectSubtitles = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.isSubtitles
+);
+
+export const selectSound = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.isSound
+);
