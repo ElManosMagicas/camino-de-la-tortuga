@@ -14,6 +14,7 @@ export class LayoutBarComponent implements OnInit {
   @Output() goToConfigurationEvent = new EventEmitter<boolean>();
   @Output() goToBackpackEvent = new EventEmitter<boolean>();
   @Output() repeatSceneEvent = new EventEmitter<boolean>();
+  @Output() openScenesListEvent = new EventEmitter<boolean>();
 
   public toggleControls: boolean = false;
   public sceneListLabel: string = '';
@@ -67,5 +68,9 @@ export class LayoutBarComponent implements OnInit {
 
   public onRepeatScene(): void {
     this.repeatSceneEvent.emit(true);
+  }
+
+  public onOpenScenesList(): void {
+    this.openScenesListEvent.emit(true);
   }
 }
