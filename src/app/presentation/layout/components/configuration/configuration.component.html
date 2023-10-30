@@ -11,21 +11,19 @@
   <div class="config__item">
     <div class="config__item__left">Activar /Desactivar subtítulos</div>
     <div class="config__item__right">
-      <layout-toggle-button
-        [identifier]="ECONFIGURATION.SUBTITLES"
-        [isToggled]="isToggled"
-        (toggleEvent)="onToggle($event)"
-      ></layout-toggle-button>
+      <layout-toggle-subtitles-button
+        [isSubtitlesToggled]="isSubtitlesToggled"
+        (subtitlesToggleEvent)="onSubtitlesToggle($event)"
+      ></layout-toggle-subtitles-button>
     </div>
   </div>
   <div class="config__item">
     <div class="config__item__left">Activar / Desactivar sonido</div>
     <div class="config__item__right">
-      <layout-toggle-button
-        [identifier]="ECONFIGURATION.SOUND"
-        [isToggled]="isToggled"
-        (toggleEvent)="onToggle($event)"
-      ></layout-toggle-button>
+      <layout-toggle-sound-button
+        [isSoundToggled]="isSoundToggled"
+        (soundToggleEvent)="onSoundToggle($event)"
+      ></layout-toggle-sound-button>
     </div>
   </div>
 </div>

@@ -11,9 +11,10 @@ import { SubtitlesComponent } from './components/subtitles/subtitles.component';
 import { BackpackComponents } from './components/backpack/backpack.components';
 import { CreditsComponent } from './components/credits/credits.component';
 import { ScenesListComponent } from './components/scenes-list/scenes-list.component';
-import { ToggleButtonComponent } from './components/toggle-button/toggle-button.component';
+import { ToggleSoundButtonComponent } from './components/toggle-sound-button/toggle-sound-button.component';
 import { ConfigurationComponent } from './components/configuration/configuration.component';
 import { FormsModule } from '@angular/forms';
+import { ToggleSubtitlesButtonComponent } from './components/toggle-subtitles-button/toggle-subtitles-button.component';
 
 const PIPES = [];
 
@@ -28,8 +29,9 @@ const COMPONENTS = [
   BackpackComponents,
   CreditsComponent,
   ScenesListComponent,
-  ToggleButtonComponent,
+  ToggleSoundButtonComponent,
   ConfigurationComponent,
+  ToggleSubtitlesButtonComponent,
 ];
 
 @NgModule({

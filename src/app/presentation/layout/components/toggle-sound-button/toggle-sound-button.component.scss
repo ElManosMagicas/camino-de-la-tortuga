@@ -1,14 +1,14 @@
 @import "global";
 @import "media-querys";
 
-.toggle-label {
+.toggle-sound-label {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
 }
 
-.toggle-slider {
+.toggle-sound-slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -20,7 +20,7 @@
   transition: 0.4s;
 }
 
-.toggle-slider:before {
+.toggle-sound-slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -38,10 +38,10 @@ input[type="checkbox"] {
   height: 0;
 }
 
-input[type="checkbox"]:checked + .toggle-slider {
+input[type="checkbox"]:checked + .toggle-sound-slider {
   background-color: #2196f3;
 }
 
-input[type="checkbox"]:checked + .toggle-slider:before {
+input[type="checkbox"]:checked + .toggle-sound-slider:before {
   transform: translateX(26px);
 }

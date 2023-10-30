@@ -35,7 +35,6 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   public placeholderText: string = 'Ingresa el nombre aquí';
   public isButtonDisabled: boolean = true;
   public currentRoute: string = '';
-  public isToggled: boolean = true;
 
   public chapterTwoFinished$: Observable<boolean>;
   public chapterThreeFinished$: Observable<boolean>;
@@ -118,19 +117,13 @@ export class SceneOnePage implements OnInit, AfterViewInit {
     this._appFacade.closeModal();
   }
 
-  public onToggle(eventData: { identifier: string; isToggled: boolean }) {
-    if (eventData.identifier === ECONFIGURATION.SUBTITLES) {
-      if (eventData.isToggled) {
-        this._appFacade.activateSubtitles();
-      } else {
-        this._appFacade.deactivateSubtitles();
-      }
-    } else if (eventData.identifier === ECONFIGURATION.SOUND) {
-      if (eventData.isToggled) {
-        this._appFacade.activateSound();
-      } else {
-        this._appFacade.deactivateSound();
-      }
-    }
+  public onSoundToggle(event: boolean) {
+    event ? this._appFacade.activateSound() : this._appFacade.deactivateSound();
+  }
+
+  public onSubtitlesToggle(event: boolean) {
+    event
+      ? this._appFacade.activateSubtitles()
+      : this._appFacade.deactivateSubtitles();
   }
 }
