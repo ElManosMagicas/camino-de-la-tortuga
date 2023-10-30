@@ -36,7 +36,6 @@ export class SceneElevenPage implements OnInit, OnDestroy, AfterViewInit {
   public turtleName: string;
   public showNextButton: boolean = true;
   public showPreviousButton: boolean = true;
-  public isToggled: boolean = true;
 
   public turtleName$: Observable<string>;
   public chapterTwoFinished$: Observable<boolean>;
@@ -129,19 +128,13 @@ export class SceneElevenPage implements OnInit, OnDestroy, AfterViewInit {
     this._appFacade.closeModal();
   }
 
-  public onToggle(eventData: { identifier: string; isToggled: boolean }) {
-    if (eventData.identifier === ECONFIGURATION.SUBTITLES) {
-      if (eventData.isToggled) {
-        this._appFacade.activateSubtitles();
-      } else {
-        this._appFacade.deactivateSubtitles();
-      }
-    } else if (eventData.identifier === ECONFIGURATION.SOUND) {
-      if (eventData.isToggled) {
-        this._appFacade.activateSound();
-      } else {
-        this._appFacade.deactivateSound();
-      }
-    }
+  public onSoundToggle(event: boolean) {
+    event ? this._appFacade.activateSound() : this._appFacade.deactivateSound();
+  }
+
+  public onSubtitlesToggle(event: boolean) {
+    event
+      ? this._appFacade.activateSubtitles()
+      : this._appFacade.deactivateSubtitles();
   }
 }
