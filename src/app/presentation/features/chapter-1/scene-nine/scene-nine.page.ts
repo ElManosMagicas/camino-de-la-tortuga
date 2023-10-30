@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  OnDestroy,
   OnInit,
   Renderer2,
   TemplateRef,
@@ -13,7 +14,7 @@ import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
 import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 import { IContextModal } from '@app/core/models/modal.model';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { AppFacade } from '@app/facades/app.facade';
 import { ECONFIGURATION } from '@app/core/enums/configuration.enum';
 
@@ -22,7 +23,7 @@ import { ECONFIGURATION } from '@app/core/enums/configuration.enum';
   templateUrl: './scene-nine.page.html',
   styleUrls: ['./scene-nine.page.scss'],
 })
-export class SceneNinePage implements OnInit, AfterViewInit {
+export class SceneNinePage implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('backpackChapter1', { static: true })
   backpackChapter1!: TemplateRef<IContextModal>;
   @ViewChild('scenesList', { static: true })
@@ -36,12 +37,15 @@ export class SceneNinePage implements OnInit, AfterViewInit {
   public turtleName: string;
   public showNextButton: boolean = true;
   public showPreviousButton: boolean = true;
+  public removeSubtitlesAnimation: number = 0;
 
   public chapterTwoFinished$: Observable<boolean>;
   public chapterThreeFinished$: Observable<boolean>;
   public chapterFourFinished$: Observable<boolean>;
   public isSubtitles$: Observable<boolean>;
   public isSound$: Observable<boolean>;
+
+  public isSubtitlesSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -51,18 +55,32 @@ export class SceneNinePage implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.currentRoute = this._utilService.getCurrentRoute();
-    this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
-    this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
-    this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
-    this.isSubtitles$ = this._appFacade.isSubtitles$;
-    this.isSound$ = this._appFacade.isSound$;
+    this._setValues();
   }
 
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.playAudio();
     }, 2500);
+  }
+
+  ngOnDestroy(): void {
+    this.isSubtitlesSubscription$?.unsubscribe();
+  }
+
+  private _setValues(): void {
+    this.currentRoute = this._utilService.getCurrentRoute();
+    this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
+    this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
+    this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
+    this.isSubtitles$ = this._appFacade.isSubtitles$;
+    this.isSound$ = this._appFacade.isSound$;
+    this.isSubtitlesSubscription$ = this.isSubtitles$.subscribe((value) => {
+      this.removeSubtitlesAnimation =
+        value === false
+          ? this.removeSubtitlesAnimation + 1
+          : this.removeSubtitlesAnimation;
+    });
   }
 
   public getSubtitles(): string {

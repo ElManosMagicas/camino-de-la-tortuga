@@ -36,6 +36,7 @@ export class SceneElevenPage implements OnInit, OnDestroy, AfterViewInit {
   public turtleName: string;
   public showNextButton: boolean = true;
   public showPreviousButton: boolean = true;
+  public removeSubtitlesAnimation: number = 0;
 
   public turtleName$: Observable<string>;
   public chapterTwoFinished$: Observable<boolean>;
@@ -45,6 +46,7 @@ export class SceneElevenPage implements OnInit, OnDestroy, AfterViewInit {
   public isSound$: Observable<boolean>;
 
   public turtleNameSubscription$: Subscription;
+  public isSubtitlesSubscription$: Subscription;
 
   constructor(
     private _appFacade: AppFacade,
@@ -56,14 +58,15 @@ export class SceneElevenPage implements OnInit, OnDestroy, AfterViewInit {
     this._setValues();
   }
 
-  ngOnDestroy(): void {
-    this.turtleNameSubscription$?.unsubscribe();
-  }
-
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.playAudio();
     }, 2000);
+  }
+
+  ngOnDestroy(): void {
+    this.turtleNameSubscription$?.unsubscribe();
+    this.isSubtitlesSubscription$?.unsubscribe();
   }
 
   private _setValues() {
@@ -77,6 +80,12 @@ export class SceneElevenPage implements OnInit, OnDestroy, AfterViewInit {
     this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
     this.isSubtitles$ = this._appFacade.isSubtitles$;
     this.isSound$ = this._appFacade.isSound$;
+    this.isSubtitlesSubscription$ = this.isSubtitles$.subscribe((value) => {
+      this.removeSubtitlesAnimation =
+        value === false
+          ? this.removeSubtitlesAnimation + 1
+          : this.removeSubtitlesAnimation;
+    });
   }
 
   public getSubtitles(): string {

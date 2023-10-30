@@ -5,8 +5,11 @@
     <div class="scene-seven__container__left-bush"></div>
     <div class="scene-seven__container__front-grass"></div>
     <div class="scene-seven__container__cuyo"></div>
-    <ng-container>
-      <div class="scene-seven__container__subtitles">
+    <ng-container *ngIf="isSubtitles$ | async as isSubtitles">
+      <div
+        class="scene-seven__container__subtitles"
+        [ngClass]="{ on: isSubtitles && removeSubtitlesAnimation > 0 }"
+      >
         <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>

@@ -3,8 +3,11 @@
     <div class="scene-four__container__car"></div>
     <div class="scene-four__container__person"></div>
     <div class="scene-four__container__cuyo"></div>
-    <ng-container>
-      <div class="scene-four__container__subtitles">
+    <ng-container *ngIf="isSubtitles$ | async as isSubtitles">
+      <div
+        class="scene-four__container__subtitles"
+        [ngClass]="{ on: isSubtitles && removeSubtitlesAnimation > 0 }"
+      >
         <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>

@@ -37,6 +37,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
   public turtleName: string;
   public showNextButton: boolean = true;
   public showPreviousButton: boolean = true;
+  public removeSubtitlesAnimation: number = 0;
 
   public turtleName$: Observable<string>;
   public chapterTwoFinished$: Observable<boolean>;
@@ -46,6 +47,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
   public isSound$: Observable<boolean>;
 
   public turtleNameSubscription$: Subscription;
+  public isSubtitlesSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -66,6 +68,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.turtleNameSubscription$?.unsubscribe();
+    this.isSubtitlesSubscription$?.unsubscribe();
   }
 
   private _setValues(): void {
@@ -79,6 +82,12 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
     this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
     this.isSubtitles$ = this._appFacade.isSubtitles$;
     this.isSound$ = this._appFacade.isSound$;
+    this.isSubtitlesSubscription$ = this.isSubtitles$.subscribe((value) => {
+      this.removeSubtitlesAnimation =
+        value === false
+          ? this.removeSubtitlesAnimation + 1
+          : this.removeSubtitlesAnimation;
+    });
   }
 
   public getSubtitles(): string {
