@@ -48,3 +48,13 @@
     (closeScenesListEvent)="onCloseScenesList()"
   ></layout-scenes-list>
 </ng-template>
+
+<ng-template #config>
+  <layout-configuration
+    [isSubtitlesToggled]="isSubtitles$ | async"
+    [isSoundToggled]="isSound$ | async"
+    (closeConfigEvent)="onCloseConfig()"
+    (soundToggleEvent)="onSoundToggle($event)"
+    (subtitlesToggleEvent)="onSubtitlesToggle($event)"
+  ></layout-configuration>
+</ng-template>
