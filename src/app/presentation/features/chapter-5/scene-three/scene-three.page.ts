@@ -27,6 +27,8 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
   backpackChapter5!: TemplateRef<IContextModal>;
   @ViewChild('scenesList', { static: true })
   scenesList!: TemplateRef<IContextModal>;
+  @ViewChild('config', { static: true })
+  config!: TemplateRef<IContextModal>;
   @ViewChild('cap5Esc3Narrator') audioPlayer: ElementRef;
 
   public CONST = CONST;
@@ -39,6 +41,8 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
   public chapterTwoFinished$: Observable<boolean>;
   public chapterThreeFinished$: Observable<boolean>;
   public chapterFourFinished$: Observable<boolean>;
+  public isSubtitles$: Observable<boolean>;
+  public isSound$: Observable<boolean>;
 
   public turtleNameSubscription$: Subscription;
 
@@ -58,6 +62,8 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
     this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
     this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
     this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
+    this.isSubtitles$ = this._appFacade.isSubtitles$;
+    this.isSound$ = this._appFacade.isSound$;
   }
 
   ngAfterViewInit(): void {
@@ -90,7 +96,6 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
     this._chapter5Facade.goToPreviousStep();
     this._utilService.navigateTo(ROUTES.CHAPTER_5_SCENE_2);
   }
-  public onGoToConfiguration() {}
 
   public onRepeatScene() {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_5_SCENE_3);
@@ -110,5 +115,23 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
 
   public onCloseScenesList(): void {
     this._appFacade.closeModal();
+  }
+
+  public onGoToConfiguration(): void {
+    this._appFacade.openModal(this.config);
+  }
+
+  public onCloseConfig(): void {
+    this._appFacade.closeModal();
+  }
+
+  public onSoundToggle(event: boolean) {
+    event ? this._appFacade.activateSound() : this._appFacade.deactivateSound();
+  }
+
+  public onSubtitlesToggle(event: boolean) {
+    event
+      ? this._appFacade.activateSubtitles()
+      : this._appFacade.deactivateSubtitles();
   }
 }
