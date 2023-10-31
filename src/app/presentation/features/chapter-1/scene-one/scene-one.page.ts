@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  OnDestroy,
   OnInit,
   Renderer2,
   TemplateRef,
@@ -13,34 +14,37 @@ import { IContextModal } from '@app/core/models/modal.model';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
-import { Observable } from 'rxjs';
-import { ECONFIGURATION } from '@app/core/enums/configuration.enum';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'chapter-1-scene-one',
   templateUrl: './scene-one.page.html',
   styleUrls: ['./scene-one.page.scss'],
 })
-export class SceneOnePage implements OnInit, AfterViewInit {
+export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('backpackChapter1', { static: true })
   backpackChapter1!: TemplateRef<IContextModal>;
   @ViewChild('scenesList', { static: true })
   scenesList!: TemplateRef<IContextModal>;
   @ViewChild('config', { static: true })
   config!: TemplateRef<IContextModal>;
-  @ViewChild('cap1Esc1Narrator') audioPlayer: ElementRef;
+  @ViewChild('cap1Esc1Narrator') audioPlayer: ElementRef<HTMLAudioElement>;
 
   public CONST = CONST;
   public turtleName: string = '';
   public placeholderText: string = 'Ingresa el nombre aquí';
   public isButtonDisabled: boolean = true;
   public currentRoute: string = '';
+  public audioPlaying: boolean = false;
+  public audioCounter: number = 0;
 
   public chapterTwoFinished$: Observable<boolean>;
   public chapterThreeFinished$: Observable<boolean>;
   public chapterFourFinished$: Observable<boolean>;
   public isSubtitles$: Observable<boolean>;
   public isSound$: Observable<boolean>;
+
+  public isSoundSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -59,15 +63,42 @@ export class SceneOnePage implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.playAudio();
-    }, 3500);
+    this.isSoundSubscription$ = this.isSound$.subscribe((isSound) => {
+      if (isSound && this.audioCounter === 0) {
+        this.audioCounter;
+        setTimeout(() => {
+          this.playAudio();
+        }, 5000);
+      }
+      if (isSound && this.audioCounter > 0) {
+        this.audioCounter;
+        this.playAudio();
+      }
+      if (isSound == false) {
+        this.audioCounter = this.audioCounter + 1;
+        this.stopAudio();
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.isSoundSubscription$?.unsubscribe();
   }
 
   public playAudio() {
-    const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
-    if (audioElement.paused) {
+    if (!this.audioPlaying) {
+      const audioElement = this.audioPlayer.nativeElement;
       audioElement.play();
+      this.audioPlaying = true;
+    }
+  }
+
+  public stopAudio() {
+    if (this.audioPlaying) {
+      const audioElement = this.audioPlayer.nativeElement;
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      this.audioPlaying = false;
     }
   }
 

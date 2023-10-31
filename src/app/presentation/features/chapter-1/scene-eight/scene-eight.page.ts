@@ -30,7 +30,7 @@ export class SceneEightPage
   scenesList!: TemplateRef<IContextModal>;
   @ViewChild('config', { static: true })
   config!: TemplateRef<IContextModal>;
-  @ViewChild('cap1Esc8Narrator') audioPlayer: ElementRef;
+  @ViewChild('cap1Esc8Narrator') audioPlayer: ElementRef<HTMLAudioElement>;
 
   public CONST = CONST;
   public currentRoute: string = '';
@@ -38,6 +38,8 @@ export class SceneEightPage
   public showNextButton: boolean = true;
   public showPreviousButton: boolean = true;
   public removeSubtitlesAnimation: number = 0;
+  public audioPlaying: boolean = false;
+  public audioCounter: number = 0;
 
   public turtleName$: Observable<string>;
   public chapterTwoFinished$: Observable<boolean>;
@@ -48,6 +50,7 @@ export class SceneEightPage
 
   public turtleNameSubscription$: Subscription;
   public isSubtitlesSubscription$: Subscription;
+  public isSoundSubscription$: Subscription;
 
   constructor(
     private _appFacade: AppFacade,
@@ -60,14 +63,28 @@ export class SceneEightPage
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.playAudio();
-    }, 3000);
+    this.isSoundSubscription$ = this.isSound$.subscribe((isSound) => {
+      if (isSound && this.audioCounter === 0) {
+        this.audioCounter;
+        setTimeout(() => {
+          this.playAudio();
+        }, 3000);
+      }
+      if (isSound && this.audioCounter > 0) {
+        this.audioCounter;
+        this.playAudio();
+      }
+      if (isSound == false) {
+        this.audioCounter = this.audioCounter + 1;
+        this.stopAudio();
+      }
+    });
   }
 
   ngOnDestroy(): void {
     this.turtleNameSubscription$?.unsubscribe();
     this.isSubtitlesSubscription$?.unsubscribe();
+    this.isSoundSubscription$?.unsubscribe();
   }
 
   private _setValues(): void {
@@ -116,9 +133,19 @@ export class SceneEightPage
   }
 
   public playAudio() {
-    const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
-    if (audioElement.paused) {
+    if (!this.audioPlaying) {
+      const audioElement = this.audioPlayer.nativeElement;
       audioElement.play();
+      this.audioPlaying = true;
+    }
+  }
+
+  public stopAudio() {
+    if (this.audioPlaying) {
+      const audioElement = this.audioPlayer.nativeElement;
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      this.audioPlaying = false;
     }
   }
 
