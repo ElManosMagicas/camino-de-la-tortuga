@@ -2,8 +2,11 @@
   <div class="scene-three__container">
     <div class="scene-three__container__turtle"></div>
     <div class="scene-three__container__danta"></div>
-    <ng-container>
-      <div class="scene-three__container__subtitles">
+    <ng-container *ngIf="isSubtitles$ | async as isSubtitles">
+      <div
+        class="scene-three__container__subtitles"
+        [ngClass]="{ on: isSubtitles && removeSubtitlesAnimation > 0 }"
+      >
         <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
       </div>
     </ng-container>
