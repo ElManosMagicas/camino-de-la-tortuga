@@ -16,7 +16,6 @@ import { UtilService } from '@app/services/util.service';
 import { Observable, Subscription } from 'rxjs';
 import { SUBTITLES_CHAPTER_2 } from '../chapter-2.subtitles';
 import { IContextModal } from '@app/core/models/modal.model';
-import { ECONFIGURATION } from '@app/core/enums/configuration.enum';
 
 @Component({
   selector: 'chapter-2-scene-two',
@@ -37,6 +36,7 @@ export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
   public turtleName: string;
   public showNextButton: boolean = true;
   public showPreviousButton: boolean = true;
+  public removeSubtitlesAnimation: number = 0;
 
   public turtleName$: Observable<string>;
   public chapterTwoFinished$: Observable<boolean>;
@@ -46,6 +46,7 @@ export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
   public isSound$: Observable<boolean>;
 
   public turtleNameSubscription$: Subscription;
+  public isSubtitlesSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -54,16 +55,7 @@ export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
     private _utilService: UtilService
   ) {}
   ngOnInit(): void {
-    this.turtleName$ = this._appFacade.turtleName$;
-    this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
-    this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
-    this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
-    this.turtleNameSubscription$ = this.turtleName$.subscribe((name) => {
-      this.turtleName = name;
-    });
-    this.currentRoute = this._utilService.getCurrentRoute();
-    this.isSubtitles$ = this._appFacade.isSubtitles$;
-    this.isSound$ = this._appFacade.isSound$;
+    this._setValues();
   }
 
   ngAfterViewInit(): void {
@@ -74,6 +66,26 @@ export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.turtleNameSubscription$?.unsubscribe();
+    this.isSubtitlesSubscription$?.unsubscribe();
+  }
+
+  private _setValues(): void {
+    this.turtleName$ = this._appFacade.turtleName$;
+    this.chapterTwoFinished$ = this._appFacade.isChapterTwoFinished$;
+    this.chapterThreeFinished$ = this._appFacade.isChapterThreeFinished$;
+    this.chapterFourFinished$ = this._appFacade.isChapterFourFinished$;
+    this.turtleNameSubscription$ = this.turtleName$.subscribe((name) => {
+      this.turtleName = name;
+    });
+    this.currentRoute = this._utilService.getCurrentRoute();
+    this.isSubtitles$ = this._appFacade.isSubtitles$;
+    this.isSound$ = this._appFacade.isSound$;
+    this.isSubtitlesSubscription$ = this.isSubtitles$.subscribe((value) => {
+      this.removeSubtitlesAnimation =
+        value === false
+          ? this.removeSubtitlesAnimation + 1
+          : this.removeSubtitlesAnimation;
+    });
   }
 
   public getSubtitles(): string {

@@ -16,7 +16,6 @@ import { SUBTITLES_CHAPTER_1 } from '../chapter-1.subtitles';
 import { IContextModal } from '@app/core/models/modal.model';
 import { Observable, Subscription } from 'rxjs';
 import { AppFacade } from '@app/facades/app.facade';
-import { ECONFIGURATION } from '@app/core/enums/configuration.enum';
 
 @Component({
   selector: 'chapter-1-scene-two',
