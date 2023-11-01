@@ -1,32 +1,57 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { APP_ROUTES } from '@app/app.routes';
 import { IContextModal } from '@app/core/models/modal.model';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'start-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
   @ViewChild('credits', { static: true })
   credits!: TemplateRef<IContextModal>;
+  @ViewChild('config', { static: true })
+  config!: TemplateRef<IContextModal>;
+
   public ROUTES = APP_ROUTES;
+
+  public isSubtitles$: Observable<boolean>;
+  public isSound$: Observable<boolean>;
 
   constructor(
     private _utilService: UtilService,
     private _appFacade: AppFacade,
     private _chapter1Facade: Chapter1Facade
   ) {}
+  ngOnInit(): void {
+    this.isSubtitles$ = this._appFacade.isSubtitles$;
+    this.isSound$ = this._appFacade.isSound$;
+  }
 
   public onGoToInstructions(): void {
     this._utilService.navigateTo(this.ROUTES.INSTRUCTIONS);
   }
 
   public onGoToConfiguration(): void {
-    this._utilService.navigateTo(this.ROUTES.CONFIGURATION);
+    this._appFacade.openModal(this.config);
+  }
+
+  public onCloseConfig(): void {
+    this._appFacade.closeModal();
+  }
+
+  public onSoundToggle(event: boolean) {
+    event ? this._appFacade.activateSound() : this._appFacade.deactivateSound();
+  }
+
+  public onSubtitlesToggle(event: boolean) {
+    event
+      ? this._appFacade.activateSubtitles()
+      : this._appFacade.deactivateSubtitles();
   }
 
   public onGoToCredits(): void {
