@@ -13,6 +13,8 @@ export class Chapter3Facade {
   public pieceFour$: Observable<boolean>;
   public pieceFive$: Observable<boolean>;
   public pieceSix$: Observable<boolean>;
+  public c3s5Subtitles$: Observable<string>;
+  public c3s6Subtitles$: Observable<string>;
 
   constructor(private _store: Store) {
     this.step$ = this._store.select(chapter3Selectors.selectStep);
@@ -22,6 +24,12 @@ export class Chapter3Facade {
     this.pieceFour$ = this._store.select(chapter3Selectors.selectPieceFour);
     this.pieceFive$ = this._store.select(chapter3Selectors.selectPieceFive);
     this.pieceSix$ = this._store.select(chapter3Selectors.selectPieceSix);
+    this.c3s5Subtitles$ = this._store.select(
+      chapter3Selectors.selectC3S5Subtitles
+    );
+    this.c3s6Subtitles$ = this._store.select(
+      chapter3Selectors.selectC3S6Subtitles
+    );
   }
 
   public goToNextStep(): void {
@@ -58,5 +66,17 @@ export class Chapter3Facade {
 
   public setPieceSix(isPieceSix: boolean): void {
     this._store.dispatch(chapter3Actions.setPieceSix({ isPieceSix }));
+  }
+
+  public setC3S5Subtitles(c3s5Subtitles: string): void {
+    this._store.dispatch(
+      chapter3Actions.setC3S5Subtitles({ c3s5Subtitles: c3s5Subtitles })
+    );
+  }
+
+  public setC3S6Subtitles(c3s6Subtitles: string): void {
+    this._store.dispatch(
+      chapter3Actions.setC3S6Subtitles({ c3s6Subtitles: c3s6Subtitles })
+    );
   }
 }

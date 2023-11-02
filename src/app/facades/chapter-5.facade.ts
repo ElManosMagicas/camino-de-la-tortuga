@@ -8,11 +8,19 @@ import { Observable } from 'rxjs';
 export class Chapter5Facade {
   public step$: Observable<number>;
   public turtleHome$: Observable<number>;
+  public c5s1Subtitles$: Observable<string>;
+  public c5s2Subtitles$: Observable<string>;
 
   constructor(private _store: Store) {
     this.step$ = this._store.select(chapter5Selectors.selectStep);
     this.turtleHome$ = this._store.select(
       chapter5Selectors.selectTurtleHomeScore
+    );
+    this.c5s1Subtitles$ = this._store.select(
+      chapter5Selectors.selectC5S1Subtitles
+    );
+    this.c5s2Subtitles$ = this._store.select(
+      chapter5Selectors.selectC5S2Subtitles
     );
   }
 
@@ -34,5 +42,17 @@ export class Chapter5Facade {
 
   public resetTurtleHomeScore(): void {
     this._store.dispatch(chapter5Actions.resetTurtleHomeScore());
+  }
+
+  public setC5S1Subtitles(c5s1Subtitles: string): void {
+    this._store.dispatch(
+      chapter5Actions.setC5S1Subtitles({ c5s1Subtitles: c5s1Subtitles })
+    );
+  }
+
+  public setC5S2Subtitles(c5s2Subtitles: string): void {
+    this._store.dispatch(
+      chapter5Actions.setC5S2Subtitles({ c5s2Subtitles: c5s2Subtitles })
+    );
   }
 }
