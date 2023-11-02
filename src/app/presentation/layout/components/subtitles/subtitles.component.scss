@@ -5,7 +5,7 @@
   width: 100%;
   height: 148px;
   display: flex;
-  background: rgba($color: #000000, $alpha: 0.6);
+  background: rgba($color: #000000, $alpha: 0.65);
   align-items: flex-start;
   justify-content: center;
   &__container {
@@ -22,7 +22,7 @@
       font-family: $letter-for-learners;
       font-size: 32px;
       font-weight: 300;
-      line-height: 25px;
+      line-height: 32px;
       color: $color-primary-white;
       text-align: center;
     }
