@@ -11,6 +11,8 @@ export const initialChapter3: Chapter3State = {
   isPieceFour: false,
   isPieceFive: false,
   isPieceSix: false,
+  c3s5Subtitles: '',
+  c3s6Subtitles: '',
 };
 
 const _chapter3Reducer = createReducer(
@@ -67,6 +69,18 @@ const _chapter3Reducer = createReducer(
     return {
       ...state,
       isPieceSix,
+    };
+  }),
+  on(chapter3Actions.setC3S5Subtitles, (state, { c3s5Subtitles }) => {
+    return {
+      ...state,
+      c3s5Subtitles,
+    };
+  }),
+  on(chapter3Actions.setC3S6Subtitles, (state, { c3s6Subtitles }) => {
+    return {
+      ...state,
+      c3s6Subtitles,
     };
   })
 );

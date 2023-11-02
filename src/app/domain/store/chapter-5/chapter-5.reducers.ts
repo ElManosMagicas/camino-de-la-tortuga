@@ -6,6 +6,8 @@ import * as chapter5Actions from '@store/chapter-5/chapter-5.actions';
 export const initialChapter5: Chapter5State = {
   step: 0,
   turtleHome: 0,
+  c5s1Subtitles: '',
+  c5s2Subtitles: '',
 };
 
 const _chapter5Reducer = createReducer(
@@ -38,6 +40,18 @@ const _chapter5Reducer = createReducer(
     return {
       ...state,
       turtleHome: 1,
+    };
+  }),
+  on(chapter5Actions.setC5S1Subtitles, (state, { c5s1Subtitles }) => {
+    return {
+      ...state,
+      c5s1Subtitles,
+    };
+  }),
+  on(chapter5Actions.setC5S2Subtitles, (state, { c5s2Subtitles }) => {
+    return {
+      ...state,
+      c5s2Subtitles,
     };
   })
 );

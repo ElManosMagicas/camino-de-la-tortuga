@@ -6,4 +6,6 @@ export interface Chapter3State {
   isPieceFour: boolean;
   isPieceFive: boolean;
   isPieceSix: boolean;
+  c3s5Subtitles: string;
+  c3s6Subtitles: string;
 }

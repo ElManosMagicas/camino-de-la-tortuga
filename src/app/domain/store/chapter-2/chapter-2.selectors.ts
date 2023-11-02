@@ -12,3 +12,8 @@ export const selectBackpack = createSelector(
   getChapter2FeatureState,
   (state: Chapter2State) => state.backpack
 );
+
+export const selectC1S3Subtitles = createSelector(
+  getChapter2FeatureState,
+  (state: Chapter2State) => state.c2s3Subtitles
+);

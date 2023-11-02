@@ -1,4 +1,4 @@
-import { createAction } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
 export const getCurrentRoute = createAction('[Chapter-5] Get Current Route');
 
@@ -15,5 +15,15 @@ export const increaseTurtleHomeScore = createAction(
 );
 
 export const resetTurtleHomeScore = createAction(
-  '[Chapter-2] Reset Turtles Home Score'
+  '[Chapter-5] Reset Turtles Home Score'
+);
+
+export const setC5S1Subtitles = createAction(
+  '[Chapter-5] Set Chapter 5 Scene 1 Subtitles',
+  props<{ c5s1Subtitles: string }>()
+);
+
+export const setC5S2Subtitles = createAction(
+  '[Chapter-5] Set Chapter 5 Scene 2 Subtitles',
+  props<{ c5s2Subtitles: string }>()
 );

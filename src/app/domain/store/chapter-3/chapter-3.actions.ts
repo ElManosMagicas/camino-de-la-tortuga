@@ -39,3 +39,13 @@ export const setPieceSix = createAction(
   '[Chapter-3] Set Piece Six',
   props<{ isPieceSix: boolean }>()
 );
+
+export const setC3S5Subtitles = createAction(
+  '[Chapter-3] Set Chapter 3 Scene 5 Subtitles',
+  props<{ c3s5Subtitles: string }>()
+);
+
+export const setC3S6Subtitles = createAction(
+  '[Chapter-3] Set Chapter 3 Scene 6 Subtitles',
+  props<{ c3s6Subtitles: string }>()
+);

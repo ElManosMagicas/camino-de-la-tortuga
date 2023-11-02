@@ -1,4 +1,4 @@
-import { createAction } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 
 export const nextStep = createAction('[Chapter-2] Go To Next Step');
 
@@ -16,4 +16,9 @@ export const increaseBackpackScore = createAction(
 
 export const resetBackpackScore = createAction(
   '[Chapter-2] Reset Backpack Score'
+);
+
+export const setC2S3Subtitles = createAction(
+  '[Chapter-2] Set Chapter 2 Scene 3 Subtitles',
+  props<{ c2s3Subtitles: string }>()
 );

@@ -8,9 +8,13 @@ import { Observable } from 'rxjs';
 export class Chapter2Facade {
   public step$: Observable<number>;
   public backpack$: Observable<number>;
+  public c2s3subtitles$: Observable<string>;
 
   constructor(private _store: Store) {
     this.step$ = this._store.select(chapter2Selectors.selectStep);
+    this.c2s3subtitles$ = this._store.select(
+      chapter2Selectors.selectC1S3Subtitles
+    );
     this.backpack$ = this._store.select(chapter2Selectors.selectBackpack);
   }
 
@@ -32,5 +36,11 @@ export class Chapter2Facade {
 
   public resetBackpackScore(): void {
     this._store.dispatch(chapter2Actions.resetBackpackScore());
+  }
+
+  public setC1S3Subtitles(c2s3Subtitles: string): void {
+    this._store.dispatch(
+      chapter2Actions.setC2S3Subtitles({ c2s3Subtitles: c2s3Subtitles })
+    );
   }
 }

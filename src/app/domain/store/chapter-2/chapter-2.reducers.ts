@@ -6,6 +6,7 @@ import * as chapter2Actions from '@store/chapter-2/chapter-2.actions';
 export const initialChapter2: Chapter2State = {
   step: 0,
   backpack: 1,
+  c2s3Subtitles: '',
 };
 
 const _chapter2Reducer = createReducer(
@@ -38,6 +39,12 @@ const _chapter2Reducer = createReducer(
     return {
       ...state,
       backpack: 1,
+    };
+  }),
+  on(chapter2Actions.setC2S3Subtitles, (state, { c2s3Subtitles }) => {
+    return {
+      ...state,
+      c2s3Subtitles,
     };
   })
 );

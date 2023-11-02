@@ -37,3 +37,13 @@ export const selectPieceSix = createSelector(
   getChapter3FeatureState,
   (state: Chapter3State) => state.isPieceSix
 );
+
+export const selectC3S5Subtitles = createSelector(
+  getChapter3FeatureState,
+  (state: Chapter3State) => state.c3s5Subtitles
+);
+
+export const selectC3S6Subtitles = createSelector(
+  getChapter3FeatureState,
+  (state: Chapter3State) => state.c3s6Subtitles
+);
