@@ -4,5 +4,5 @@ export const SUBTITLES_CHAPTER_5 = {
   SCENE_TWO:
     'También hay unos nidos de tortuga cerca al río, rodeados con muchos tallos y semillas sabrosas. Y en la noche ningún animal la molestará.',
   SCENE_THREE: 'Hay muchas tortugas como ella alrededor del río.',
-  SCENE_FIVE: '─¡Al fin encontré mi hogar!',
+  SCENE_FIVE: '- ¡Al fin! ¡Encontré mi hogar!',
 };
