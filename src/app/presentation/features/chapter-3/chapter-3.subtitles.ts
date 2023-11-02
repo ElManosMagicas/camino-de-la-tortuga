@@ -3,7 +3,7 @@ export const SUBTITLES_CHAPTER_3 = {
     'La tortuga {turtleName} llega a un nuevo lugar, es caliente y parece derretirse.\nMientras camina se encuentra con un tronco.',
   SCENE_TWO: 'Al tocar la puerta, una pequeña serpiente se asoma.',
   SCENE_THREE:
-    '- Buenos días o tardes, para mí todavía es muy temprano para salir.',
+    '- Buenos días o tardes, para mí todavía es\nmuy temprano para salir.',
   SCENE_FOUR:
     '- Señora serpiente, estoy intentando llegar a mi hogar, pero no sé cómo.',
   SCENE_FIVE:
