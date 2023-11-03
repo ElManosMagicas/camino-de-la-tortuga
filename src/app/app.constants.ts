@@ -54,9 +54,9 @@ export const APP_CONSTANTS = {
     MAP_AFTER_CHAPTER_2: '/assets/audios/mapa-despues-cap2.wav',
     MAP_AFTER_CHAPTER_3: '/assets/audios/mapa-despues-cap3.wav',
     MAP_AFTER_CHAPTER_4: '/assets/audios/mapa-despues-cap4.wav',
+    //ACTIVITIES
+    ACTIVITY_SUCCESS: '/assets/audios/sonido-exito-actividad.mp3',
+    //HOME
+    HOME_MUSIC: '/assets/audios/portada-musica.wav',
   },
-  //ACTIVITIES
-  ACTIVITY_SUCCESS: '/assets/audios/sonido-exito-actividad.mp3',
-  //HOME
-  HOME_MUSIC: '/assets/audios/portada-musica.wav',
 };

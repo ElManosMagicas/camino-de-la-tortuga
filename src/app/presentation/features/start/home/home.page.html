@@ -12,6 +12,9 @@
         (goToChapterOneEvent)="onGoToChapterOne()"
       ></home-footer>
     </div>
+    <audio #homeBgMusic>
+      <source [src]="CONST.AUDIO.HOME_MUSIC" type="audio/wav" />
+    </audio>
   </div>
 </section>
 
