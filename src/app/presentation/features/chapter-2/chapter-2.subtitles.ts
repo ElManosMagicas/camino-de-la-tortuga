@@ -5,7 +5,7 @@ export const SUBTITLES_CHAPTER_2 = {
   SCENE_THREE:
     '- Mmm… acá no he visto ninguna tortuga, solo conozco animales\ncomo la mirla, la ardilla o tucanes andinos como yo.',
   SCENE_THREE_PT2:
-    '- Pero podría saber más si me dices qué te gusta comer.\nA mí me encantan las frutas.',
+    'Pero podría saber más si me dices qué te gusta comer.\nA mí me encantan las frutas.',
   SCENE_FOUR:
     '- Yo prefiero comer tallos y semillas.\n¡Son deliciosos y llenan mi pancita!',
   SCENE_FIVE:
