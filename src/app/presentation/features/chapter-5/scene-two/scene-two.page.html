@@ -10,7 +10,9 @@
         class="scene-two__container__subtitles"
         [ngClass]="{ on: isSubtitles && removeSubtitlesAnimation > 0 }"
       >
-        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
+        <layout-subtitles
+          [subtitles]="c5s2Subtitles$ | async"
+        ></layout-subtitles>
       </div>
     </ng-container>
     <div class="scene-two__container__arrows">

@@ -46,10 +46,12 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
   public chapterFourFinished$: Observable<boolean>;
   public isSubtitles$: Observable<boolean>;
   public isSound$: Observable<boolean>;
+  public c5s1Subtitles$: Observable<string>;
 
   public turtleNameSubscription$: Subscription;
   public isSubtitlesSubscription$: Subscription;
   public isSoundSubscription$: Subscription;
+  public c5s1SubtitlesSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -60,6 +62,7 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this._setValues();
+    this._chapter5Facade.setC5S1Subtitles(this.getSubtitles());
   }
 
   ngAfterViewInit(): void {
@@ -79,12 +82,22 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
         this.stopAudio();
       }
     });
+    this.c5s1SubtitlesSubscription$ = this.c5s1Subtitles$.subscribe(
+      (subtitles) => {
+        setTimeout(() => {
+          this._chapter5Facade.setC5S1Subtitles(
+            SUBTITLES_CHAPTER_5.SCENE_ONE_PT2
+          );
+        }, 11000);
+      }
+    );
   }
 
   ngOnDestroy(): void {
     this.turtleNameSubscription$?.unsubscribe();
     this.isSubtitlesSubscription$?.unsubscribe();
     this.isSoundSubscription$?.unsubscribe();
+    this.c5s1SubtitlesSubscription$?.unsubscribe();
   }
 
   private _setValues(): void {
@@ -104,6 +117,7 @@ export class SceneOnePage implements OnInit, AfterViewInit, OnDestroy {
           ? this.removeSubtitlesAnimation + 1
           : this.removeSubtitlesAnimation;
     });
+    this.c5s1Subtitles$ = this._chapter5Facade.c5s1Subtitles$;
   }
 
   public getSubtitles(): string {

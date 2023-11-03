@@ -46,10 +46,12 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
   public chapterFourFinished$: Observable<boolean>;
   public isSubtitles$: Observable<boolean>;
   public isSound$: Observable<boolean>;
+  public c3s6Subtitles$: Observable<string>;
 
   public turtleNameSubscription$: Subscription;
   public isSubtitlesSubscription$: Subscription;
   public isSoundSubscription$: Subscription;
+  public c3s6SubtitlesSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -59,6 +61,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
   ) {}
   ngOnInit(): void {
     this._setValues();
+    this._chapter3Facade.setC3S6Subtitles(SUBTITLES_CHAPTER_3.SCENE_SIX);
   }
 
   ngAfterViewInit(): void {
@@ -78,12 +81,22 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
         this.stopAudio();
       }
     });
+    this.c3s6SubtitlesSubscription$ = this.c3s6Subtitles$.subscribe(
+      (subtitles) => {
+        setTimeout(() => {
+          this._chapter3Facade.setC3S6Subtitles(
+            SUBTITLES_CHAPTER_3.SCENE_SIX_PT2
+          );
+        }, 12000);
+      }
+    );
   }
 
   ngOnDestroy(): void {
     this.turtleNameSubscription$?.unsubscribe();
     this.isSubtitlesSubscription$?.unsubscribe();
     this.isSoundSubscription$?.unsubscribe();
+    this.c3s6SubtitlesSubscription$?.unsubscribe();
   }
 
   private _setValues(): void {
@@ -103,6 +116,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
           ? this.removeSubtitlesAnimation + 1
           : this.removeSubtitlesAnimation;
     });
+    this.c3s6Subtitles$ = this._chapter3Facade.c3s6Subtitles$;
   }
 
   public getSubtitles(): string {

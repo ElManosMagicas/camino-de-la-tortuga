@@ -45,9 +45,11 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
   public chapterFourFinished$: Observable<boolean>;
   public isSubtitles$: Observable<boolean>;
   public isSound$: Observable<boolean>;
+  public c2s3subtitles$: Observable<string>;
 
   public isSubtitlesSubscription$: Subscription;
   public isSoundSubscription$: Subscription;
+  public c2s3subtitlesSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -58,6 +60,7 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this._setValues();
+    this._chapter2Facade.setC1S3Subtitles(SUBTITLES_CHAPTER_2.SCENE_THREE);
   }
 
   ngAfterViewInit(): void {
@@ -77,11 +80,21 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
         this.stopAudio();
       }
     });
+    this.c2s3subtitlesSubscription$ = this.c2s3subtitles$.subscribe(
+      (subtitles) => {
+        setTimeout(() => {
+          this._chapter2Facade.setC1S3Subtitles(
+            SUBTITLES_CHAPTER_2.SCENE_THREE_PT2
+          );
+        }, 13500);
+      }
+    );
   }
 
   ngOnDestroy(): void {
     this.isSubtitlesSubscription$?.unsubscribe();
     this.isSoundSubscription$?.unsubscribe();
+    this.c2s3subtitlesSubscription$?.unsubscribe();
   }
 
   private _setValues(): void {
@@ -97,6 +110,7 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
           ? this.removeSubtitlesAnimation + 1
           : this.removeSubtitlesAnimation;
     });
+    this.c2s3subtitles$ = this._chapter2Facade.c2s3subtitles$;
   }
 
   public getSubtitles(): string {
