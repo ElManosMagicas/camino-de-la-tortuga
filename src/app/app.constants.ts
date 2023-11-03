@@ -47,6 +47,7 @@ export const APP_CONSTANTS = {
     ACTIVITY_INSTRUCTIONS_CHAPTER_5_SCENE_4:
       '/assets/audios/cap5-esc4-instrucciones-actividad.wav',
     TURTLE_CHAPTER_5_SCENE_5: '/assets/audios/cap5-esc5-tortuga.wav',
+    BG_SOUND_CHAPTER_5_SCENE_6: '/assets/audios/cap5-esc6-musica-ambiente.wav',
     NARRATOR_CHAPTER_5_SCENE_7: '/assets/audios/cap5-esc7-narradora.wav',
     // MAP
     MAP_AFTER_CHAPTER_1: '/assets/audios/mapa-despues-cap1.wav',
@@ -56,4 +57,6 @@ export const APP_CONSTANTS = {
   },
   //ACTIVITIES
   ACTIVITY_SUCCESS: '/assets/audios/sonido-exito-actividad.mp3',
+  //HOME
+  HOME_MUSIC: '/assets/audios/portada-musica.wav',
 };
