@@ -19,10 +19,38 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    &__left-tree {
+      position: absolute;
+      top: 8%;
+      left: 6%;
+      z-index: 5;
+      width: 324px;
+      height: 508px;
+      opacity: 0;
+      background: url($elements-chapter-2-scene-6-left-tree);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromTop 1s ease-in-out 0s forwards;
+    }
+    &__right-tree {
+      position: absolute;
+      top: 0%;
+      right: 10%;
+      z-index: 5;
+      width: 333px;
+      height: 404px;
+      opacity: 0;
+      background: url($elements-chapter-2-scene-6-right-tree);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromTop 1s ease-in-out 0s forwards;
+    }
     &__seed-right-back {
       position: absolute;
-      top: 338px;
-      right: 284px;
+      top: 30%;
+      right: 1%;
       z-index: 2;
       width: 186px;
       height: 132px;
@@ -31,17 +59,17 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromRight 1s ease-in-out 0s forwards;
+      animation: fromRight 1s ease-in-out 1s forwards;
       &:hover {
-        top: 316px;
-        right: 274px;
+        top: 30%;
+        right: 1%;
         width: 218px;
         height: 167px;
         background: url($elements-chapter-2-scene-6-seed-right-back-on);
       }
       &.clicked {
-        top: 316px;
-        right: 274px;
+        top: 30%;
+        right: 1%;
         width: 218px;
         height: 167px;
         background: url($elements-chapter-2-scene-6-seed-right-back-on);
@@ -49,8 +77,8 @@
     }
     &__seed-left-front {
       position: absolute;
-      bottom: 120px;
-      left: 38px;
+      bottom: 18%;
+      left: 4%;
       z-index: 3;
       width: 227px;
       height: 146px;
@@ -59,17 +87,17 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromLeft 1s ease-in-out 0.5s forwards;
+      animation: fromLeft 1s ease-in-out 1.5s forwards;
       &:hover {
-        bottom: 104px;
-        left: 30px;
+        bottom: 18%;
+        left: 4%;
         width: 255px;
         height: 174px;
         background: url($elements-chapter-2-scene-6-seed-left-front-on);
       }
       &.clicked {
-        bottom: 104px;
-        left: 30px;
+        bottom: 18%;
+        left: 4%;
         width: 255px;
         height: 174px;
         background: url($elements-chapter-2-scene-6-seed-left-front-on);
@@ -77,8 +105,8 @@
     }
     &__stem-back {
       position: absolute;
-      top: 312px;
-      left: 266px;
+      top: 40%;
+      left: 50%;
       z-index: 4;
       width: 121px;
       height: 109px;
@@ -87,17 +115,17 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromLeft 1s ease-in-out 1s forwards;
+      animation: fromLeft 1s ease-in-out 2s forwards;
       &:hover {
-        top: 292px;
-        left: 248px;
+        top: 40%;
+        left: 50%;
         width: 162px;
         height: 149px;
         background: url($elements-chapter-2-scene-6-stem-back-on);
       }
       &.clicked {
-        top: 292px;
-        left: 248px;
+        top: 40%;
+        left: 50%;
         width: 162px;
         height: 149px;
         background: url($elements-chapter-2-scene-6-stem-back-on);
@@ -105,8 +133,8 @@
     }
     &__stem-front {
       position: absolute;
-      bottom: 100px;
-      right: 48px;
+      bottom: 10%;
+      right: 5%;
       z-index: 5;
       width: 173px;
       height: 182px;
@@ -115,17 +143,17 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromRight 1s ease-in-out 1.5s forwards;
+      animation: fromRight 1s ease-in-out 2.5s forwards;
       &:hover {
-        bottom: 82px;
-        right: 28px;
+        bottom: 10%;
+        right: 5%;
         width: 223px;
         height: 228px;
         background: url($elements-chapter-2-scene-6-stem-front-on);
       }
       &.clicked {
-        bottom: 82px;
-        right: 28px;
+        bottom: 10%;
+        right: 5%;
         width: 223px;
         height: 228px;
         background: url($elements-chapter-2-scene-6-stem-front-on);
@@ -169,7 +197,7 @@
       opacity: 0;
       width: 100%;
       height: 74px;
-      animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      animation: appearFullOpacity 1s ease-in-out 0s forwards;
       p {
         color: $color-primary-white;
         font-family: $letter-for-learners;
