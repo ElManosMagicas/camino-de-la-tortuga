@@ -21,16 +21,18 @@ import { Chapter5Facade } from '@app/facades/chapter-5.facade';
   styleUrls: ['./scene-six.page.scss'],
 })
 export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
-  @ViewChild('cap5Esc1Narrator') audioPlayer: ElementRef;
-  @ViewChild('cap5Esc1Serpiente') tucanPlayer: ElementRef;
+  @ViewChild('bgSound') audioPlayer: ElementRef<HTMLAudioElement>;
 
   public CONST = CONST;
   public currentRoute: string = '';
   public turtleName: string;
+  public audioPlaying: boolean = false;
 
   public turtleName$: Observable<string>;
+  public isSound$: Observable<boolean>;
 
   public turtleNameSubscription$: Subscription;
+  public isSoundSubscription$: Subscription;
 
   constructor(
     private _renderer: Renderer2,
@@ -45,16 +47,25 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
       this.turtleName = name;
     });
     this.currentRoute = this._utilService.getCurrentRoute();
+    this.isSound$ = this._appFacade.isSound$;
   }
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.playAudio();
-    // }, 5000);
+    this.isSoundSubscription$ = this.isSound$.subscribe((isSound) => {
+      if (isSound) {
+        setTimeout(() => {
+          this.playAudio();
+        }, 2000);
+      }
+      if (isSound == false) {
+        this.stopAudio();
+      }
+    });
   }
 
   ngOnDestroy(): void {
     this.turtleNameSubscription$?.unsubscribe();
+    this.isSoundSubscription$?.unsubscribe();
   }
 
   public getSubtitles(): string {
@@ -63,9 +74,19 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
   }
 
   public playAudio() {
-    const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
-    if (audioElement.paused) {
+    if (!this.audioPlaying) {
+      const audioElement = this.audioPlayer.nativeElement;
       audioElement.play();
+      this.audioPlaying = true;
+    }
+  }
+
+  public stopAudio() {
+    if (this.audioPlaying) {
+      const audioElement = this.audioPlayer.nativeElement;
+      audioElement.pause();
+      audioElement.currentTime = 0;
+      this.audioPlaying = false;
     }
   }
 
