@@ -106,7 +106,7 @@
     &__stem-back {
       position: absolute;
       top: 40%;
-      left: 50%;
+      left: 46%;
       z-index: 4;
       width: 121px;
       height: 109px;
@@ -117,15 +117,15 @@
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 2s forwards;
       &:hover {
-        top: 40%;
-        left: 50%;
+        top: 39%;
+        left: 45%;
         width: 162px;
         height: 149px;
         background: url($elements-chapter-2-scene-6-stem-back-on);
       }
       &.clicked {
-        top: 40%;
-        left: 50%;
+        top: 39%;
+        left: 45%;
         width: 162px;
         height: 149px;
         background: url($elements-chapter-2-scene-6-stem-back-on);
@@ -145,15 +145,15 @@
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 2.5s forwards;
       &:hover {
-        bottom: 10%;
-        right: 5%;
+        bottom: 8%;
+        right: 4%;
         width: 223px;
         height: 228px;
         background: url($elements-chapter-2-scene-6-stem-front-on);
       }
       &.clicked {
-        bottom: 10%;
-        right: 5%;
+        bottom: 8%;
+        right: 4%;
         width: 223px;
         height: 228px;
         background: url($elements-chapter-2-scene-6-stem-front-on);

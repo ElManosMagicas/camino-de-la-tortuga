@@ -28,6 +28,8 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
   successChapter2Activity!: TemplateRef<IContextModal>;
   @ViewChild('cap2Esc6Narrator')
   audioPlayer: ElementRef;
+  @ViewChild('successSound')
+  successSound: ElementRef;
 
   public CONST = CONST;
   public EBACKPACK = EBACKPACK;
@@ -67,9 +69,14 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
     this.currentRoute = this._utilService.getCurrentRoute();
     this.backpack$ = this._chapter2Facade.backpack$;
     this.backpackSubscription$ = this.backpack$.subscribe((score) => {
-      score === EBACKPACK.STATE_5
-        ? this._appFacade.openModal(this.successChapter2Activity)
-        : false;
+      if (score === EBACKPACK.STATE_5) {
+        this.playSuccessAudio();
+        setTimeout(() => {
+          this._appFacade.openModal(this.successChapter2Activity);
+        }, 2000);
+      } else {
+        false;
+      }
     });
   }
 
@@ -77,6 +84,13 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
     const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
     if (audioElement.paused) {
       audioElement.play();
+    }
+  }
+
+  public playSuccessAudio() {
+    const successElement: HTMLAudioElement = this.successSound.nativeElement;
+    if (successElement.paused) {
+      successElement.play();
     }
   }
 
