@@ -54,7 +54,7 @@ export class HomePage implements OnInit, AfterViewInit {
         if (isSound) {
           setTimeout(() => {
             this.playAudio();
-          }, 2000);
+          }, 1000);
         } else {
           this.stopAudio();
         }

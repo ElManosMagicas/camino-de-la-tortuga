@@ -8,7 +8,7 @@
 .home {
   width: 100vw;
   height: 100vh;
-  background-image: url($gifs-home-bg);
+  background-image: url($bg-start-screen);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,20 +18,6 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    &__river {
-      position: absolute;
-      bottom: 0px;
-      right: 0px;
-      z-index: 0;
-      width: 836px;
-      height: 592px;
-      opacity: 0;
-      background: url($gifs-home-river);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: fromBottom 1s ease-in-out 0s forwards;
-    }
     &__front-bush {
       position: absolute;
       bottom: 0px;
@@ -44,7 +30,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromBottom 1s ease-in-out 0s forwards;
+      animation: fromBottom 1.5s ease-in-out 1s forwards;
     }
     &__turtle {
       position: absolute;
@@ -58,7 +44,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromLeft 1s ease-in-out 0s forwards;
+      animation: fromLeft 1.5s ease-in-out 0s forwards;
     }
     &__title {
       position: absolute;
@@ -72,7 +58,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromTop 1s ease-in-out 2s forwards;
+      animation: fromTop 1.5s ease-in-out 2s forwards;
     }
     &__footer {
       z-index: 1000;
