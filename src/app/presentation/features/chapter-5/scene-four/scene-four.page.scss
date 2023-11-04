@@ -36,7 +36,7 @@
       opacity: 0;
       border-radius: 20px;
       width: 50%;
-      animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      animation: appearFullOpacity 1s ease-in-out 0s forwards;
       p {
         color: $color-primary-white;
         font-family: $letter-for-learners;
@@ -60,7 +60,7 @@
       background-position: center;
       background-repeat: no-repeat;
       opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      animation: appearFullOpacity 1s ease-in-out 2s forwards;
     }
     &__pieces {
       position: absolute;
@@ -80,7 +80,7 @@
         background-position: center;
         background-repeat: no-repeat;
         opacity: 0;
-        animation: appearFullOpacity 1s ease-in-out 0s forwards;
+        animation: appearFullOpacity 1s ease-in-out 4s forwards;
         cursor: pointer;
         &.clicked {
           background: url($elements-chapter-5-scene-4-piece-branches-on);
@@ -97,7 +97,7 @@
         background-position: center;
         background-repeat: no-repeat;
         opacity: 0;
-        animation: appearFullOpacity 1s ease-in-out 0s forwards;
+        animation: appearFullOpacity 1s ease-in-out 4.5s forwards;
         cursor: pointer;
         &.clicked {
           background: url($elements-chapter-5-scene-4-piece-river-on);
@@ -114,7 +114,7 @@
         background-position: center;
         background-repeat: no-repeat;
         opacity: 0;
-        animation: appearFullOpacity 1s ease-in-out 0s forwards;
+        animation: appearFullOpacity 1s ease-in-out 5s forwards;
         cursor: pointer;
         &.clicked {
           background: url($elements-chapter-5-scene-4-piece-sun-on);

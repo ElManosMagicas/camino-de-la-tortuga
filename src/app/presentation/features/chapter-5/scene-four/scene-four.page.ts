@@ -67,7 +67,7 @@ export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.playAudio();
-    }, 2500);
+    }, 500);
   }
 
   ngOnDestroy(): void {
