@@ -28,6 +28,8 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
   successChapter3Activity!: TemplateRef<IContextModal>;
   @ViewChild('cap3Esc8Narrator')
   audioPlayer: ElementRef;
+  @ViewChild('successSound')
+  successSound: ElementRef;
 
   public CONST = CONST;
   public EBACKPACK = EBACKPACK;
@@ -117,23 +119,27 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
           pieceFive &&
           pieceSix
         ) {
-          this._appFacade.openModal(this.successChapter3Activity);
+          this.playSuccessAudio();
+          setTimeout(() => {
+            this._appFacade.openModal(this.successChapter3Activity);
+          }, 2000);
         }
       }
     );
     this.currentRoute = this._utilService.getCurrentRoute();
-    // this.backpack$ = this._chapter2Facade.backpack$;
-    // this.backpackSubscription$ = this.backpack$.subscribe((score) => {
-    //   score === EBACKPACK.STATE_5
-    //     ? this._appFacade.openModal(this.successChapter2Activity)
-    //     : false;
-    // });
   }
 
   public playAudio() {
     const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
     if (audioElement.paused) {
       audioElement.play();
+    }
+  }
+
+  public playSuccessAudio() {
+    const successElement: HTMLAudioElement = this.successSound.nativeElement;
+    if (successElement.paused) {
+      successElement.play();
     }
   }
 
