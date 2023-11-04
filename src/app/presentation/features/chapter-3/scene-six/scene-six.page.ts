@@ -68,9 +68,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
     this.isSoundSubscription$ = this.isSound$.subscribe((isSound) => {
       if (isSound && this.audioCounter === 0) {
         this.audioCounter;
-        setTimeout(() => {
-          this.playAudio();
-        }, 2000);
+        this.playAudio();
       }
       if (isSound && this.audioCounter > 0) {
         this.audioCounter;
@@ -87,7 +85,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnDestroy {
           this._chapter3Facade.setC3S6Subtitles(
             SUBTITLES_CHAPTER_3.SCENE_SIX_PT2
           );
-        }, 12000);
+        }, 10000);
       }
     );
   }
