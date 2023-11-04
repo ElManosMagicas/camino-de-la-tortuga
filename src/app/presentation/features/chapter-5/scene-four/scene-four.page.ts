@@ -27,6 +27,8 @@ import { ILastChapterFinished } from '@app/core/models/finished-chapter.model';
 })
 export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('cap5Esc4Narrator') audioPlayer: ElementRef;
+  @ViewChild('successSound')
+  successSound: ElementRef;
 
   public CONST = CONST;
   public EPERFECT_DAY = EPERFECT_DAY;
@@ -59,7 +61,12 @@ export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
     });
     this.turtleHome$ = this._chapter5Facade.turtleHome$;
     this.turtleHomeSubscription$ = this.turtleHome$.subscribe((score) => {
-      score === ETURLTE_HOME.STATE_3 ? this.onContinue() : false;
+      if (score === ETURLTE_HOME.STATE_3) {
+        this.playSuccessAudio();
+        setTimeout(() => {
+          this.onContinue();
+        }, 2000);
+      }
     });
     this.currentRoute = this._utilService.getCurrentRoute();
   }
@@ -84,6 +91,13 @@ export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
     const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
     if (audioElement.paused) {
       audioElement.play();
+    }
+  }
+
+  public playSuccessAudio() {
+    const successElement: HTMLAudioElement = this.successSound.nativeElement;
+    if (successElement.paused) {
+      successElement.play();
     }
   }
 
