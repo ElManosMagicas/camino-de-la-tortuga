@@ -63,9 +63,7 @@ export class SceneFivePage implements OnInit, AfterViewInit, OnDestroy {
     this.isSoundSubscription$ = this.isSound$.subscribe((isSound) => {
       if (isSound && this.audioCounter === 0) {
         this.audioCounter;
-        setTimeout(() => {
-          this.playAudio();
-        }, 1000);
+        this.playAudio();
       }
       if (isSound && this.audioCounter > 0) {
         this.audioCounter;

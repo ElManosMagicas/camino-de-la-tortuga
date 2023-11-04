@@ -66,7 +66,7 @@ export class SceneTwoPage implements OnInit, AfterViewInit, OnDestroy {
         this.audioCounter;
         setTimeout(() => {
           this.playAudio();
-        }, 5000);
+        }, 3500);
       }
       if (isSound && this.audioCounter > 0) {
         this.audioCounter;

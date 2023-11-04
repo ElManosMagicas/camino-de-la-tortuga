@@ -31,7 +31,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromRight 1s ease-in-out 0s forwards;
+      animation: fromRight 1s ease-in-out 0.5s forwards;
     }
     &__tucan {
       position: absolute;
@@ -45,7 +45,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      animation: fromLeft 1s ease-in-out 0.5s forwards;
+      animation: fromLeft 1s ease-in-out 0s forwards;
     }
     &__subtitles {
       width: 100%;
@@ -54,7 +54,7 @@
       left: 0;
       z-index: 999;
       opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      animation: appearFullOpacity 1s ease-in-out 0.5s forwards;
       &.on {
         animation: none;
         opacity: 1;
@@ -68,7 +68,7 @@
       margin-top: -30px;
       width: 100%;
       opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 9.5s forwards;
+      animation: appearFullOpacity 1s ease-in-out 8s forwards;
     }
     &__footer {
       z-index: 1000;

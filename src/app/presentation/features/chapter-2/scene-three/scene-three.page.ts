@@ -67,9 +67,7 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
     this.isSoundSubscription$ = this.isSound$.subscribe((isSound) => {
       if (isSound && this.audioCounter === 0) {
         this.audioCounter;
-        setTimeout(() => {
-          this.playAudio();
-        }, 2000);
+        this.playAudio();
       }
       if (isSound && this.audioCounter > 0) {
         this.audioCounter;
@@ -86,7 +84,7 @@ export class SceneThreePage implements OnInit, AfterViewInit, OnDestroy {
           this._chapter2Facade.setC1S3Subtitles(
             SUBTITLES_CHAPTER_2.SCENE_THREE_PT2
           );
-        }, 13500);
+        }, 12000);
       }
     );
   }

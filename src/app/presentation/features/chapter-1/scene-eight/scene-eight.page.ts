@@ -68,7 +68,7 @@ export class SceneEightPage
         this.audioCounter;
         setTimeout(() => {
           this.playAudio();
-        }, 3000);
+        }, 2000);
       }
       if (isSound && this.audioCounter > 0) {
         this.audioCounter;
