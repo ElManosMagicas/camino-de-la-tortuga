@@ -27,6 +27,8 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
   @ViewChild('successChapter4Activity', { static: true })
   successChapter4Activity!: TemplateRef<IContextModal>;
   @ViewChild('cap4Esc6Narrator') audioPlayer: ElementRef;
+  @ViewChild('successSound')
+  successSound: ElementRef;
 
   public CONST = CONST;
   public EPERFECT_DAY = EPERFECT_DAY;
@@ -52,9 +54,14 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
     this.turtleName$ = this._appFacade.turtleName$;
     this.perfectDay$ = this._chapter4Facade.perfectDay$;
     this.perfectDaySubscription$ = this.perfectDay$.subscribe((score) => {
-      score === EPERFECT_DAY.STATE_3
-        ? this._appFacade.openModal(this.successChapter4Activity)
-        : false;
+      if (score === EPERFECT_DAY.STATE_3) {
+        this.playSuccessAudio();
+        setTimeout(() => {
+          this._appFacade.openModal(this.successChapter4Activity);
+        }, 2000);
+      } else {
+        false;
+      }
     });
     this.currentRoute = this._utilService.getCurrentRoute();
   }
@@ -73,6 +80,13 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
     const audioElement: HTMLAudioElement = this.audioPlayer.nativeElement;
     if (audioElement.paused) {
       audioElement.play();
+    }
+  }
+
+  public playSuccessAudio() {
+    const successElement: HTMLAudioElement = this.successSound.nativeElement;
+    if (successElement.paused) {
+      successElement.play();
     }
   }
 
