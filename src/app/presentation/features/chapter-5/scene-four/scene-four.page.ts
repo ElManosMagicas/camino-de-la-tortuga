@@ -40,6 +40,7 @@ export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
   public isDottedEnabled: boolean = false;
   public dottedClicked: boolean[] = [false, false, false];
   public piecesCompleted: boolean[] = [false, false, false];
+  public showConfeti: boolean = false;
 
   public turtleName$: Observable<string>;
   public turtleHome$: Observable<number>;
@@ -62,10 +63,11 @@ export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
     this.turtleHome$ = this._chapter5Facade.turtleHome$;
     this.turtleHomeSubscription$ = this.turtleHome$.subscribe((score) => {
       if (score === ETURLTE_HOME.STATE_3) {
+        this.showConfeti = true;
         this.playSuccessAudio();
         setTimeout(() => {
           this.onContinue();
-        }, 2000);
+        }, 4000);
       }
     });
     this.currentRoute = this._utilService.getCurrentRoute();
@@ -159,6 +161,7 @@ export class SceneFourPage implements OnInit, AfterViewInit, OnDestroy {
     this.isDottedEnabled = false;
     this.dottedClicked = [false, false, false];
     this.piecesCompleted = [false, false, false];
+    this.showConfeti = false;
     this._chapter5Facade.resetTurtleHomeScore();
     this._utilService.navigateTo(ROUTES.CHAPTER_5_SCENE_5);
   }
