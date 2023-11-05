@@ -38,6 +38,10 @@
       <ng-container *ngIf="backpack === EBACKPACK.STATE_5">
         <div class="scene-six__container__backpack state-5"></div>
       </ng-container>
+      <div
+        class="scene-six__container__confeti"
+        [ngClass]="{success: backpack === EBACKPACK.STATE_5}"
+      ></div>
     </ng-container>
     <div class="scene-six__container__subtitles">
       <p>

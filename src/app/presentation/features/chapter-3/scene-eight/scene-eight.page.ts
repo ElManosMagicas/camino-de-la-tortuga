@@ -64,6 +64,7 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
   public isPieceFour: boolean = false;
   public isPieceFive: boolean = false;
   public isPieceSix: boolean = false;
+  public showConfeti: boolean = false;
 
   public backgroundsPiece1: string[] = ['pos1', 'pos2', 'pos3', 'pos4'];
   public backgroundsPiece2: string[] = ['pos1', 'pos2', 'pos3', 'pos4'];
@@ -119,6 +120,7 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
           pieceFive &&
           pieceSix
         ) {
+          this.showConfeti = true;
           this.playSuccessAudio();
           setTimeout(() => {
             this._appFacade.openModal(this.successChapter3Activity);
@@ -171,7 +173,7 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
     };
     this._appFacade.setLastChapterFinished(lastChapterFinished);
     this.divClicked = [false, false, false, false];
-    // this._chapter3Facade.resetBackpackScore();
+    this.showConfeti = false;
     this._appFacade.closeModal();
     this._appFacade.finishChapterThree();
     this._utilService.navigateTo(ROUTES.MAP);
