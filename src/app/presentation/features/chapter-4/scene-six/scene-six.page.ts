@@ -37,6 +37,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
   public showNextButton: boolean = false;
   public showPreviousButton: boolean = true;
   public divClicked: boolean[] = [false, false, false];
+  public showConfeti: boolean = false;
 
   public turtleName$: Observable<string>;
   public perfectDay$: Observable<number>;
@@ -55,6 +56,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
     this.perfectDay$ = this._chapter4Facade.perfectDay$;
     this.perfectDaySubscription$ = this.perfectDay$.subscribe((score) => {
       if (score === EPERFECT_DAY.STATE_3) {
+        this.showConfeti = true;
         this.playSuccessAudio();
         setTimeout(() => {
           this._appFacade.openModal(this.successChapter4Activity);
@@ -125,6 +127,7 @@ export class SceneSixPage implements OnInit, AfterViewInit, OnInit {
     };
     this._appFacade.setLastChapterFinished(lastChapterFinished);
     this.divClicked = [false, false, false];
+    this.showConfeti = false;
     this._chapter4Facade.resetPerfectDayScore();
     this._appFacade.closeModal();
     this._appFacade.finishChapterFour();
