@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:33d8b32dc81dd38fff1ddddb7fe90afbc500cf0eae88b242d70f7a2c2a642d8f
-size 750
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "dom"],
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@core/*": ["src/app/core/*"],
+      "@store/*": ["src/app/domain/store/*"],
+      "@facades/*": ["src/app/facades/*"]
+    }
+  }
+}
