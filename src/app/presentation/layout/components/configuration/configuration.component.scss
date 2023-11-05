@@ -1,0 +1,60 @@
+@import "global";
+@import "media-querys";
+@import "elements";
+@import "keyframes";
+
+.config {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 4rem 3rem 3rem;
+  background: $color-primary-blue;
+  &__close {
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      position: absolute;
+      top: -30px;
+      right: -20px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &__title {
+    color: $color-primary-white;
+    font-family: $lato-bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 24px;
+  }
+  &__description {
+    color: $color-primary-white;
+    font-family: $lato-regular;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+    &__left {
+      color: $color-primary-white;
+      font-family: $lato-regular;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

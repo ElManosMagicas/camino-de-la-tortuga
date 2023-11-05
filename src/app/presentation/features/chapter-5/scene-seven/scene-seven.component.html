@@ -1,0 +1,40 @@
+<section class="scene-seven">
+  <div class="scene-seven__container">
+    <div class="scene-seven__container__back-grass"></div>
+    <div class="scene-seven__container__bush-rock"></div>
+    <div class="scene-seven__container__turtle"></div>
+    <div class="scene-seven__container__front-grass"></div>
+    <ng-container>
+      <div class="scene-seven__container__introduction">
+        <div class="scene-seven__container__introduction__text">
+          <p>
+            ¡Lo hiciste genial!<br />
+            <br />
+            Hemos llegado al final de la historia de nuestra amiga tortuga.
+            <br />
+            <br />
+            Puedes volver a acompañarla en su aventura siempre que quieras.
+          </p>
+        </div>
+      </div>
+    </ng-container>
+    <div class="scene-seven__container__buttons">
+      <button class="scene-seven__container__buttons__btn" (click)="onRepeat()">
+        REPETIR EL CUENTO
+      </button>
+      <button
+        class="scene-seven__container__buttons__btn"
+        (click)="onGoToCredits()"
+      >
+        CRÉDITOS
+      </button>
+    </div>
+    <audio #cap5Esc7Narrator>
+      <source [src]="CONST.AUDIO.NARRATOR_CHAPTER_5_SCENE_7" type="audio/wav" />
+    </audio>
+  </div>
+</section>
+
+<ng-template #credits>
+  <layout-credits (closeCreditsEvent)="onCloseCredits()"></layout-credits>
+</ng-template>

@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
+  &.cdk-global-scrollblock {
+    top: 0 !important;
+  }
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: 100%;
+}

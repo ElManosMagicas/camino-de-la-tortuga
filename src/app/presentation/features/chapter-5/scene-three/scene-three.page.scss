@@ -1,0 +1,123 @@
+@import "global";
+@import "media-querys";
+@import "backgrounds";
+@import "elements";
+@import "gifs";
+@import "characters";
+@import "keyframes";
+
+.scene-three {
+  width: 100vw;
+  height: 100vh;
+  background-image: url($bg-chapter-5-scene-3);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    &__right-after-turtle {
+      position: absolute;
+      top: 54px;
+      left: 268px;
+      z-index: 2;
+      width: 166px;
+      height: 138px;
+      background: url($character-chapter-5-scene-3-right-after-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 0s forwards;
+    }
+    &__left-after-turtle {
+      position: absolute;
+      top: 118px;
+      left: 30px;
+      z-index: 2;
+      width: 214px;
+      height: 168px;
+      background: url($character-chapter-5-scene-3-left-after-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 0s forwards;
+    }
+    &__right-before-turtle {
+      position: absolute;
+      top: 152px;
+      right: 100px;
+      z-index: 1;
+      width: 247px;
+      height: 202px;
+      background: url($character-chapter-5-scene-3-right-before-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 1s forwards;
+    }
+    &__left-before-turtle {
+      position: absolute;
+      bottom: 220px;
+      left: 180px;
+      z-index: 1;
+      width: 202px;
+      height: 176px;
+      background: url($character-chapter-5-scene-3-left-before-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 1s forwards;
+    }
+    &__main-turtle {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      z-index: 1;
+      width: 333px;
+      height: 284px;
+      background: url($character-chapter-5-scene-3-main-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
+    }
+    &__subtitles {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 3s forwards;
+      &.on {
+        animation: none;
+        opacity: 1;
+      }
+    }
+    &__arrows {
+      z-index: 990;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -30px;
+      width: 100%;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 8s forwards;
+    }
+    &__footer {
+      z-index: 1000;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

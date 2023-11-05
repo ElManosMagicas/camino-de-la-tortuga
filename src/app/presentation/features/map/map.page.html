@@ -1,0 +1,80 @@
+<section class="map">
+  <div class="map__container">
+    <div class="map__container__cuy"></div>
+    <div class="map__container__textbox">
+      <div class="map__container__textbox__text">{{ mapDialogs }}</div>
+    </div>
+    <div class="map__container__chapter1">
+      <div
+        class="map__container__chapter1__sabana"
+        (click)="onGoToChapterOne()"
+      ></div>
+      <div
+        class="map__container__chapter1__tortuga1"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter1}"
+      ></div>
+    </div>
+    <div class="map__container__chapter2">
+      <div
+        class="map__container__chapter2__tucan"
+        [ngClass]="{'finished': (isChapterTwoFinished$ | async)}"
+        (click)="onGoToChapterTwo()"
+      ></div>
+      <div
+        class="map__container__chapter2__tortuga2"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter2}"
+      ></div>
+    </div>
+    <div class="map__container__chapter3">
+      <div
+        class="map__container__chapter3__serpiente"
+        [ngClass]="{'finished': (isChapterThreeFinished$ | async)}"
+        (click)="onGoToChapterThree()"
+      ></div>
+      <div
+        class="map__container__chapter3__tortuga3"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter3}"
+      ></div>
+    </div>
+    <div class="map__container__chapter4">
+      <div
+        class="map__container__chapter4__danta"
+        [ngClass]="{'finished': (isChapterFourFinished$ | async)}"
+        (click)="onGoToChapterFour()"
+      ></div>
+      <div
+        class="map__container__chapter4__tortuga4"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter4}"
+      ></div>
+    </div>
+    <div class="map__container__chapter5">
+      <div
+        class="map__container__chapter5__rio"
+        [ngClass]="{'enabled': (isChapterOneFinished$ | async) && (isChapterTwoFinished$ | async) && (isChapterThreeFinished$ | async) && (isChapterFourFinished$ | async)}"
+        (click)="onGoToChapterFive()"
+      ></div>
+      <div
+        class="map__container__chapter5__tortuga5"
+        [ngClass]="{'finished': (lastChapterFinished$ | async)?.chapter5}"
+      ></div>
+    </div>
+    <div class="map__container__subtitles">
+      <p>
+        Selecciona a qué amigo quieres ir a visitar, presionando sobre su
+        ecosistema.
+      </p>
+    </div>
+    <audio #afterChapter1>
+      <source [src]="CONST.AUDIO.MAP_AFTER_CHAPTER_1" type="audio/wav" />
+    </audio>
+    <audio #afterChapter2>
+      <source [src]="CONST.AUDIO.MAP_AFTER_CHAPTER_2" type="audio/wav" />
+    </audio>
+    <audio #afterChapter3>
+      <source [src]="CONST.AUDIO.MAP_AFTER_CHAPTER_3" type="audio/wav" />
+    </audio>
+    <audio #afterChapter4>
+      <source [src]="CONST.AUDIO.MAP_AFTER_CHAPTER_4" type="audio/wav" />
+    </audio>
+  </div>
+</section>

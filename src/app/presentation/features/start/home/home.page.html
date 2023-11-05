@@ -1,0 +1,32 @@
+<section class="home">
+  <div class="home__container">
+    <div class="home__container__turtle"></div>
+    <div class="home__container__title"></div>
+    <div class="home__container__front-bush"></div>
+    <div class="home__container__footer">
+      <home-footer
+        (goToInstructionsEvent)="onGoToInstructions()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToCreditsEvent)="onGoToCredits()"
+        (goToChapterOneEvent)="onGoToChapterOne()"
+      ></home-footer>
+    </div>
+    <audio #homeBgMusic>
+      <source [src]="CONST.AUDIO.HOME_MUSIC" type="audio/wav" />
+    </audio>
+  </div>
+</section>
+
+<ng-template #credits>
+  <layout-credits (closeCreditsEvent)="onCloseCredits()"></layout-credits>
+</ng-template>
+
+<ng-template #config>
+  <layout-configuration
+    [isSubtitlesToggled]="isSubtitles$ | async"
+    [isSoundToggled]="isSound$ | async"
+    (closeConfigEvent)="onCloseConfig()"
+    (soundToggleEvent)="onSoundToggle($event)"
+    (subtitlesToggleEvent)="onSubtitlesToggle($event)"
+  ></layout-configuration>
+</ng-template>

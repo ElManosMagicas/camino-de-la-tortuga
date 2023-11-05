@@ -1,0 +1,29 @@
+<div class="config">
+  <button class="config__close" (click)="onClose()">
+    <img src="/assets/icons/btn-close.png" alt="Botón Cerrar" />
+  </button>
+  <h2 class="config__title">CONFIGURACIÓN:</h2>
+  <div class="config__logos"></div>
+  <div class="config__description">
+    Acá puedes configurar la experiencia audiovisual del libro según tus
+    preferencias y necesidades:
+  </div>
+  <div class="config__item">
+    <div class="config__item__left">Activar /Desactivar subtítulos</div>
+    <div class="config__item__right">
+      <layout-toggle-subtitles-button
+        [isSubtitlesToggled]="isSubtitlesToggled"
+        (subtitlesToggleEvent)="onSubtitlesToggle($event)"
+      ></layout-toggle-subtitles-button>
+    </div>
+  </div>
+  <div class="config__item">
+    <div class="config__item__left">Activar / Desactivar sonido</div>
+    <div class="config__item__right">
+      <layout-toggle-sound-button
+        [isSoundToggled]="isSoundToggled"
+        (soundToggleEvent)="onSoundToggle($event)"
+      ></layout-toggle-sound-button>
+    </div>
+  </div>
+</div>

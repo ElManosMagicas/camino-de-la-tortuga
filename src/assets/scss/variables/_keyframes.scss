@@ -1,0 +1,124 @@
+@keyframes fromBottom {
+  from {
+    transform: translate(0, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromTop {
+  from {
+    transform: translate(0, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    transform: translate(-100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translate(100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.55;
+  }
+}
+
+@keyframes appearFullOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappearSubtitles {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes subtitlesAppear {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modalOpacityBackgroundIn {
+  0% {
+    background-color: rgba(55, 55, 55, 0);
+  }
+  100% {
+    background-color: rgba(55, 55, 55, 0.5);
+  }
+}
+
+@keyframes modalEasyInBottom {
+  0% {
+    transform: translate(0, 1200px);
+    -webkit-transform: translate(0, 1200px);
+    -moz-transform: translate(0, 1200px);
+    -ms-transform: translate(0, 1200px);
+    -o-transform: translate(0, 1200px);
+  }
+  100% {
+    transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+  }
+}
+
+@keyframes modalEasyOutBottom {
+  0% {
+    transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0, 1500px);
+    -webkit-transform: translate(0, 1500px);
+    -moz-transform: translate(0, 1500px);
+    -ms-transform: translate(0, 1500px);
+    -o-transform: translate(0, 1500px);
+  }
+}

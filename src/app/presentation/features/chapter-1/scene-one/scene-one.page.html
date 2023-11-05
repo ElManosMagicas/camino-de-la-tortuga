@@ -1,0 +1,77 @@
+<section class="scene-one">
+  <div class="scene-one__container">
+    <div class="scene-one__container__back-grass"></div>
+    <div class="scene-one__container__bush-rock"></div>
+    <div class="scene-one__container__turtle"></div>
+    <div class="scene-one__container__front-grass"></div>
+    <ng-container>
+      <div class="scene-one__container__introduction">
+        <div class="scene-one__container__introduction__text">
+          <p>
+            Te damos la bienvenida.<br />
+            Para acompañar a nuestra amiga tortuga en esta aventura, ella
+            necesita un nombre.<br />
+            <br />
+            ¿Cómo quieres que se llame la tortuga?
+          </p>
+        </div>
+        <input
+          class="scene-one__container__introduction__input"
+          type="text"
+          [(ngModel)]="turtleName"
+          [placeholder]="placeholderText"
+          (input)="onInputChange()"
+          (focus)="onClearPlaceholder()"
+          required
+        />
+        <button
+          class="scene-one__container__introduction__accept"
+          [ngClass]="{'enabled': !isButtonDisabled}"
+          [disabled]="isButtonDisabled"
+          (click)="onSubmit()"
+        >
+          Aceptar
+        </button>
+      </div>
+    </ng-container>
+    <div class="scene-one__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+        (openScenesListEvent)="onOpenScenesList()"
+      ></layout-bar>
+    </div>
+    <audio #cap1Esc1Narrator>
+      <source [src]="CONST.AUDIO.NARRATOR_CHAPTER_1_SCENE_1" type="audio/wav" />
+    </audio>
+  </div>
+</section>
+
+<ng-template #backpackChapter1>
+  <layout-backpack
+    [food]="chapterTwoFinished$ | async"
+    [river]="chapterThreeFinished$ | async"
+    [sun]="chapterFourFinished$ | async"
+    (closeBackpackEvent)="onCloseBackpack()"
+  ></layout-backpack>
+</ng-template>
+
+<ng-template #scenesList>
+  <layout-scenes-list
+    (closeScenesListEvent)="onCloseScenesList()"
+  ></layout-scenes-list>
+</ng-template>
+
+<ng-template #config>
+  <layout-configuration
+    [isSubtitlesToggled]="isSubtitles$ | async"
+    [isSoundToggled]="isSound$ | async"
+    (closeConfigEvent)="onCloseConfig()"
+    (soundToggleEvent)="onSoundToggle($event)"
+    (subtitlesToggleEvent)="onSubtitlesToggle($event)"
+  ></layout-configuration>
+</ng-template>

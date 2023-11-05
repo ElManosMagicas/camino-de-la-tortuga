@@ -1,0 +1,14 @@
+<ng-container *ngIf="modalConfig$ | async as modalConfig">
+  <div
+    *ngIf="modalConfig.show"
+    class="modal-base"
+    [class.close-in-progress]="onCloseStylesAnimationInProgress"
+  >
+    <div
+      class="modal-content"
+      [class.close-in-progress]="onCloseStylesAnimationInProgress"
+    >
+      <ng-container [ngTemplateOutlet]="modalConfig.templateRef"></ng-container>
+    </div>
+  </div>
+</ng-container>

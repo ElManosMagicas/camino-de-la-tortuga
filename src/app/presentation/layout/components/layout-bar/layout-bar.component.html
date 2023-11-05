@@ -1,0 +1,44 @@
+<div class="bar">
+  <button class="bar__tab" *ngIf="!toggleControls" (click)="onToggleControls()">
+    REPRODUCTOR
+  </button>
+  <div
+    class="bar__controls"
+    *ngIf="toggleControls"
+    #controls
+    (mouseenter)="onMouseEnterControls()"
+    (mouseleave)="onMouseLeaveControls()"
+  >
+    <div class="bar__controls__left">
+      <div class="bar__controls__left__scenes" (click)="onOpenScenesList()">
+        <p>{{ sceneListLabel }}</p>
+      </div>
+    </div>
+    <div class="bar__controls__right">
+      <button class="bar__controls__right__btns" (click)="onGoToPreviousPage()">
+        <img src="/assets/icons/btn-retroceder.svg" alt="Botón de retroceder" />
+      </button>
+      <button class="bar__controls__right__btns" (click)="onGoToNextPage()">
+        <img src="/assets/icons/btn-avanzar.svg" alt="Botón de avanzar" />
+      </button>
+      <button class="bar__controls__right__btns" (click)="onRepeatScene()">
+        <img
+          src="/assets/icons/btn-repetir-escena.svg"
+          alt="Botón de repetir escena"
+        />
+      </button>
+      <button class="bar__controls__right__btns" (click)="onGoToBackpack()">
+        <img src="/assets/icons/btn-mochila.svg" alt="Botón de mochila" />
+      </button>
+      <button
+        class="bar__controls__right__btns"
+        (click)="onGoToConfiguration()"
+      >
+        <img
+          src="/assets/icons/btn-configuracion.svg"
+          alt="Botón de configuración"
+        />
+      </button>
+    </div>
+  </div>
+</div>

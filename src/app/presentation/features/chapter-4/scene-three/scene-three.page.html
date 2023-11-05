@@ -1,0 +1,61 @@
+<section class="scene-three">
+  <div class="scene-three__container">
+    <div class="scene-three__container__turtle"></div>
+    <div class="scene-three__container__danta"></div>
+    <ng-container *ngIf="isSubtitles$ | async as isSubtitles">
+      <div
+        class="scene-three__container__subtitles"
+        [ngClass]="{ on: isSubtitles && removeSubtitlesAnimation > 0 }"
+      >
+        <layout-subtitles [subtitles]="getSubtitles()"></layout-subtitles>
+      </div>
+    </ng-container>
+    <div class="scene-three__container__arrows">
+      <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-three__container__footer">
+      <layout-bar
+        [currentRoute]="currentRoute"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToBackpackEvent)="onGoToBackpack()"
+        (repeatSceneEvent)="onRepeatScene()"
+        (openScenesListEvent)="onOpenScenesList()"
+      ></layout-bar>
+    </div>
+    <audio #cap4Esc3Danta>
+      <source [src]="CONST.AUDIO.DANTA_CHAPTER_4_SCENE_3" type="audio/wav" />
+    </audio>
+  </div>
+</section>
+
+<ng-template #backpackChapter4>
+  <layout-backpack
+    [food]="chapterTwoFinished$ | async"
+    [river]="chapterThreeFinished$ | async"
+    [sun]="chapterFourFinished$ | async"
+    (closeBackpackEvent)="onCloseBackpack()"
+  ></layout-backpack>
+</ng-template>
+
+<ng-template #scenesList>
+  <layout-scenes-list
+    (closeScenesListEvent)="onCloseScenesList()"
+  ></layout-scenes-list>
+</ng-template>
+
+<ng-template #config>
+  <layout-configuration
+    [isSubtitlesToggled]="isSubtitles$ | async"
+    [isSoundToggled]="isSound$ | async"
+    (closeConfigEvent)="onCloseConfig()"
+    (soundToggleEvent)="onSoundToggle($event)"
+    (subtitlesToggleEvent)="onSubtitlesToggle($event)"
+  ></layout-configuration>
+</ng-template>

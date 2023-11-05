@@ -1,0 +1,15 @@
+@import "global";
+@import "media-querys";
+
+.sound {
+  cursor: pointer;
+  background: url("/assets/buttons/cap2-esc1-sonido-off.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  &.clicked {
+    background: url("/assets/buttons/cap2-esc1-sonido-on.svg");
+  }
+}

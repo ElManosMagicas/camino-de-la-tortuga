@@ -1,0 +1,56 @@
+<div class="slider">
+  <div class="slider__close">
+    <button class="slider__close__btn" (click)="onGoToHome()">
+      <img src="/assets/buttons/btn-cerrar.png" alt="Botón Cerrar" />
+    </button>
+  </div>
+  <div class="slider__icon">
+    <img src="{{ currentSlide?.icon }}" alt="{{ currentSlide?.alt }}" />
+  </div>
+  <div class="slider__content">
+    <button
+      class="buttons"
+      (click)="onPreviousSlide()"
+      *ngIf="currentSlideIndex > 0"
+    >
+      <img
+        src="/assets/buttons/slider-btn-retroceder.png"
+        alt="Botón retroceder"
+      />
+    </button>
+    <div class="description" [innerHTML]="currentSlide?.description"></div>
+    <button
+      class="buttons"
+      (click)="onNextSlide()"
+      *ngIf="currentSlideIndex < SLIDER_CONST.length - 1"
+    >
+      <img src="/assets/buttons/slider-btn-avanzar.png" alt="Botón avanzar" />
+    </button>
+  </div>
+  <div class="slider__nav">
+    <button
+      class="slider__nav__circle"
+      [class.active]="currentSlideIndex === 0"
+    ></button>
+    <button
+      class="slider__nav__circle"
+      [class.active]="currentSlideIndex === 1"
+    ></button>
+    <button
+      class="slider__nav__circle"
+      [class.active]="currentSlideIndex === 2"
+    ></button>
+    <button
+      class="slider__nav__circle"
+      [class.active]="currentSlideIndex === 3"
+    ></button>
+    <button
+      class="slider__nav__circle"
+      [class.active]="currentSlideIndex === 4"
+    ></button>
+    <button
+      class="slider__nav__circle"
+      [class.active]="currentSlideIndex === 5"
+    ></button>
+  </div>
+</div>

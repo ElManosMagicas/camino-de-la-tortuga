@@ -1,0 +1,151 @@
+@import "global";
+@import "media-querys";
+@import "backgrounds";
+@import "elements";
+@import "gifs";
+@import "characters";
+@import "keyframes";
+
+.scene-two {
+  width: 100vw;
+  height: 100vh;
+  background-image: url($bg-chapter-1-scene-2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    &__back-right-bush {
+      position: absolute;
+      top: 212px;
+      right: 0px;
+      z-index: 1;
+      width: 263px;
+      height: 430px;
+      opacity: 0;
+      background: url($gifs-chapter-1-scene-2-back-right-bush);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromRight 1s ease-in-out 0s forwards;
+    }
+    &__back-left-bush {
+      position: absolute;
+      top: 212px;
+      left: 0px;
+      z-index: 1;
+      width: 189px;
+      height: 375px;
+      opacity: 0;
+      background: url($gifs-chapter-1-scene-2-back-left-bush);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromLeft 1s ease-in-out 0.5s forwards;
+    }
+    &__mom-cuy {
+      position: absolute;
+      top: 290px;
+      left: 200px;
+      z-index: 2;
+      width: 284px;
+      height: 225px;
+      opacity: 0;
+      background: url($character-chapter-1-scene-2-mom-cuy);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromBottom 1s ease-in-out 4s forwards;
+    }
+    &__son-cuy {
+      position: absolute;
+      top: 264px;
+      right: 144px;
+      z-index: 3;
+      width: 443px;
+      height: 418px;
+      opacity: 0;
+      background: url($character-chapter-1-scene-2-son-cuy);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromBottom 1s ease-in-out 4.5s forwards;
+    }
+    &__cambuche {
+      position: absolute;
+      top: 30px;
+      left: 92px;
+      z-index: 4;
+      width: 865px;
+      height: 673px;
+      opacity: 0;
+      background: url($elements-chapter-1-scene-2-cambuche);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromTop 1s ease-in-out 3s forwards;
+    }
+    &__front-right-bush {
+      position: absolute;
+      bottom: 60px;
+      right: 0px;
+      z-index: 5;
+      width: 312px;
+      height: 329px;
+      opacity: 0;
+      background: url($gifs-chapter-1-scene-2-front-right-grass);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromBottom 1s ease-in-out 1.5s forwards;
+    }
+    &__front-left-bush {
+      position: absolute;
+      bottom: 42px;
+      left: 0px;
+      z-index: 6;
+      width: 744px;
+      height: 318px;
+      opacity: 0;
+      background: url($gifs-chapter-1-scene-2-left-grass);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromBottom 1s ease-in-out 1.5s forwards;
+    }
+    &__subtitles {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 4.5s forwards;
+      &.on {
+        animation: none;
+        opacity: 1;
+      }
+    }
+    &__arrows {
+      z-index: 990;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -30px;
+      width: 100%;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 17s forwards;
+    }
+    &__footer {
+      z-index: 1000;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

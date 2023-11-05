@@ -1,0 +1,106 @@
+@import "global";
+@import "media-querys";
+@import "backgrounds";
+@import "elements";
+@import "gifs";
+@import "characters";
+@import "keyframes";
+
+.scene-eleven {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-primary-white;
+  opacity: 0;
+  animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
+  &__container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    &__back-grass-cuy {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+      width: 519px;
+      height: 768px;
+      opacity: 0;
+      background: url($bg-chapter-1-scene-11-13-cuy-color);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromLeft 1s ease-in-out 0s forwards;
+    }
+    &__cuy {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 2;
+      width: 445px;
+      height: 729px;
+      opacity: 0;
+      background: url($character-chapter-1-scene-11-13-cuy);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromLeft 1s ease-in-out 0.5s forwards;
+    }
+    &__back-grass-turtle {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 1;
+      width: 591px;
+      height: 768px;
+      opacity: 0;
+      background: url($bg-chapter-1-scene-11-12-tortuga-color);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromRight 1s ease-in-out 1s forwards;
+    }
+    &__turtle {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      z-index: 2;
+      width: 465px;
+      height: 588px;
+      opacity: 0;
+      background: url($character-chapter-1-scene-11-12-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromRight 1s ease-in-out 1.5s forwards;
+    }
+    &__subtitles {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      &.on {
+        animation: none;
+        opacity: 1;
+      }
+    }
+    &__arrows {
+      z-index: 990;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -30px;
+      width: 100%;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 9s forwards;
+    }
+    &__footer {
+      z-index: 1000;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+@import "global";
+@import "media-querys";
+@import "backgrounds";
+@import "elements";
+@import "gifs";
+@import "characters";
+@import "keyframes";
+
+.scene-six {
+  width: 100vw;
+  height: 100vh;
+  background-image: url($bg-chapter-4-scene-5);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    &__sun {
+      position: absolute;
+      top: 8px;
+      left: 84px;
+      z-index: 1;
+      width: 163px;
+      height: 153px;
+      background: url($elements-chapter-4-scene-5-sun);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: fromTop 1s ease-in-out 0s forwards;
+    }
+    &__left-frailejon {
+      position: absolute;
+      bottom: 64px;
+      left: 426px;
+      z-index: 2;
+      width: 192px;
+      height: 340px;
+      background: url($elements-chapter-4-scene-1-2-6-frailejon-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 0s forwards;
+    }
+    &__right-frailejon {
+      position: absolute;
+      top: 190px;
+      right: 40px;
+      z-index: 2;
+      width: 154px;
+      height: 324px;
+      background: url($elements-chapter-4-scene-1-2-6-frailejon-danta);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 0s forwards;
+    }
+    &__center-clouds {
+      position: absolute;
+      top: 26px;
+      left: 300px;
+      z-index: 2;
+      width: 251px;
+      height: 148px;
+      background: url($elements-chapter-4-scene-5-center-clouds);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 0.5s forwards;
+    }
+    &__clouds {
+      position: absolute;
+      top: 20px;
+      right: 0px;
+      z-index: 2;
+      width: 104px;
+      height: 136px;
+      background: url($elements-chapter-4-scene-5-clouds-f);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 0.5s forwards;
+    }
+    &__moon {
+      position: absolute;
+      top: 50px;
+      left: 470px;
+      z-index: 1;
+      width: 172px;
+      height: 182px;
+      background: url($elements-chapter-4-scene-5-moon-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: fromLeft 1s ease-in-out 1s forwards;
+      &:hover {
+        background: url($elements-chapter-4-scene-5-moon-on);
+      }
+      &.clicked {
+        display: none;
+      }
+    }
+    &__stars {
+      position: absolute;
+      top: 18px;
+      right: 12px;
+      z-index: 1;
+      width: 148px;
+      height: 104px;
+      background: url($elements-chapter-4-scene-5-star-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: fromRight 1s ease-in-out 1s forwards;
+      &:hover {
+        background: url($elements-chapter-4-scene-5-star-on);
+      }
+      &.clicked {
+        display: none;
+      }
+    }
+    &__lintern {
+      position: absolute;
+      bottom: 80px;
+      left: 270px;
+      z-index: 1;
+      width: 198px;
+      height: 104px;
+      background: url($elements-chapter-4-scene-5-lamp-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
+      &:hover {
+        background: url($elements-chapter-4-scene-5-lamp-on);
+      }
+      &.clicked {
+        display: none;
+      }
+    }
+    &__subtitles {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-primary-blue;
+      opacity: 0;
+      width: 100%;
+      height: 74px;
+      animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      p {
+        color: $color-primary-white;
+        font-family: $letter-for-learners;
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 25px;
+        text-align: center;
+        margin: 12px 0px;
+        padding: 0 60px;
+      }
+    }
+    &__arrows {
+      z-index: 990;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -30px;
+      width: 100%;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 3s forwards;
+    }
+  }
+}

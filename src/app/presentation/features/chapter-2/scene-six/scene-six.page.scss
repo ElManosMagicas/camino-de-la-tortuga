@@ -1,0 +1,230 @@
+@import "global";
+@import "media-querys";
+@import "backgrounds";
+@import "elements";
+@import "gifs";
+@import "characters";
+@import "keyframes";
+
+.scene-six {
+  width: 100vw;
+  height: 100vh;
+  background-image: url($bg-chapter-2-scene-6);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    &__left-tree {
+      position: absolute;
+      top: 8%;
+      left: 6%;
+      z-index: 5;
+      width: 324px;
+      height: 508px;
+      opacity: 0;
+      background: url($elements-chapter-2-scene-6-left-tree);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromTop 1s ease-in-out 0s forwards;
+    }
+    &__right-tree {
+      position: absolute;
+      top: 0%;
+      right: 10%;
+      z-index: 5;
+      width: 333px;
+      height: 404px;
+      opacity: 0;
+      background: url($elements-chapter-2-scene-6-right-tree);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromTop 1s ease-in-out 0s forwards;
+    }
+    &__seed-right-back {
+      position: absolute;
+      top: 30%;
+      right: 1%;
+      z-index: 2;
+      width: 186px;
+      height: 132px;
+      opacity: 0;
+      background: url($elements-chapter-2-scene-6-seed-right-back-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromRight 1s ease-in-out 1s forwards;
+      &:hover {
+        top: 30%;
+        right: 1%;
+        width: 218px;
+        height: 167px;
+        background: url($elements-chapter-2-scene-6-seed-right-back-on);
+      }
+      &.clicked {
+        top: 30%;
+        right: 1%;
+        width: 218px;
+        height: 167px;
+        background: url($elements-chapter-2-scene-6-seed-right-back-on);
+      }
+    }
+    &__seed-left-front {
+      position: absolute;
+      bottom: 18%;
+      left: 4%;
+      z-index: 3;
+      width: 227px;
+      height: 146px;
+      opacity: 0;
+      background: url($elements-chapter-2-scene-6-seed-left-front-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromLeft 1s ease-in-out 1.5s forwards;
+      &:hover {
+        bottom: 18%;
+        left: 4%;
+        width: 255px;
+        height: 174px;
+        background: url($elements-chapter-2-scene-6-seed-left-front-on);
+      }
+      &.clicked {
+        bottom: 18%;
+        left: 4%;
+        width: 255px;
+        height: 174px;
+        background: url($elements-chapter-2-scene-6-seed-left-front-on);
+      }
+    }
+    &__stem-back {
+      position: absolute;
+      top: 40%;
+      left: 46%;
+      z-index: 4;
+      width: 121px;
+      height: 109px;
+      opacity: 0;
+      background: url($elements-chapter-2-scene-6-stem-back-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromLeft 1s ease-in-out 2s forwards;
+      &:hover {
+        top: 39%;
+        left: 45%;
+        width: 162px;
+        height: 149px;
+        background: url($elements-chapter-2-scene-6-stem-back-on);
+      }
+      &.clicked {
+        top: 39%;
+        left: 45%;
+        width: 162px;
+        height: 149px;
+        background: url($elements-chapter-2-scene-6-stem-back-on);
+      }
+    }
+    &__stem-front {
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+      z-index: 5;
+      width: 173px;
+      height: 182px;
+      opacity: 0;
+      background: url($elements-chapter-2-scene-6-stem-front-off);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromRight 1s ease-in-out 2.5s forwards;
+      &:hover {
+        bottom: 8%;
+        right: 4%;
+        width: 223px;
+        height: 228px;
+        background: url($elements-chapter-2-scene-6-stem-front-on);
+      }
+      &.clicked {
+        bottom: 8%;
+        right: 4%;
+        width: 223px;
+        height: 228px;
+        background: url($elements-chapter-2-scene-6-stem-front-on);
+      }
+    }
+    &__backpack {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 5;
+      width: 273px;
+      height: 319px;
+      background: url($elements-chapter-2-scene-6-backpack-state-1);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      &.state-2 {
+        background: url($elements-chapter-2-scene-6-backpack-state-2);
+      }
+      &.state-3 {
+        background: url($elements-chapter-2-scene-6-backpack-state-3);
+      }
+      &.state-4 {
+        background: url($elements-chapter-2-scene-6-backpack-state-4);
+      }
+      &.state-5 {
+        background: url($elements-chapter-2-scene-6-backpack-state-5);
+      }
+    }
+    &__subtitles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-primary-blue;
+      opacity: 0;
+      width: 100%;
+      height: 74px;
+      animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      p {
+        color: $color-primary-white;
+        font-family: $letter-for-learners;
+        font-size: 26px;
+        font-weight: 300;
+        line-height: 25px;
+        text-align: center;
+        margin: 12px 0px;
+        padding: 0 60px;
+      }
+    }
+    &__arrows {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -30px;
+      width: 100%;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 3s forwards;
+    }
+    &__footer {
+      z-index: 1000;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

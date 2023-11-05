@@ -1,0 +1,73 @@
+<section class="scene-eight">
+  <div class="scene-eight__container">
+    <ng-container>
+      <div class="scene-eight__container__subtitles">
+        <p>
+          Presiona las fichas para girarlas y armar la imagen del río, hogar de
+          la tortuga {{ turtleName$ | async }}.
+        </p>
+      </div>
+    </ng-container>
+    <div class="scene-eight__container__arrows">
+      <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <div class="scene-eight__container__reference"></div>
+    <div class="scene-eight__container__box">
+      <div class="scene-eight__container__box__top">
+        <div
+          class="scene-eight__container__box__top__piece-1"
+          [ngClass]="currentBackgroundClassPiece1"
+          (click)="onToggleBackgroundPiece1()"
+        ></div>
+        <div
+          class="scene-eight__container__box__top__piece-3"
+          [ngClass]="currentBackgroundClassPiece3"
+          (click)="onToggleBackgroundPiece3()"
+        ></div>
+        <div
+          class="scene-eight__container__box__top__piece-5"
+          [ngClass]="currentBackgroundClassPiece5"
+          (click)="onToggleBackgroundPiece5()"
+        ></div>
+      </div>
+      <div class="scene-eight__container__box__bot">
+        <div
+          class="scene-eight__container__box__bot__piece-2"
+          [ngClass]="currentBackgroundClassPiece2"
+          (click)="onToggleBackgroundPiece2()"
+        ></div>
+        <div
+          class="scene-eight__container__box__bot__piece-4"
+          [ngClass]="currentBackgroundClassPiece4"
+          (click)="onToggleBackgroundPiece4()"
+        ></div>
+        <div
+          class="scene-eight__container__box__bot__piece-6"
+          [ngClass]="currentBackgroundClassPiece6"
+          (click)="onToggleBackgroundPiece6()"
+        ></div>
+      </div>
+    </div>
+    <audio #cap3Esc8Narrator>
+      <source
+        [src]="CONST.AUDIO.ACTIVITY_INSTRUCTIONS_CHAPTER_3_SCENE_8"
+        type="audio/wav"
+      />
+    </audio>
+    <audio #successSound>
+      <source [src]="CONST.AUDIO.ACTIVITY_SUCCESS" type="audio/wav" />
+    </audio>
+  </div>
+</section>
+
+<ng-template #successChapter3Activity>
+  <success-activity-chapter-three
+    [turtleName]="turtleName$ | async"
+    (goToMapEvent)="onGoToMap()"
+  ></success-activity-chapter-three>
+</ng-template>

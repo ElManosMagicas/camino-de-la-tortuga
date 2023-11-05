@@ -1,0 +1,93 @@
+@import "global";
+@import "media-querys";
+@import "backgrounds";
+@import "elements";
+@import "gifs";
+@import "characters";
+@import "keyframes";
+
+.scene-two {
+  width: 100vw;
+  height: 100vh;
+  background-image: url($bg-chapter-3-scene-1-2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    &__turtle {
+      position: absolute;
+      bottom: 110px;
+      left: 140px;
+      z-index: 1;
+      width: 228px;
+      height: 225px;
+      background: url($character-chapter-3-scene-1-2-turtle);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &__log {
+      position: absolute;
+      bottom: 262px;
+      right: 98px;
+      z-index: 3;
+      width: 271px;
+      height: 305px;
+      background: url($elements-chapter-3-scene-2-log);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 0s forwards;
+    }
+    &__snake {
+      position: absolute;
+      bottom: 236px;
+      right: 200px;
+      z-index: 2;
+      width: 195px;
+      height: 172px;
+      background: url($character-chapter-3-scene-2-snake);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 5s forwards;
+    }
+    &__subtitles {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      &.on {
+        animation: none;
+        opacity: 1;
+      }
+    }
+    &__arrows {
+      z-index: 990;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: -30px;
+      width: 100%;
+      opacity: 0;
+      animation: appearFullOpacity 1s ease-in-out 8s forwards;
+    }
+    &__footer {
+      z-index: 1000;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}

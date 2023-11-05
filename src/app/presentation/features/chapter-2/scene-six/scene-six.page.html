@@ -1,0 +1,73 @@
+<section class="scene-six">
+  <div class="scene-six__container">
+    <div class="scene-six__container__left-tree"></div>
+    <div class="scene-six__container__right-tree"></div>
+    <div
+      class="scene-six__container__seed-right-back"
+      [ngClass]="{'clicked': divClicked[0]}"
+      (click)="divClicked[0] ? null : onIncreaseBackpackScore(0)"
+    ></div>
+    <div
+      class="scene-six__container__seed-left-front"
+      [ngClass]="{'clicked': divClicked[1]}"
+      (click)="divClicked[1] ? null : onIncreaseBackpackScore(1)"
+    ></div>
+    <div
+      class="scene-six__container__stem-back"
+      [ngClass]="{'clicked': divClicked[2]}"
+      (click)="divClicked[2] ? null : onIncreaseBackpackScore(2)"
+    ></div>
+    <div
+      class="scene-six__container__stem-front"
+      [ngClass]="{'clicked': divClicked[3]}"
+      (click)="divClicked[3] ? null : onIncreaseBackpackScore(3)"
+    ></div>
+    <ng-container *ngIf="backpack$ | async as backpack">
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_1">
+        <div class="scene-six__container__backpack"></div>
+      </ng-container>
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_2">
+        <div class="scene-six__container__backpack state-2"></div>
+      </ng-container>
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_3">
+        <div class="scene-six__container__backpack state-3"></div>
+      </ng-container>
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_4">
+        <div class="scene-six__container__backpack state-4"></div>
+      </ng-container>
+      <ng-container *ngIf="backpack === EBACKPACK.STATE_5">
+        <div class="scene-six__container__backpack state-5"></div>
+      </ng-container>
+    </ng-container>
+    <div class="scene-six__container__subtitles">
+      <p>
+        Recolecta las semillas y las ramas que le gustan a la tortuga hasta que
+        la mochila esté llena.
+      </p>
+    </div>
+    <div class="scene-six__container__arrows">
+      <layout-inner-nav
+        [showNextButton]="showNextButton"
+        [showPreviousButton]="showPreviousButton"
+        (goToNextPageEvent)="onGoToNextPage()"
+        (goToPreviousPageEvent)="onGoToPreviousPage()"
+      ></layout-inner-nav>
+    </div>
+    <audio #cap2Esc6Narrator>
+      <source
+        [src]="CONST.AUDIO.ACTIVITY_INSTRUCTIONS_CHAPTER_2_SCENE_6"
+        type="audio/wav"
+      />
+    </audio>
+    <audio #successSound>
+      <source [src]="CONST.AUDIO.ACTIVITY_SUCCESS" type="audio/wav" />
+    </audio>
+  </div>
+</section>
+
+<ng-template #successChapter2Activity>
+  <success-activity-chapter-two
+    [turtleName]="turtleName$ | async"
+    (goToMapEvent)="onGoToMap()"
+  ></success-activity-chapter-two>
+</ng-template>
