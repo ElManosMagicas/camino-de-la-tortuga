@@ -1,7 +1,10 @@
 <div class="slider">
   <div class="slider__close">
     <button class="slider__close__btn" (click)="onGoToHome()">
-      <img src="/assets/buttons/btn-cerrar.png" alt="Botón Cerrar" />
+      <img
+        src="https://elcaminodelatortuga.com/assets/buttons/btn-cerrar.png"
+        alt="Botón Cerrar"
+      />
     </button>
   </div>
   <div class="slider__icon">
@@ -14,7 +17,7 @@
       *ngIf="currentSlideIndex > 0"
     >
       <img
-        src="/assets/buttons/slider-btn-retroceder.png"
+        src="https://elcaminodelatortuga.com/assets/buttons/slider-btn-retroceder.png"
         alt="Botón retroceder"
       />
     </button>
@@ -24,7 +27,10 @@
       (click)="onNextSlide()"
       *ngIf="currentSlideIndex < SLIDER_CONST.length - 1"
     >
-      <img src="/assets/buttons/slider-btn-avanzar.png" alt="Botón avanzar" />
+      <img
+        src="https://elcaminodelatortuga.com/assets/buttons/slider-btn-avanzar.png"
+        alt="Botón avanzar"
+      />
     </button>
   </div>
   <div class="slider__nav">
