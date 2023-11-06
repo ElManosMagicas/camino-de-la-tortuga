@@ -3,8 +3,7 @@
   font-family: Lato-Thin;
   font-style: normal;
   font-weight: 100;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-Thin.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-Thin.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -12,8 +11,7 @@
   font-family: Lato-Thin-Italic;
   font-style: normal;
   font-weight: 100;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-ThinItalic.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-ThinItalic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -21,8 +19,7 @@
   font-family: Lato-Light;
   font-style: normal;
   font-weight: 300;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-Light.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-Light.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -30,8 +27,7 @@
   font-family: Lato-Light-Italic;
   font-style: normal;
   font-weight: 300;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-LightItalic.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-LightItalic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -39,8 +35,7 @@
   font-family: Lato-Regular;
   font-style: normal;
   font-weight: 400;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-Regular.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-Regular.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -48,8 +43,7 @@
   font-family: Lato-Italic;
   font-style: normal;
   font-weight: 400;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-Italic.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-Italic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -57,8 +51,7 @@
   font-family: Lato-Bold;
   font-style: normal;
   font-weight: 700;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-Bold.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-Bold.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -66,8 +59,7 @@
   font-family: Lato-Bold-Italic;
   font-style: normal;
   font-weight: 700;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-BoldItalic.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-BoldItalic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -75,8 +67,7 @@
   font-family: Lato-Black;
   font-style: normal;
   font-weight: 900;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-Black.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-Black.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -84,8 +75,7 @@
   font-family: Lato-Black-Italic;
   font-style: normal;
   font-weight: 900;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/lato/Lato-BlackItalic.ttf")
-    format("truetype");
+  src: url("/assets/fonts/lato/Lato-BlackItalic.ttf") format("truetype");
   unicode-range: U+000-5FF;
 }
 
@@ -108,7 +98,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-family: Letter-For-Learners;
   font-style: normal;
   font-weight: 400;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/letters-for-learners/Letters-for-Learners.ttf")
+  src: url("/assets/fonts/letters-for-learners/Letters-for-Learners.ttf")
     format("truetype");
   unicode-range: U+000-5FF;
 }
@@ -117,7 +107,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-family: Letter-For-Learners-Outline;
   font-style: normal;
   font-weight: 400;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/letters-for-learners/Letters-for-Learners-Outline.ttf")
+  src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Outline.ttf")
     format("truetype");
   unicode-range: U+000-5FF;
 }
@@ -126,7 +116,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-family: Letter-For-Learners-Outline-Light;
   font-style: normal;
   font-weight: 300;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/letters-for-learners/Letters-for-Learners-Outline-Light.ttf")
+  src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Outline-Light.ttf")
     format("truetype");
   unicode-range: U+000-5FF;
 }
@@ -135,7 +125,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-family: Letter-For-Learners-Outline-Bold;
   font-style: normal;
   font-weight: 700;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/letters-for-learners/Letters-for-Learners-Outline-Bold.ttf")
+  src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Outline-Bold.ttf")
     format("truetype");
   unicode-range: U+000-5FF;
 }
@@ -144,7 +134,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-family: Letter-For-Learners-Lined;
   font-style: normal;
   font-weight: 400;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/letters-for-learners/Letters-for-Learners-Lined.ttf")
+  src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Lined.ttf")
     format("truetype");
   unicode-range: U+000-5FF;
 }
@@ -153,7 +143,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-family: Letter-For-Learners-Lined-Dots;
   font-style: normal;
   font-weight: 400;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/letters-for-learners/Letters-for-Learners-Lined-Dots.ttf")
+  src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Lined-Dots.ttf")
     format("truetype");
   unicode-range: U+000-5FF;
 }
@@ -162,7 +152,7 @@ $lato-black-Italic: Lato-Black-Italic, sans-serif;
   font-family: Letter-For-Learners-Dots;
   font-style: normal;
   font-weight: 400;
-  src: url("https://elcaminodelatortuga.com/assets/fonts/letters-for-learners/Letters-for-Learners-Dots.ttf")
+  src: url("/assets/fonts/letters-for-learners/Letters-for-Learners-Dots.ttf")
     format("truetype");
   unicode-range: U+000-5FF;
 }
