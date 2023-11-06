@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f83015b1dd04a17c0cc2c1fe804ad8aba4d20a8a05260896d78081f596e70204
-size 83
+{
+  "angular.enable-strict-mode-prompt": false,
+  "git.ignoreLimitWarning": true
+}
