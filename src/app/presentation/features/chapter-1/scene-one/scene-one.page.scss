@@ -21,7 +21,7 @@
     height: 100vh;
     &__back-grass {
       position: absolute;
-      top: 58px;
+      top: 4%;
       z-index: 1;
       width: 100%;
       height: 328px;
@@ -31,10 +31,14 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        height: 154px;
+        background-size: cover;
+      }
     }
     &__bush-rock {
       position: absolute;
-      top: 190px;
+      top: 26%;
       z-index: 2;
       width: 652px;
       height: 333px;
@@ -44,11 +48,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0.75s forwards;
+      @include to(min-width) {
+        width: 358px;
+        height: 145px;
+      }
     }
     &__turtle {
       position: absolute;
-      top: 382px;
-      right: 80px;
+      bottom: 20%;
+      right: 5%;
       z-index: 3;
       width: 369px;
       height: 252px;
@@ -58,6 +66,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 2.75s forwards;
+      @include to(min-width) {
+        width: 223px;
+        height: 140px;
+      }
     }
     &__front-grass {
       position: absolute;
@@ -71,12 +83,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1.75s forwards;
+      @include to(min-width) {
+        height: 106px;
+      }
     }
     &__introduction {
       width: 45%;
       position: absolute;
-      top: 64px;
-      left: 64px;
+      top: 8%;
+      left: 8%;
       z-index: 999;
       display: flex;
       flex-direction: column;
@@ -84,6 +99,10 @@
       justify-content: center;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 3.5s forwards;
+      @include to(min-width) {
+        top: 7%;
+        left: 4%;
+      }
       &__text {
         display: flex;
         flex-direction: column;
@@ -93,6 +112,10 @@
         border-radius: 20px;
         padding: 24px;
         opacity: 0.8;
+        @include to(min-width) {
+          border-radius: 20px;
+          padding: 8px;
+        }
         p {
           color: $color-primary-white;
           font-family: $lato-regular;
@@ -102,6 +125,11 @@
           text-align: center;
           margin: 12px 0;
           padding: 0 60px;
+          @include to(min-width) {
+            font-size: 14px;
+            line-height: 18px;
+            padding: 0;
+          }
         }
       }
       &__input {
@@ -121,6 +149,12 @@
         }
         &:focus {
           border-color: $color-primary-blue;
+        }
+        @include to(min-width) {
+          margin: 12px 0 20px;
+          padding: 6px;
+          font-size: 14px;
+          line-height: 18px;
         }
       }
       &__accept {
@@ -142,6 +176,11 @@
           background-color: $color-primary-blue;
           color: $color-primary-white;
           cursor: pointer;
+        }
+        @include to(min-width) {
+          padding: 6px;
+          font-size: 14px;
+          line-height: 18px;
         }
       }
     }
