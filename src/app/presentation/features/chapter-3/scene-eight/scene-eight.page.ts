@@ -158,9 +158,13 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
     this._utilService.redirectToUrl(ROUTES.CHAPTER_3_SCENE_7);
   }
 
-  public onIncreaseBackpackScore(index: number) {
-    this.divClicked[index] = true;
-    // this._chapter2Facade.increaseBackpackScore();
+  public resetPuzzleObservables(): void {
+    this._chapter3Facade.setPieceOne(false);
+    this._chapter3Facade.setPieceTwo(false);
+    this._chapter3Facade.setPieceThree(false);
+    this._chapter3Facade.setPieceFour(false);
+    this._chapter3Facade.setPieceFive(false);
+    this._chapter3Facade.setPieceSix(false);
   }
 
   public onGoToMap() {
@@ -174,6 +178,7 @@ export class SceneEightPage implements OnInit, AfterViewInit, OnDestroy {
     this._appFacade.setLastChapterFinished(lastChapterFinished);
     this.divClicked = [false, false, false, false];
     this.showConfeti = false;
+    this.resetPuzzleObservables();
     this._appFacade.closeModal();
     this._appFacade.finishChapterThree();
     this._utilService.navigateTo(ROUTES.MAP);
