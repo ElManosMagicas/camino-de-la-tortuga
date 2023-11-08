@@ -39,7 +39,7 @@ const _chapter5Reducer = createReducer(
   on(chapter5Actions.resetTurtleHomeScore, (state) => {
     return {
       ...state,
-      turtleHome: 1,
+      turtleHome: 0,
     };
   }),
   on(chapter5Actions.setC5S1Subtitles, (state, { c5s1Subtitles }) => {

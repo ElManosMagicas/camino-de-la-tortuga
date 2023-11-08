@@ -157,6 +157,7 @@
         pointer-events: none;
       }
       &.dottedClicked {
+        pointer-events: none;
         background: url($elements-chapter-5-scene-4-branches);
       }
     }
@@ -177,6 +178,7 @@
         pointer-events: none;
       }
       &.dottedClicked {
+        pointer-events: none;
         background: url($elements-chapter-5-scene-4-sun);
       }
     }
