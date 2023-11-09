@@ -21,6 +21,11 @@
     font-size: 16px;
     font-family: $lato-bold;
     text-align: center;
+    @include to(min-width) {
+      width: 200px;
+      height: 40px;
+      font-size: 14px;
+    }
   }
 
   &__controls {
@@ -31,6 +36,9 @@
     align-items: center;
     justify-content: space-between;
     background-color: #182642;
+    @include to(min-width) {
+      height: 40px;
+    }
     &__left {
       margin: 0px 32px;
       &__scenes {
@@ -42,11 +50,20 @@
         flex-direction: column;
         justify-content: center;
         cursor: pointer;
+        @include to(min-width) {
+          width: 200px;
+          height: 20px;
+        }
         p {
           padding-left: 24px;
           font-family: $lato-bold;
           font-size: 16px;
           padding-bottom: 2px;
+          @include to(min-width) {
+            font-size: 12px;
+            padding-left: 16px;
+            padding-bottom: 0;
+          }
         }
       }
     }
@@ -57,12 +74,19 @@
       justify-content: space-evenly;
       gap: 32px;
       margin: 0 32px;
+      @include to(min-width) {
+        gap: 40px;
+      }
       &__btns {
         all: unset;
         cursor: pointer;
         img {
           width: 20px;
           height: 20px;
+          @include to(min-width) {
+            width: 14px;
+            height: 14px;
+          }
         }
       }
     }
