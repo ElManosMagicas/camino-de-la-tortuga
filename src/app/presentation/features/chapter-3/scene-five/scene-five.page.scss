@@ -22,7 +22,7 @@
     &__log {
       position: absolute;
       top: 0px;
-      right: 24px;
+      right: 2%;
       z-index: 2;
       width: 532px;
       height: 526px;
@@ -30,11 +30,16 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        right: -5%;
+        width: 334px;
+        height: 234px;
+      }
     }
     &__snake {
       position: absolute;
-      top: 220px;
-      right: 218px;
+      top: 30%;
+      right: 20%;
       z-index: 1;
       width: 343px;
       height: 340px;
@@ -42,10 +47,16 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        top: 26%;
+        right: 14%;
+        width: 187px;
+        height: 170px;
+      }
     }
     &__turtle {
       position: absolute;
-      bottom: 28px;
+      bottom: 1%;
       left: 0px;
       z-index: 2;
       width: 307px;
@@ -54,6 +65,12 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        bottom: -4%;
+        left: -3%;
+        width: 194px;
+        height: 168px;
+      }
     }
     &__subtitles {
       width: 100%;
