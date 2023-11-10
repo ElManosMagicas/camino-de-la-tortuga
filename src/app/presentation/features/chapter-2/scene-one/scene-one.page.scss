@@ -32,6 +32,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 210px;
+        height: 241px;
+      }
     }
     &__left-back-tree {
       position: absolute;
@@ -46,11 +50,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0.5s forwards;
+      @include to(min-width) {
+        width: 287px;
+        height: 292px;
+      }
     }
     &__tucan {
       position: absolute;
-      top: 36px;
-      left: 264px;
+      top: 5%;
+      left: 25%;
       z-index: 3;
       width: 201px;
       height: 151px;
@@ -60,11 +68,17 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
+      @include to(min-width) {
+        top: 2%;
+        left: 22%;
+        width: 108px;
+        height: 82px;
+      }
     }
     &__turtle {
       position: absolute;
-      bottom: 80px;
-      right: 120px;
+      bottom: 14%;
+      right: 14%;
       z-index: 4;
       width: 231px;
       height: 224px;
@@ -74,6 +88,11 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 2s forwards;
+      @include to(min-width) {
+        bottom: 22%;
+        width: 125px;
+        height: 110px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -93,7 +112,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 14.5s forwards;

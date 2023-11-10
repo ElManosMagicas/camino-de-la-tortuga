@@ -32,6 +32,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 205px;
+        height: 245px;
+      }
     }
     &__right-tree {
       position: absolute;
@@ -46,6 +50,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 215px;
+        height: 196px;
+      }
     }
     &__seed-right-back {
       position: absolute;
@@ -73,6 +81,20 @@
         width: 218px;
         height: 167px;
         background: url($elements-chapter-2-scene-6-seed-right-back-on);
+      }
+      @include to(min-width) {
+        width: 126px;
+        height: 89px;
+        &:hover {
+          width: 126px;
+          height: 89px;
+          background: url($elements-chapter-2-scene-6-seed-right-back-on);
+        }
+        &.clicked {
+          width: 126px;
+          height: 89px;
+          background: url($elements-chapter-2-scene-6-seed-right-back-on);
+        }
       }
     }
     &__seed-left-front {
@@ -102,6 +124,20 @@
         height: 174px;
         background: url($elements-chapter-2-scene-6-seed-left-front-on);
       }
+      @include to(min-width) {
+        width: 148px;
+        height: 96px;
+        &:hover {
+          width: 148px;
+          height: 96px;
+          background: url($elements-chapter-2-scene-6-seed-left-front-on);
+        }
+        &.clicked {
+          width: 148px;
+          height: 96px;
+          background: url($elements-chapter-2-scene-6-seed-left-front-on);
+        }
+      }
     }
     &__stem-back {
       position: absolute;
@@ -129,6 +165,20 @@
         width: 162px;
         height: 149px;
         background: url($elements-chapter-2-scene-6-stem-back-on);
+      }
+      @include to(min-width) {
+        width: 162px;
+        height: 142px;
+        &:hover {
+          width: 162px;
+          height: 142px;
+          background: url($elements-chapter-2-scene-6-stem-back-on);
+        }
+        &.clicked {
+          width: 162px;
+          height: 142px;
+          background: url($elements-chapter-2-scene-6-stem-back-on);
+        }
       }
     }
     &__stem-front {
@@ -158,6 +208,20 @@
         height: 228px;
         background: url($elements-chapter-2-scene-6-stem-front-on);
       }
+      @include to(min-width) {
+        width: 132px;
+        height: 120px;
+        &:hover {
+          width: 132px;
+          height: 120px;
+          background: url($elements-chapter-2-scene-6-stem-front-on);
+        }
+        &.clicked {
+          width: 132px;
+          height: 120px;
+          background: url($elements-chapter-2-scene-6-stem-front-on);
+        }
+      }
     }
     &__backpack {
       position: absolute;
@@ -184,12 +248,28 @@
       &.state-5 {
         background: url($elements-chapter-2-scene-6-backpack-state-5);
       }
+      @include to(min-width) {
+        width: 163px;
+        height: 161px;
+        &.state-2 {
+          background: url($elements-chapter-2-scene-6-backpack-state-2);
+        }
+        &.state-3 {
+          background: url($elements-chapter-2-scene-6-backpack-state-3);
+        }
+        &.state-4 {
+          background: url($elements-chapter-2-scene-6-backpack-state-4);
+        }
+        &.state-5 {
+          background: url($elements-chapter-2-scene-6-backpack-state-5);
+        }
+      }
     }
     &__subtitles {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 999;
+      z-index: 990;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -208,13 +288,19 @@
         margin: 12px 0px;
         padding: 0 60px;
       }
+      @include to(min-width) {
+        height: 62px;
+        p {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
     }
     &__arrows {
       z-index: 1;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 3s forwards;
@@ -226,13 +312,16 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 5;
+        z-index: 991;
         width: 100%;
         height: 768px;
         background: url($gifs-success-activity);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        @include to(min-width) {
+          height: 360px;
+        }
       }
     }
     &__footer {
