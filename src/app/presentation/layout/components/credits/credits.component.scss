@@ -7,8 +7,13 @@
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  padding: 4rem 3rem 3rem;
+  padding: 3rem 3rem 3rem;
   background: $color-primary-blue;
+  @include to(min-width) {
+    max-width: 450px;
+    max-height: 250px;
+    padding: 12px 14px 28px;
+  }
   &__close {
     all: unset;
     cursor: pointer;
@@ -16,11 +21,12 @@
     display: flex;
     justify-content: flex-end;
     img {
-      position: absolute;
-      top: -30px;
-      right: -20px;
       width: 24px;
       height: 24px;
+      @include to(min-width) {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
@@ -31,6 +37,11 @@
     line-height: 24px;
     text-align: center;
     margin-top: 24px;
+    @include to(min-width) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 24px;
+    }
   }
 
   &__description {
@@ -39,12 +50,19 @@
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+    @include to(min-width) {
+      font-size: 12px;
+      line-height: 26px;
+    }
   }
 
   &__wrapper {
     max-height: 160px;
     overflow-y: auto;
     margin-top: 32px;
+    @include to(min-width) {
+      margin-top: 12px;
+    }
     &::-webkit-scrollbar {
       width: 6px; // Adjust the width as needed
     }
@@ -65,6 +83,10 @@
         font-size: 18px;
         line-height: 12px;
         text-align: center;
+        @include to(min-width) {
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
       &__team {
         color: $color-primary-white;
@@ -73,8 +95,15 @@
         line-height: 24px;
         text-align: center;
         margin-bottom: 24px;
+        @include to(min-width) {
+          font-size: 12px;
+          line-height: 16px;
+        }
         span {
           font-size: 14px;
+          @include to(min-width) {
+            font-size: 12px;
+          }
         }
         a {
           color: $color-primary-white;
