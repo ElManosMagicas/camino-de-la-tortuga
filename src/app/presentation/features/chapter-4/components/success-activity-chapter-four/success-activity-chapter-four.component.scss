@@ -10,6 +10,11 @@
   align-items: center;
   padding: 4rem 3rem 3rem;
   background: $color-primary-blue;
+  @include to(min-width) {
+    max-width: 450px;
+    max-height: 250px;
+    padding: 12px 14px 28px;
+  }
   &__icon {
     display: flex;
     flex-direction: column;
@@ -48,6 +53,11 @@
       cursor: pointer;
       font-family: $lato-bold;
       font-size: 18px;
+      @include to(min-width) {
+        width: 24%;
+        padding: 6px;
+        font-size: 14px;
+      }
       &:focus {
         background-color: #0056b3;
       }

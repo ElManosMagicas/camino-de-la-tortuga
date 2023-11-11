@@ -110,6 +110,6 @@ export class SceneSevenComponent implements OnInit, AfterViewInit, OnDestroy {
     this._chapter3Facade.resetStep();
     this._chapter4Facade.resetStep();
     this._chapter5Facade.resetStep();
-    this._utilService.navigateTo(ROUTES.MAP);
+    this._utilService.navigateTo(ROUTES.CHAPTER_1_SCENE_1);
   }
 }

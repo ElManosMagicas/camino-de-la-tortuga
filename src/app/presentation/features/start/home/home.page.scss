@@ -31,11 +31,14 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1.5s ease-in-out 1s forwards;
+      @include to(min-width) {
+        height: 180px;
+      }
     }
     &__turtle {
       position: absolute;
-      top: 244px;
-      left: 200px;
+      top: 34%;
+      left: 20%;
       z-index: 2;
       width: 345px;
       height: 327px;
@@ -45,11 +48,17 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1.5s ease-in-out 0s forwards;
+      @include to(min-width) {
+        top: 38%;
+        left: 22%;
+        width: 206px;
+        height: 158px;
+      }
     }
     &__title {
       position: absolute;
-      top: 80px;
-      left: 200px;
+      top: 10%;
+      left: 20%;
       z-index: 2;
       width: 615px;
       height: 143px;
@@ -59,6 +68,11 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1.5s ease-in-out 2s forwards;
+      @include to(min-width) {
+        top: 6%;
+        width: 369px;
+        height: 89px;
+      }
     }
     &__footer {
       z-index: 1000;

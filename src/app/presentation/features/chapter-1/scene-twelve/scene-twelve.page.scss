@@ -32,6 +32,11 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        left: -3%;
+        width: 237px;
+        height: 344px;
+      }
     }
     &__turtle {
       position: absolute;
@@ -46,6 +51,11 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        right: -5%;
+        width: 276px;
+        height: 274px;
+      }
     }
     &__subtitles {
       width: 100%;

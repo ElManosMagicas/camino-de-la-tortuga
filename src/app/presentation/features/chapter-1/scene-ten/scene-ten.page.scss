@@ -18,8 +18,8 @@
     position: relative;
     &__head {
       position: absolute;
-      top: 24px;
-      left: 72px;
+      top: 4%;
+      left: 6%;
       z-index: 1;
       width: 476px;
       height: 224px;
@@ -29,11 +29,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 242px;
+        height: 153px;
+      }
     }
     &__backpack {
       position: absolute;
-      top: 126px;
-      right: 72px;
+      top: 18%;
+      right: 6%;
       z-index: 2;
       width: 511px;
       height: 314px;
@@ -43,11 +47,17 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0.5s forwards;
+      @include to(min-width) {
+        top: 6%;
+        right: 2%;
+        width: 280px;
+        height: 151px;
+      }
     }
     &__feet {
       position: absolute;
-      bottom: 148px;
-      left: 72px;
+      bottom: 20%;
+      left: 6%;
       z-index: 3;
       width: 471px;
       height: 213px;
@@ -57,6 +67,11 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1s forwards;
+      @include to(min-width) {
+        left: 28%;
+        width: 285px;
+        height: 140px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -76,7 +91,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 11s forwards;

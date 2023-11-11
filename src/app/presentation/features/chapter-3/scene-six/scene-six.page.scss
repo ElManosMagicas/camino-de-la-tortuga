@@ -22,7 +22,7 @@
     &__log {
       position: absolute;
       top: 0px;
-      right: 24px;
+      right: 2%;
       z-index: 2;
       width: 532px;
       height: 526px;
@@ -30,11 +30,16 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        right: -5%;
+        width: 334px;
+        height: 234px;
+      }
     }
     &__snake {
       position: absolute;
-      top: 204px;
-      right: 196px;
+      top: 26%;
+      right: 21%;
       z-index: 1;
       width: 340px;
       height: 333px;
@@ -42,10 +47,15 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        right: 14%;
+        width: 187px;
+        height: 170px;
+      }
     }
     &__turtle {
       position: absolute;
-      bottom: 28px;
+      bottom: 2%;
       left: 0px;
       z-index: 2;
       width: 304px;
@@ -54,11 +64,17 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        bottom: -5%;
+        left: -1%;
+        width: 194px;
+        height: 168px;
+      }
     }
     &__globe {
       position: absolute;
-      top: 60px;
-      left: 80px;
+      top: 8%;
+      left: 8%;
       z-index: 3;
       width: 269px;
       height: 344px;
@@ -68,6 +84,10 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 7s forwards;
+      @include to(min-width) {
+        width: 155px;
+        height: 160px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -87,7 +107,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 16s forwards;

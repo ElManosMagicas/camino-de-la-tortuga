@@ -27,6 +27,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 60px;
+    @include to(min-width) {
+      margin-bottom: 24px;
+    }
     img {
       margin: 0 auto;
       width: 48px;
@@ -40,6 +43,9 @@
     justify-content: center;
     gap: 24px;
     margin-bottom: 120px;
+    @include to(min-width) {
+      margin-bottom: 60px;
+    }
     .buttons {
       all: unset;
       cursor: pointer;
@@ -53,6 +59,9 @@
       font-size: 21px;
       text-align: center;
       max-width: 360px;
+      @include to(min-width) {
+        font-size: 16px;
+      }
     }
   }
   &__nav {

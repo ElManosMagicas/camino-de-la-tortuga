@@ -32,6 +32,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0.5s forwards;
+      @include to(min-width) {
+        width: 208px;
+        height: 200px;
+      }
     }
     &__tucan {
       position: absolute;
@@ -46,6 +50,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 297px;
+        height: 208px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -65,7 +73,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 8s forwards;
