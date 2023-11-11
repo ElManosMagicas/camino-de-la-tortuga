@@ -21,8 +21,8 @@
     height: 100vh;
     &__turtle {
       position: absolute;
-      bottom: 110px;
-      left: 140px;
+      bottom: 16%;
+      left: 16%;
       z-index: 3;
       width: 228px;
       height: 225px;
@@ -32,11 +32,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 135px;
+        height: 120px;
+      }
     }
     &__log {
       position: absolute;
-      bottom: 262px;
-      right: 98px;
+      bottom: 34%;
+      right: 8%;
       z-index: 2;
       width: 329px;
       height: 133px;
@@ -47,11 +51,15 @@
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 11s forwards;
       cursor: pointer;
+      @include to(min-width) {
+        width: 175px;
+        height: 75px;
+      }
     }
     &__hand {
       position: absolute;
-      top: 400px;
-      right: 140px;
+      top: 52%;
+      right: 14%;
       z-index: 4;
       width: 90px;
       height: 90px;
@@ -61,6 +69,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 12s forwards;
+      @include to(min-width) {
+        width: 60px;
+        height: 47px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -80,7 +92,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 13s forwards;

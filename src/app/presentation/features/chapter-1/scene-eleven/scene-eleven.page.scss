@@ -32,6 +32,11 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0.5s forwards;
+      @include to(min-width) {
+        left: -3%;
+        width: 237px;
+        height: 344px;
+      }
     }
     &__turtle {
       position: absolute;
@@ -46,6 +51,11 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 1.5s forwards;
+      @include to(min-width) {
+        right: -5%;
+        width: 276px;
+        height: 274px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -65,7 +75,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 9s forwards;

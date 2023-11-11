@@ -26,8 +26,8 @@
     height: 100vh;
     &__subtitles {
       position: absolute;
-      top: 25px;
-      right: 25px;
+      top: 2%;
+      right: 2%;
       z-index: 999;
       display: flex;
       align-items: flex-start;
@@ -47,6 +47,14 @@
         margin: 12px 0px;
         padding: 0 60px;
       }
+      @include to(min-width) {
+        p {
+          font-size: 20px;
+          line-height: 24px;
+          margin: 6px 0px;
+          padding: 0 24px;
+        }
+      }
     }
     &__confeti {
       display: none;
@@ -62,12 +70,15 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        @include to(min-width) {
+          height: 360px;
+        }
       }
     }
     &__backpack {
       position: absolute;
       bottom: 0px;
-      left: 100px;
+      left: 8%;
       z-index: 2;
       width: 249px;
       height: 267px;
@@ -77,17 +88,25 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      @include to(min-width) {
+        width: 148px;
+        height: 140px;
+      }
     }
     &__pieces {
       position: absolute;
-      bottom: 60px;
-      right: 90px;
+      bottom: 4%;
+      right: 6%;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
       gap: 12px;
       height: 176px;
+      @include to(min-width) {
+        height: 70px;
+        right: 10%;
+      }
       &__branches {
         width: 177px;
         height: 180px;
@@ -98,8 +117,19 @@
         opacity: 0;
         animation: appearFullOpacity 1s ease-in-out 4s forwards;
         cursor: pointer;
+        @include to(min-width) {
+          width: 110px;
+          height: 90px;
+        }
         &.clicked {
           background: url($elements-chapter-5-scene-4-piece-branches-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 110px;
+            height: 90px;
+          }
         }
         &.completed {
           display: none;
@@ -115,8 +145,19 @@
         opacity: 0;
         animation: appearFullOpacity 1s ease-in-out 4.5s forwards;
         cursor: pointer;
+        @include to(min-width) {
+          width: 108px;
+          height: 91px;
+        }
         &.clicked {
           background: url($elements-chapter-5-scene-4-piece-river-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 108px;
+            height: 91px;
+          }
         }
         &.completed {
           display: none;
@@ -132,8 +173,19 @@
         opacity: 0;
         animation: appearFullOpacity 1s ease-in-out 5s forwards;
         cursor: pointer;
+        @include to(min-width) {
+          width: 110px;
+          height: 91px;
+        }
         &.clicked {
           background: url($elements-chapter-5-scene-4-piece-sun-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 110px;
+            height: 91px;
+          }
         }
         &.completed {
           display: none;
@@ -142,8 +194,8 @@
     }
     &__dotted-branches {
       position: absolute;
-      bottom: 236px;
-      right: 40px;
+      bottom: 30%;
+      right: 4%;
       width: 124px;
       height: 138px;
       background: url($elements-chapter-5-scene-4-dotted-branches);
@@ -153,18 +205,29 @@
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
       cursor: pointer;
+      @include to(min-width) {
+        width: 78px;
+        height: 65px;
+      }
       &.disabled {
         pointer-events: none;
       }
       &.dottedClicked {
         pointer-events: none;
         background: url($elements-chapter-5-scene-4-branches);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 78px;
+          height: 65px;
+        }
       }
     }
     &__dotted-sun {
       position: absolute;
-      top: 20px;
-      left: 200px;
+      top: 2%;
+      left: 18%;
       width: 161px;
       height: 148px;
       background: url($elements-chapter-5-scene-4-dotted-sun);
@@ -174,20 +237,32 @@
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
       cursor: pointer;
+      @include to(min-width) {
+        width: 91px;
+        height: 72px;
+      }
       &.disabled {
         pointer-events: none;
       }
       &.dottedClicked {
         pointer-events: none;
         background: url($elements-chapter-5-scene-4-sun);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 91px;
+          height: 72px;
+        }
       }
     }
     &__dotted-river {
       position: absolute;
-      top: 360px;
-      left: 160px;
+      top: 45%;
+      left: 15%;
       width: 109px;
       height: 109px;
+      z-index: 3;
       background: url($elements-chapter-5-scene-4-dotted-river);
       background-size: contain;
       background-position: center;
@@ -195,6 +270,11 @@
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
       cursor: pointer;
+      @include to(min-width) {
+        top: 42%;
+        width: 66px;
+        height: 58px;
+      }
       &.disabled {
         pointer-events: none;
       }
@@ -203,11 +283,10 @@
       }
     }
     &__arrows {
-      z-index: 990;
+      z-index: 1;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 4s forwards;

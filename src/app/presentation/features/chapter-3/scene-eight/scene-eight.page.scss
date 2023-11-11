@@ -43,6 +43,15 @@
         margin: 12px 0px;
         padding: 0 60px;
       }
+      @include to(min-width) {
+        top: 0;
+        height: 62px;
+        p {
+          font-size: 20px;
+          line-height: 24px;
+          margin: 6px 0px;
+        }
+      }
     }
     &__confeti {
       display: none;
@@ -51,13 +60,16 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 5;
+        z-index: 991;
         width: 100%;
         height: 768px;
         background: url($gifs-success-activity);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        @include to(min-width) {
+          height: 360px;
+        }
       }
     }
     &__reference {
@@ -73,16 +85,23 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 158px;
+        height: 90px;
+      }
     }
     &__box {
       position: absolute;
-      bottom: 64px;
+      bottom: 8%;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       flex-direction: column;
       align-items: center;
       z-index: 2;
+      @include to(min-width) {
+        bottom: 2%;
+      }
       &__top {
         display: flex;
         flex-direction: row;
@@ -97,6 +116,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 126px;
+              height: 102px;
+            }
           }
           &.pos2 {
             width: 202px;
@@ -105,6 +129,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 102px;
+              height: 126px;
+            }
           }
           &.pos3 {
             width: 210px;
@@ -113,6 +142,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 126px;
+              height: 102px;
+            }
           }
           &.pos4 {
             width: 202px;
@@ -121,6 +155,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 102px;
+              height: 126px;
+            }
           }
         }
         &__piece-3 {
@@ -133,6 +172,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 138px;
+              height: 102px;
+            }
           }
           &.pos2 {
             width: 202px;
@@ -141,6 +185,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 102px;
+              height: 138px;
+            }
           }
           &.pos3 {
             width: 227px;
@@ -149,6 +198,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 138px;
+              height: 102px;
+            }
           }
           &.pos4 {
             width: 202px;
@@ -157,6 +211,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 102px;
+              height: 138px;
+            }
           }
         }
         &__piece-5 {
@@ -169,6 +228,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 123px;
+              height: 103px;
+            }
           }
           &.pos2 {
             width: 203px;
@@ -177,6 +241,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 103px;
+              height: 123px;
+            }
           }
           &.pos3 {
             width: 205px;
@@ -185,6 +254,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 123px;
+              height: 103px;
+            }
           }
           &.pos4 {
             width: 203px;
@@ -193,6 +267,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 103px;
+              height: 123px;
+            }
           }
         }
       }
@@ -210,6 +289,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 126px;
+              height: 106px;
+            }
           }
           &.pos2 {
             width: 207px;
@@ -218,6 +302,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 106px;
+              height: 126px;
+            }
           }
           &.pos3 {
             width: 210px;
@@ -226,6 +315,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 126px;
+              height: 106px;
+            }
           }
           &.pos4 {
             width: 207px;
@@ -234,6 +328,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 106px;
+              height: 126px;
+            }
           }
         }
         &__piece-4 {
@@ -246,6 +345,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 138px;
+              height: 105px;
+            }
           }
           &.pos2 {
             width: 206px;
@@ -254,6 +358,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 105px;
+              height: 138px;
+            }
           }
           &.pos3 {
             width: 227px;
@@ -262,6 +371,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 138px;
+              height: 105px;
+            }
           }
           &.pos4 {
             width: 206px;
@@ -270,6 +384,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 105px;
+              height: 138px;
+            }
           }
         }
         &__piece-6 {
@@ -282,6 +401,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 123px;
+              height: 104px;
+            }
           }
           &.pos2 {
             width: 205px;
@@ -290,6 +414,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 104px;
+              height: 123px;
+            }
           }
           &.pos3 {
             width: 205px;
@@ -298,6 +427,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 123px;
+              height: 104px;
+            }
           }
           &.pos4 {
             width: 205px;
@@ -306,6 +440,11 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
+            @include to(min-width) {
+              background-size: cover;
+              width: 104px;
+              height: 123px;
+            }
           }
         }
       }
@@ -315,7 +454,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 3s forwards;

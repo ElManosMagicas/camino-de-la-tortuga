@@ -21,8 +21,8 @@
     height: 100vh;
     &__right-after-turtle {
       position: absolute;
-      top: 114px;
-      right: 190px;
+      top: 14%;
+      right: 18%;
       z-index: 2;
       width: 148px;
       height: 105px;
@@ -32,11 +32,16 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        top: 8%;
+        width: 95px;
+        height: 49px;
+      }
     }
     &__left-after-turtle {
       position: absolute;
-      top: 128px;
-      right: 376px;
+      top: 16%;
+      right: 38%;
       z-index: 2;
       width: 139px;
       height: 109px;
@@ -46,11 +51,16 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0.5s forwards;
+      @include to(min-width) {
+        top: 10%;
+        width: 80px;
+        height: 55px;
+      }
     }
     &__right-before-turtle {
       position: absolute;
-      bottom: 312px;
-      right: 70px;
+      bottom: 32%;
+      right: 8%;
       z-index: 1;
       width: 199px;
       height: 167px;
@@ -60,11 +70,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1s forwards;
+      @include to(min-width) {
+        width: 117px;
+        height: 85px;
+      }
     }
     &__left-before-turtle {
       position: absolute;
-      bottom: 284px;
-      right: 290px;
+      bottom: 30%;
+      right: 28%;
       z-index: 1;
       width: 190px;
       height: 168px;
@@ -74,11 +88,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1.5s forwards;
+      @include to(min-width) {
+        width: 112px;
+        height: 90px;
+      }
     }
     &__main-turtle {
       position: absolute;
-      bottom: 80px;
-      left: 80px;
+      bottom: 14%;
+      left: 10%;
       z-index: 1;
       width: 333px;
       height: 268px;
@@ -88,6 +106,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 2s forwards;
+      @include to(min-width) {
+        width: 198px;
+        height: 148px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -107,7 +129,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 17s forwards;

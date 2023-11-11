@@ -30,11 +30,15 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        width: 299px;
+        height: 256px;
+      }
     }
     &__snake {
       position: absolute;
-      top: 140px;
-      right: 140px;
+      top: 18%;
+      right: 12%;
       z-index: 1;
       width: 350px;
       height: 409px;
@@ -42,6 +46,11 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        right: 21%;
+        width: 198px;
+        height: 209px;
+      }
     }
     &__turtle {
       position: absolute;
@@ -54,6 +63,12 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        bottom: -5%;
+        left: -1%;
+        width: 216px;
+        height: 199px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -73,7 +88,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 7s forwards;

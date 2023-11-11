@@ -32,6 +32,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 205px;
+        height: 245px;
+      }
     }
     &__right-tree {
       position: absolute;
@@ -46,6 +50,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 215px;
+        height: 196px;
+      }
     }
     &__seed-right-back {
       position: absolute;
@@ -60,12 +68,25 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 1s forwards;
+      @include to(min-width) {
+        right: -2%;
+        width: 126px;
+        height: 89px;
+      }
       &:hover {
         top: 30%;
         right: 1%;
         width: 218px;
         height: 167px;
         background: url($elements-chapter-2-scene-6-seed-right-back-on);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          right: -2%;
+          width: 126px;
+          height: 89px;
+        }
       }
       &.clicked {
         top: 30%;
@@ -73,6 +94,14 @@
         width: 218px;
         height: 167px;
         background: url($elements-chapter-2-scene-6-seed-right-back-on);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          right: -2%;
+          width: 126px;
+          height: 89px;
+        }
       }
     }
     &__seed-left-front {
@@ -88,12 +117,23 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 1.5s forwards;
+      @include to(min-width) {
+        width: 148px;
+        height: 96px;
+      }
       &:hover {
         bottom: 18%;
         left: 4%;
         width: 255px;
         height: 174px;
         background: url($elements-chapter-2-scene-6-seed-left-front-on);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 148px;
+          height: 96px;
+        }
       }
       &.clicked {
         bottom: 18%;
@@ -101,6 +141,13 @@
         width: 255px;
         height: 174px;
         background: url($elements-chapter-2-scene-6-seed-left-front-on);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 148px;
+          height: 96px;
+        }
       }
     }
     &__stem-back {
@@ -116,12 +163,23 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 2s forwards;
+      @include to(min-width) {
+        width: 162px;
+        height: 142px;
+      }
       &:hover {
         top: 39%;
         left: 45%;
         width: 162px;
         height: 149px;
         background: url($elements-chapter-2-scene-6-stem-back-on);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 162px;
+          height: 142px;
+        }
       }
       &.clicked {
         top: 39%;
@@ -129,6 +187,13 @@
         width: 162px;
         height: 149px;
         background: url($elements-chapter-2-scene-6-stem-back-on);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 162px;
+          height: 142px;
+        }
       }
     }
     &__stem-front {
@@ -144,12 +209,23 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 2.5s forwards;
+      @include to(min-width) {
+        width: 132px;
+        height: 120px;
+      }
       &:hover {
         bottom: 8%;
         right: 4%;
         width: 223px;
         height: 228px;
         background: url($elements-chapter-2-scene-6-stem-front-on);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 132px;
+          height: 120px;
+        }
       }
       &.clicked {
         bottom: 8%;
@@ -157,6 +233,13 @@
         width: 223px;
         height: 228px;
         background: url($elements-chapter-2-scene-6-stem-front-on);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 132px;
+          height: 120px;
+        }
       }
     }
     &__backpack {
@@ -172,24 +255,56 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(min-width) {
+        width: 163px;
+        height: 161px;
+      }
       &.state-2 {
         background: url($elements-chapter-2-scene-6-backpack-state-2);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 163px;
+          height: 161px;
+        }
       }
       &.state-3 {
         background: url($elements-chapter-2-scene-6-backpack-state-3);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 163px;
+          height: 161px;
+        }
       }
       &.state-4 {
         background: url($elements-chapter-2-scene-6-backpack-state-4);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 163px;
+          height: 161px;
+        }
       }
       &.state-5 {
         background: url($elements-chapter-2-scene-6-backpack-state-5);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include to(min-width) {
+          width: 163px;
+          height: 161px;
+        }
       }
     }
     &__subtitles {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 999;
+      z-index: 990;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -208,13 +323,20 @@
         margin: 12px 0px;
         padding: 0 60px;
       }
+      @include to(min-width) {
+        height: 62px;
+        p {
+          font-size: 20px;
+          line-height: 24px;
+          margin: 6px 0px;
+        }
+      }
     }
     &__arrows {
       z-index: 1;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 3s forwards;
@@ -226,13 +348,16 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 5;
+        z-index: 991;
         width: 100%;
         height: 768px;
         background: url($gifs-success-activity);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        @include to(min-width) {
+          height: 360px;
+        }
       }
     }
     &__footer {

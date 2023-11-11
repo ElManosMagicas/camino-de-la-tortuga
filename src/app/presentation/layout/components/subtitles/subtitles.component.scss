@@ -8,6 +8,9 @@
   background: rgba($color: #000000, $alpha: 0.65);
   align-items: flex-start;
   justify-content: center;
+  @include to(min-width) {
+    height: 102px;
+  }
   &__container {
     width: 84%;
     height: 76px;
@@ -16,6 +19,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include to(min-width) {
+      margin: 0;
+      height: 62px;
+    }
     p {
       margin: 0;
       padding: 0;
@@ -25,6 +32,10 @@
       line-height: 32px;
       color: $color-primary-white;
       text-align: center;
+      @include to(min-width) {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
   }
 }

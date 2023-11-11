@@ -21,8 +21,8 @@
     height: 100vh;
     &__cuy {
       position: absolute;
-      top: 20px;
-      left: 70px;
+      top: 2%;
+      left: 8%;
       z-index: 1;
       width: 239px;
       height: 175px;
@@ -32,11 +32,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(min-width) {
+        width: 140px;
+        height: 98px;
+      }
     }
     &__textbox {
       position: absolute;
-      top: 56px;
-      left: 340px;
+      top: 6%;
+      left: 34%;
       z-index: 2;
       display: flex;
       align-items: center;
@@ -49,6 +53,12 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(min-width) {
+        top: 0%;
+        left: 30%;
+        width: 210px;
+        height: 100px;
+      }
       &__text {
         color: $color-primary-white;
         font-family: $letter-for-learners;
@@ -57,13 +67,18 @@
         line-height: 25px;
         text-align: center;
         padding: 0 0 0 20px;
+        @include to(min-width) {
+          font-size: 16px;
+          line-height: 20px;
+          padding: 0 0 0 14px;
+        }
       }
     }
     &__chapter1 {
       position: relative;
       position: absolute;
-      bottom: 190px;
-      left: 60px;
+      bottom: 26%;
+      left: 8%;
       z-index: 3;
       &__sabana {
         width: 206px;
@@ -75,14 +90,18 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         cursor: pointer;
+        @include to(min-width) {
+          width: 140px;
+          height: 133px;
+        }
       }
       &__tortuga1 {
         display: none;
         &.finished {
           display: block;
           position: absolute;
-          top: -86px;
-          left: 50px;
+          top: -20%;
+          left: 30%;
           width: 116px;
           height: 124px;
           background: url($elements-map-turtle-bottom);
@@ -91,13 +110,19 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(min-width) {
+            width: 70px;
+            height: 80px;
+            top: -20%;
+            left: 30%;
+          }
         }
       }
     }
     &__chapter2 {
       position: absolute;
-      bottom: 90px;
-      left: 310px;
+      bottom: 12%;
+      left: 30%;
       z-index: 3;
       &__tucan {
         width: 221px;
@@ -109,8 +134,19 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         cursor: pointer;
+        @include to(min-width) {
+          width: 132px;
+          height: 135px;
+        }
         &.finished {
           background: url($elements-map-btn-chapter2-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 132px;
+            height: 135px;
+          }
         }
       }
       &__tortuga2 {
@@ -118,8 +154,8 @@
         &.finished {
           display: block;
           position: absolute;
-          top: -86px;
-          left: 50px;
+          top: -20%;
+          left: 30%;
           width: 116px;
           height: 124px;
           background: url($elements-map-turtle-bottom);
@@ -128,14 +164,24 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(min-width) {
+            top: -48%;
+            left: 4%;
+            width: 70px;
+            height: 80px;
+          }
         }
       }
     }
     &__chapter3 {
       position: absolute;
-      top: 230px;
-      right: 390px;
+      top: 24%;
+      right: 38%;
       z-index: 3;
+      @include to(min-width) {
+        top: 32%;
+        right: 36%;
+      }
       &__serpiente {
         width: 212px;
         height: 189px;
@@ -146,8 +192,21 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         cursor: pointer;
+        @include to(min-width) {
+          top: 32%;
+          right: 36%;
+          width: 120px;
+          height: 107px;
+        }
         &.finished {
           background: url($elements-map-btn-chapter3-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 120px;
+            height: 107px;
+          }
         }
       }
       &__tortuga3 {
@@ -165,14 +224,23 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(min-width) {
+            top: 5%;
+            left: -54%;
+            width: 80px;
+            height: 75px;
+          }
         }
       }
     }
     &__chapter4 {
       position: absolute;
-      bottom: 100px;
-      right: 170px;
+      bottom: 12%;
+      right: 16%;
       z-index: 3;
+      @include to(min-width) {
+        bottom: 16%;
+      }
       &__danta {
         width: 206px;
         height: 228px;
@@ -183,8 +251,19 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         cursor: pointer;
+        @include to(min-width) {
+          width: 120px;
+          height: 133px;
+        }
         &.finished {
           background: url($elements-map-btn-chapter4-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 120px;
+            height: 133px;
+          }
         }
       }
       &__tortuga4 {
@@ -192,8 +271,8 @@
         &.finished {
           display: block;
           position: absolute;
-          top: -86px;
-          left: 50px;
+          top: -20%;
+          left: 30%;
           width: 116px;
           height: 124px;
           background: url($elements-map-turtle-bottom);
@@ -202,14 +281,28 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(min-width) {
+            background: url($elements-map-turtle-left);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 20%;
+            left: 95%;
+            width: 70px;
+            height: 80px;
+          }
         }
       }
     }
     &__chapter5 {
       position: absolute;
-      top: 190px;
-      right: 40px;
+      top: 20%;
+      right: 4%;
       z-index: 3;
+      @include to(min-width) {
+        top: 14%;
+        right: 2%;
+      }
       &__rio {
         width: 215px;
         height: 214px;
@@ -220,10 +313,21 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         pointer-events: none;
+        @include to(min-width) {
+          width: 130px;
+          height: 130px;
+        }
         &.enabled {
           pointer-events: all;
           cursor: pointer;
           background: url($elements-map-btn-chapter5-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 130px;
+            height: 130px;
+          }
         }
       }
       &__tortuga5 {
@@ -241,6 +345,10 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(min-width) {
+            width: 70px;
+            height: 80px;
+          }
         }
       }
     }
@@ -267,13 +375,20 @@
         margin: 12px 0px;
         padding: 0 60px;
       }
+      @include to(min-width) {
+        height: 62px;
+        p {
+          font-size: 20px;
+          line-height: 24px;
+          margin: 6px 0px;
+        }
+      }
     }
     &__arrows {
       z-index: 990;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 3s forwards;

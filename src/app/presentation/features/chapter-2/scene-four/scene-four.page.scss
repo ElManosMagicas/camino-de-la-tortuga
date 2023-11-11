@@ -32,6 +32,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 208px;
+        height: 200px;
+      }
     }
     &__tucan {
       position: absolute;
@@ -46,11 +50,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(min-width) {
+        width: 297px;
+        height: 208px;
+      }
     }
     &__logs {
       position: absolute;
-      bottom: 150px;
-      left: 72px;
+      bottom: 14%;
+      left: 8%;
       z-index: 1;
       width: 476px;
       height: 334px;
@@ -60,6 +68,12 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(min-width) {
+        bottom: 25%;
+        left: 32%;
+        width: 246px;
+        height: 145px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -79,7 +93,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 5.5s forwards;
