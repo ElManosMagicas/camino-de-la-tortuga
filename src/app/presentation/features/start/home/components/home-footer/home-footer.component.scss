@@ -9,6 +9,9 @@
   align-items: center;
   justify-content: center;
   gap: 32px;
+  @include to(min-width) {
+    gap: 12px;
+  }
   &__button {
     all: unset;
     cursor: pointer;

@@ -68,8 +68,19 @@
         background-position: center;
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 0.5s forwards;
+        @include to(min-width) {
+          width: 98px;
+          height: 109px;
+        }
         &.collected {
           background: url($elements-backpack-food-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 98px;
+            height: 109px;
+          }
         }
       }
       &__sun {
@@ -81,8 +92,19 @@
         background-position: center;
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 0.5s forwards;
+        @include to(min-width) {
+          width: 93px;
+          height: 85px;
+        }
         &.collected {
           background: url($elements-backpack-sun-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 93px;
+            height: 85px;
+          }
         }
       }
       &__river {
@@ -94,8 +116,19 @@
         background-position: center;
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 0.5s forwards;
+        @include to(min-width) {
+          width: 96px;
+          height: 96px;
+        }
         &.collected {
           background: url($elements-backpack-river-on);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include to(min-width) {
+            width: 96px;
+            height: 96px;
+          }
         }
       }
     }
