@@ -7,8 +7,13 @@
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  padding: 4rem 3rem 3rem;
+  padding: 3rem 3rem 3rem;
   background: $color-primary-blue;
+  @include to(min-width) {
+    max-width: 450px;
+    max-height: 250px;
+    padding: 12px 14px 28px;
+  }
   &__close {
     all: unset;
     cursor: pointer;
@@ -16,11 +21,12 @@
     display: flex;
     justify-content: flex-end;
     img {
-      position: absolute;
-      top: -30px;
-      right: -20px;
       width: 24px;
       height: 24px;
+      @include to(min-width) {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
   &__title {
@@ -30,6 +36,11 @@
     line-height: 24px;
     text-align: center;
     margin-top: 24px;
+    @include to(min-width) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 24px;
+    }
   }
   &__description {
     color: $color-primary-white;
@@ -37,6 +48,10 @@
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+    @include to(min-width) {
+      font-size: 12px;
+      line-height: 26px;
+    }
   }
   &__item {
     display: flex;
@@ -44,12 +59,19 @@
     align-items: center;
     justify-content: space-between;
     margin: 12px 0;
+    @include to(min-width) {
+      margin: 12px 24px;
+    }
     &__left {
       color: $color-primary-white;
       font-family: $lato-regular;
       font-size: 16px;
       line-height: 24px;
       text-align: center;
+      @include to(min-width) {
+        font-size: 12px;
+        line-height: 20px;
+      }
     }
     &__right {
       display: flex;
