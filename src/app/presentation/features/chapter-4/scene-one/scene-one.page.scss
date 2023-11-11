@@ -21,8 +21,8 @@
     height: 100vh;
     &__turtle-frailejon {
       position: absolute;
-      bottom: 250px;
-      left: 342px;
+      bottom: 32%;
+      left: 32%;
       z-index: 1;
       width: 192px;
       height: 340px;
@@ -32,11 +32,16 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(min-width) {
+        bottom: 40%;
+        width: 107px;
+        height: 160px;
+      }
     }
     &__danta-frailejon {
       position: absolute;
-      top: 142px;
-      right: 210px;
+      top: 18%;
+      right: 20%;
       z-index: 2;
       width: 154px;
       height: 324px;
@@ -46,6 +51,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(min-width) {
+        width: 83px;
+        height: 156px;
+      }
     }
     &__fog {
       position: absolute;
@@ -60,11 +69,14 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(min-width) {
+        background-size: cover;
+      }
     }
     &__turtle {
       position: absolute;
-      bottom: 142px;
-      left: 316px;
+      bottom: 18%;
+      left: 30%;
       z-index: 2;
       width: 249px;
       height: 185px;
@@ -74,11 +86,16 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
+      @include to(min-width) {
+        bottom: 28%;
+        width: 135px;
+        height: 80px;
+      }
     }
     &__danta {
       position: absolute;
-      top: 266px;
-      right: 200px;
+      top: 38%;
+      right: 18%;
       z-index: 1;
       width: 228px;
       height: 225px;
@@ -88,6 +105,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 2s ease-in-out 8s forwards;
+      @include to(min-width) {
+        width: 149px;
+        height: 90px;
+      }
     }
     &__subtitles {
       width: 100%;
@@ -107,7 +128,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      margin-top: -30px;
       width: 100%;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 12.5s forwards;
