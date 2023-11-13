@@ -96,13 +96,19 @@
     &__pieces {
       position: absolute;
       bottom: 4%;
-      right: 6%;
+      right: 30%;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
       gap: 12px;
       height: 176px;
+      @include to(laptop-m) {
+        right: 14%;
+      }
+      @include to(laptop) {
+        right: 6%;
+      }
       @include to(min-width) {
         height: 70px;
         right: 10%;

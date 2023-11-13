@@ -22,7 +22,7 @@
     &__right-after-turtle {
       position: absolute;
       top: 14%;
-      right: 18%;
+      left: 18%;
       z-index: 2;
       width: 148px;
       height: 105px;
@@ -31,16 +31,24 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(laptop-m) {
+        top: 14%;
+        left: 18%;
+      }
+      @include to(laptop) {
+        top: 18%;
+        left: 18%;
+      }
       @include to(min-width) {
-        top: 8%;
+        top: 14%;
         width: 95px;
         height: 49px;
       }
     }
     &__left-after-turtle {
       position: absolute;
-      top: 16%;
-      right: 38%;
+      top: 8%;
+      right: 36%;
       z-index: 2;
       width: 139px;
       height: 109px;
@@ -49,8 +57,16 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(laptop-m) {
+        top: 14%;
+        right: 36%;
+      }
+      @include to(laptop) {
+        top: 18%;
+        right: 36%;
+      }
       @include to(min-width) {
-        top: 10%;
+        top: 8%;
         width: 80px;
         height: 55px;
       }

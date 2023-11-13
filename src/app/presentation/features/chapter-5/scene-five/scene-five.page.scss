@@ -32,6 +32,10 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(laptop-m) {
+        bottom: 26%;
+        right: 6%;
+      }
       @include to(min-width) {
         width: 91px;
         height: 67px;
@@ -40,7 +44,7 @@
     &__left-after-turtle {
       position: absolute;
       top: 10%;
-      left: 10%;
+      left: 24%;
       z-index: 2;
       width: 170px;
       height: 127px;
@@ -50,6 +54,10 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(laptop-m) {
+        top: 10%;
+        left: 10%;
+      }
       @include to(min-width) {
         top: 6%;
         width: 110px;
@@ -58,8 +66,8 @@
     }
     &__middle-after-turtle {
       position: absolute;
-      top: 26%;
-      left: 38%;
+      top: 22%;
+      left: 42%;
       z-index: 1;
       width: 164px;
       height: 132px;
@@ -69,6 +77,10 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(laptop-m) {
+        top: 26%;
+        left: 38%;
+      }
       @include to(min-width) {
         width: 110px;
         height: 65px;
