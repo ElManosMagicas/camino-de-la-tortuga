@@ -21,8 +21,8 @@
     height: 100vh;
     &__sun {
       position: absolute;
-      top: 2%;
-      left: 8%;
+      top: -6%;
+      left: 10%;
       z-index: 1;
       width: 163px;
       height: 153px;
@@ -32,8 +32,16 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(laptop-m) {
+        top: 0%;
+        left: 8%;
+      }
+      @include to(laptop) {
+        top: 2%;
+        left: 8%;
+      }
       @include to(min-width) {
-        top: -4%;
+        top: -5%;
         width: 99px;
         height: 78px;
       }
@@ -77,8 +85,8 @@
     }
     &__center-clouds {
       position: absolute;
-      top: 6%;
-      left: 30%;
+      top: 0;
+      left: 34%;
       z-index: 2;
       width: 251px;
       height: 148px;
@@ -115,8 +123,8 @@
     }
     &__moon {
       position: absolute;
-      top: 8%;
-      left: 48%;
+      top: 5%;
+      left: 46%;
       z-index: 1;
       width: 172px;
       height: 182px;
@@ -126,17 +134,25 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: fromLeft 1s ease-in-out 1s forwards;
+      @include to(laptop-m) {
+        top: 4%;
+        left: 50%;
+      }
       @include to(min-width) {
         top: 2%;
-        left: 45%;
+        left: 49%;
         width: 115px;
         height: 100px;
       }
       &:hover {
         background: url($elements-chapter-4-scene-5-moon-on);
+        @include to(laptop-m) {
+          top: 4%;
+          left: 50%;
+        }
         @include to(min-width) {
           top: 2%;
-          left: 45%;
+          left: 49%;
           width: 115px;
           height: 100px;
         }
@@ -147,7 +163,7 @@
     }
     &__stars {
       position: absolute;
-      top: 2%;
+      top: -4%;
       right: 3%;
       z-index: 1;
       width: 148px;
