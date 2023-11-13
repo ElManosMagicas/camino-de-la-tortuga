@@ -36,41 +36,39 @@
         width: 140px;
         height: 98px;
       }
-    }
-    &__textbox {
-      position: absolute;
-      top: 6%;
-      left: 34%;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 287px;
-      height: 119px;
-      background: url($elements-map-textbox);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 1s forwards;
-      @include to(min-width) {
-        top: 0%;
-        left: 30%;
-        width: 210px;
-        height: 100px;
-      }
-      &__text {
-        color: $color-primary-white;
-        font-family: $letter-for-learners;
-        font-size: 24px;
-        font-weight: 300;
-        line-height: 25px;
-        text-align: center;
-        padding: 0 0 0 20px;
+      .textbox {
+        position: absolute;
+        top: 6%;
+        left: 106%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 287px;
+        height: 119px;
+        background: url($elements-map-textbox);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        animation: appearFullOpacity 1s ease-in-out 1s forwards;
         @include to(min-width) {
-          font-size: 16px;
-          line-height: 20px;
-          padding: 0 0 0 14px;
+          width: 210px;
+          height: 100px;
+        }
+        .text {
+          color: $color-primary-white;
+          font-family: $letter-for-learners;
+          font-size: 24px;
+          font-weight: 300;
+          line-height: 25px;
+          text-align: center;
+          padding: 0 0 0 20px;
+          @include to(min-width) {
+            font-size: 16px;
+            line-height: 20px;
+            padding: 0 0 0 14px;
+          }
         }
       }
     }
@@ -100,7 +98,7 @@
         &.finished {
           display: block;
           position: absolute;
-          top: -20%;
+          top: -44%;
           left: 30%;
           width: 116px;
           height: 124px;
@@ -111,10 +109,10 @@
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
           @include to(min-width) {
+            top: 0;
+            left: 40%;
             width: 70px;
             height: 80px;
-            top: -20%;
-            left: 30%;
           }
         }
       }
@@ -154,7 +152,7 @@
         &.finished {
           display: block;
           position: absolute;
-          top: -20%;
+          top: -44%;
           left: 30%;
           width: 116px;
           height: 124px;
@@ -166,7 +164,7 @@
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
           @include to(min-width) {
             top: -48%;
-            left: 4%;
+            left: 22%;
             width: 70px;
             height: 80px;
           }
@@ -271,8 +269,8 @@
         &.finished {
           display: block;
           position: absolute;
-          top: -20%;
-          left: 30%;
+          top: -44%;
+          left: 24%;
           width: 116px;
           height: 124px;
           background: url($elements-map-turtle-bottom);
@@ -281,6 +279,10 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(laptop) {
+            top: -38%;
+            left: 30%;
+          }
           @include to(min-width) {
             background: url($elements-map-turtle-left);
             background-size: contain;
