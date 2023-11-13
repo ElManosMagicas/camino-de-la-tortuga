@@ -55,23 +55,23 @@
         width: 175px;
         height: 75px;
       }
-    }
-    &__hand {
-      position: absolute;
-      top: 52%;
-      right: 14%;
-      z-index: 4;
-      width: 90px;
-      height: 90px;
-      opacity: 0;
-      background: url($gifs-chapter-3-scene-1-hand);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: appearFullOpacity 1s ease-in-out 12s forwards;
-      @include to(min-width) {
-        width: 60px;
-        height: 47px;
+      .hand {
+        position: absolute;
+        top: 52%;
+        right: 14%;
+        z-index: 4;
+        width: 90px;
+        height: 90px;
+        opacity: 0;
+        background: url($gifs-chapter-3-scene-1-hand);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: appearFullOpacity 1s ease-in-out 12s forwards;
+        @include to(min-width) {
+          width: 60px;
+          height: 47px;
+        }
       }
     }
     &__subtitles {

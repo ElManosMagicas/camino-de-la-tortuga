@@ -55,8 +55,8 @@
     }
     &__snake {
       position: absolute;
-      bottom: 30%;
-      right: 18%;
+      bottom: 33%;
+      right: 16%;
       z-index: 2;
       width: 195px;
       height: 172px;
@@ -66,6 +66,10 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 5s forwards;
+      @include to(laptop) {
+        bottom: 30%;
+        right: 18%;
+      }
       @include to(min-width) {
         width: 145px;
         height: 107px;

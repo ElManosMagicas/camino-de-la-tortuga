@@ -21,8 +21,8 @@
     height: 100vh;
     &__log {
       position: absolute;
-      top: 0px;
-      right: -5%;
+      top: 0;
+      right: 0;
       z-index: 2;
       width: 532px;
       height: 526px;
@@ -37,8 +37,8 @@
     }
     &__snake {
       position: absolute;
-      top: 30%;
-      right: 20%;
+      top: 24%;
+      right: 14%;
       z-index: 1;
       width: 343px;
       height: 340px;
@@ -46,17 +46,20 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(laptop) {
+        top: 30%;
+        right: 20%;
+      }
       @include to(min-width) {
         top: 26%;
-        right: 14%;
         width: 187px;
         height: 170px;
       }
     }
     &__turtle {
       position: absolute;
-      bottom: 1%;
-      left: 0px;
+      bottom: 0;
+      left: 0;
       z-index: 2;
       width: 304px;
       height: 312px;
@@ -65,8 +68,8 @@
       background-position: center;
       background-repeat: no-repeat;
       @include to(min-width) {
-        bottom: -4%;
-        left: -3%;
+        bottom: 0;
+        left: 0;
         width: 194px;
         height: 168px;
       }

@@ -55,24 +55,23 @@
         width: 198px;
         height: 209px;
       }
-    }
-    &__snake-zzz {
-      position: absolute;
-      top: 0px;
-      right: 42%;
-      z-index: 2;
-      width: 198px;
-      height: 186px;
-      opacity: 0;
-      background: url($gifs-chapter-3-scene-3-snake-zzz);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: appearFullOpacity 1s ease-in-out 1s forwards;
-      @include to(min-width) {
-        right: 50%;
-        width: 148px;
-        height: 139px;
+      .zzz {
+        position: absolute;
+        top: -30%;
+        right: 100%;
+        z-index: 2;
+        width: 198px;
+        height: 186px;
+        opacity: 0;
+        background: url($gifs-chapter-3-scene-3-snake-zzz);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: appearFullOpacity 1s ease-in-out 1s forwards;
+        @include to(min-width) {
+          width: 148px;
+          height: 139px;
+        }
       }
     }
     &__turtle {
