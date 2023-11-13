@@ -134,6 +134,7 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: fromLeft 1s ease-in-out 1s forwards;
+      cursor: pointer;
       @include to(laptop-m) {
         top: 4%;
         left: 50%;
@@ -174,6 +175,7 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: fromRight 1s ease-in-out 1s forwards;
+      cursor: pointer;
       @include to(min-width) {
         top: -4%;
         right: 2%;
@@ -206,6 +208,7 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
+      cursor: pointer;
       @include to(min-width) {
         bottom: 20%;
         width: 119px;
