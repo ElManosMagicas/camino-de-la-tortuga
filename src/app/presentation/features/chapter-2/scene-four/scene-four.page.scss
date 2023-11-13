@@ -36,6 +36,25 @@
         width: 208px;
         height: 200px;
       }
+      .logs {
+        position: absolute;
+        bottom: 48%;
+        left: -100%;
+        z-index: 1;
+        width: 476px;
+        height: 334px;
+        opacity: 0;
+        background: url($elements-chapter-2-scene-4-logs);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: appearFullOpacity 1s ease-in-out 1s forwards;
+        @include to(min-width) {
+          left: -112%;
+          width: 246px;
+          height: 145px;
+        }
+      }
     }
     &__tucan {
       position: absolute;
@@ -53,26 +72,6 @@
       @include to(min-width) {
         width: 297px;
         height: 208px;
-      }
-    }
-    &__logs {
-      position: absolute;
-      bottom: 14%;
-      left: 8%;
-      z-index: 1;
-      width: 476px;
-      height: 334px;
-      opacity: 0;
-      background: url($elements-chapter-2-scene-4-logs);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: appearFullOpacity 1s ease-in-out 1s forwards;
-      @include to(min-width) {
-        bottom: 25%;
-        left: 32%;
-        width: 246px;
-        height: 145px;
       }
     }
     &__subtitles {

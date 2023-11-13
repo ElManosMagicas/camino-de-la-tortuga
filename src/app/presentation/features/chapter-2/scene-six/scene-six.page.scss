@@ -68,6 +68,7 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 1s forwards;
+      cursor: pointer;
       @include to(min-width) {
         right: -2%;
         width: 126px;
@@ -117,6 +118,7 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 1.5s forwards;
+      cursor: pointer;
       @include to(min-width) {
         width: 148px;
         height: 96px;
@@ -163,6 +165,7 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 2s forwards;
+      cursor: pointer;
       @include to(min-width) {
         width: 162px;
         height: 142px;
@@ -209,6 +212,7 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 2.5s forwards;
+      cursor: pointer;
       @include to(min-width) {
         width: 132px;
         height: 120px;

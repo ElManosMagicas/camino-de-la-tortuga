@@ -55,24 +55,23 @@
         width: 297px;
         height: 208px;
       }
-    }
-    &__fruits {
-      position: absolute;
-      top: 0px;
-      right: 14%;
-      z-index: 3;
-      width: 336px;
-      height: 254px;
-      opacity: 0;
-      background: url($elements-chapter-2-scene-3-fruits);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: appearFullOpacity 1s ease-in-out 17s forwards;
-      @include to(min-width) {
-        right: 28%;
-        width: 194px;
-        height: 136px;
+      .fruits {
+        position: absolute;
+        top: 0px;
+        right: -54%;
+        z-index: 3;
+        width: 336px;
+        height: 254px;
+        opacity: 0;
+        background: url($elements-chapter-2-scene-3-fruits);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: appearFullOpacity 1s ease-in-out 17s forwards;
+        @include to(min-width) {
+          width: 194px;
+          height: 136px;
+        }
       }
     }
     &__subtitles {
