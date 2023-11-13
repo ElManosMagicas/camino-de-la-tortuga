@@ -9,6 +9,10 @@
 .scene-eight {
   width: 100vw;
   height: 100vh;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   background-color: $color-primary-white;
   opacity: 0;
   animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
@@ -16,12 +20,13 @@
     width: 100%;
     height: 100vh;
     position: relative;
+    max-width: 1440px;
     &__back-grass {
       position: absolute;
-      top: 0px;
-      left: 2%;
+      top: 0;
+      left: 0;
       z-index: 1;
-      width: 946px;
+      width: 100%;
       height: 485px;
       opacity: 0;
       background: url($gifs-chapter-1-scene-8-back-grass);
@@ -36,10 +41,10 @@
     }
     &__floor {
       position: absolute;
-      bottom: 7%;
-      left: 0px;
+      bottom: 20%;
+      left: 0;
       z-index: 2;
-      width: 1024px;
+      width: 100%;
       height: 426px;
       opacity: 0;
       background: url($bg-chapter-1-scene-8);
@@ -47,6 +52,9 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0.5s forwards;
+      @include to(laptop) {
+        bottom: 7%;
+      }
       @include to(min-width) {
         width: 640px;
         height: 224px;
@@ -54,10 +62,10 @@
     }
     &__front-grass {
       position: absolute;
-      bottom: 4%;
-      left: 0px;
+      bottom: 18%;
+      left: 0;
       z-index: 4;
-      width: 1014px;
+      width: 100%;
       height: 279px;
       opacity: 0;
       background: url($gifs-chapter-1-scene-8-front-grass);
@@ -65,6 +73,9 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1s forwards;
+      @include to(laptop) {
+        bottom: 4%;
+      }
       @include to(min-width) {
         width: 630px;
         height: 167px;
