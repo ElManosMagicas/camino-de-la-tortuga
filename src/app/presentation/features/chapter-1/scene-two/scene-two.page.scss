@@ -9,10 +9,6 @@
 .scene-two {
   width: 100vw;
   height: 100%;
-  max-width: 1440px;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
   background-image: url($bg-chapter-1-scene-2);
   background-size: cover;
   background-position: center;
@@ -23,7 +19,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 1440px;
     &__back-right-bush {
       position: absolute;
       top: 30%;
@@ -60,7 +55,7 @@
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0.5s forwards;
       @include to(laptop) {
-        top: 22%;
+        top: 30%;
       }
       @include to(min-width) {
         top: 20%;
@@ -69,78 +64,78 @@
         background-size: contain;
       }
     }
-    &__mom-cuy {
+    &__middle {
       position: absolute;
-      top: 48%;
-      left: 28%;
-      z-index: 2;
-      width: 284px;
-      height: 225px;
-      opacity: 0;
-      background: url($character-chapter-1-scene-2-mom-cuy);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: fromBottom 1s ease-in-out 4s forwards;
-      @include to(laptop) {
-        top: 38%;
-        left: 20%;
-      }
-      @include to(min-width) {
-        top: 38%;
-        left: 24%;
-        width: 177px;
-        height: 149px;
-      }
-    }
-    &__son-cuy {
-      position: absolute;
-      bottom: 12%;
-      right: 24%;
-      z-index: 3;
-      width: 443px;
-      height: 418px;
-      opacity: 0;
-      background: url($character-chapter-1-scene-2-son-cuy);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: fromBottom 1s ease-in-out 4.5s forwards;
-      @include to(laptop) {
-        bottom: 12%;
-        right: 14%;
-      }
-      @include to(min-width) {
-        bottom: 12%;
-        right: 14%;
-        width: 285px;
-        height: 208px;
-      }
-    }
-    &__cambuche {
-      position: absolute;
-      top: 8%;
-      left: 22%;
-      z-index: 4;
+      top: 10%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       width: 865px;
       height: 673px;
-      opacity: 0;
-      background: url($elements-chapter-1-scene-2-cambuche);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: fromTop 1s ease-in-out 3s forwards;
-      @include to(laptop) {
-        top: 4%;
-        left: 10%;
+      @include to(min-width) {
         width: 533px;
         height: 322px;
       }
-      @include to(min-width) {
-        top: 4%;
+      .cambuche {
+        position: absolute;
+        z-index: 4;
+        width: 865px;
+        height: 673px;
+        opacity: 0;
+        background: url($elements-chapter-1-scene-2-cambuche);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: fromTop 1s ease-in-out 3s forwards;
+        @include to(min-width) {
+          width: 533px;
+          height: 322px;
+        }
+      }
+      .mom-cuy {
+        position: absolute;
+        top: 50%;
         left: 10%;
-        width: 533px;
-        height: 322px;
+        z-index: 2;
+        width: 284px;
+        height: 225px;
+        opacity: 0;
+        background: url($character-chapter-1-scene-2-mom-cuy);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: fromBottom 1s ease-in-out 4s forwards;
+        @include to(laptop) {
+          top: 46%;
+          left: 10%;
+        }
+        @include to(min-width) {
+          width: 177px;
+          height: 149px;
+        }
+      }
+      .son-cuy {
+        position: absolute;
+        bottom: -6%;
+        right: 12%;
+        z-index: 3;
+        width: 443px;
+        height: 418px;
+        opacity: 0;
+        background: url($character-chapter-1-scene-2-son-cuy);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: fromBottom 1s ease-in-out 4.5s forwards;
+        @include to(laptop) {
+          bottom: 0;
+          right: 14%;
+        }
+        @include to(min-width) {
+          width: 285px;
+          height: 208px;
+        }
       }
     }
     &__front-right-bush {
@@ -150,12 +145,14 @@
       z-index: 5;
       width: 312px;
       height: 329px;
-      opacity: 0;
       background: url($gifs-chapter-1-scene-2-front-right-grass);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      opacity: 0;
       animation: fromBottom 1s ease-in-out 1.5s forwards;
+      @include to(laptop-l) {
+      }
       @include to(min-width) {
         width: 165px;
         height: 145px;
