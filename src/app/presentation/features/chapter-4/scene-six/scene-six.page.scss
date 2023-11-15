@@ -33,8 +33,8 @@
       opacity: 0;
       animation: fromTop 1s ease-in-out 0s forwards;
       @include to(laptop-m) {
-        top: 0%;
-        left: 8%;
+        top: -3%;
+        left: 9%;
       }
       @include to(laptop) {
         top: 2%;
@@ -176,6 +176,10 @@
       opacity: 0;
       animation: fromRight 1s ease-in-out 1s forwards;
       cursor: pointer;
+      @include to(laptop-m) {
+        top: -2%;
+        right: 6%;
+      }
       @include to(min-width) {
         top: -4%;
         right: 2%;
