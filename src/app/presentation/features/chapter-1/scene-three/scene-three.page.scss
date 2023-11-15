@@ -9,10 +9,6 @@
 .scene-three {
   width: 100vw;
   height: 100%;
-  max-width: 1440px;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
   background-image: url($bg-chapter-1-scene-3);
   background-size: cover;
   background-position: center;
@@ -23,7 +19,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 1440px;
     &__cambuche {
       position: absolute;
       top: 40%;
