@@ -9,18 +9,12 @@
 .scene-five {
   width: 100vw;
   height: 100%;
-  background-image: url($bg-chapter-1-scene-4-5-1280);
+  background-image: url($elements-cap1-esc4-5-fondo);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
   animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
-  @include to(laptop) {
-    background-image: url($bg-chapter-1-scene-4-5);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
   &__container {
     width: 100%;
     height: 100%;
@@ -30,10 +24,10 @@
       top: 36%;
       right: 18%;
       z-index: 1;
-      width: 236px;
-      height: 338px;
+      width: 218px;
+      height: 324px;
       opacity: 1;
-      background: url($elements-chapter-1-scene-4-5-car);
+      background: url($elements-cap1-esc4-5-carro);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;

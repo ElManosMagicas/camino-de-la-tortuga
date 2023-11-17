@@ -9,7 +9,7 @@
 .scene-seven {
   width: 100vw;
   height: 100%;
-  background-image: url($bg-chapter-1-scene-6-7);
+  background-image: url($elements-cap1-esc7-fondo);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,13 +39,13 @@
     }
     &__right-bush {
       position: absolute;
-      bottom: 0;
+      bottom: 9%;
       right: 0;
       z-index: 2;
-      width: 276px;
-      height: 485px;
+      width: 289px;
+      height: 478px;
       opacity: 0;
-      background: url($gifs-chapter-1-scene-7-9-right-bush);
+      background: url($elements-cap1-esc7-arbusto-derecho);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -60,10 +60,10 @@
       bottom: 18%;
       left: 0;
       z-index: 3;
-      width: 285px;
-      height: 340px;
+      width: 257px;
+      height: 344px;
       opacity: 0;
-      background: url($gifs-chapter-1-scene-7-9-left-bush);
+      background: url($elements-cap1-esc7-arbusto-izquierdo);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -78,10 +78,10 @@
       bottom: 0;
       left: 0;
       z-index: 4;
-      width: 934px;
-      height: 264px;
+      width: 910px;
+      height: 235px;
       opacity: 0;
-      background: url($gifs-chapter-1-scene-7-9-front-grass);
+      background: url($elements-cap1-esc7-pasto-adelante);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
