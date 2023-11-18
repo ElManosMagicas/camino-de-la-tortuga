@@ -22,7 +22,7 @@
     &__cambuche {
       position: absolute;
       top: 40%;
-      left: 0;
+      left: 10%;
       z-index: 3;
       width: 396px;
       height: 252px;
@@ -34,6 +34,7 @@
       animation: fromTop 1s ease-in-out 0.5s forwards;
       @include to(laptop) {
         top: 28%;
+        left: 0;
       }
       @include to(min-width) {
         width: 255px;
@@ -43,7 +44,7 @@
     &__mom-cuy {
       position: absolute;
       top: 48%;
-      left: 6%;
+      left: 16%;
       z-index: 2;
       width: 244px;
       height: 173px;
@@ -65,7 +66,7 @@
     &__enea {
       position: absolute;
       top: 30%;
-      left: 18%;
+      left: 28%;
       z-index: 4;
       width: 257px;
       height: 210px;
@@ -87,7 +88,7 @@
     &__son-cuy {
       position: absolute;
       bottom: 18%;
-      right: 4%;
+      right: 12%;
       z-index: 5;
       width: 502px;
       height: 302px;

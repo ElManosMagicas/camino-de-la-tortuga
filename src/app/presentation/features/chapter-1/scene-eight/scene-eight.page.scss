@@ -39,7 +39,7 @@
     }
     &__front-grass {
       position: absolute;
-      bottom: 18%;
+      bottom: 24%;
       left: 0;
       z-index: 4;
       width: 100%;
@@ -71,6 +71,9 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 1.5s forwards;
+      @include to(laptop-m) {
+        top: 0;
+      }
       @include to(min-width) {
         width: 329px;
         height: 260px;

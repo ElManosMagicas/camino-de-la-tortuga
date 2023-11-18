@@ -22,7 +22,7 @@
     &__back-right-bush {
       position: absolute;
       top: 30%;
-      right: 0;
+      right: 3%;
       z-index: 1;
       width: 245px;
       height: 411px;
@@ -32,8 +32,12 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0s forwards;
-      @include to(laptop) {
+      @include to(laptop-m) {
         top: 22%;
+        right: 2%;
+      }
+      @include to(laptop) {
+        right: 0;
       }
       @include to(min-width) {
         top: 20%;
@@ -44,7 +48,7 @@
     &__back-left-bush {
       position: absolute;
       top: 36%;
-      left: 0px;
+      left: 2%;
       z-index: 1;
       width: 150px;
       height: 370px;
@@ -54,8 +58,13 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0.5s forwards;
+      @include to(laptop-m) {
+        top: 30%;
+        left: 1%;
+      }
       @include to(laptop) {
         top: 30%;
+        left: 0;
       }
       @include to(min-width) {
         top: 20%;
