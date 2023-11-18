@@ -32,6 +32,10 @@
       @include to(laptop) {
         left: 6%;
       }
+      @include to(tablet-s) {
+        width: 321px;
+        height: 160px;
+      }
       @include to(min-width) {
         width: 242px;
         height: 153px;
@@ -50,6 +54,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0.5s forwards;
+      @include to(tablet-s) {
+        width: 340px;
+        height: 165px;
+      }
       @include to(min-width) {
         top: 6%;
         right: 2%;
@@ -72,6 +80,11 @@
       animation: fromBottom 1s ease-in-out 1s forwards;
       @include to(laptop) {
         left: 6%;
+      }
+      @include to(tablet-s) {
+        width: 335px;
+        height: 135px;
+        left: 18%;
       }
       @include to(min-width) {
         left: 28%;

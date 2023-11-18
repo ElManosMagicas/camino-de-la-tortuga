@@ -32,9 +32,10 @@
       @include to(laptop) {
         bottom: 7%;
       }
-      @include to(min-width) {
-        width: 640px;
-        height: 224px;
+      @include to(tablet-s) {
+        background-size: cover;
+        bottom: 0;
+        height: 100%;
       }
     }
     &__front-grass {
@@ -53,9 +54,8 @@
       @include to(laptop) {
         bottom: 14%;
       }
-      @include to(min-width) {
-        width: 630px;
-        height: 167px;
+      @include to(tablet-s) {
+        display: none;
       }
     }
     &__turtle {
@@ -73,6 +73,10 @@
       animation: fromTop 1s ease-in-out 1.5s forwards;
       @include to(laptop-m) {
         top: 0;
+      }
+      @include to(tablet-s) {
+        width: 390px;
+        height: 313px;
       }
       @include to(min-width) {
         width: 329px;

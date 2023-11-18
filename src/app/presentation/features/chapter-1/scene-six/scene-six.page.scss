@@ -35,6 +35,11 @@
       @include to(laptop) {
         top: 30%;
       }
+      @include to(tablet-s) {
+        top: 18%;
+        width: 215px;
+        height: 263px;
+      }
       @include to(min-width) {
         top: 30%;
         left: 34%;
@@ -57,6 +62,10 @@
       animation: fromRight 1s ease-in-out 0s forwards;
       @include to(laptop) {
         bottom: 12%;
+      }
+      @include to(tablet-s) {
+        width: 295px;
+        height: 276px;
       }
       @include to(min-width) {
         bottom: 25%;
@@ -81,6 +90,10 @@
         bottom: 20%;
         left: 0;
       }
+      @include to(tablet-s) {
+        width: 202px;
+        height: 193px;
+      }
       @include to(min-width) {
         bottom: 14%;
         width: 159px;
@@ -103,7 +116,14 @@
       @include to(laptop) {
         bottom: 0;
       }
+      @include to(tablet-s) {
+        bottom: 10%;
+        left: -10%;
+        width: 714px;
+        height: 152px;
+      }
       @include to(min-width) {
+        left: 0;
         width: 530px;
         height: 132px;
       }
@@ -124,6 +144,11 @@
       @include to(laptop) {
         bottom: 0;
         right: 0;
+      }
+      @include to(tablet-s) {
+        right: -4%;
+        width: 243px;
+        height: 230px;
       }
       @include to(min-width) {
         width: 207px;

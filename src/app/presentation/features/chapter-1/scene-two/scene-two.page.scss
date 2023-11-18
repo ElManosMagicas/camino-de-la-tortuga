@@ -39,6 +39,10 @@
       @include to(laptop) {
         right: 0;
       }
+      @include to(tablet-s) {
+        width: 197px;
+        height: 220px;
+      }
       @include to(min-width) {
         top: 20%;
         width: 153px;
@@ -66,8 +70,12 @@
         top: 30%;
         left: 0;
       }
+      @include to(tablet-s) {
+        width: 120px;
+        height: 196px;
+      }
       @include to(min-width) {
-        top: 20%;
+        top: 30%;
         width: 93px;
         height: 173px;
         background-size: contain;
@@ -82,6 +90,11 @@
       margin-right: auto;
       width: 865px;
       height: 673px;
+      @include to(tablet-s) {
+        top: -4%;
+        width: 670px;
+        height: 400px;
+      }
       @include to(min-width) {
         width: 533px;
         height: 322px;
@@ -97,6 +110,10 @@
         background-position: center;
         background-repeat: no-repeat;
         animation: fromTop 1s ease-in-out 3s forwards;
+        @include to(tablet-s) {
+          width: 670px;
+          height: 400px;
+        }
         @include to(min-width) {
           width: 533px;
           height: 322px;
@@ -119,9 +136,15 @@
           top: 46%;
           left: 10%;
         }
+        @include to(tablet-s) {
+          width: 194px;
+          height: 132px;
+          left: 18%;
+        }
         @include to(min-width) {
           width: 177px;
           height: 149px;
+          left: 10%;
         }
       }
       .son-cuy {
@@ -141,28 +164,16 @@
           bottom: 0;
           right: 14%;
         }
+        @include to(tablet-s) {
+          width: 285px;
+          height: 211px;
+          right: 18%;
+        }
         @include to(min-width) {
           width: 285px;
           height: 208px;
+          right: 14%;
         }
-      }
-    }
-    &__front-bush {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 6;
-      width: 944px;
-      height: 319px;
-      opacity: 0;
-      background: url($elements-cap1-esc2-pasto-al-frente);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: fromBottom 1s ease-in-out 1.5s forwards;
-      @include to(min-width) {
-        width: 463px;
-        height: 146px;
       }
     }
     &__subtitles {

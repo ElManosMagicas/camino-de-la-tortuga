@@ -32,6 +32,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1.5s forwards;
+      @include to(tablet-s) {
+        width: 256px;
+        height: 150px;
+      }
       @include to(min-width) {
         width: 190px;
         height: 125px;
@@ -52,6 +56,10 @@
       animation: fromRight 1s ease-in-out 0s forwards;
       @include to(laptop) {
         right: 0;
+      }
+      @include to(tablet-s) {
+        width: 232px;
+        height: 256px;
       }
       @include to(min-width) {
         bottom: 2%;
@@ -75,6 +83,10 @@
       @include to(laptop) {
         left: 0;
       }
+      @include to(tablet-s) {
+        width: 205px;
+        height: 185px;
+      }
       @include to(min-width) {
         width: 162px;
         height: 164px;
@@ -97,6 +109,10 @@
         bottom: 0;
         left: 0;
       }
+      @include to(tablet-s) {
+        width: 740px;
+        height: 127px;
+      }
       @include to(min-width) {
         width: 570px;
         height: 110px;
@@ -117,6 +133,10 @@
       animation: fromLeft 1s ease-in-out 2s forwards;
       @include to(laptop) {
         top: 39%;
+      }
+      @include to(tablet-s) {
+        width: 196px;
+        height: 141px;
       }
       @include to(min-width) {
         width: 148px;

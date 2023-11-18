@@ -32,6 +32,11 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0.5s forwards;
+      @include to(tablet-s) {
+        left: -3%;
+        width: 282px;
+        height: 394px;
+      }
       @include to(min-width) {
         left: -3%;
         width: 237px;
@@ -51,6 +56,11 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 1.5s forwards;
+      @include to(tablet-s) {
+        right: -5%;
+        width: 324px;
+        height: 342px;
+      }
       @include to(min-width) {
         right: -5%;
         width: 276px;

@@ -32,8 +32,12 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
-      @include to(min-width) {
+      @include to(tablet-s) {
         right: -5%;
+        width: 324px;
+        height: 342px;
+      }
+      @include to(min-width) {
         width: 276px;
         height: 274px;
       }
@@ -51,6 +55,11 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(tablet-s) {
+        left: -3%;
+        width: 282px;
+        height: 394px;
+      }
       @include to(min-width) {
         left: -3%;
         width: 237px;

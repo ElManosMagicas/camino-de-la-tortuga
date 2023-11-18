@@ -41,6 +41,12 @@
       @include to(laptop) {
         right: 7%;
       }
+      @include to(tablet-s) {
+        top: 34%;
+        right: 10%;
+        width: 170px;
+        height: 202px;
+      }
       @include to(min-width) {
         right: 10%;
         width: 142px;
@@ -62,6 +68,10 @@
       @include to(laptop) {
         right: 34%;
       }
+      @include to(tablet-s) {
+        width: 113px;
+        height: 187px;
+      }
       @include to(min-width) {
         width: 108px;
         height: 164px;
@@ -79,6 +89,10 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-s) {
+        width: 269px;
+        height: 260px;
+      }
       @include to(min-width) {
         width: 233px;
         height: 228px;

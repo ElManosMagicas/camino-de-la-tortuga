@@ -21,7 +21,7 @@
     font-size: 16px;
     font-family: $lato-bold;
     text-align: center;
-    @include to(min-width) {
+    @include to(tablet-s) {
       width: 200px;
       height: 40px;
       font-size: 14px;
@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: #182642;
-    @include to(min-width) {
+    @include to(tablet-s) {
       height: 40px;
     }
     &__left {
@@ -50,7 +50,7 @@
         flex-direction: column;
         justify-content: center;
         cursor: pointer;
-        @include to(min-width) {
+        @include to(tablet-s) {
           width: 200px;
           height: 20px;
         }
@@ -59,7 +59,7 @@
           font-family: $lato-bold;
           font-size: 16px;
           padding-bottom: 2px;
-          @include to(min-width) {
+          @include to(tablet-s) {
             font-size: 12px;
             padding-left: 16px;
             padding-bottom: 0;
@@ -74,7 +74,7 @@
       justify-content: space-evenly;
       gap: 32px;
       margin: 0 32px;
-      @include to(min-width) {
+      @include to(tablet-s) {
         gap: 40px;
       }
       &__btns {
@@ -83,7 +83,7 @@
         img {
           width: 20px;
           height: 20px;
-          @include to(min-width) {
+          @include to(tablet-s) {
             width: 14px;
             height: 14px;
           }

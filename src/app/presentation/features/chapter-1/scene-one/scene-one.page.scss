@@ -37,6 +37,18 @@
       @include to(laptop-m) {
         top: 30%;
       }
+      @include to(laptop) {
+        width: 652px;
+        height: 333px;
+      }
+      @include to(tablet-l) {
+        width: 605px;
+        height: 241px;
+      }
+      @include to(tablet-s) {
+        width: 454px;
+        height: 163px;
+      }
       @include to(min-width) {
         width: 358px;
         height: 145px;
@@ -59,6 +71,15 @@
         bottom: 28%;
         right: 10%;
       }
+      @include to(tablet-l) {
+        bottom: 16%;
+        width: 326px;
+        height: 218px;
+      }
+      @include to(tablet-s) {
+        width: 258px;
+        height: 170px;
+      }
       @include to(min-width) {
         width: 223px;
         height: 140px;
@@ -76,25 +97,18 @@
       background-position: center bottom;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1.75s forwards;
-      // @include to(laptop-m) {
-      //   height: 180px;
-      // }
-      // @include to(laptop) {
-      //   height: 180px;
-      //   background: url($gifs-chapter-1-scene-1-7-front-grass);
-      //   background-size: cover;
-      //   background-position: center bottom;
-      //   background-repeat: no-repeat;
-      // }
-      // @include to(min-width) {
-      //   height: 106px;
-      // }
+      @include to(tablet-l) {
+        height: 166px;
+      }
+      @include to(tablet-s) {
+        height: 140px;
+      }
     }
     &__introduction {
       width: 35%;
       position: absolute;
-      top: 8%;
-      left: 8%;
+      top: 4%;
+      left: 4%;
       z-index: 999;
       display: flex;
       flex-direction: column;
@@ -104,6 +118,9 @@
       animation: appearFullOpacity 1s ease-in-out 3.5s forwards;
       @include to(laptop-m) {
         width: 45%;
+      }
+      @include to(tablet-s) {
+        width: 56%;
       }
       @include to(min-width) {
         top: 7%;
@@ -118,8 +135,10 @@
         border-radius: 20px;
         padding: 24px;
         opacity: 0.8;
+        @include to(tablet-s) {
+          padding: 10px;
+        }
         @include to(min-width) {
-          border-radius: 20px;
           padding: 8px;
         }
         p {
@@ -131,6 +150,9 @@
           text-align: center;
           margin: 12px 0;
           padding: 0 60px;
+          @include to(tablet-s) {
+            padding: 0 40px;
+          }
           @include to(min-width) {
             font-size: 14px;
             line-height: 18px;
@@ -155,6 +177,9 @@
         }
         &:focus {
           border-color: $color-primary-blue;
+        }
+        @include to(tablet-s) {
+          width: 40%;
         }
         @include to(min-width) {
           margin: 12px 0 20px;
