@@ -21,8 +21,8 @@
     height: 100%;
     &__right-front-tree {
       position: absolute;
-      top: 0px;
-      right: 0px;
+      top: 0;
+      right: 0;
       z-index: 1;
       width: 379px;
       height: 552px;
@@ -32,6 +32,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        right: -4%;
+        width: 509px;
+        height: 518px;
+      }
+      @include to(tablet-s) {
+        width: 292px;
+        height: 298px;
+      }
       @include to(min-width) {
         width: 210px;
         height: 241px;
@@ -50,6 +59,14 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0.5s forwards;
+      @include to(tablet-l) {
+        width: 490px;
+        height: 500px;
+      }
+      @include to(tablet-s) {
+        width: 308px;
+        height: 324px;
+      }
       @include to(min-width) {
         width: 287px;
         height: 292px;
@@ -68,8 +85,18 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
         @include to(laptop) {
-          top: 5%;
-          left: 25%;
+          top: 8%;
+          left: 46%;
+        }
+        @include to(tablet-l) {
+          width: 156px;
+          height: 128px;
+        }
+        @include to(tablet-s) {
+          top: 2%;
+          left: 44%;
+          width: 136px;
+          height: 94px;
         }
         @include to(min-width) {
           top: 4%;
@@ -96,8 +123,17 @@
         bottom: 16%;
         right: 28%;
       }
+      @include to(tablet-l) {
+        width: 199px;
+        height: 180px;
+      }
+      @include to(tablet-s) {
+        bottom: 24%;
+        width: 170px;
+        height: 128px;
+      }
       @include to(min-width) {
-        bottom: 22%;
+        bottom: 28%;
         width: 125px;
         height: 110px;
       }

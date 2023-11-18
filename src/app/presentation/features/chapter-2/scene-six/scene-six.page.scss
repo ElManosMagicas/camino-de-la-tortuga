@@ -32,6 +32,14 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        width: 314px;
+        height: 401px;
+      }
+      @include to(tablet-s) {
+        width: 260px;
+        height: 267px;
+      }
       @include to(min-width) {
         width: 205px;
         height: 245px;
@@ -50,6 +58,14 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        width: 332px;
+        height: 309px;
+      }
+      @include to(tablet-s) {
+        width: 260px;
+        height: 283px;
+      }
       @include to(min-width) {
         width: 215px;
         height: 196px;
@@ -69,10 +85,16 @@
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 1s forwards;
       cursor: pointer;
-      @include to(min-width) {
+      @include to(tablet-l) {
+        background: url($elements-chapter-2-scene-6-seed-right-back-off-990);
+        width: 220px;
+        height: 155px;
+      }
+      @include to(tablet-s) {
+        background: url($elements-chapter-2-scene-6-seed-right-back-off-640);
         right: -2%;
-        width: 126px;
-        height: 89px;
+        width: 136px;
+        height: 82px;
       }
       &:hover {
         top: 30%;
@@ -83,10 +105,16 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-seed-right-back-on-990);
+          width: 220px;
+          height: 155px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-seed-right-back-on-640);
           right: -2%;
-          width: 126px;
-          height: 89px;
+          width: 136px;
+          height: 82px;
         }
       }
       &.clicked {
@@ -98,10 +126,16 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-seed-right-back-on-990);
+          width: 220px;
+          height: 155px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-seed-right-back-on-640);
           right: -2%;
-          width: 126px;
-          height: 89px;
+          width: 136px;
+          height: 82px;
         }
       }
     }
@@ -119,9 +153,19 @@
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 1.5s forwards;
       cursor: pointer;
+      @include to(tablet-l) {
+        background: url($elements-chapter-2-scene-6-seed-left-front-off-990);
+        width: 259px;
+        height: 156px;
+      }
+      @include to(tablet-s) {
+        background: url($elements-chapter-2-scene-6-seed-left-front-off-640);
+        width: 163px;
+        height: 90px;
+      }
       @include to(min-width) {
-        width: 148px;
-        height: 96px;
+        bottom: 8%;
+        left: 0;
       }
       &:hover {
         bottom: 18%;
@@ -132,9 +176,19 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-seed-left-front-on-990);
+          width: 259px;
+          height: 156px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-seed-left-front-on-640);
+          width: 163px;
+          height: 90px;
+        }
         @include to(min-width) {
-          width: 148px;
-          height: 96px;
+          bottom: 8%;
+          left: 0;
         }
       }
       &.clicked {
@@ -146,9 +200,19 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-seed-left-front-off-990);
+          width: 259px;
+          height: 156px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-seed-left-front-off-640);
+          width: 163px;
+          height: 90px;
+        }
         @include to(min-width) {
-          width: 148px;
-          height: 96px;
+          bottom: 8%;
+          left: 0;
         }
       }
     }
@@ -166,9 +230,9 @@
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 2s forwards;
       cursor: pointer;
-      @include to(min-width) {
-        width: 162px;
-        height: 142px;
+      @include to(tablet-s) {
+        width: 104px;
+        height: 75px;
       }
       &:hover {
         top: 39%;
@@ -179,9 +243,9 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
-          width: 162px;
-          height: 142px;
+        @include to(tablet-s) {
+          width: 104px;
+          height: 75px;
         }
       }
       &.clicked {
@@ -193,9 +257,9 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
-          width: 162px;
-          height: 142px;
+        @include to(tablet-s) {
+          width: 104px;
+          height: 75px;
         }
       }
     }
@@ -213,9 +277,15 @@
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 2.5s forwards;
       cursor: pointer;
-      @include to(min-width) {
-        width: 132px;
-        height: 120px;
+      @include to(tablet-l) {
+        background: url($elements-chapter-2-scene-6-stem-front-off-990);
+        width: 222px;
+        height: 198px;
+      }
+      @include to(tablet-s) {
+        background: url($elements-chapter-2-scene-6-stem-front-off-640);
+        width: 128px;
+        height: 119px;
       }
       &:hover {
         bottom: 8%;
@@ -226,9 +296,15 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
-          width: 132px;
-          height: 120px;
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-stem-front-on-990);
+          width: 222px;
+          height: 198px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-stem-front-on-640);
+          width: 128px;
+          height: 119px;
         }
       }
       &.clicked {
@@ -240,9 +316,15 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
-          width: 132px;
-          height: 120px;
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-stem-front-on-990);
+          width: 222px;
+          height: 198px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-stem-front-on-640);
+          width: 128px;
+          height: 119px;
         }
       }
     }
@@ -259,18 +341,30 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      @include to(min-width) {
-        width: 163px;
-        height: 161px;
+      @include to(tablet-l) {
+        background: url($elements-chapter-2-scene-6-backpack-state-1-990);
+        width: 225px;
+        height: 251px;
+      }
+      @include to(tablet-s) {
+        background: url($elements-chapter-2-scene-6-backpack-state-1-640);
+        width: 140px;
+        height: 158px;
       }
       &.state-2 {
         background: url($elements-chapter-2-scene-6-backpack-state-2);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
-          width: 163px;
-          height: 161px;
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-backpack-state-2-990);
+          width: 225px;
+          height: 251px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-backpack-state-2-640);
+          width: 140px;
+          height: 158px;
         }
       }
       &.state-3 {
@@ -278,9 +372,15 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
-          width: 163px;
-          height: 161px;
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-backpack-state-3-990);
+          width: 225px;
+          height: 251px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-backpack-state-3-640);
+          width: 140px;
+          height: 158px;
         }
       }
       &.state-4 {
@@ -288,9 +388,15 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
-          width: 163px;
-          height: 161px;
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-backpack-state-4-990);
+          width: 225px;
+          height: 251px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-backpack-state-4-640);
+          width: 140px;
+          height: 158px;
         }
       }
       &.state-5 {
@@ -298,9 +404,15 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
-          width: 163px;
-          height: 161px;
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-backpack-state-5-990);
+          width: 225px;
+          height: 251px;
+        }
+        @include to(tablet-s) {
+          background: url($elements-chapter-2-scene-6-backpack-state-5-640);
+          width: 140px;
+          height: 158px;
         }
       }
     }

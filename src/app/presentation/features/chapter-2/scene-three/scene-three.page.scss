@@ -32,6 +32,16 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        right: -7%;
+        width: 450px;
+        height: 345px;
+      }
+      @include to(tablet-s) {
+        right: -7%;
+        width: 323px;
+        height: 221px;
+      }
       @include to(min-width) {
         right: -7%;
         width: 280px;
@@ -51,6 +61,14 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        width: 399px;
+        height: 294px;
+      }
+      @include to(tablet-s) {
+        width: 337px;
+        height: 225px;
+      }
       @include to(min-width) {
         width: 297px;
         height: 208px;
@@ -68,6 +86,16 @@
         background-position: center;
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 17s forwards;
+        @include to(tablet-l) {
+          right: -72%;
+          width: 327px;
+          height: 208px;
+        }
+        @include to(tablet-s) {
+          right: -54%;
+          width: 242px;
+          height: 144px;
+        }
         @include to(min-width) {
           width: 194px;
           height: 136px;
