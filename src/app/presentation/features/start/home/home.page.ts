@@ -12,7 +12,14 @@ import { IContextModal } from '@app/core/models/modal.model';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
-import { Observable, Subject, Subscription, takeUntil } from 'rxjs';
+import {
+  Observable,
+  Subject,
+  Subscription,
+  distinctUntilChanged,
+  takeUntil,
+} from 'rxjs';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'start-home',
@@ -28,61 +35,62 @@ export class HomePage implements OnInit, AfterViewInit {
 
   public ROUTES = APP_ROUTES;
   public CONST = CONST;
-
-  public audioPlaying: boolean = false;
+  public orientationCounter: number = 0;
 
   public isSubtitles$: Observable<boolean>;
-  public isSound$: Observable<boolean>;
+  public isLoadingOrientation$: Observable<boolean>;
+  public isPortrait$: Observable<boolean>;
+  public isLandscape$: Observable<boolean>;
 
-  public isSoundSubscription$: Subscription;
+  public orientationSubscription$: Subscription;
   public destroy$: Subject<void> = new Subject<void>();
 
   constructor(
     private _utilService: UtilService,
     private _appFacade: AppFacade,
-    private _chapter1Facade: Chapter1Facade
+    private _chapter1Facade: Chapter1Facade,
+    private _breakpointObserver: BreakpointObserver
   ) {}
   ngOnInit(): void {
     this.isSubtitles$ = this._appFacade.isSubtitles$;
-    this.isSound$ = this._appFacade.isSound$;
+    this.isLoadingOrientation$ = this._appFacade.isLoadingOrientation$;
+    this.isPortrait$ = this._appFacade.isPortrait$;
+    this.isLandscape$ = this._appFacade.isLandscape$;
   }
 
   ngAfterViewInit(): void {
-    this.isSoundSubscription$ = this.isSound$
-      .pipe(takeUntil(this.destroy$))
-      .subscribe((isSound) => {
-        if (isSound) {
-          setTimeout(() => {
-            this.playAudio();
-          }, 1000);
-        } else {
-          this.stopAudio();
+    this.orientationSubscription$ = this._breakpointObserver
+      .observe([Breakpoints.HandsetPortrait, Breakpoints.HandsetLandscape])
+      .subscribe((result) => {
+        if (result.matches) {
+          // The device orientation has changed
+          if (result.breakpoints[Breakpoints.HandsetPortrait]) {
+            // Handle portrait orientation
+            console.log('Está en modo portrait');
+            this._appFacade.setIsLoadingOrientation(true);
+            this._appFacade.setIsPortrait(true);
+            this._appFacade.setIsLandscape(false);
+            setTimeout(() => {
+              this._appFacade.setIsLoadingOrientation(false);
+            }, 2000);
+          } else if (result.breakpoints[Breakpoints.HandsetLandscape]) {
+            // Handle landscape orientation
+            console.log('Está en modo landscape');
+            this._appFacade.setIsLoadingOrientation(true);
+            this._appFacade.setIsPortrait(false);
+            this._appFacade.setIsLandscape(true);
+            setTimeout(() => {
+              this._appFacade.setIsLoadingOrientation(false);
+            }, 2000);
+          }
         }
       });
   }
 
   ngOnDestroy(): void {
-    // Unsubscribe from the observable to prevent memory leaks
     this.destroy$.next();
     this.destroy$.complete();
-    this.isSoundSubscription$?.unsubscribe();
-  }
-
-  public playAudio() {
-    if (!this.audioPlaying) {
-      const audioElement = this.audioPlayer.nativeElement;
-      audioElement.play();
-      this.audioPlaying = true;
-    }
-  }
-
-  public stopAudio() {
-    if (this.audioPlaying) {
-      const audioElement = this.audioPlayer.nativeElement;
-      audioElement.pause();
-      audioElement.currentTime = 0;
-      this.audioPlaying = false;
-    }
+    this.orientationSubscription$?.unsubscribe();
   }
 
   public onGoToInstructions(): void {
@@ -119,4 +127,6 @@ export class HomePage implements OnInit, AfterViewInit {
     this._chapter1Facade.goToNextStep();
     this._utilService.navigateTo(this.ROUTES.CHAPTER_1);
   }
+
+  public onReload(): void {}
 }

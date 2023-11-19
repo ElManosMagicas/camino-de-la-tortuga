@@ -108,3 +108,33 @@
     }
   }
 }
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  background-color: $color-primary-blue;
+  opacity: 0;
+  animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
+  p {
+    color: $color-primary-white;
+    font-family: $lato-bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.rotate-device {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  opacity: 0;
+  animation: appearFullOpacity 1s ease-in-out 0s forwards;
+}

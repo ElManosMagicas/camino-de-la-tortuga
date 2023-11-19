@@ -51,5 +51,4 @@ export const APP_ROUTES = {
   CHAPTER_5_SCENE_6: '/capitulo-5/escena-6',
   CHAPTER_5_SCENE_7: '/capitulo-5/escena-7',
   MAP: '/mapa',
-  ROTATE_DEVICE: '/rota-el-dispositivo',
 };

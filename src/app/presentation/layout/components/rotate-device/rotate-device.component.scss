@@ -20,14 +20,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &__title {
-      color: $color-primary-blue;
-      font-family: $lato-bold;
-      font-size: 32px;
-      line-height: 36px;
-      text-align: center;
-      margin-bottom: 18px;
-    }
     &__description {
       color: $color-primary-blue;
       font-family: $lato-bold;
@@ -47,25 +39,6 @@
       @include to(min-width) {
         width: 230px;
         height: 112px;
-      }
-    }
-    &__button {
-      width: 30%;
-      padding: 12px;
-      cursor: pointer;
-      background-color: $color-primary-blue;
-      color: $color-primary-white;
-      border: none;
-      border-radius: 4px;
-      font-family: $lato-bold;
-      font-size: 18px;
-      &:focus {
-        background-color: #0056b3;
-      }
-      @include to(min-width) {
-        padding: 6px;
-        font-size: 14px;
-        line-height: 18px;
       }
     }
   }

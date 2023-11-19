@@ -11,4 +11,7 @@ export interface AppState {
   lastChapterFinished: ILastChapterFinished;
   isSubtitles: boolean;
   isSound: boolean;
+  isLoadingOrientation: boolean;
+  isPortrait: boolean;
+  isLandscape: boolean;
 }
