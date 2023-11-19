@@ -54,6 +54,13 @@ const routes: Routes = [
             (m) => m.MapModule
           ),
       },
+      {
+        path: 'rota-el-dispositivo',
+        loadChildren: () =>
+          import(
+            './presentation/features/rotate-device/rotate-device.module'
+          ).then((m) => m.RotateDeviceModule),
+      },
     ],
   },
 ];
