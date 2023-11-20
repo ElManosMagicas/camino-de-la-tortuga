@@ -22,9 +22,7 @@
 </ng-container>
 
 <ng-container *ngIf="(isPortrait$ | async) && !(isLoadingOrientation$ | async)">
-  <div class="rotate-device">
-    <layout-rotate-device (reloadEvent)="onReload()"></layout-rotate-device>
-  </div>
+  <layout-rotate-device (reloadEvent)="onReload()"></layout-rotate-device>
 </ng-container>
 
 <ng-template #credits>

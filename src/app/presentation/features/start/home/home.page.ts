@@ -66,7 +66,6 @@ export class HomePage implements OnInit, AfterViewInit {
           // The device orientation has changed
           if (result.breakpoints[Breakpoints.HandsetPortrait]) {
             // Handle portrait orientation
-            console.log('Está en modo portrait');
             this._appFacade.setIsLoadingOrientation(true);
             this._appFacade.setIsPortrait(true);
             this._appFacade.setIsLandscape(false);
@@ -75,7 +74,6 @@ export class HomePage implements OnInit, AfterViewInit {
             }, 2000);
           } else if (result.breakpoints[Breakpoints.HandsetLandscape]) {
             // Handle landscape orientation
-            console.log('Está en modo landscape');
             this._appFacade.setIsLoadingOrientation(true);
             this._appFacade.setIsPortrait(false);
             this._appFacade.setIsLandscape(true);
