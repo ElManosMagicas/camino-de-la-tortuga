@@ -18,9 +18,7 @@
   </section>
 </ng-container>
 <ng-container *ngIf="isLoadingOrientation$ | async">
-  <div class="loader">
-    <p>Esto si está cargando :v</p>
-  </div>
+  <layout-loader></layout-loader>
 </ng-container>
 
 <ng-container *ngIf="(isPortrait$ | async) && !(isLoadingOrientation$ | async)">
