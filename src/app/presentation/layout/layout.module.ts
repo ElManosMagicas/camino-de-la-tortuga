@@ -16,6 +16,7 @@ import { ConfigurationComponent } from './components/configuration/configuration
 import { FormsModule } from '@angular/forms';
 import { ToggleSubtitlesButtonComponent } from './components/toggle-subtitles-button/toggle-subtitles-button.component';
 import { RotateDeviceComponent } from './components/rotate-device/rotate-device.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 const PIPES = [];
 
@@ -34,6 +35,7 @@ const COMPONENTS = [
   ConfigurationComponent,
   ToggleSubtitlesButtonComponent,
   RotateDeviceComponent,
+  LoaderComponent,
 ];
 
 @NgModule({
