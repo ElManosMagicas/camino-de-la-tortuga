@@ -42,12 +42,12 @@
         height: 333px;
       }
       @include to(tablet-l) {
-        width: 605px;
-        height: 241px;
+        width: 502px;
+        height: 143px;
       }
       @include to(tablet-s) {
-        width: 454px;
-        height: 163px;
+        width: 417px;
+        height: 142px;
       }
       @include to(min-width) {
         width: 358px;
@@ -73,12 +73,12 @@
       }
       @include to(tablet-l) {
         bottom: 16%;
-        width: 326px;
-        height: 218px;
+        width: 264px;
+        height: 188px;
       }
       @include to(tablet-s) {
-        width: 258px;
-        height: 170px;
+        width: 235px;
+        height: 167px;
       }
       @include to(min-width) {
         width: 223px;
@@ -103,6 +103,9 @@
       @include to(tablet-s) {
         height: 140px;
       }
+      @include to(min-width) {
+        height: 108px;
+      }
     }
     &__introduction {
       width: 35%;
@@ -117,14 +120,14 @@
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 3.5s forwards;
       @include to(laptop-m) {
-        width: 45%;
-      }
-      @include to(tablet-s) {
-        width: 56%;
+        width: 46%;
       }
       @include to(min-width) {
         top: 7%;
         left: 4%;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 24%;
       }
       &__text {
         display: flex;
@@ -135,6 +138,9 @@
         border-radius: 20px;
         padding: 24px;
         opacity: 0.8;
+        @include to(tablet-l) {
+          padding: 12px;
+        }
         @include to(tablet-s) {
           padding: 10px;
         }
@@ -150,13 +156,14 @@
           text-align: center;
           margin: 12px 0;
           padding: 0 60px;
-          @include to(tablet-s) {
-            padding: 0 40px;
+          @include to(tablet-l) {
+            padding: 0;
+            font-size: 16px;
+            line-height: 20px;
           }
           @include to(min-width) {
             font-size: 14px;
             line-height: 18px;
-            padding: 0;
           }
         }
       }
@@ -178,14 +185,15 @@
         &:focus {
           border-color: $color-primary-blue;
         }
-        @include to(tablet-s) {
+        @include to(tablet-l) {
           width: 40%;
+          margin: 10px 0;
+          font-size: 14px;
+          line-height: 18px;
         }
         @include to(min-width) {
           margin: 12px 0 20px;
           padding: 6px;
-          font-size: 14px;
-          line-height: 18px;
         }
       }
       &__accept {
@@ -207,6 +215,10 @@
           background-color: $color-primary-blue;
           color: $color-primary-white;
           cursor: pointer;
+        }
+        @include to(tablet-l) {
+          font-size: 16px;
+          padding: 10px;
         }
         @include to(min-width) {
           padding: 6px;
