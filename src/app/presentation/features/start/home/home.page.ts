@@ -16,8 +16,6 @@ import {
   Observable,
   Subject,
   Subscription,
-  distinctUntilChanged,
-  takeUntil,
 } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
