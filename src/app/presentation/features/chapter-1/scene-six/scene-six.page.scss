@@ -35,16 +35,26 @@
       @include to(laptop) {
         top: 30%;
       }
+      @include to(tablet-l) {
+        left: 34%;
+        width: 208px;
+        height: 149px;
+      }
       @include to(tablet-s) {
-        top: 18%;
-        width: 215px;
-        height: 263px;
+        top: 26%;
+        left: 42%;
+        width: 179px;
+        height: 153px;
       }
       @include to(min-width) {
         top: 30%;
         left: 34%;
         width: 196px;
         height: 138px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 286px;
+        height: 220px;
       }
     }
     &__right-bush {
@@ -63,14 +73,23 @@
       @include to(laptop) {
         bottom: 12%;
       }
+      @include to(tablet-l) {
+        width: 360px;
+        height: 243px;
+      }
       @include to(tablet-s) {
-        width: 295px;
-        height: 276px;
+        width: 298px;
+        height: 243px;
       }
       @include to(min-width) {
         bottom: 25%;
         width: 233px;
         height: 243px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 20%;
+        width: 358px;
+        height: 404px;
       }
     }
     &__left-bush {
@@ -90,14 +109,23 @@
         bottom: 20%;
         left: 0;
       }
+      @include to(tablet-l) {
+        bottom: 28%;
+        width: 250px;
+        height: 163px;
+      }
       @include to(tablet-s) {
-        width: 202px;
-        height: 193px;
+        width: 209px;
+        height: 163px;
       }
       @include to(min-width) {
-        bottom: 14%;
+        bottom: 20%;
         width: 159px;
         height: 160px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 245px;
+        height: 266px;
       }
     }
     &__front-grass {
@@ -116,16 +144,29 @@
       @include to(laptop) {
         bottom: 0;
       }
+      @include to(tablet-l) {
+        bottom: 20%;
+        left: -16%;
+        width: 854px;
+        height: 133px;
+      }
       @include to(tablet-s) {
-        bottom: 10%;
-        left: -10%;
-        width: 714px;
-        height: 152px;
+        bottom: 22%;
+        left: -12%;
+        width: 712px;
+        height: 133px;
       }
       @include to(min-width) {
+        bottom: 14%;
         left: 0;
         width: 530px;
         height: 132px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 14%;
+        left: -4%;
+        width: 858px;
+        height: 222px;
       }
     }
     &__cuyo {
@@ -145,14 +186,24 @@
         bottom: 0;
         right: 0;
       }
+      @include to(tablet-l) {
+        right: 2%;
+        width: 260px;
+        height: 236px;
+      }
       @include to(tablet-s) {
-        right: -4%;
-        width: 243px;
-        height: 230px;
+        right: 4%;
+        width: 218px;
+        height: 229px;
       }
       @include to(min-width) {
         width: 207px;
         height: 207px;
+      }
+      @media only screen and (min-height: 600px) {
+        right: 2%;
+        width: 325px;
+        height: 300px;
       }
     }
     &__subtitles {

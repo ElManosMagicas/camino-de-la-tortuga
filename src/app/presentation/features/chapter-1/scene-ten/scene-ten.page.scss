@@ -32,13 +32,21 @@
       @include to(laptop) {
         left: 6%;
       }
+      @include to(tablet-l) {
+        width: 301px;
+        height: 141px;
+      }
       @include to(tablet-s) {
-        width: 321px;
-        height: 160px;
+        width: 262px;
+        height: 138px;
       }
       @include to(min-width) {
         width: 242px;
         height: 153px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 408px;
+        height: 221px;
       }
     }
     &__backpack {
@@ -54,9 +62,14 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0.5s forwards;
+      @include to(tablet-l) {
+        top: 4%;
+        width: 302px;
+        height: 144px;
+      }
       @include to(tablet-s) {
-        width: 340px;
-        height: 165px;
+        width: 249px;
+        height: 152px;
       }
       @include to(min-width) {
         top: 6%;
@@ -64,11 +77,15 @@
         width: 280px;
         height: 151px;
       }
+      @media only screen and (min-height: 600px) {
+        width: 450px;
+        height: 225px;
+      }
     }
     &__feet {
       position: absolute;
       bottom: 20%;
-      left: 22%;
+      left: 34%;
       z-index: 3;
       width: 471px;
       height: 213px;
@@ -79,17 +96,28 @@
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1s forwards;
       @include to(laptop) {
-        left: 6%;
+        left: 28%;
+      }
+      @include to(tablet-l) {
+        bottom: 30%;
+        left: 34%;
+        width: 302px;
+        height: 143px;
       }
       @include to(tablet-s) {
-        width: 335px;
-        height: 135px;
-        left: 18%;
+        width: 232px;
+        height: 110px;
       }
       @include to(min-width) {
+        bottom: 22%;
         left: 28%;
         width: 285px;
         height: 140px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 22%;
+        width: 420px;
+        height: 178px;
       }
     }
     &__subtitles {

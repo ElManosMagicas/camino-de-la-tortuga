@@ -14,12 +14,7 @@
   background-repeat: no-repeat;
   opacity: 0;
   animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
-  // @media only screen and (max-width: 990px) and (min-height: 360px) {
-  //   background-image: url($bg-start-screen-990x360);
-  // }
-  // @media only screen and (max-width: 824px) and (min-height: 360px) {
-  //   background-image: url($bg-start-screen-824x360);
-  // }
+
   &__container {
     position: relative;
     width: 100%;
@@ -46,9 +41,6 @@
       @include to(tablet-l) {
         bottom: -14%;
       }
-      // @include to(min-width) {
-      //   height: 180px;
-      // }
     }
     &__left-bush {
       position: absolute;
@@ -63,18 +55,6 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1.5s ease-in-out 1s forwards;
-      // @include to(laptop-m) {
-      //   bottom: -6%;
-      // }
-      // @include to(laptop) {
-      //   bottom: -12%;
-      // }
-      // @include to(tablet-l) {
-      //   bottom: -14%;
-      // }
-      // @include to(min-width) {
-      //   height: 180px;
-      // }
     }
     &__turtle {
       position: absolute;

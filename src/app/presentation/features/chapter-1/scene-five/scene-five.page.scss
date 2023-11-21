@@ -41,16 +41,26 @@
       @include to(laptop) {
         right: 7%;
       }
+      @include to(tablet-l) {
+        right: 14%;
+        width: 126px;
+        height: 185px;
+      }
       @include to(tablet-s) {
-        top: 34%;
-        right: 10%;
-        width: 170px;
-        height: 202px;
+        top: 38%;
+        right: 12%;
+        width: 122px;
+        height: 147px;
       }
       @include to(min-width) {
-        right: 10%;
+        right: 8%;
         width: 142px;
         height: 156px;
+      }
+      @media only screen and (min-height: 600px) {
+        right: 8%;
+        width: 218px;
+        height: 259px;
       }
     }
     &__person {
@@ -68,13 +78,23 @@
       @include to(laptop) {
         right: 34%;
       }
+      @include to(tablet-l) {
+        right: 30%;
+        width: 132px;
+        height: 158px;
+      }
       @include to(tablet-s) {
-        width: 113px;
-        height: 187px;
+        width: 110px;
+        height: 156px;
       }
       @include to(min-width) {
         width: 108px;
         height: 164px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 44%;
+        width: 145px;
+        height: 153px;
       }
     }
     &__cuyo {
@@ -89,13 +109,21 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        width: 265px;
+        height: 218px;
+      }
       @include to(tablet-s) {
-        width: 269px;
-        height: 260px;
+        width: 229px;
+        height: 204px;
       }
       @include to(min-width) {
         width: 233px;
         height: 228px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 328px;
+        height: 310px;
       }
     }
     &__subtitles {

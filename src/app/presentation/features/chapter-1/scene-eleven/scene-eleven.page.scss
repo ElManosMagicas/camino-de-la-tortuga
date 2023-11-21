@@ -21,8 +21,8 @@
     position: relative;
     &__cuy {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 10%;
+      left: -4%;
       z-index: 2;
       width: 445px;
       height: 729px;
@@ -32,21 +32,30 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0.5s forwards;
+      @include to(tablet-l) {
+        left: -4%;
+        width: 278px;
+        height: 339px;
+      }
       @include to(tablet-s) {
-        left: -3%;
-        width: 282px;
-        height: 394px;
+        left: -2%;
+        width: 234px;
+        height: 340px;
       }
       @include to(min-width) {
         left: -3%;
         width: 237px;
         height: 344px;
       }
+      @media only screen and (min-height: 600px) {
+        width: 445px;
+        height: 729px;
+      }
     }
     &__turtle {
       position: absolute;
       bottom: -1%;
-      right: -1%;
+      right: -4%;
       z-index: 2;
       width: 465px;
       height: 588px;
@@ -56,15 +65,24 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 1.5s forwards;
+      @include to(tablet-l) {
+        right: -3%;
+        width: 287px;
+        height: 300px;
+      }
       @include to(tablet-s) {
-        right: -5%;
-        width: 324px;
-        height: 342px;
+        right: -1%;
+        width: 239px;
+        height: 300px;
       }
       @include to(min-width) {
-        right: -5%;
+        right: -6%;
         width: 276px;
         height: 274px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 465px;
+        height: 588px;
       }
     }
     &__subtitles {
