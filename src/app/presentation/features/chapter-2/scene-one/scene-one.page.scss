@@ -34,16 +34,20 @@
       animation: fromTop 1s ease-in-out 0s forwards;
       @include to(tablet-l) {
         right: -4%;
-        width: 509px;
-        height: 518px;
+        width: 287px;
+        height: 254px;
       }
       @include to(tablet-s) {
-        width: 292px;
-        height: 298px;
+        width: 240px;
+        height: 254px;
       }
       @include to(min-width) {
         width: 210px;
         height: 241px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 379px;
+        height: 552px;
       }
     }
     &__left-back-tree {
@@ -60,16 +64,20 @@
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0.5s forwards;
       @include to(tablet-l) {
-        width: 490px;
-        height: 500px;
+        width: 362px;
+        height: 311px;
       }
       @include to(tablet-s) {
-        width: 308px;
-        height: 324px;
+        width: 305px;
+        height: 314px;
       }
       @include to(min-width) {
         width: 287px;
         height: 292px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 508px;
+        height: 652px;
       }
       .tucan {
         position: absolute;
@@ -89,14 +97,14 @@
           left: 46%;
         }
         @include to(tablet-l) {
-          width: 156px;
-          height: 128px;
+          width: 125px;
+          height: 76px;
         }
         @include to(tablet-s) {
-          top: 2%;
-          left: 44%;
-          width: 136px;
-          height: 94px;
+          top: 7%;
+          left: 48%;
+          width: 104px;
+          height: 75px;
         }
         @include to(min-width) {
           top: 4%;
@@ -104,12 +112,16 @@
           width: 108px;
           height: 82px;
         }
+        @media only screen and (min-height: 600px) {
+          width: 201px;
+          height: 151px;
+        }
       }
     }
     &__turtle {
       position: absolute;
       bottom: 22%;
-      right: 16%;
+      right: 30%;
       z-index: 4;
       width: 231px;
       height: 224px;
@@ -124,18 +136,23 @@
         right: 28%;
       }
       @include to(tablet-l) {
-        width: 199px;
-        height: 180px;
+        bottom: 30%;
+        width: 171px;
+        height: 111px;
       }
       @include to(tablet-s) {
         bottom: 24%;
-        width: 170px;
-        height: 128px;
+        width: 149px;
+        height: 114px;
       }
       @include to(min-width) {
         bottom: 28%;
         width: 125px;
         height: 110px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 231px;
+        height: 224px;
       }
     }
     &__subtitles {

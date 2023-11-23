@@ -30,10 +30,22 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        width: 252px;
+        height: 245px;
+      }
+      @include to(tablet-s) {
+        width: 240px;
+        height: 240px;
+      }
       @include to(min-width) {
         right: -5%;
         width: 334px;
         height: 234px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 365px;
+        height: 356px;
       }
     }
     &__snake {
@@ -51,11 +63,26 @@
         top: 30%;
         right: 20%;
       }
+      @include to(tablet-l) {
+        right: 9%;
+        width: 220px;
+        height: 166px;
+      }
+      @include to(tablet-s) {
+        width: 182px;
+        height: 162px;
+      }
       @include to(min-width) {
         top: 26%;
         right: 14%;
         width: 187px;
         height: 170px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 10%;
+        right: 14%;
+        width: 343px;
+        height: 340px;
       }
     }
     &__turtle {
@@ -69,10 +96,18 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        width: 166px;
+        height: 183px;
+      }
       @include to(min-width) {
         left: -3%;
         width: 194px;
         height: 168px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 307px;
+        height: 353px;
       }
     }
     &__subtitles {

@@ -46,7 +46,8 @@
       @include to(laptop) {
         align-items: flex-start;
       }
-      @include to(min-width) {
+      @include to(tablet-l) {
+        align-items: center;
         top: 0;
         height: 62px;
         p {
@@ -88,6 +89,10 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        width: 200px;
+        height: 132px;
+      }
       @include to(min-width) {
         width: 158px;
         height: 90px;
@@ -105,6 +110,9 @@
       @include to(min-width) {
         bottom: 2%;
       }
+      @media only screen and (min-height: 600px) {
+        bottom: 4%;
+      }
       &__top {
         display: flex;
         flex-direction: row;
@@ -119,10 +127,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-1-pos-1);
               background-size: cover;
-              width: 126px;
-              height: 102px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 121px;
+              height: 88px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 210px;
+              height: 202px;
+              background: url($elements-chapter-3-scene-8-piece-1-pos-1);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos2 {
@@ -132,10 +151,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-1-pos-2);
               background-size: cover;
-              width: 102px;
-              height: 126px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 88px;
+              height: 121px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 202px;
+              height: 210px;
+              background: url($elements-chapter-3-scene-8-piece-1-pos-2);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos3 {
@@ -145,10 +175,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-1-pos-3);
               background-size: cover;
-              width: 126px;
-              height: 102px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 121px;
+              height: 88px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 210px;
+              height: 202px;
+              background: url($elements-chapter-3-scene-8-piece-1-pos-3);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos4 {
@@ -158,10 +199,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-1-pos-4);
               background-size: cover;
-              width: 102px;
-              height: 126px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 88px;
+              height: 121px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 202px;
+              height: 210px;
+              background: url($elements-chapter-3-scene-8-piece-1-pos-4);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
         }
@@ -175,10 +227,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-3-pos-1);
               background-size: cover;
-              width: 138px;
-              height: 102px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 133px;
+              height: 90px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 227px;
+              height: 202px;
+              background: url($elements-chapter-3-scene-8-piece-3-pos-1);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos2 {
@@ -188,10 +251,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-3-pos-2);
               background-size: cover;
-              width: 102px;
-              height: 138px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 90px;
+              height: 133px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 202px;
+              height: 227px;
+              background: url($elements-chapter-3-scene-8-piece-3-pos-2);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos3 {
@@ -201,10 +275,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-3-pos-3);
               background-size: cover;
-              width: 138px;
-              height: 102px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 133px;
+              height: 90px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 227px;
+              height: 202px;
+              background: url($elements-chapter-3-scene-8-piece-3-pos-3);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos4 {
@@ -214,10 +299,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-3-pos-2);
               background-size: cover;
-              width: 102px;
-              height: 138px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 90px;
+              height: 133px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 202px;
+              height: 227px;
+              background: url($elements-chapter-3-scene-8-piece-3-pos-4);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
         }
@@ -231,10 +327,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-5-pos-1);
               background-size: cover;
-              width: 123px;
-              height: 103px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 120px;
+              height: 90px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 205px;
+              height: 203px;
+              background: url($elements-chapter-3-scene-8-piece-5-pos-1);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos2 {
@@ -244,10 +351,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-5-pos-2);
               background-size: cover;
-              width: 103px;
-              height: 123px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 90px;
+              height: 120px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 203px;
+              height: 205px;
+              background: url($elements-chapter-3-scene-8-piece-5-pos-2);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos3 {
@@ -257,10 +375,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-5-pos-3);
               background-size: cover;
-              width: 123px;
-              height: 103px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 120px;
+              height: 90px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 205px;
+              height: 203px;
+              background: url($elements-chapter-3-scene-8-piece-5-pos-3);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos4 {
@@ -270,10 +399,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-5-pos-4);
               background-size: cover;
-              width: 103px;
-              height: 123px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 90px;
+              height: 120px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 203px;
+              height: 205px;
+              background: url($elements-chapter-3-scene-8-piece-5-pos-4);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
         }
@@ -292,10 +432,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-2-pos-1);
               background-size: cover;
-              width: 126px;
-              height: 106px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 121px;
+              height: 92px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 210px;
+              height: 207px;
+              background: url($elements-chapter-3-scene-8-piece-2-pos-1);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos2 {
@@ -305,10 +456,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-2-pos-2);
               background-size: cover;
-              width: 106px;
-              height: 126px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 92px;
+              height: 121px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 207px;
+              height: 210px;
+              background: url($elements-chapter-3-scene-8-piece-2-pos-2);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos3 {
@@ -318,10 +480,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-2-pos-3);
               background-size: cover;
-              width: 126px;
-              height: 106px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 121px;
+              height: 92px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 210px;
+              height: 207px;
+              background: url($elements-chapter-3-scene-8-piece-2-pos-3);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos4 {
@@ -331,10 +504,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-2-pos-4);
               background-size: cover;
-              width: 106px;
-              height: 126px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 92px;
+              height: 121px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 207px;
+              height: 210px;
+              background: url($elements-chapter-3-scene-8-piece-2-pos-4);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
         }
@@ -348,10 +532,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-4-pos-1);
               background-size: cover;
-              width: 138px;
-              height: 105px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 133px;
+              height: 93px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 227px;
+              height: 206px;
+              background: url($elements-chapter-3-scene-8-piece-4-pos-1);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos2 {
@@ -361,10 +556,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-4-pos-2);
               background-size: cover;
-              width: 105px;
-              height: 138px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 93px;
+              height: 133px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 206px;
+              height: 227px;
+              background: url($elements-chapter-3-scene-8-piece-4-pos-2);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos3 {
@@ -374,10 +580,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-4-pos-3);
               background-size: cover;
-              width: 138px;
-              height: 105px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 133px;
+              height: 93px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 227px;
+              height: 206px;
+              background: url($elements-chapter-3-scene-8-piece-4-pos-3);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos4 {
@@ -387,10 +604,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-4-pos-4);
               background-size: cover;
-              width: 105px;
-              height: 138px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 93px;
+              height: 133px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 206px;
+              height: 227px;
+              background: url($elements-chapter-3-scene-8-piece-4-pos-4);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
         }
@@ -404,10 +632,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-6-pos-1);
               background-size: cover;
-              width: 123px;
-              height: 104px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 121px;
+              height: 89px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 205px;
+              height: 205px;
+              background: url($elements-chapter-3-scene-8-piece-6-pos-1);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos2 {
@@ -417,10 +656,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-6-pos-2);
               background-size: cover;
-              width: 104px;
-              height: 123px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 89px;
+              height: 121px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 205px;
+              height: 205px;
+              background: url($elements-chapter-3-scene-8-piece-6-pos-2);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos3 {
@@ -430,10 +680,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-6-pos-3);
               background-size: cover;
-              width: 123px;
-              height: 104px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 121px;
+              height: 89px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 205px;
+              height: 205px;
+              background: url($elements-chapter-3-scene-8-piece-6-pos-3);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
           &.pos4 {
@@ -443,10 +704,21 @@
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            @include to(min-width) {
+            @include to(tablet-l) {
+              background: url($elements-chapter-3-scene-8-ficha-6-pos-4);
               background-size: cover;
-              width: 104px;
-              height: 123px;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 89px;
+              height: 121px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 205px;
+              height: 205px;
+              background: url($elements-chapter-3-scene-8-piece-6-pos-4);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
             }
           }
         }

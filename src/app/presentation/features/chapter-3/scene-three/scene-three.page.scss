@@ -38,6 +38,14 @@
       @include to(laptop-s) {
         right: 0;
       }
+      @include to(tablet-l) {
+        width: 269px;
+        height: 236px;
+      }
+      @include to(tablet-s) {
+        width: 290px;
+        height: 234px;
+      }
       @include to(min-width) {
         right: -1%;
         width: 299px;
@@ -57,6 +65,14 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 222px;
+        height: 203px;
+      }
+      @include to(tablet-s) {
+        width: 200px;
+        height: 180px;
+      }
       @include to(min-width) {
         right: 21%;
         width: 198px;
@@ -75,6 +91,14 @@
         background-position: center;
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
+        @include to(tablet-l) {
+          width: 102px;
+          height: 100px;
+        }
+        @include to(tablet-s) {
+          width: 86px;
+          height: 98px;
+        }
         @include to(min-width) {
           width: 148px;
           height: 139px;
@@ -94,6 +118,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 197px;
+        height: 186px;
+      }
+      @include to(tablet-s) {
+        left: 0;
+        width: 215px;
+        height: 191px;
+      }
       @include to(min-width) {
         bottom: 10%;
         left: -1%;

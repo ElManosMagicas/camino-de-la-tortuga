@@ -33,23 +33,21 @@
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
       @include to(tablet-l) {
-        width: 314px;
-        height: 401px;
+        top: 16%;
+        width: 140px;
+        height: 200px;
       }
-      @include to(tablet-s) {
-        width: 260px;
-        height: 267px;
-      }
-      @include to(min-width) {
-        width: 205px;
-        height: 245px;
+      @media only screen and (min-height: 600px) {
+        top: -8%;
+        width: 324px;
+        height: 508px;
       }
     }
     &__right-tree {
       position: absolute;
       top: 0%;
       right: 10%;
-      z-index: 5;
+      z-index: 4;
       width: 333px;
       height: 404px;
       opacity: 0;
@@ -59,16 +57,22 @@
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
       @include to(tablet-l) {
-        width: 332px;
-        height: 309px;
-      }
-      @include to(tablet-s) {
-        width: 260px;
-        height: 283px;
+        width: 264px;
+        height: 276px;
       }
       @include to(min-width) {
-        width: 215px;
-        height: 196px;
+        right: 14%;
+        width: 227px;
+        height: 236px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 333px;
+        height: 404px;
+      }
+      @media only screen and (min-height: 600px) {
+        right: 12%;
+        width: 333px;
+        height: 404px;
       }
     }
     &__seed-right-back {
@@ -86,62 +90,53 @@
       animation: fromRight 1s ease-in-out 1s forwards;
       cursor: pointer;
       @include to(tablet-l) {
-        background: url($elements-chapter-2-scene-6-seed-right-back-off-990);
-        width: 220px;
-        height: 155px;
-      }
-      @include to(tablet-s) {
-        background: url($elements-chapter-2-scene-6-seed-right-back-off-640);
-        right: -2%;
+        background: url($elements-chapter-2-scene-6-semilla-derecha-atras-off-h360);
         width: 136px;
         height: 82px;
+      }
+      @include to(min-width) {
+        right: -2%;
       }
       &:hover {
         top: 30%;
         right: 1%;
-        width: 218px;
-        height: 167px;
+        width: 186px;
+        height: 132px;
         background: url($elements-chapter-2-scene-6-seed-right-back-on);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-seed-right-back-on-990);
-          width: 220px;
-          height: 155px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-seed-right-back-on-640);
-          right: -2%;
+          background: url($elements-chapter-2-scene-6-semilla-derecha-atras-on-h360);
           width: 136px;
           height: 82px;
+        }
+        @include to(min-width) {
+          right: -2%;
         }
       }
       &.clicked {
         top: 30%;
         right: 1%;
-        width: 218px;
-        height: 167px;
+        width: 186px;
+        height: 132px;
         background: url($elements-chapter-2-scene-6-seed-right-back-on);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-seed-right-back-on-990);
-          width: 220px;
-          height: 155px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-seed-right-back-on-640);
-          right: -2%;
+          background: url($elements-chapter-2-scene-6-semilla-derecha-atras-on-h360);
           width: 136px;
           height: 82px;
+        }
+        @include to(min-width) {
+          right: -2%;
         }
       }
     }
     &__seed-left-front {
       position: absolute;
-      bottom: 18%;
+      bottom: 12%;
       left: 4%;
       z-index: 3;
       width: 227px;
@@ -154,65 +149,38 @@
       animation: fromLeft 1s ease-in-out 1.5s forwards;
       cursor: pointer;
       @include to(tablet-l) {
-        background: url($elements-chapter-2-scene-6-seed-left-front-off-990);
-        width: 259px;
-        height: 156px;
-      }
-      @include to(tablet-s) {
-        background: url($elements-chapter-2-scene-6-seed-left-front-off-640);
+        background: url($elements-chapter-2-scene-6-semilla-izquierda-delante-off-h360);
         width: 163px;
         height: 90px;
       }
-      @include to(min-width) {
-        bottom: 8%;
-        left: 0;
-      }
       &:hover {
-        bottom: 18%;
+        bottom: 12%;
         left: 4%;
-        width: 255px;
-        height: 174px;
+        width: 227px;
+        height: 146px;
         background: url($elements-chapter-2-scene-6-seed-left-front-on);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-seed-left-front-on-990);
-          width: 259px;
-          height: 156px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-seed-left-front-on-640);
+          background: url($elements-chapter-2-scene-6-semilla-izquierda-delante-on-h360);
           width: 163px;
           height: 90px;
-        }
-        @include to(min-width) {
-          bottom: 8%;
-          left: 0;
         }
       }
       &.clicked {
-        bottom: 18%;
+        bottom: 12%;
         left: 4%;
-        width: 255px;
-        height: 174px;
+        width: 227px;
+        height: 146px;
         background: url($elements-chapter-2-scene-6-seed-left-front-on);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-seed-left-front-off-990);
-          width: 259px;
-          height: 156px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-seed-left-front-off-640);
+          background: url($elements-chapter-2-scene-6-semilla-izquierda-delante-on-h360);
           width: 163px;
           height: 90px;
-        }
-        @include to(min-width) {
-          bottom: 8%;
-          left: 0;
         }
       }
     }
@@ -230,36 +198,48 @@
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 2s forwards;
       cursor: pointer;
-      @include to(tablet-s) {
+      @include to(tablet-l) {
+        background: url($elements-chapter-2-scene-6-tallito-atras-off-h360);
         width: 104px;
         height: 75px;
       }
+      @include to(min-width) {
+        left: 32%;
+      }
       &:hover {
-        top: 39%;
-        left: 45%;
-        width: 162px;
-        height: 149px;
+        top: 40%;
+        left: 46%;
+        width: 121px;
+        height: 109px;
         background: url($elements-chapter-2-scene-6-stem-back-on);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(tablet-s) {
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-tallito-atras-on-h360);
           width: 104px;
           height: 75px;
         }
+        @include to(min-width) {
+          left: 32%;
+        }
       }
       &.clicked {
-        top: 39%;
-        left: 45%;
-        width: 162px;
-        height: 149px;
+        top: 40%;
+        left: 46%;
+        width: 121px;
+        height: 109px;
         background: url($elements-chapter-2-scene-6-stem-back-on);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(tablet-s) {
+        @include to(tablet-l) {
+          background: url($elements-chapter-2-scene-6-tallito-atras-on-h360);
           width: 104px;
           height: 75px;
+        }
+        @include to(min-width) {
+          left: 32%;
         }
       }
     }
@@ -278,51 +258,36 @@
       animation: fromRight 1s ease-in-out 2.5s forwards;
       cursor: pointer;
       @include to(tablet-l) {
-        background: url($elements-chapter-2-scene-6-stem-front-off-990);
-        width: 222px;
-        height: 198px;
-      }
-      @include to(tablet-s) {
-        background: url($elements-chapter-2-scene-6-stem-front-off-640);
+        background: url($elements-chapter-2-scene-6-tallito-delante-off-h360);
         width: 128px;
         height: 119px;
       }
       &:hover {
-        bottom: 8%;
-        right: 4%;
-        width: 223px;
-        height: 228px;
+        bottom: 10%;
+        right: 5%;
+        width: 173px;
+        height: 182px;
         background: url($elements-chapter-2-scene-6-stem-front-on);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-stem-front-on-990);
-          width: 222px;
-          height: 198px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-stem-front-on-640);
+          background: url($elements-chapter-2-scene-6-tallito-delante-on-h360);
           width: 128px;
           height: 119px;
         }
       }
       &.clicked {
-        bottom: 8%;
-        right: 4%;
-        width: 223px;
-        height: 228px;
+        bottom: 10%;
+        right: 5%;
+        width: 173px;
+        height: 182px;
         background: url($elements-chapter-2-scene-6-stem-front-on);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-stem-front-on-990);
-          width: 222px;
-          height: 198px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-stem-front-on-640);
+          background: url($elements-chapter-2-scene-6-tallito-delante-on-h360);
           width: 128px;
           height: 119px;
         }
@@ -342,12 +307,7 @@
       background-position: center;
       background-repeat: no-repeat;
       @include to(tablet-l) {
-        background: url($elements-chapter-2-scene-6-backpack-state-1-990);
-        width: 225px;
-        height: 251px;
-      }
-      @include to(tablet-s) {
-        background: url($elements-chapter-2-scene-6-backpack-state-1-640);
+        background: url($elements-chapter-2-scene-6-mochila-estado-1-h360);
         width: 140px;
         height: 158px;
       }
@@ -357,12 +317,7 @@
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-backpack-state-2-990);
-          width: 225px;
-          height: 251px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-backpack-state-2-640);
+          background: url($elements-chapter-2-scene-6-mochila-estado-2-h360);
           width: 140px;
           height: 158px;
         }
@@ -373,12 +328,7 @@
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-backpack-state-3-990);
-          width: 225px;
-          height: 251px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-backpack-state-3-640);
+          background: url($elements-chapter-2-scene-6-mochila-estado-3-h360);
           width: 140px;
           height: 158px;
         }
@@ -389,12 +339,7 @@
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-backpack-state-4-990);
-          width: 225px;
-          height: 251px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-backpack-state-4-640);
+          background: url($elements-chapter-2-scene-6-mochila-estado-4-h360);
           width: 140px;
           height: 158px;
         }
@@ -405,12 +350,7 @@
         background-position: center;
         background-repeat: no-repeat;
         @include to(tablet-l) {
-          background: url($elements-chapter-2-scene-6-backpack-state-5-990);
-          width: 225px;
-          height: 251px;
-        }
-        @include to(tablet-s) {
-          background: url($elements-chapter-2-scene-6-backpack-state-5-640);
+          background: url($elements-chapter-2-scene-6-mochila-estado-5-h360);
           width: 140px;
           height: 158px;
         }

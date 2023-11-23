@@ -34,18 +34,22 @@
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
       @include to(tablet-l) {
         right: -7%;
-        width: 450px;
-        height: 345px;
+        width: 300px;
+        height: 191px;
       }
       @include to(tablet-s) {
         right: -7%;
-        width: 323px;
-        height: 221px;
+        width: 254px;
+        height: 188px;
       }
       @include to(min-width) {
         right: -7%;
         width: 280px;
         height: 198px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 416px;
+        height: 407px;
       }
     }
     &__tucan {
@@ -62,16 +66,20 @@
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
       @include to(tablet-l) {
-        width: 399px;
-        height: 294px;
+        width: 332px;
+        height: 250px;
       }
       @include to(tablet-s) {
-        width: 337px;
-        height: 225px;
+        width: 280px;
+        height: 255px;
       }
       @include to(min-width) {
         width: 297px;
         height: 208px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 576px;
+        height: 467px;
       }
       .fruits {
         position: absolute;
@@ -87,18 +95,23 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 17s forwards;
         @include to(tablet-l) {
-          right: -72%;
-          width: 327px;
-          height: 208px;
+          right: -60%;
+          width: 224px;
+          height: 150px;
         }
         @include to(tablet-s) {
-          right: -54%;
-          width: 242px;
-          height: 144px;
+          width: 187px;
+          height: 150px;
         }
         @include to(min-width) {
           width: 194px;
           height: 136px;
+        }
+        @media only screen and (min-height: 600px) {
+          top: -4%;
+          right: -35%;
+          width: 270px;
+          height: 254px;
         }
       }
     }
