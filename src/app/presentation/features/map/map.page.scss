@@ -32,9 +32,23 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 165px;
+        height: 67px;
+      }
+      @include to(tablet-s) {
+        width: 138px;
+        height: 67px;
+      }
       @include to(min-width) {
         width: 140px;
         height: 98px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 2%;
+        left: 8%;
+        width: 239px;
+        height: 175px;
       }
       .textbox {
         position: absolute;
@@ -52,9 +66,21 @@
         background-repeat: no-repeat;
         opacity: 0;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
-        @include to(min-width) {
+        @include to(tablet-l) {
+          left: 82%;
           width: 210px;
           height: 100px;
+        }
+        @include to(min-width) {
+          left: 100%;
+          width: 210px;
+          height: 100px;
+        }
+        @media only screen and (min-height: 600px) {
+          top: 6%;
+          left: 100%;
+          width: 287px;
+          height: 119px;
         }
         .text {
           color: $color-primary-white;
@@ -64,10 +90,15 @@
           line-height: 25px;
           text-align: center;
           padding: 0 0 0 20px;
-          @include to(min-width) {
+          @include to(tablet-l) {
             font-size: 16px;
             line-height: 20px;
             padding: 0 0 0 14px;
+          }
+          @media only screen and (min-height: 600px) {
+            font-size: 24px;
+            line-height: 25px;
+            padding: 0 0 0 20px;
           }
         }
       }
@@ -88,9 +119,21 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         cursor: pointer;
+        @include to(tablet-l) {
+          width: 141px;
+          height: 121px;
+        }
+        @include to(tablet-s) {
+          width: 138px;
+          height: 67px;
+        }
         @include to(min-width) {
-          width: 140px;
-          height: 133px;
+          width: 113px;
+          height: 106px;
+        }
+        @media only screen and (min-height: 600px) {
+          width: 206px;
+          height: 195px;
         }
       }
       &__tortuga1 {
@@ -108,20 +151,37 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(tablet-l) {
+            width: 76px;
+            height: 68px;
+          }
+          @include to(tablet-s) {
+            width: 63px;
+            height: 66px;
+          }
           @include to(min-width) {
             top: 0;
             left: 40%;
             width: 70px;
             height: 80px;
           }
+          @media only screen and (min-height: 600px) {
+            top: -44%;
+            left: 30%;
+            width: 116px;
+            height: 124px;
+          }
         }
       }
     }
     &__chapter2 {
       position: absolute;
-      bottom: 12%;
+      bottom: 16%;
       left: 30%;
       z-index: 3;
+      @media only screen and (min-height: 600px) {
+        bottom: 8%;
+      }
       &__tucan {
         width: 221px;
         height: 225px;
@@ -132,18 +192,42 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         cursor: pointer;
+        @include to(tablet-l) {
+          width: 153px;
+          height: 125px;
+        }
+        @include to(tablet-s) {
+          width: 117px;
+          height: 116px;
+        }
         @include to(min-width) {
           width: 132px;
           height: 135px;
+        }
+        @media only screen and (min-height: 600px) {
+          width: 221px;
+          height: 225px;
         }
         &.finished {
           background: url($elements-map-btn-chapter2-on);
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
+          @include to(tablet-l) {
+            width: 153px;
+            height: 125px;
+          }
+          @include to(tablet-s) {
+            width: 117px;
+            height: 116px;
+          }
           @include to(min-width) {
             width: 132px;
             height: 135px;
+          }
+          @media only screen and (min-height: 600px) {
+            width: 221px;
+            height: 225px;
           }
         }
       }
@@ -162,11 +246,25 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(tablet-l) {
+            width: 76px;
+            height: 68px;
+          }
+          @include to(tablet-s) {
+            width: 63px;
+            height: 66px;
+          }
           @include to(min-width) {
             top: -48%;
             left: 22%;
             width: 70px;
             height: 80px;
+          }
+          @media only screen and (min-height: 600px) {
+            top: -44%;
+            left: 30%;
+            width: 116px;
+            height: 124px;
           }
         }
       }
@@ -190,20 +288,44 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         cursor: pointer;
+        @include to(tablet-l) {
+          width: 144px;
+          height: 113px;
+        }
+        @include to(tablet-s) {
+          width: 118px;
+          height: 104px;
+        }
         @include to(min-width) {
           top: 32%;
           right: 36%;
           width: 120px;
           height: 107px;
         }
+        @media only screen and (min-height: 600px) {
+          width: 212px;
+          height: 189px;
+        }
         &.finished {
           background: url($elements-map-btn-chapter3-on);
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
+          @include to(tablet-l) {
+            width: 144px;
+            height: 113px;
+          }
+          @include to(tablet-s) {
+            width: 118px;
+            height: 104px;
+          }
           @include to(min-width) {
             width: 120px;
             height: 107px;
+          }
+          @media only screen and (min-height: 600px) {
+            width: 212px;
+            height: 189px;
           }
         }
       }
@@ -222,22 +344,37 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(tablet-l) {
+            width: 81px;
+            height: 61px;
+          }
+          @include to(tablet-s) {
+            width: 60px;
+            height: 60px;
+          }
           @include to(min-width) {
             top: 5%;
             left: -54%;
             width: 80px;
             height: 75px;
           }
+          @media only screen and (min-height: 600px) {
+            top: 34px;
+            left: -100px;
+            width: 116px;
+            height: 124px;
+          }
         }
       }
     }
     &__chapter4 {
       position: absolute;
-      bottom: 12%;
-      right: 16%;
+      bottom: 16%;
+      right: 22%;
       z-index: 3;
-      @include to(min-width) {
-        bottom: 16%;
+      @media only screen and (min-height: 600px) {
+        bottom: 8%;
+        right: 20%;
       }
       &__danta {
         width: 206px;
@@ -249,18 +386,42 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         cursor: pointer;
+        @include to(tablet-l) {
+          width: 146px;
+          height: 130px;
+        }
+        @include to(tablet-s) {
+          width: 123px;
+          height: 127px;
+        }
         @include to(min-width) {
           width: 120px;
           height: 133px;
+        }
+        @media only screen and (min-height: 600px) {
+          width: 206px;
+          height: 228px;
         }
         &.finished {
           background: url($elements-map-btn-chapter4-on);
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
+          @include to(tablet-l) {
+            width: 146px;
+            height: 130px;
+          }
+          @include to(tablet-s) {
+            width: 123px;
+            height: 127px;
+          }
           @include to(min-width) {
             width: 120px;
             height: 133px;
+          }
+          @media only screen and (min-height: 600px) {
+            width: 206px;
+            height: 228px;
           }
         }
       }
@@ -283,6 +444,14 @@
             top: -38%;
             left: 30%;
           }
+          @include to(tablet-l) {
+            width: 76px;
+            height: 68px;
+          }
+          @include to(tablet-s) {
+            width: 63px;
+            height: 66px;
+          }
           @include to(min-width) {
             background: url($elements-map-turtle-left);
             background-size: contain;
@@ -292,6 +461,12 @@
             left: 95%;
             width: 70px;
             height: 80px;
+          }
+          @media only screen and (min-height: 600px) {
+            top: -44%;
+            left: 24%;
+            width: 116px;
+            height: 124px;
           }
         }
       }
@@ -315,9 +490,21 @@
         background-repeat: no-repeat;
         animation: appearFullOpacity 1s ease-in-out 1s forwards;
         pointer-events: none;
+        @include to(tablet-l) {
+          width: 152px;
+          height: 139px;
+        }
+        @include to(tablet-s) {
+          width: 130px;
+          height: 118px;
+        }
         @include to(min-width) {
           width: 130px;
           height: 130px;
+        }
+        @media only screen and (min-height: 600px) {
+          width: 215px;
+          height: 214px;
         }
         &.enabled {
           pointer-events: all;
@@ -326,9 +513,21 @@
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
+          @include to(tablet-l) {
+            width: 152px;
+            height: 139px;
+          }
+          @include to(tablet-s) {
+            width: 130px;
+            height: 118px;
+          }
           @include to(min-width) {
             width: 130px;
             height: 130px;
+          }
+          @media only screen and (min-height: 600px) {
+            width: 215px;
+            height: 214px;
           }
         }
       }
@@ -347,9 +546,23 @@
           background-repeat: no-repeat;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 1s forwards;
+          @include to(tablet-l) {
+            width: 76px;
+            height: 68px;
+          }
+          @include to(tablet-s) {
+            width: 63px;
+            height: 66px;
+          }
           @include to(min-width) {
             width: 70px;
             height: 80px;
+          }
+          @media only screen and (min-height: 600px) {
+            top: -86px;
+            left: 50px;
+            width: 116px;
+            height: 124px;
           }
         }
       }
@@ -377,7 +590,7 @@
         margin: 12px 0px;
         padding: 0 60px;
       }
-      @include to(min-width) {
+      @include to(tablet-l) {
         height: 62px;
         p {
           font-size: 20px;
