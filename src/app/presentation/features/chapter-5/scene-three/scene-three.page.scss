@@ -36,11 +36,27 @@
         top: 6%;
         left: 30%;
       }
+      @include to(tablet-l) {
+        top: 0;
+        left: 12%;
+        width: 108px;
+        height: 66px;
+      }
+      @include to(tablet-s) {
+        width: 91px;
+        height: 66px;
+      }
       @include to(min-width) {
         top: -2%;
-        left: 10%;
+        left: 14%;
         width: 123px;
         height: 102px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 0%;
+        left: 18%;
+        width: 166px;
+        height: 138px;
       }
     }
     &__left-after-turtle {
@@ -56,9 +72,25 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        top: 6%;
+        left: 0;
+        width: 134px;
+        height: 110px;
+      }
+      @include to(tablet-s) {
+        width: 106px;
+        height: 74px;
+      }
       @include to(min-width) {
         width: 102px;
         height: 78px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 12%;
+        left: -1%;
+        width: 214px;
+        height: 168px;
       }
     }
     &__right-before-turtle {
@@ -74,9 +106,23 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 164px;
+        height: 104px;
+      }
+      @include to(tablet-s) {
+        width: 138px;
+        height: 104px;
+      }
       @include to(min-width) {
         width: 89px;
         height: 72px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 16%;
+        right: 10%;
+        width: 247px;
+        height: 202px;
       }
     }
     &__left-before-turtle {
@@ -92,9 +138,23 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 127px;
+        height: 74px;
+      }
+      @include to(tablet-s) {
+        width: 113px;
+        height: 110px;
+      }
       @include to(min-width) {
         width: 110px;
         height: 111px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 24%;
+        left: 14%;
+        width: 202px;
+        height: 176px;
       }
     }
     &__main-turtle {
@@ -110,9 +170,23 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
+      @include to(tablet-l) {
+        width: 237px;
+        height: 153px;
+      }
+      @include to(tablet-s) {
+        width: 198px;
+        height: 153px;
+      }
       @include to(min-width) {
         width: 197px;
         height: 162px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 12%;
+        right: 6%;
+        width: 333px;
+        height: 284px;
       }
     }
     &__subtitles {

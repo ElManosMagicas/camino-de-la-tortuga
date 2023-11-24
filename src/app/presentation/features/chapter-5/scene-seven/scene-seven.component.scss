@@ -9,7 +9,7 @@
 .scene-seven {
   width: 100vw;
   height: 100%;
-  background-image: url($bg-chapter-1-scene-1);
+  background-image: url($bg-chapter-1-scene-1-reduced);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,42 +19,32 @@
     position: relative;
     width: 100%;
     height: 100%;
-    &__back-grass {
-      position: absolute;
-      top: 0;
-      z-index: 1;
-      width: 100%;
-      height: 622px;
-      opacity: 0;
-      background: url($gifs-chapter-1-scene-1-7-back-grass);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: fromTop 1s ease-in-out 0s forwards;
-      @include to(laptop-m) {
-        height: 418px;
-      }
-      @include to(laptop) {
-        height: 328px;
-      }
-      @include to(min-width) {
-        height: 200px;
-      }
-    }
     &__bush-rock {
       position: absolute;
-      top: 44%;
+      top: 38%;
       z-index: 2;
       width: 652px;
       height: 333px;
       opacity: 0;
-      background: url($gifs-chapter-1-scene-1-7-bushes-with-rock);
+      background: url($gifs-chapter-1-scene-1-7-bushes-with-rock-reduced);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0.75s forwards;
       @include to(laptop-m) {
-        top: 26%;
+        top: 30%;
+      }
+      @include to(laptop) {
+        width: 652px;
+        height: 333px;
+      }
+      @include to(tablet-l) {
+        width: 502px;
+        height: 143px;
+      }
+      @include to(tablet-s) {
+        width: 417px;
+        height: 142px;
       }
       @include to(min-width) {
         width: 358px;
@@ -64,7 +54,7 @@
     &__turtle {
       position: absolute;
       bottom: 20%;
-      right: 20%;
+      right: 24%;
       z-index: 3;
       width: 369px;
       height: 252px;
@@ -74,6 +64,19 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 2.75s forwards;
+      @include to(laptop-m) {
+        bottom: 28%;
+        right: 10%;
+      }
+      @include to(tablet-l) {
+        bottom: 16%;
+        width: 264px;
+        height: 188px;
+      }
+      @include to(tablet-s) {
+        width: 235px;
+        height: 167px;
+      }
       @include to(min-width) {
         width: 223px;
         height: 140px;
@@ -84,21 +87,21 @@
       bottom: 0px;
       z-index: 4;
       width: 100%;
-      height: 320px;
+      height: 310px;
       opacity: 0;
-      background: url($gifs-chapter-1-scene-1-7-front-grass);
+      background: url($elements-arbusto-adelante-1980);
       background-size: cover;
-      background-position: center;
+      background-position: center bottom;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1.75s forwards;
-      @include to(laptop-m) {
-        height: 226px;
+      @include to(tablet-l) {
+        height: 166px;
       }
-      @include to(laptop) {
-        height: 179px;
+      @include to(tablet-s) {
+        height: 140px;
       }
       @include to(min-width) {
-        height: 106px;
+        height: 108px;
       }
     }
     &__introduction {
@@ -113,7 +116,7 @@
       justify-content: center;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 3s forwards;
-      @include to(min-width) {
+      @include to(tablet-l) {
         top: 6%;
       }
       &__text {
@@ -125,7 +128,7 @@
         border-radius: 20px;
         padding: 24px;
         opacity: 0.8;
-        @include to(min-width) {
+        @include to(tablet-l) {
           border-radius: 20px;
           padding: 8px;
         }
@@ -138,7 +141,7 @@
           text-align: center;
           margin: 12px 0;
           padding: 0 60px;
-          @include to(min-width) {
+          @include to(tablet-l) {
             font-size: 14px;
             line-height: 18px;
             padding: 0;
@@ -159,7 +162,7 @@
       gap: 24px;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 4s forwards;
-      @include to(min-width) {
+      @include to(tablet-l) {
         bottom: 6%;
       }
       &__btn {
@@ -173,7 +176,7 @@
         cursor: pointer;
         font-family: $lato-bold;
         font-size: 18px;
-        @include to(min-width) {
+        @include to(tablet-l) {
           font-size: 14px;
         }
         &:focus {

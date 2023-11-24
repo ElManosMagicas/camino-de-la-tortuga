@@ -32,6 +32,14 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        width: 116px;
+        height: 79px;
+      }
+      @include to(tablet-s) {
+        width: 98px;
+        height: 79px;
+      }
       @include to(min-width) {
         width: 100px;
         height: 71px;
@@ -50,6 +58,14 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        width: 124px;
+        height: 87px;
+      }
+      @include to(tablet-s) {
+        width: 104px;
+        height: 87px;
+      }
       @include to(min-width) {
         width: 112px;
         height: 74px;
@@ -68,6 +84,14 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 152px;
+        height: 110px;
+      }
+      @include to(tablet-s) {
+        width: 127px;
+        height: 110px;
+      }
       @include to(min-width) {
         width: 125px;
         height: 98px;
@@ -86,6 +110,14 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 136px;
+        height: 131px;
+      }
+      @include to(tablet-s) {
+        width: 114px;
+        height: 131px;
+      }
       @include to(min-width) {
         width: 120px;
         height: 113px;
@@ -104,6 +136,14 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
+      @include to(tablet-l) {
+        width: 175px;
+        height: 123px;
+      }
+      @include to(tablet-s) {
+        width: 146px;
+        height: 123px;
+      }
       @include to(min-width) {
         width: 146px;
         height: 108px;
@@ -127,6 +167,9 @@
       animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
       &:focus {
         background-color: #0056b3;
+      }
+      @include to(tablet-l) {
+        bottom: 8%;
       }
     }
     &__subtitles {
