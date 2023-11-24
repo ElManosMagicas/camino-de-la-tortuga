@@ -30,10 +30,24 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        bottom: 28%;
+        width: 159px;
+        height: 91px;
+      }
+      @include to(tablet-s) {
+        width: 133px;
+        height: 93px;
+      }
       @include to(min-width) {
         bottom: 28%;
         width: 134px;
         height: 94px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 16%;
+        width: 210px;
+        height: 170px;
       }
     }
     &__danta {
@@ -47,10 +61,24 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        top: 32%;
+        width: 226px;
+        height: 140px;
+      }
+      @include to(tablet-s) {
+        width: 189px;
+        height: 140px;
+      }
       @include to(min-width) {
         top: 28%;
         width: 222px;
         height: 155px;
+      }
+      @media only screen and (min-height: 600px) {
+        right: 8%;
+        width: 388px;
+        height: 306px;
       }
     }
     &__subtitles {

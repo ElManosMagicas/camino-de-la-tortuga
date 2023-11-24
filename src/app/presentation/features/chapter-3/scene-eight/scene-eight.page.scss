@@ -114,6 +114,7 @@
         bottom: 4%;
       }
       &__top {
+        position: relative;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -318,8 +319,31 @@
           }
         }
         &__piece-5 {
+          position: relative;
           opacity: 0;
           animation: appearFullOpacity 1s ease-in-out 0s forwards;
+          .hand {
+            position: absolute;
+            top: 52%;
+            right: 14%;
+            z-index: 4;
+            width: 90px;
+            height: 90px;
+            opacity: 0;
+            background: url($gifs-chapter-3-scene-1-hand);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: fadeInOut 6s forwards;
+            @include to(tablet-l) {
+              width: 60px;
+              height: 47px;
+            }
+            @media only screen and (min-height: 600px) {
+              width: 90px;
+              height: 90px;
+            }
+          }
           &.pos1 {
             width: 205px;
             height: 203px;

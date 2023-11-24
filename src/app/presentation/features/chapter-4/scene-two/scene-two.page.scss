@@ -30,10 +30,25 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        bottom: 41%;
+        width: 155px;
+        height: 188px;
+      }
+      @include to(tablet-s) {
+        width: 130px;
+        height: 188px;
+      }
       @include to(min-width) {
         bottom: 40%;
         width: 107px;
         height: 160px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 32%;
+        left: 20%;
+        width: 192px;
+        height: 340px;
       }
     }
     &__danta-frailejon {
@@ -47,9 +62,23 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        width: 129px;
+        height: 175px;
+      }
+      @include to(tablet-s) {
+        width: 108px;
+        height: 175px;
+      }
       @include to(min-width) {
         width: 83px;
         height: 156px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 11%;
+        right: 20%;
+        width: 154px;
+        height: 324px;
       }
     }
     &__fog {
@@ -78,10 +107,25 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        bottom: 28%;
+        width: 160px;
+        height: 82px;
+      }
+      @include to(tablet-s) {
+        width: 135px;
+        height: 83px;
+      }
       @include to(min-width) {
         bottom: 28%;
         width: 135px;
         height: 80px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 18%;
+        left: 22%;
+        width: 249px;
+        height: 185px;
       }
     }
     &__danta {
@@ -95,10 +139,25 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        top: 46%;
+        width: 151px;
+        height: 80px;
+      }
+      @include to(tablet-s) {
+        width: 127px;
+        height: 81px;
+      }
       @include to(min-width) {
         right: 20%;
         width: 149px;
         height: 90px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 38%;
+        right: 24%;
+        width: 228px;
+        height: 225px;
       }
     }
     &__subtitles {
