@@ -8,7 +8,7 @@
 
 .scene-nine {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url($bg-chapter-1-scene-9);
   background-size: cover;
   background-position: center;
@@ -17,7 +17,7 @@
   animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
   &__container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
     &__turtle {
       position: absolute;
@@ -32,15 +32,28 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1.5s forwards;
+      @include to(tablet-l) {
+        bottom: 26%;
+        width: 280px;
+        height: 146px;
+      }
+      @include to(tablet-s) {
+        width: 237px;
+        height: 147px;
+      }
       @include to(min-width) {
         width: 190px;
         height: 125px;
       }
+      @media only screen and (min-height: 600px) {
+        width: 320px;
+        height: 206px;
+      }
     }
     &__right-bush {
       position: absolute;
-      bottom: 14%;
-      right: 0px;
+      bottom: 9%;
+      right: 5%;
       z-index: 2;
       width: 276px;
       height: 485px;
@@ -50,16 +63,30 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0s forwards;
+      @include to(laptop) {
+        right: 0;
+      }
+      @include to(tablet-l) {
+        width: 280px;
+        height: 224px;
+      }
+      @include to(tablet-s) {
+        width: 233px;
+        height: 224px;
+      }
       @include to(min-width) {
-        bottom: 2%;
         width: 180px;
         height: 224px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 277px;
+        height: 370px;
       }
     }
     &__left-bush {
       position: absolute;
-      bottom: 19%;
-      left: 2%;
+      bottom: 18%;
+      left: 5%;
       z-index: 3;
       width: 285px;
       height: 340px;
@@ -69,14 +96,32 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 0.5s forwards;
+      @include to(laptop) {
+        left: 0;
+      }
+      @include to(tablet-l) {
+        bottom: 28%;
+        width: 265px;
+        height: 163px;
+      }
+      @include to(tablet-s) {
+        width: 221px;
+        height: 172px;
+      }
       @include to(min-width) {
         width: 162px;
         height: 164px;
       }
+      @media only screen and (min-height: 600px) {
+        bottom: 24%;
+        left: 1%;
+        width: 250px;
+        height: 271px;
+      }
     }
     &__front-grass {
       position: absolute;
-      bottom: 6%;
+      bottom: 10%;
       left: 5%;
       z-index: 4;
       width: 934px;
@@ -87,16 +132,35 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1s forwards;
+      @include to(laptop) {
+        bottom: 0;
+        left: 0;
+      }
+      @include to(tablet-l) {
+        bottom: 6%;
+        left: -10%;
+        width: 893px;
+        height: 144px;
+      }
+      @include to(tablet-s) {
+        width: 743px;
+        height: 126px;
+      }
       @include to(min-width) {
-        bottom: -5%;
-        left: -9%;
+        left: -7%;
         width: 570px;
         height: 110px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 6%;
+        left: -4%;
+        width: 890px;
+        height: 185px;
       }
     }
     &__cuyo {
       position: absolute;
-      top: 39%;
+      top: 50%;
       left: 20%;
       z-index: 1;
       width: 250px;
@@ -107,9 +171,29 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 2s forwards;
+      @include to(laptop) {
+        top: 39%;
+      }
+      @include to(tablet-l) {
+        top: 36%;
+        left: 30%;
+        width: 189px;
+        height: 144px;
+      }
+      @include to(tablet-s) {
+        width: 165px;
+        height: 150px;
+      }
       @include to(min-width) {
+        top: 40%;
         width: 148px;
         height: 114px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 42%;
+        left: 24%;
+        width: 238px;
+        height: 183px;
       }
     }
     &__subtitles {

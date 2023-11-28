@@ -8,8 +8,8 @@
 
 .scene-twelve {
   width: 100vw;
-  height: 100vh;
-  background-image: url($bg-chapter-1-scene-12-new);
+  height: 100%;
+  background-image: url($elements-cap1-esc12-fondo);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,44 +17,72 @@
   animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
   &__container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
     &__cuy {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 10%;
+      left: -4%;
       z-index: 2;
-      width: 380px;
-      height: 629px;
-      background: url($character-chapter-1-scene-12-cuy);
+      width: 445px;
+      height: 729px;
+      opacity: 0;
+      background: url($character-chapter-1-scene-12-cuy-red);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      animation: fromLeft 1s ease-in-out 0.5s forwards;
+      @include to(tablet-l) {
+        left: -4%;
+        width: 278px;
+        height: 339px;
+      }
+      @include to(tablet-s) {
+        left: -2%;
+        width: 234px;
+        height: 340px;
+      }
       @include to(min-width) {
         left: -3%;
         width: 237px;
         height: 344px;
       }
+      @media only screen and (min-height: 600px) {
+        width: 445px;
+        height: 729px;
+      }
     }
     &__turtle {
       position: absolute;
-      bottom: 0px;
-      right: 0px;
-      z-index: 4;
+      bottom: -1%;
+      right: -4%;
+      z-index: 2;
       width: 465px;
       height: 588px;
-      background: url($character-chapter-1-scene-11-12-turtle);
+      opacity: 0;
+      background: url($character-chapter-1-scene-11-12-turtle-red);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      animation: fromRight 1s ease-in-out 1.5s forwards;
+      @include to(tablet-l) {
+        right: -3%;
+        width: 287px;
+        height: 300px;
+      }
+      @include to(tablet-s) {
+        right: -1%;
+        width: 239px;
+        height: 300px;
+      }
       @include to(min-width) {
-        right: -5%;
+        right: -6%;
         width: 276px;
         height: 274px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 465px;
+        height: 588px;
       }
     }
     &__subtitles {

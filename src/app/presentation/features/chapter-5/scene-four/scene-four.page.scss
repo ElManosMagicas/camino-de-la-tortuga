@@ -8,7 +8,7 @@
 
 .scene-four {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url($bg-chapter-5-scene-4-without-river);
   background-size: cover;
   background-position: center;
@@ -23,7 +23,7 @@
   &__container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     &__subtitles {
       position: absolute;
       top: 2%;
@@ -47,7 +47,7 @@
         margin: 12px 0px;
         padding: 0 60px;
       }
-      @include to(min-width) {
+      @include to(tablet-l) {
         p {
           font-size: 20px;
           line-height: 24px;
@@ -88,6 +88,14 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 2s forwards;
+      @include to(tablet-l) {
+        width: 153px;
+        height: 153px;
+      }
+      @include to(tablet-s) {
+        width: 108px;
+        height: 144px;
+      }
       @include to(min-width) {
         width: 148px;
         height: 140px;
@@ -96,13 +104,23 @@
     &__pieces {
       position: absolute;
       bottom: 4%;
-      right: 6%;
+      right: 30%;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
       gap: 12px;
       height: 176px;
+      @include to(laptop-m) {
+        right: 14%;
+      }
+      @include to(laptop) {
+        right: 6%;
+      }
+      @include to(tablet-l) {
+        height: 80px;
+        right: 30%;
+      }
       @include to(min-width) {
         height: 70px;
         right: 10%;
@@ -117,6 +135,14 @@
         opacity: 0;
         animation: appearFullOpacity 1s ease-in-out 4s forwards;
         cursor: pointer;
+        @include to(tablet-l) {
+          width: 131px;
+          height: 105px;
+        }
+        @include to(tablet-s) {
+          width: 116px;
+          height: 105px;
+        }
         @include to(min-width) {
           width: 110px;
           height: 90px;
@@ -126,6 +152,14 @@
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
+          @include to(tablet-l) {
+            width: 131px;
+            height: 105px;
+          }
+          @include to(tablet-s) {
+            width: 116px;
+            height: 105px;
+          }
           @include to(min-width) {
             width: 110px;
             height: 90px;
@@ -145,6 +179,14 @@
         opacity: 0;
         animation: appearFullOpacity 1s ease-in-out 4.5s forwards;
         cursor: pointer;
+        @include to(tablet-l) {
+          width: 131px;
+          height: 105px;
+        }
+        @include to(tablet-s) {
+          width: 116px;
+          height: 105px;
+        }
         @include to(min-width) {
           width: 108px;
           height: 91px;
@@ -154,6 +196,14 @@
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
+          @include to(tablet-l) {
+            width: 131px;
+            height: 105px;
+          }
+          @include to(tablet-s) {
+            width: 116px;
+            height: 105px;
+          }
           @include to(min-width) {
             width: 108px;
             height: 91px;
@@ -161,6 +211,31 @@
         }
         &.completed {
           display: none;
+        }
+        .hand {
+          position: absolute;
+          top: 52%;
+          right: 14%;
+          z-index: 4;
+          width: 90px;
+          height: 90px;
+          opacity: 0;
+          background: url($gifs-chapter-3-scene-1-hand);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          animation: fadeInOut 5s forwards;
+          animation-delay: 6s;
+          @include to(tablet-l) {
+            top: 40%;
+            right: 35%;
+            width: 60px;
+            height: 47px;
+          }
+          @media only screen and (min-height: 600px) {
+            width: 90px;
+            height: 90px;
+          }
         }
       }
       &__sun {
@@ -173,6 +248,14 @@
         opacity: 0;
         animation: appearFullOpacity 1s ease-in-out 5s forwards;
         cursor: pointer;
+        @include to(tablet-l) {
+          width: 131px;
+          height: 105px;
+        }
+        @include to(tablet-s) {
+          width: 116px;
+          height: 105px;
+        }
         @include to(min-width) {
           width: 110px;
           height: 91px;
@@ -182,6 +265,14 @@
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
+          @include to(tablet-l) {
+            width: 131px;
+            height: 105px;
+          }
+          @include to(tablet-s) {
+            width: 116px;
+            height: 105px;
+          }
           @include to(min-width) {
             width: 110px;
             height: 91px;
@@ -205,6 +296,14 @@
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
       cursor: pointer;
+      @include to(tablet-l) {
+        width: 84px;
+        height: 66px;
+      }
+      @include to(tablet-s) {
+        width: 70px;
+        height: 66px;
+      }
       @include to(min-width) {
         width: 78px;
         height: 65px;
@@ -218,6 +317,14 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        @include to(tablet-l) {
+          width: 84px;
+          height: 66px;
+        }
+        @include to(tablet-s) {
+          width: 70px;
+          height: 66px;
+        }
         @include to(min-width) {
           width: 78px;
           height: 65px;
@@ -237,8 +344,12 @@
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
       cursor: pointer;
-      @include to(min-width) {
-        width: 91px;
+      @include to(tablet-l) {
+        width: 110px;
+        height: 72px;
+      }
+      @include to(tablet-s) {
+        width: 92px;
         height: 72px;
       }
       &.disabled {
@@ -250,8 +361,12 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
-        @include to(min-width) {
-          width: 91px;
+        @include to(tablet-l) {
+          width: 110px;
+          height: 72px;
+        }
+        @include to(tablet-s) {
+          width: 92px;
           height: 72px;
         }
       }
@@ -270,6 +385,15 @@
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
       cursor: pointer;
+      @include to(tablet-l) {
+        top: 38%;
+        width: 74px;
+        height: 53px;
+      }
+      @include to(tablet-s) {
+        width: 61px;
+        height: 53px;
+      }
       @include to(min-width) {
         top: 42%;
         width: 66px;
@@ -280,6 +404,30 @@
       }
       &.dottedClicked {
         display: none;
+      }
+      .hand {
+        position: absolute;
+        top: 52%;
+        right: 14%;
+        z-index: 4;
+        width: 90px;
+        height: 90px;
+        opacity: 0;
+        background: url($gifs-chapter-3-scene-1-hand);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: fadeInOut 5s forwards;
+        animation-delay: 11s;
+        @include to(tablet-l) {
+          top: 32%;
+          width: 60px;
+          height: 47px;
+        }
+        @media only screen and (min-height: 600px) {
+          width: 90px;
+          height: 90px;
+        }
       }
     }
     &__arrows {

@@ -8,7 +8,7 @@
 
 .scene-six {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url($bg-chapter-3-scene-3-4-5-6-7);
   background-size: cover;
   background-position: center;
@@ -18,7 +18,7 @@
   &__container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     &__log {
       position: absolute;
       top: 0px;
@@ -30,16 +30,28 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        width: 252px;
+        height: 245px;
+      }
+      @include to(tablet-s) {
+        width: 240px;
+        height: 240px;
+      }
       @include to(min-width) {
         right: -5%;
         width: 334px;
         height: 234px;
       }
+      @media only screen and (min-height: 600px) {
+        width: 365px;
+        height: 356px;
+      }
     }
     &__snake {
       position: absolute;
-      top: 26%;
-      right: 21%;
+      top: 24%;
+      right: 18%;
       z-index: 1;
       width: 340px;
       height: 333px;
@@ -47,16 +59,36 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(laptop) {
+        top: 30%;
+        right: 20%;
+      }
+      @include to(tablet-l) {
+        right: 9%;
+        width: 220px;
+        height: 166px;
+      }
+      @include to(tablet-s) {
+        width: 182px;
+        height: 162px;
+      }
       @include to(min-width) {
+        top: 26%;
         right: 14%;
         width: 187px;
         height: 170px;
       }
+      @media only screen and (min-height: 600px) {
+        top: 10%;
+        right: 14%;
+        width: 343px;
+        height: 340px;
+      }
     }
     &__turtle {
       position: absolute;
-      bottom: 2%;
-      left: 0px;
+      bottom: 10%;
+      left: 2%;
       z-index: 2;
       width: 304px;
       height: 312px;
@@ -64,29 +96,52 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        width: 166px;
+        height: 183px;
+      }
       @include to(min-width) {
-        bottom: -5%;
-        left: -1%;
+        left: -3%;
         width: 194px;
         height: 168px;
       }
-    }
-    &__globe {
-      position: absolute;
-      top: 8%;
-      left: 8%;
-      z-index: 3;
-      width: 269px;
-      height: 344px;
-      background: url($elements-chapter-3-scene-6-river-globe);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0;
-      animation: appearFullOpacity 1s ease-in-out 7s forwards;
-      @include to(min-width) {
-        width: 155px;
-        height: 160px;
+      @media only screen and (min-height: 600px) {
+        width: 307px;
+        height: 353px;
+      }
+      .globe {
+        position: absolute;
+        top: -109%;
+        left: 34%;
+        z-index: 3;
+        width: 269px;
+        height: 344px;
+        background: url($elements-chapter-3-scene-6-river-globe);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        animation: appearFullOpacity 1s ease-in-out 7s forwards;
+        @include to(tablet-l) {
+          top: -72%;
+          width: 175px;
+          height: 141px;
+        }
+        @include to(tablet-s) {
+          width: 178px;
+          height: 162px;
+        }
+        @include to(min-width) {
+          top: -100%;
+          width: 155px;
+          height: 160px;
+        }
+        @media only screen and (min-height: 600px) {
+          top: -53%;
+          left: 58%;
+          width: 160px;
+          height: 204px;
+        }
       }
     }
     &__subtitles {

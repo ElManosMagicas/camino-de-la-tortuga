@@ -15,6 +15,8 @@ import { ToggleSoundButtonComponent } from './components/toggle-sound-button/tog
 import { ConfigurationComponent } from './components/configuration/configuration.component';
 import { FormsModule } from '@angular/forms';
 import { ToggleSubtitlesButtonComponent } from './components/toggle-subtitles-button/toggle-subtitles-button.component';
+import { RotateDeviceComponent } from './components/rotate-device/rotate-device.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 const PIPES = [];
 
@@ -32,6 +34,8 @@ const COMPONENTS = [
   ToggleSoundButtonComponent,
   ConfigurationComponent,
   ToggleSubtitlesButtonComponent,
+  RotateDeviceComponent,
+  LoaderComponent,
 ];
 
 @NgModule({

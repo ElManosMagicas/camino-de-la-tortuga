@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +7,7 @@ import { appEffects, appReducers } from './domain/store/index';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppInitializerService } from './services/app-initializer.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,15 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
       maxAge: 25,
     }),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (appInitializer: AppInitializerService) =>
+        appInitializer.initializeApp(),
+      multi: true,
+      deps: [AppInitializerService],
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

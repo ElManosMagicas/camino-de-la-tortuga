@@ -8,7 +8,7 @@
 
 .scene-two {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url($bg-chapter-3-scene-1-2);
   background-size: cover;
   background-position: center;
@@ -18,7 +18,7 @@
   &__container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     &__turtle {
       position: absolute;
       bottom: 16%;
@@ -30,9 +30,23 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include to(tablet-l) {
+        bottom: 20%;
+        width: 155px;
+        height: 137px;
+      }
+      @include to(tablet-s) {
+        width: 127px;
+        height: 134px;
+      }
       @include to(min-width) {
         width: 135px;
         height: 120px;
+      }
+      @media only screen and (min-height: 600px) {
+        left: 16%;
+        width: 228px;
+        height: 225px;
       }
     }
     &__log {
@@ -48,15 +62,27 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        width: 214px;
+        height: 185px;
+      }
+      @include to(tablet-s) {
+        width: 179px;
+        height: 184px;
+      }
       @include to(min-width) {
         width: 152px;
         height: 159px;
       }
+      @media only screen and (min-height: 600px) {
+        width: 271px;
+        height: 305px;
+      }
     }
     &__snake {
       position: absolute;
-      bottom: 30%;
-      right: 18%;
+      bottom: 33%;
+      right: 16%;
       z-index: 2;
       width: 195px;
       height: 172px;
@@ -66,9 +92,25 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 5s forwards;
+      @include to(laptop) {
+        bottom: 30%;
+        right: 18%;
+      }
+      @include to(tablet-l) {
+        width: 149px;
+        height: 109px;
+      }
+      @include to(tablet-s) {
+        width: 129px;
+        height: 112px;
+      }
       @include to(min-width) {
         width: 145px;
         height: 107px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 195px;
+        height: 172px;
       }
     }
     &__subtitles {
