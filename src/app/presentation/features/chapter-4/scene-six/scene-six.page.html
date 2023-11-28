@@ -37,7 +37,9 @@
       class="scene-six__container__lintern"
       [ngClass]="{'clicked': divClicked[2]}"
       (click)="divClicked[2] ? null : onIncreasePerfectDayScore(2)"
-    ></div>
+    >
+      <div class="hand"></div>
+    </div>
     <audio #cap4Esc6Narrator>
       <source
         [src]="CONST.AUDIO.ACTIVITY_INSTRUCTIONS_CHAPTER_4_SCENE_6"

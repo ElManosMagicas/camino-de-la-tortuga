@@ -8,8 +8,8 @@
 
 .scene-four {
   width: 100vw;
-  height: 100vh;
-  background-image: url($bg-chapter-1-scene-4-5);
+  height: 100%;
+  background-image: url($elements-cap1-esc4-5-fondo);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,31 +17,57 @@
   animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
   &__container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
     &__car {
       position: absolute;
       top: 36%;
-      right: 7%;
+      right: 18%;
       z-index: 1;
-      width: 236px;
-      height: 338px;
+      width: 218px;
+      height: 324px;
       opacity: 0;
-      background: url($elements-chapter-1-scene-4-5-car);
+      background: url($elements-cap1-esc4-5-carro);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 6s forwards;
+      @include to(laptop-l) {
+        top: 38%;
+        right: 14%;
+      }
+      @include to(laptop-m) {
+        right: 12%;
+      }
+      @include to(laptop) {
+        right: 7%;
+      }
+      @include to(tablet-l) {
+        right: 14%;
+        width: 126px;
+        height: 185px;
+      }
+      @include to(tablet-s) {
+        top: 38%;
+        right: 12%;
+        width: 122px;
+        height: 147px;
+      }
       @include to(min-width) {
-        right: 10%;
+        right: 8%;
         width: 142px;
         height: 156px;
+      }
+      @media only screen and (min-height: 600px) {
+        right: 8%;
+        width: 218px;
+        height: 259px;
       }
     }
     &__person {
       position: absolute;
       top: 34%;
-      right: 34%;
+      right: 36%;
       z-index: 2;
       width: 185px;
       height: 299px;
@@ -51,15 +77,32 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 3.5s forwards;
+      @include to(laptop) {
+        right: 34%;
+      }
+      @include to(tablet-l) {
+        right: 30%;
+        width: 132px;
+        height: 158px;
+      }
+      @include to(tablet-s) {
+        width: 110px;
+        height: 156px;
+      }
       @include to(min-width) {
         width: 108px;
         height: 164px;
       }
+      @media only screen and (min-height: 600px) {
+        top: 44%;
+        width: 145px;
+        height: 153px;
+      }
     }
     &__cuyo {
       position: absolute;
-      bottom: 4%;
-      left: 2%;
+      bottom: 0;
+      left: 0;
       z-index: 3;
       width: 400px;
       height: 405px;
@@ -69,11 +112,21 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 0s forwards;
+      @include to(tablet-l) {
+        width: 265px;
+        height: 218px;
+      }
+      @include to(tablet-s) {
+        width: 229px;
+        height: 204px;
+      }
       @include to(min-width) {
-        bottom: 0%;
-        left: 1%;
         width: 233px;
         height: 228px;
+      }
+      @media only screen and (min-height: 600px) {
+        width: 328px;
+        height: 310px;
       }
     }
     &__subtitles {

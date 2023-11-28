@@ -8,7 +8,7 @@
 
 .scene-five {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url($bg-chapter-5-scene-5);
   background-size: cover;
   background-position: center;
@@ -18,7 +18,7 @@
   &__container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     &__right-after-turtle {
       position: absolute;
       bottom: 26%;
@@ -32,6 +32,18 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(laptop-m) {
+        bottom: 26%;
+        right: 6%;
+      }
+      @include to(tablet-l) {
+        width: 146px;
+        height: 85px;
+      }
+      @include to(tablet-s) {
+        width: 123px;
+        height: 85px;
+      }
       @include to(min-width) {
         width: 91px;
         height: 67px;
@@ -40,7 +52,7 @@
     &__left-after-turtle {
       position: absolute;
       top: 10%;
-      left: 10%;
+      left: 24%;
       z-index: 2;
       width: 170px;
       height: 127px;
@@ -50,6 +62,20 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 0s forwards;
+      @include to(laptop-m) {
+        top: 10%;
+        left: 10%;
+      }
+      @include to(tablet-l) {
+        top: 4%;
+        left: 30%;
+        width: 119px;
+        height: 66px;
+      }
+      @include to(tablet-s) {
+        width: 101px;
+        height: 66px;
+      }
       @include to(min-width) {
         top: 6%;
         width: 110px;
@@ -58,8 +84,8 @@
     }
     &__middle-after-turtle {
       position: absolute;
-      top: 26%;
-      left: 38%;
+      top: 22%;
+      left: 42%;
       z-index: 1;
       width: 164px;
       height: 132px;
@@ -69,6 +95,20 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(laptop-m) {
+        top: 26%;
+        left: 38%;
+      }
+      @include to(tablet-l) {
+        top: 22%;
+        left: 42%;
+        width: 104px;
+        height: 66px;
+      }
+      @include to(tablet-s) {
+        width: 87px;
+        height: 66px;
+      }
       @include to(min-width) {
         width: 110px;
         height: 65px;
@@ -87,6 +127,14 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 119px;
+        height: 66px;
+      }
+      @include to(tablet-s) {
+        width: 101px;
+        height: 66px;
+      }
       @include to(min-width) {
         width: 97px;
         height: 67px;
@@ -105,9 +153,19 @@
       background-repeat: no-repeat;
       opacity: 0;
       animation: appearFullOpacity 1s ease-in-out 1.5s forwards;
+      @include to(tablet-l) {
+        bottom: 26%;
+        left: 12%;
+        width: 131px;
+        height: 105px;
+      }
+      @include to(tablet-s) {
+        width: 159px;
+        height: 110px;
+      }
       @include to(min-width) {
-        width: 130px;
-        height: 106px;
+        width: 133px;
+        height: 110px;
       }
     }
     &__subtitles {

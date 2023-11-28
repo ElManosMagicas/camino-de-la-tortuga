@@ -35,3 +35,18 @@ export const deactivateSubtitles = createAction('[App] Deactivate Subtitles');
 export const activateSound = createAction('[App] Activate Sound');
 
 export const deactivateSound = createAction('[App] Deactivate Sound');
+
+export const setIsLoadingOrientation = createAction(
+  '[App] Set Is Loading Orientation',
+  props<{ isLoadingOrientation: boolean }>()
+);
+
+export const selectIsPortrait = createAction(
+  '[App] Set Is Portrait',
+  props<{ isPortrait: boolean }>()
+);
+
+export const selectIsLandscape = createAction(
+  '[App] Set Is Landscape',
+  props<{ isLandscape: boolean }>()
+);

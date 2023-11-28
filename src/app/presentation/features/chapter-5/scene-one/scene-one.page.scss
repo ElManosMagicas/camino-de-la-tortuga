@@ -8,7 +8,7 @@
 
 .scene-one {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url($bg-chapter-5-scene-1-2);
   background-size: cover;
   background-position: center;
@@ -18,11 +18,11 @@
   &__container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     &__right-after-turtle {
       position: absolute;
       top: 14%;
-      right: 18%;
+      left: 18%;
       z-index: 2;
       width: 148px;
       height: 105px;
@@ -32,16 +32,41 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0s forwards;
+      @include to(laptop-m) {
+        top: 14%;
+        left: 18%;
+      }
+      @include to(laptop) {
+        top: 18%;
+        left: 18%;
+      }
+      @include to(tablet-l) {
+        top: 10%;
+        left: 10%;
+        width: 56px;
+        height: 40px;
+      }
+      @include to(tablet-s) {
+        top: 14%;
+        width: 85px;
+        height: 40px;
+      }
       @include to(min-width) {
-        top: 8%;
+        top: 14%;
         width: 95px;
         height: 49px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 14%;
+        left: 18%;
+        width: 148px;
+        height: 105px;
       }
     }
     &__left-after-turtle {
       position: absolute;
-      top: 16%;
-      right: 38%;
+      top: 8%;
+      right: 36%;
       z-index: 2;
       width: 139px;
       height: 109px;
@@ -51,10 +76,34 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1s ease-in-out 0.5s forwards;
+      @include to(laptop-m) {
+        top: 14%;
+        right: 36%;
+      }
+      @include to(laptop) {
+        top: 18%;
+        right: 36%;
+      }
+      @include to(tablet-l) {
+        top: 0;
+        right: 65%;
+        width: 108px;
+        height: 73px;
+      }
+      @include to(tablet-s) {
+        width: 69px;
+        height: 43px;
+      }
       @include to(min-width) {
-        top: 10%;
+        top: 8%;
         width: 80px;
         height: 55px;
+      }
+      @media only screen and (min-height: 600px) {
+        top: 8%;
+        right: 36%;
+        width: 139px;
+        height: 109px;
       }
     }
     &__right-before-turtle {
@@ -70,9 +119,23 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 126px;
+        height: 73px;
+      }
+      @include to(tablet-s) {
+        width: 106px;
+        height: 73px;
+      }
       @include to(min-width) {
         width: 117px;
         height: 85px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 32%;
+        right: 8%;
+        width: 199px;
+        height: 167px;
       }
     }
     &__left-before-turtle {
@@ -88,9 +151,23 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 1.5s forwards;
+      @include to(tablet-l) {
+        width: 108px;
+        height: 73px;
+      }
+      @include to(tablet-s) {
+        width: 91px;
+        height: 73px;
+      }
       @include to(min-width) {
         width: 112px;
         height: 90px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 30%;
+        right: 28%;
+        width: 190px;
+        height: 168px;
       }
     }
     &__main-turtle {
@@ -106,9 +183,24 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1s ease-in-out 2s forwards;
+      @include to(tablet-l) {
+        bottom: 18%;
+        width: 225px;
+        height: 123px;
+      }
+      @include to(tablet-s) {
+        width: 188px;
+        height: 123px;
+      }
       @include to(min-width) {
         width: 198px;
         height: 148px;
+      }
+      @media only screen and (min-height: 600px) {
+        bottom: 14%;
+        left: 10%;
+        width: 333px;
+        height: 268px;
       }
     }
     &__subtitles {

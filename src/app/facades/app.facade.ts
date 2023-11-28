@@ -19,6 +19,9 @@ export class AppFacade {
   public lastChapterFinished$: Observable<ILastChapterFinished>;
   public isSubtitles$: Observable<boolean>;
   public isSound$: Observable<boolean>;
+  public isLoadingOrientation$: Observable<boolean>;
+  public isPortrait$: Observable<boolean>;
+  public isLandscape$: Observable<boolean>;
 
   constructor(private _store: Store, private _modalService: ModalService) {
     this.turtleName$ = this._store.select(appSelectors.selectTurtleName);
@@ -43,6 +46,11 @@ export class AppFacade {
     );
     this.isSubtitles$ = this._store.select(appSelectors.selectSubtitles);
     this.isSound$ = this._store.select(appSelectors.selectSound);
+    this.isLoadingOrientation$ = this._store.select(
+      appSelectors.selectIsLoadingOrientation
+    );
+    this.isPortrait$ = this._store.select(appSelectors.selectIsPortrait);
+    this.isLandscape$ = this._store.select(appSelectors.selectIsLandscape);
   }
 
   public setTurtleName(turtleName: string) {
@@ -106,5 +114,19 @@ export class AppFacade {
 
   public deactivateSound(): void {
     this._store.dispatch(appActions.deactivateSound());
+  }
+
+  public setIsLoadingOrientation(isLoadingOrientation: boolean): void {
+    this._store.dispatch(
+      appActions.setIsLoadingOrientation({ isLoadingOrientation })
+    );
+  }
+
+  public setIsPortrait(isPortrait: boolean): void {
+    this._store.dispatch(appActions.selectIsPortrait({ isPortrait }));
+  }
+
+  public setIsLandscape(isLandscape: boolean): void {
+    this._store.dispatch(appActions.selectIsLandscape({ isLandscape }));
   }
 }

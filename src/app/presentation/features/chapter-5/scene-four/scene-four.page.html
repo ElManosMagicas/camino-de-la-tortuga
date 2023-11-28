@@ -33,7 +33,9 @@
         [class.clicked]="piecesClicked[1]"
         [class.completed]="piecesCompleted[1]"
         (click)="onPieceClicked(1)"
-      ></div>
+      >
+        <div class="hand"></div>
+      </div>
       <div
         class="scene-four__container__pieces__sun"
         [class.clicked]="piecesClicked[2]"
@@ -52,7 +54,9 @@
       [class.disabled]="!isDottedEnabled"
       [class.dottedClicked]="dottedClicked[1]"
       (click)="onDottedClicked(1)"
-    ></div>
+    >
+      <div class="hand"></div>
+    </div>
     <div
       class="scene-four__container__dotted-sun"
       [class.disabled]="!isDottedEnabled"

@@ -8,7 +8,7 @@
 
 .scene-three {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url($bg-chapter-3-scene-3-4-5-6-7);
   background-size: cover;
   background-position: center;
@@ -18,11 +18,11 @@
   &__container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     &__log {
       position: absolute;
-      top: 0px;
-      right: 0px;
+      top: 0;
+      right: 1%;
       z-index: 2;
       width: 463px;
       height: 396px;
@@ -32,7 +32,22 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromRight 1s ease-in-out 0s forwards;
+      @include to(laptop-s) {
+        right: -4%;
+      }
+      @include to(laptop-s) {
+        right: 0;
+      }
+      @include to(tablet-l) {
+        width: 269px;
+        height: 236px;
+      }
+      @include to(tablet-s) {
+        width: 290px;
+        height: 234px;
+      }
       @include to(min-width) {
+        right: -1%;
         width: 299px;
         height: 256px;
       }
@@ -50,35 +65,50 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: appearFullOpacity 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 222px;
+        height: 203px;
+      }
+      @include to(tablet-s) {
+        width: 200px;
+        height: 180px;
+      }
       @include to(min-width) {
         right: 21%;
         width: 198px;
         height: 209px;
       }
-    }
-    &__snake-zzz {
-      position: absolute;
-      top: 0px;
-      right: 42%;
-      z-index: 2;
-      width: 198px;
-      height: 186px;
-      opacity: 0;
-      background: url($gifs-chapter-3-scene-3-snake-zzz);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: appearFullOpacity 1s ease-in-out 1s forwards;
-      @include to(min-width) {
-        right: 50%;
-        width: 148px;
-        height: 139px;
+      .zzz {
+        position: absolute;
+        top: -30%;
+        right: 100%;
+        z-index: 2;
+        width: 198px;
+        height: 186px;
+        opacity: 0;
+        background: url($gifs-chapter-3-scene-3-snake-zzz);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: appearFullOpacity 1s ease-in-out 1s forwards;
+        @include to(tablet-l) {
+          width: 102px;
+          height: 100px;
+        }
+        @include to(tablet-s) {
+          width: 86px;
+          height: 98px;
+        }
+        @include to(min-width) {
+          width: 148px;
+          height: 139px;
+        }
       }
     }
     &__turtle {
       position: absolute;
-      bottom: 0px;
-      left: 0px;
+      bottom: 5%;
+      left: 2%;
       z-index: 2;
       width: 393px;
       height: 393px;
@@ -88,8 +118,17 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1s ease-in-out 1s forwards;
+      @include to(tablet-l) {
+        width: 197px;
+        height: 186px;
+      }
+      @include to(tablet-s) {
+        left: 0;
+        width: 215px;
+        height: 191px;
+      }
       @include to(min-width) {
-        bottom: -5%;
+        bottom: 10%;
         left: -1%;
         width: 216px;
         height: 199px;

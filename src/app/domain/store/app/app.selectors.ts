@@ -52,3 +52,18 @@ export const selectSound = createSelector(
   getAppFeatureState,
   (state: AppState) => state.isSound
 );
+
+export const selectIsLoadingOrientation = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.isLoadingOrientation
+);
+
+export const selectIsPortrait = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.isPortrait
+);
+
+export const selectIsLandscape = createSelector(
+  getAppFeatureState,
+  (state: AppState) => state.isLandscape
+);

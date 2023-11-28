@@ -7,39 +7,60 @@
 
 .home {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url($bg-start-screen);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
   animation: appearFullOpacity 0.5s ease-in-out 0s forwards;
+
   &__container {
     position: relative;
     width: 100%;
-    height: 100vh;
-    &__front-bush {
+    height: 100%;
+    &__right-bush {
       position: absolute;
-      bottom: 0px;
-      right: 0px;
-      z-index: 1;
-      width: 100%;
-      height: 399px;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      width: 208px;
+      height: 261px;
       opacity: 0;
-      background: url($gifs-home-bushes);
+      background: url($elements-front-page-right-bush);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       animation: fromBottom 1.5s ease-in-out 1s forwards;
-      @include to(min-width) {
-        height: 180px;
+      @include to(laptop-m) {
+        bottom: -6%;
       }
+      @include to(laptop) {
+        bottom: -12%;
+      }
+      @include to(tablet-l) {
+        bottom: -14%;
+      }
+    }
+    &__left-bush {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      width: 188px;
+      height: 242px;
+      opacity: 0;
+      background: url($elements-front-page-left-bush);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: fromBottom 1.5s ease-in-out 1s forwards;
     }
     &__turtle {
       position: absolute;
-      top: 34%;
-      left: 20%;
-      z-index: 2;
+      top: 42%;
+      left: 28%;
+      z-index: 1;
       width: 345px;
       height: 327px;
       opacity: 0;
@@ -48,6 +69,22 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromLeft 1.5s ease-in-out 0s forwards;
+      @include to(laptop) {
+        top: 34%;
+        left: 20%;
+      }
+      @include to(tablet-l) {
+        top: 34%;
+        left: 22%;
+        width: 263px;
+        height: 191px;
+      }
+      @include to(tablet-s) {
+        top: 34%;
+        left: 22%;
+        width: 238px;
+        height: 178px;
+      }
       @include to(min-width) {
         top: 38%;
         left: 22%;
@@ -57,8 +94,11 @@
     }
     &__title {
       position: absolute;
-      top: 10%;
-      left: 20%;
+      top: 8%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
       z-index: 2;
       width: 615px;
       height: 143px;
@@ -68,10 +108,15 @@
       background-position: center;
       background-repeat: no-repeat;
       animation: fromTop 1.5s ease-in-out 2s forwards;
-      @include to(min-width) {
-        top: 6%;
-        width: 369px;
-        height: 89px;
+      @include to(tablet-l) {
+        top: 3%;
+        width: 467px;
+        height: 104px;
+      }
+      @include to(tablet-s) {
+        top: 3%;
+        width: 422px;
+        height: 92px;
       }
     }
     &__footer {
@@ -84,4 +129,15 @@
       animation: fromBottom 1s ease-in-out 2.5s forwards;
     }
   }
+}
+
+.rotate-device {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  opacity: 0;
+  animation: appearFullOpacity 1s ease-in-out 0s forwards;
 }

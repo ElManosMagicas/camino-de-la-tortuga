@@ -13,6 +13,9 @@ export const initialApp: AppState = {
   lastChapterFinished: null,
   isSubtitles: true,
   isSound: true,
+  isLoadingOrientation: false,
+  isPortrait: false,
+  isLandscape: false,
 };
 
 const _appReducer = createReducer(
@@ -87,6 +90,27 @@ const _appReducer = createReducer(
     return {
       ...state,
       isSound: false,
+    };
+  }),
+  on(appActions.setIsLoadingOrientation, (state, { isLoadingOrientation }) => {
+    return {
+      ...state,
+      isLoadingOrientation:
+        state.isLoadingOrientation !== isLoadingOrientation
+          ? isLoadingOrientation
+          : state.isLoadingOrientation,
+    };
+  }),
+  on(appActions.selectIsPortrait, (state, { isPortrait }) => {
+    return {
+      ...state,
+      isPortrait,
+    };
+  }),
+  on(appActions.selectIsLandscape, (state, { isLandscape }) => {
+    return {
+      ...state,
+      isLandscape,
     };
   })
 );
