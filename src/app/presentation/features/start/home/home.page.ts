@@ -25,6 +25,8 @@ export class HomePage implements OnInit, AfterViewInit {
   @ViewChild('config', { static: true })
   config!: TemplateRef<IContextModal>;
   @ViewChild('homeBgMusic') audioPlayer: ElementRef<HTMLAudioElement>;
+  @ViewChild('rotateDevice', { static: true })
+  rotateDevice!: TemplateRef<IContextModal>;
 
   public ROUTES = APP_ROUTES;
   public CONST = CONST;
@@ -40,11 +42,15 @@ export class HomePage implements OnInit, AfterViewInit {
     private _appFacade: AppFacade,
     private _chapter1Facade: Chapter1Facade
   ) {}
+
   ngOnInit(): void {
     this.isSubtitles$ = this._appFacade.isSubtitles$;
     this.isLoadingOrientation$ = this._appFacade.isLoadingOrientation$;
     this.isPortrait$ = this._appFacade.isPortrait$;
     this.isLandscape$ = this._appFacade.isLandscape$;
+    setTimeout(() => {
+      this.onRotateDevice();
+    }, 4000);
   }
 
   ngAfterViewInit(): void {}
@@ -87,4 +93,12 @@ export class HomePage implements OnInit, AfterViewInit {
   }
 
   public onReload(): void {}
+
+  public onRotateDevice(): void {
+    this._appFacade.openModal(this.rotateDevice);
+  }
+
+  public onCloseRotateDevice(): void {
+    this._appFacade.closeModal();
+  }
 }
