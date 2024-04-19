@@ -12,12 +12,7 @@ import { IContextModal } from '@app/core/models/modal.model';
 import { AppFacade } from '@app/facades/app.facade';
 import { Chapter1Facade } from '@app/facades/chapter-1.facade';
 import { UtilService } from '@app/services/util.service';
-import {
-  Observable,
-  Subject,
-  Subscription,
-} from 'rxjs';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'start-home',
@@ -30,6 +25,8 @@ export class HomePage implements OnInit, AfterViewInit {
   @ViewChild('config', { static: true })
   config!: TemplateRef<IContextModal>;
   @ViewChild('homeBgMusic') audioPlayer: ElementRef<HTMLAudioElement>;
+  @ViewChild('rotateDevice', { static: true })
+  rotateDevice!: TemplateRef<IContextModal>;
 
   public ROUTES = APP_ROUTES;
   public CONST = CONST;
@@ -40,54 +37,25 @@ export class HomePage implements OnInit, AfterViewInit {
   public isPortrait$: Observable<boolean>;
   public isLandscape$: Observable<boolean>;
 
-  public orientationSubscription$: Subscription;
-  public destroy$: Subject<void> = new Subject<void>();
-
   constructor(
     private _utilService: UtilService,
     private _appFacade: AppFacade,
-    private _chapter1Facade: Chapter1Facade,
-    private _breakpointObserver: BreakpointObserver
+    private _chapter1Facade: Chapter1Facade
   ) {}
+
   ngOnInit(): void {
     this.isSubtitles$ = this._appFacade.isSubtitles$;
     this.isLoadingOrientation$ = this._appFacade.isLoadingOrientation$;
     this.isPortrait$ = this._appFacade.isPortrait$;
     this.isLandscape$ = this._appFacade.isLandscape$;
+    setTimeout(() => {
+      this.onRotateDevice();
+    }, 4000);
   }
 
-  ngAfterViewInit(): void {
-    this.orientationSubscription$ = this._breakpointObserver
-      .observe([Breakpoints.HandsetPortrait, Breakpoints.HandsetLandscape])
-      .subscribe((result) => {
-        if (result.matches) {
-          // The device orientation has changed
-          if (result.breakpoints[Breakpoints.HandsetPortrait]) {
-            // Handle portrait orientation
-            this._appFacade.setIsLoadingOrientation(true);
-            this._appFacade.setIsPortrait(true);
-            this._appFacade.setIsLandscape(false);
-            setTimeout(() => {
-              this._appFacade.setIsLoadingOrientation(false);
-            }, 2000);
-          } else if (result.breakpoints[Breakpoints.HandsetLandscape]) {
-            // Handle landscape orientation
-            this._appFacade.setIsLoadingOrientation(true);
-            this._appFacade.setIsPortrait(false);
-            this._appFacade.setIsLandscape(true);
-            setTimeout(() => {
-              this._appFacade.setIsLoadingOrientation(false);
-            }, 2000);
-          }
-        }
-      });
-  }
+  ngAfterViewInit(): void {}
 
-  ngOnDestroy(): void {
-    this.destroy$.next();
-    this.destroy$.complete();
-    this.orientationSubscription$?.unsubscribe();
-  }
+  ngOnDestroy(): void {}
 
   public onGoToInstructions(): void {
     this._utilService.navigateTo(this.ROUTES.INSTRUCTIONS);
@@ -125,4 +93,12 @@ export class HomePage implements OnInit, AfterViewInit {
   }
 
   public onReload(): void {}
+
+  public onRotateDevice(): void {
+    this._appFacade.openModal(this.rotateDevice);
+  }
+
+  public onCloseRotateDevice(): void {
+    this._appFacade.closeModal();
+  }
 }

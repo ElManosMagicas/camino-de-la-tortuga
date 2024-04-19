@@ -30,8 +30,9 @@
     &.close-in-progress {
       animation: modalEasyOutBottom 400ms ease-in;
     }
-    @include to(mobile-l) {
+    @include to(tablet-l) {
       width: 90vw;
+      transform: translateY(-58%);
     }
   }
 }
