@@ -1,31 +1,19 @@
-<ng-container
-  *ngIf="!(isPortrait$ | async) && !(isLoadingOrientation$ | async)"
->
-  <section class="home">
-    <div class="home__container">
-      <div class="home__container__turtle"></div>
-      <div class="home__container__title"></div>
-      <div class="home__container__right-bush"></div>
-      <div class="home__container__left-bush"></div>
-      <div class="home__container__footer">
-        <home-footer
-          (goToInstructionsEvent)="onGoToInstructions()"
-          (goToConfigurationEvent)="onGoToConfiguration()"
-          (goToCreditsEvent)="onGoToCredits()"
-          (goToChapterOneEvent)="onGoToChapterOne()"
-        ></home-footer>
-      </div>
+<section class="home">
+  <div class="home__container">
+    <div class="home__container__turtle"></div>
+    <div class="home__container__title"></div>
+    <div class="home__container__right-bush"></div>
+    <div class="home__container__left-bush"></div>
+    <div class="home__container__footer">
+      <home-footer
+        (goToInstructionsEvent)="onGoToInstructions()"
+        (goToConfigurationEvent)="onGoToConfiguration()"
+        (goToCreditsEvent)="onGoToCredits()"
+        (goToChapterOneEvent)="onGoToChapterOne()"
+      ></home-footer>
     </div>
-  </section>
-</ng-container>
-
-<ng-container *ngIf="isLoadingOrientation$ | async">
-  <layout-loader></layout-loader>
-</ng-container>
-
-<ng-container *ngIf="(isPortrait$ | async) && !(isLoadingOrientation$ | async)">
-  <layout-rotate-device (reloadEvent)="onReload()"></layout-rotate-device>
-</ng-container>
+  </div>
+</section>
 
 <ng-template #credits>
   <layout-credits (closeCreditsEvent)="onCloseCredits()"></layout-credits>
